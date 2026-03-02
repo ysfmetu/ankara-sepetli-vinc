@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ankara Sepetli Vinç
 
-## Getting Started
+Bu proje [Next.js](https://nextjs.org) (App Router), TypeScript ve Tailwind CSS kullanılarak oluşturulmuştur.
 
-First, run the development server:
+## Özellikler
+
+- **Framework:** Next.js (App Router)
+- **Dil:** TypeScript
+- **Styling:** Tailwind CSS
+- **Lint/Format:** ESLint + Prettier
+- **SEO & Performans:** Next.js Metadata API entegrasyonu ve (default) Server Components yapısı, `next/image` kullanımı.
+
+---
+
+### Local Development
+
+Yerel ortamınızda geliştirme yapmak için:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Production Test
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Uygulamayı canlı ortama / Vercel'e göndermeden önce localde production build almak ve test etmek için:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm install
+npm run build
+npm run start
+```
 
-## Learn More
+### Environment Variables
 
-To learn more about Next.js, take a look at the following resources:
+Projenin iletişim formunu kullanabilmesi için Resend SDK entegre edilmiştir. Kök dizinde (root) bir `.env.local` veya `.env` dosyası oluşturun ve aşağıdaki değerleri kendi altyapınıza göre doldurun:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```env
+RESEND_API_KEY=re_sizin_api_anahtariniz
+MAIL_TO=ysf.metu@gmail.com
+MAIL_FROM=onboarding@resend.dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Not:** Vercel Dashboard üzerinde Environment Variables girilmezse, production ortamında iletişim formu (mail) çalışmaz.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Vercel Deploy
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Uygulamayı Vercel üzerinde canlıya almak için aşağıdaki adımları izleyin:
+
+1) Vercel'e GitHub hesabınız ile giriş yapın.
+2) Sağ üstteki **"Add New"** > **"Project"** butonuna (veya "Import Project") tıklayın.
+3) `ankara-sepetli-vinc` reposunu seçip "Import" deyin.
+4) Çıkan konfigürasyon sayfasında **Environment Variables** bölümünü genişletin ve ekleyin:
+   - `RESEND_API_KEY` = Sizin Resend anahtarınız
+   - `MAIL_TO` = `ysf.metu@gmail.com`
+5) **Deploy** butonuna basarak süreci başlatın.
+6) Deploy başarılı olduktan sonra, sitedeki iletişim formunu test edin ve Vercel panosundaki **Project → Logs** sekmesinden `/api/teklif` end-point'inin loglarını kontrol edin.
