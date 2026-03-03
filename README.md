@@ -33,12 +33,15 @@ npm run start
 
 ### Environment Variables
 
-Projenin iletişim formunu kullanabilmesi için Resend SDK entegre edilmiştir. Kök dizinde (root) bir `.env.local` veya `.env` dosyası oluşturun ve aşağıdaki değerleri kendi altyapınıza göre doldurun:
+Projenin iletişim formunu kullanabilmesi için Resend SDK entegre edilmiştir. Ayrıca blog görsellerini otomatik indirebilmek için Pexels API ayarı gerekir. Kök dizinde (root) bir `.env.local` veya `.env` dosyası oluşturun ve aşağıdaki değerleri kendi altyapınıza göre doldurun:
 
 ```env
 RESEND_API_KEY=re_sizin_api_anahtariniz
 MAIL_TO=ysf.metu@gmail.com
 MAIL_FROM=onboarding@resend.dev
+
+# Blog Resimleri Otomatik İndirme İçin (Pexels API Key)
+PEXELS_API_KEY=sizin_pexels_api_anahtariniz
 ```
 
 **Not:** Vercel Dashboard üzerinde Environment Variables girilmezse, production ortamında iletişim formu (mail) çalışmaz.
@@ -57,3 +60,6 @@ Uygulamayı Vercel üzerinde canlıya almak için aşağıdaki adımları izleyi
    - `MAIL_TO` = `ysf.metu@gmail.com`
 5) **Deploy** butonuna basarak süreci başlatın.
 6) Deploy başarılı olduktan sonra, sitedeki iletişim formunu test edin ve Vercel panosundaki **Project → Logs** sekmesinden `/api/teklif` end-point'inin loglarını kontrol edin.
+
+---
+Deployment trigger update.

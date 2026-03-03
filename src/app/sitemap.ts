@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next';
+import { getAllPosts } from '@/lib/mdx';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://ankarasepetlivinc.com';
@@ -18,12 +19,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/fiyatlar',
     '/iletisim',
     '/hakkimizda',
+    '/blog',
+    ...getAllPosts().map((post) => `/blog/${post.slug}`),
   ];
 
   return routes.map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
-    changeFrequency: route === '' ? 'weekly' : 'monthly',
-    priority: route === '' ? 1 : 0.8,
+    changeFrequency: route === '' ? 'weekly' : route.startsWith('/blog/') ? 'yearly' : 'monthly',
+    priority: route === '' ? 1 : route === '/blog' ? 0.9 : route.startsWith('/blog/') ? 0.7 : 0.8,
   }));
 }

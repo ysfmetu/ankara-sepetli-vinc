@@ -5,6 +5,7 @@ import Services from '@/components/Services';
 import WhyUs from '@/components/WhyUs';
 import ServiceAreas from '@/components/ServiceAreas';
 import FAQ from '@/components/FAQ';
+import BlogSection from '@/components/BlogSection';
 import Footer from '@/components/Footer';
 import FloatingCTA from '@/components/FloatingCTA';
 
@@ -94,6 +95,7 @@ export default function Home() {
         <WhyUs />
         <ServiceAreas />
         <FAQ />
+        <BlogSection />
       </main>
 
       <Footer />
