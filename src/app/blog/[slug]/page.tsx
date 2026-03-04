@@ -94,6 +94,10 @@ export default async function BlogPost({ params }: BlogPostProps) {
             name: 'Ankara Sepetli Vinç',
             url: 'https://ankarasepetlivinc.com'
         }],
+        mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': `https://ankarasepetlivinc.com/blog/${post.slug}`
+        },
         publisher: {
             '@type': 'Organization',
             name: 'Ankara Sepetli Vinç Kiralama',

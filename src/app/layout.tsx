@@ -23,6 +23,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/',
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
     title: 'Ankara Sepetli Vinç Kiralama | 7/24 Operatörlü Hizmet',
     description:

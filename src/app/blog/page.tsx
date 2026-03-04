@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { BookOpen, ArrowRight } from 'lucide-react';
+import { BookOpen } from 'lucide-react';
 import { getAllPosts } from '@/lib/mdx';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -24,8 +24,23 @@ export default function BlogList() {
 
     const allPosts = getAllPosts();
 
+    const breadcrumbJsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: breadcrumbItems.map((item, index) => ({
+            '@type': 'ListItem',
+            position: index + 1,
+            name: item.label,
+            item: `https://ankarasepetlivinc.com${item.href}`
+        }))
+    };
+
     return (
         <div className="flex flex-col min-h-screen bg-white">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+            />
             <Header />
 
             <main className="flex-grow pt-8 pb-16">
@@ -71,8 +86,7 @@ export default function BlogList() {
                                         {post.excerpt}
                                     </p>
                                     <div className="flex items-center gap-2 text-primary font-bold mt-auto group-hover:gap-3 transition-all duration-300">
-                                        Makaleye Git
-                                        <ArrowRight className="w-4 h-4" />
+                                        Makaleye Git &rarr;
                                     </div>
                                 </div>
                             </Link>

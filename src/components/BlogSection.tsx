@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { getAllPosts } from '@/lib/mdx';
-import { ArrowRight, BookOpen } from 'lucide-react';
+import { BookOpen } from 'lucide-react';
 
 export default function BlogSection() {
     const allPosts = getAllPosts();
@@ -21,10 +21,9 @@ export default function BlogSection() {
                     </div>
                     <Link
                         href="/blog"
-                        className="hidden md:flex items-center gap-2 text-primary font-bold hover:text-primary-hover transition-colors group"
+                        className="flex items-center gap-2 text-primary font-bold hover:text-primary-hover transition-colors group"
                     >
-                        <span>Tüm Yazıları Gör</span>
-                        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                        <span>Tüm Yazıları Gör &rarr;</span>
                     </Link>
                 </div>
 
@@ -58,24 +57,14 @@ export default function BlogSection() {
                                     {post.excerpt}
                                 </p>
                                 <div className="flex items-center gap-2 text-primary font-bold mt-auto group-hover:gap-3 transition-all duration-300">
-                                    Devamını Oku
-                                    <ArrowRight className="w-4 h-4" />
+                                    Makaleye Git &rarr;
                                 </div>
                             </div>
                         </Link>
                     ))}
                 </div>
 
-                {/* Mobil CTA */}
-                <div className="mt-8 flex justify-center md:hidden">
-                    <Link
-                        href="/blog"
-                        className="flex items-center gap-2 bg-gray-100 hover:bg-gray-200 text-gray-900 px-6 py-3 rounded-xl font-bold transition-colors w-full justify-center"
-                    >
-                        <span>Tüm Yazıları İncele</span>
-                        <ArrowRight className="w-5 h-5" />
-                    </Link>
-                </div>
+
             </div>
         </section>
     );
