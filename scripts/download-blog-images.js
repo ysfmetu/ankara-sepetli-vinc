@@ -46,7 +46,8 @@ const slugs = [
     { slug: 'etimesgut-sepetli-vinc-kiralama', subject: 'residential construction boom lift' },
     { slug: 'yenimahalle-sepetli-vinc-kiralama', subject: 'cherry picker street' },
     { slug: 'mamak-sepetli-vinc-kiralama', subject: 'building facade industrial lift' },
-    { slug: 'kecioren-sepetli-vinc-kiralama', subject: 'telescopic lift city street' }
+    { slug: 'kecioren-sepetli-vinc-kiralama', subject: 'telescopic lift city street' },
+    { slug: 'ankara-sepetli-vinc-kiralama-rehberi', subject: 'boom lift crane rental guide' }
 ];
 
 const destDir = path.join(process.cwd(), 'public', 'images', 'blog');
@@ -131,7 +132,7 @@ async function fetchWithRetry(query, retries = 3) {
 }
 
 async function main() {
-    console.log('Pexels API üzerinden 38 gerçek görsel senkronize ediliyor...\n');
+    console.log('Pexels API üzerinden 40 gerçek görsel senkronize ediliyor...\n');
 
     const failedSlugs = [];
     const usedPhotoIds = new Set(); // Aynı ID'ye sahip fotoğrafları iki kez kullanmamak için takip
@@ -179,7 +180,7 @@ async function main() {
         console.log(`⚠️ ${failedSlugs.length} adet slug başarısız oldu:`);
         failedSlugs.forEach(f => console.log(` - ${f.slug}: ${f.error}`));
     } else {
-        console.log('🎉 İşlem tamamlandı! 38 adet profesyonel görsel başarıyla ".jpg" olarak kaydedildi.');
+        console.log('🎉 İşlem tamamlandı! 40 adet profesyonel görsel başarıyla ".jpg" olarak kaydedildi.');
     }
 }
 
