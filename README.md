@@ -63,3 +63,4 @@ Uygulamayı Vercel üzerinde canlıya almak için aşağıdaki adımları izleyi
 
 ---
 Deployment trigger update.
+
