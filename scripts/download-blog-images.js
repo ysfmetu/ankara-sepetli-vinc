@@ -37,7 +37,11 @@ const slugs = [
     { slug: 'agac-budama-sepetli-vinc', subject: 'tree trimming arborist truck' },
     { slug: 'ankara-vinc-kiralama-rehberi', subject: 'mobile crane construction site' },
     { slug: 'sepetli-vinc-kiralarken-nelere-dikkat-edilmeli', subject: 'construction worker safety harness' },
-    { slug: 'ankara-sepetli-vinc-guvenlik-standartlari', subject: 'industrial safety helmet construction' }
+    { slug: 'ankara-sepetli-vinc-guvenlik-standartlari', subject: 'industrial safety helmet construction' },
+    { slug: 'sepetli-vinc-kiralama-ankara', subject: 'cherry picker street' },
+    { slug: 'sepetli-vinc-kac-metreye-cikar', subject: 'telescopic boom lift sky' },
+    { slug: 'ankara-sepetli-vinc-kullanim-alanlari', subject: 'construction site utility' },
+    { slug: 'sepetli-vinc-operasyon-guvenligi', subject: 'safety harness worker platform' }
 ];
 
 const destDir = path.join(process.cwd(), 'public', 'images', 'blog');
@@ -122,7 +126,7 @@ async function fetchWithRetry(query, retries = 3) {
 }
 
 async function main() {
-    console.log('Pexels API üzerinden 20 gerçek görsel senkronize ediliyor...\n');
+    console.log('Pexels API üzerinden 28 gerçek görsel senkronize ediliyor...\n');
 
     const failedSlugs = [];
     const usedPhotoIds = new Set(); // Aynı ID'ye sahip fotoğrafları iki kez kullanmamak için takip
@@ -170,7 +174,7 @@ async function main() {
         console.log(`⚠️ ${failedSlugs.length} adet slug başarısız oldu:`);
         failedSlugs.forEach(f => console.log(` - ${f.slug}: ${f.error}`));
     } else {
-        console.log('🎉 İşlem tamamlandı! 20 adet profesyonel görsel başarıyla ".jpg" olarak kaydedildi.');
+        console.log('🎉 İşlem tamamlandı! 28 adet profesyonel görsel başarıyla ".jpg" olarak kaydedildi.');
     }
 }
 

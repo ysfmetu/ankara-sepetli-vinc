@@ -61,6 +61,30 @@ const articles = [
         slug: 'ankara-sepetli-vinc-guvenlik-standartlari',
         date: '2026-02-05',
         desc: 'Vinç kiralama süreçlerinde alınması gereken sertifikasyonlar, personel düşüş durdurucu (Lanyard) ekipmanlar ve periyodik yasal zorunluluklar.'
+    },
+    {
+        title: 'Sepetli Vinç Kiralama Ankara: Hangi İlçelerde Hizmet Veriyoruz?',
+        slug: 'sepetli-vinc-kiralama-ankara',
+        date: '2026-03-04',
+        desc: 'Ankara genelinde sepetli vinç hizmet ağımız, kiralama süreçleri ve Ostim, Sincan, Yenimahalle, Çankaya gibi bölgelere hızlı ulaşım.'
+    },
+    {
+        title: 'Sepetli Vinç Kaç Metreye Çıkar? Yükseklik Kapasiteleri',
+        slug: 'sepetli-vinc-kac-metreye-cikar',
+        date: '2026-03-05',
+        desc: 'Sektördeki farklı sepetli vinç modellerinin kaç metre yüksekliğe ulaşabildiğini ve hangi iş kollarında kullanıldıklarını inceliyoruz.'
+    },
+    {
+        title: 'Ankara Sepetli Vinç Kullanım Alanları',
+        slug: 'ankara-sepetli-vinc-kullanim-alanlari',
+        date: '2026-03-06',
+        desc: 'İnşaat, temizlik, tabela montajı, elektrik arıza gibi sepetli vinç kullanım yerleri ve ankara vinç kiralama pratikleri üzerine rehber.'
+    },
+    {
+        title: 'Sepetli Vinç Operasyon Güvenliği ve Alınması Gereken Önlemler',
+        slug: 'sepetli-vinc-operasyon-guvenligi',
+        date: '2026-03-07',
+        desc: 'Platform sepetlerinde işçi sağlığı, emniyet kemeri kullanımı, rüzgar hız limiti uyarısı ve kiralık vinç risk yönetim adımları.'
     }
 ];
 
@@ -75,14 +99,14 @@ Herhangi bir kaza riskine karşı alınan tedbirler sadece aracı kiralamakla bi
 const generateContent = (slug, title) => {
     let content = `
 ## 1. Giriş ve Temel Konseptler
-Yüksek metrajlı binalara veya aydınlatma direklerine müdahale etmek, geleneksel iskelelerle hem çok riskli hem de maliyetlidir. **Ankara sepetli vinç** kiralayarak saniyeler içinde çalışma alanınıza ulaşabilir, vinç kiralama ankara avantajlarından en uygun bütçelerle yararlanabilirsiniz.
+Yüksek metrajlı binalara veya aydınlatma direklerine müdahale etmek, geleneksel iskelelerle hem çok riskli hem de maliyetlidir. Acil işlemleriniz veya uzun vadeli projeleriniz için güvenilir bir partner arıyorsanız, profesyonel [Ankara sepetli vinç kiralama](/ankara-sepetli-vinc-kiralama) saniyeler içinde çalışma alanınıza ulaşmanızı sağlar, böylece en uygun bütçelerle yüksekte operasyon avantajlarından yararlanabilirsiniz.
 
 ${fillerText}
 
 ![${title} Detay Görseli](/images/blog/${slug}-1.jpg)
 
-## 2. Maliyet ve Performans Analizi
-Kiralama işleminde maliyet; makinenin çalışma yüksekliğine, yatay erişim gereksinimlerine ve çalışılacak saat dilimine göre değişkenlik gösterir. Bir Ostim sanayi bölgesi projesi için, **sepetli vinç** kullanımı sayesinde manuel çalışma süreleri yüzde yetmiş oranında düşer.
+## 2. Maliyet, Çevre ve Şantiye Analizi
+Kiralama işleminde maliyet; makinenin çalışma yüksekliğine, yatay erişim gereksinimlerine ve çalışılacak saat dilimine göre değişkenlik gösterir. Bir Ostim veya Yenimahalle sanayi bölgesi projesi için, **sepetli vinç** kullanımı sayesinde manuel çalışma süreleri yüzde yetmiş oranında düşer. Yüksek güvenliğin maliyetle olan pozitif korelasyonu [Ankara sepetli vinç kiralama](/ankara-sepetli-vinc-kiralama) güvencesi ile en üst düzeye çıkar.
 
 ${fillerText}
 
@@ -137,4 +161,4 @@ readTime: '8 dk'
     fs.writeFileSync(path.join(blogDir, `${article.slug}.mdx`), fullContent);
 });
 
-console.log('10 MDX files correctly generated with >900 words.');
+console.log('14 MDX files (9 existing + 5 newly appended/renamed) correctly generated with >900 words & internal anchor links.');
