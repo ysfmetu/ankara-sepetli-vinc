@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { PhoneCall, Info, Calculator, Banknote } from 'lucide-react';
+import { PhoneCall, Info, Calculator, Banknote, Clock } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingCTA from '@/components/FloatingCTA';
