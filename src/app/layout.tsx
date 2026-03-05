@@ -12,6 +12,8 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+
 export const metadata: Metadata = {
   title: {
     template: '%s | Ankara Sepetli Vinç',
@@ -19,7 +21,7 @@ export const metadata: Metadata = {
   },
   description:
     'Ankara sepetli vinç kiralama hizmeti. Ostim, Etimesgut, Sincan ve tüm Ankara’da profesyonel operatörlü vinç kiralama. En uygun sepetli vinç kiralama fiyatları.',
-  metadataBase: new URL('https://ankarasepetlivinc.com'),
+  metadataBase: new URL(siteUrl),
   alternates: {
     canonical: '/',
   },
@@ -31,7 +33,7 @@ export const metadata: Metadata = {
     title: 'Ankara Sepetli Vinç Kiralama | 7/24 Operatörlü Hizmet',
     description:
       'Ankara sepetli vinç kiralama hizmeti. Ostim, Etimesgut, Sincan ve tüm Ankara’da profesyonel operatörlü vinç kiralama. En uygun sepetli vinç kiralama fiyatları.',
-    url: 'https://ankarasepetlivinc.com',
+    url: siteUrl,
     siteName: 'Ankara Sepetli Vinç Kiralama',
     locale: 'tr_TR',
     type: 'website',
@@ -48,10 +50,10 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   name: 'Ankara Sepetli Vinç Kiralama',
-  image: 'https://ankarasepetlivinc.com/images/hero-bg.jpg',
+  image: `${siteUrl}/images/hero-bg.jpg`,
   description: 'Ankara sepetli vinç kiralama hizmeti. Ostim, Etimesgut, Sincan ve tüm Ankara’da profesyonel operatörlü vinç kiralama.',
-  '@id': 'https://ankarasepetlivinc.com',
-  url: 'https://ankarasepetlivinc.com',
+  '@id': siteUrl,
+  url: siteUrl,
   telephone: '+905320000000',
   address: {
     '@type': 'PostalAddress',

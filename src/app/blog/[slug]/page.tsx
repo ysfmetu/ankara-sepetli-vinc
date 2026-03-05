@@ -10,6 +10,8 @@ import FloatingCTA from '@/components/FloatingCTA';
 import Breadcrumb from '@/components/Breadcrumb';
 import { getPhoneUrl, getWhatsAppUrl, siteConfig } from '@/config/site';
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+
 interface BlogPostProps {
     params: Promise<{ slug: string }>;
 }
@@ -37,17 +39,17 @@ export async function generateMetadata({ params }: BlogPostProps): Promise<Metad
         title: `${post.title} | Ankara Sepetli Vinç Blog`,
         description: post.excerpt,
         alternates: {
-            canonical: `https://ankarasepetlivinc.com/blog/${post.slug}`,
+            canonical: `${siteUrl}/blog/${post.slug}`,
         },
         openGraph: {
             title: post.title,
             description: post.excerpt,
-            url: `https://ankarasepetlivinc.com/blog/${post.slug}`,
+            url: `${siteUrl}/blog/${post.slug}`,
             type: 'article',
             publishedTime: post.date,
             images: [
                 {
-                    url: `https://ankarasepetlivinc.com${post.image}`,
+                    url: `${siteUrl}${post.image}`,
                     width: 1200,
                     height: 630,
                     alt: post.title,
@@ -58,7 +60,7 @@ export async function generateMetadata({ params }: BlogPostProps): Promise<Metad
             card: 'summary_large_image',
             title: post.title,
             description: post.excerpt,
-            images: [`https://ankarasepetlivinc.com${post.image}`],
+            images: [`${siteUrl}${post.image}`],
         }
     };
 }
@@ -86,24 +88,24 @@ export default async function BlogPost({ params }: BlogPostProps) {
         '@context': 'https://schema.org',
         '@type': 'Article',
         headline: post.title,
-        image: [`https://ankarasepetlivinc.com${post.image}`],
+        image: [`${siteUrl}${post.image}`],
         datePublished: post.date, // In a real app, use ISO string
         dateModified: post.date,
         author: [{
             '@type': 'Organization',
             name: 'Ankara Sepetli Vinç',
-            url: 'https://ankarasepetlivinc.com'
+            url: siteUrl
         }],
         mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': `https://ankarasepetlivinc.com/blog/${post.slug}`
+            '@id': `${siteUrl}/blog/${post.slug}`
         },
         publisher: {
             '@type': 'Organization',
             name: 'Ankara Sepetli Vinç Kiralama',
             logo: {
                 '@type': 'ImageObject',
-                url: 'https://ankarasepetlivinc.com/logo.png'
+                url: `${siteUrl}/logo.png`
             }
         },
         description: post.excerpt

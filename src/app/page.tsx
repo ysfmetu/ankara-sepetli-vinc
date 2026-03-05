@@ -10,13 +10,15 @@ import Footer from '@/components/Footer';
 import FloatingCTA from '@/components/FloatingCTA';
 
 export default function Home() {
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
       {
         '@type': 'LocalBusiness',
         name: 'Ankara Sepetli Vinç',
-        image: 'https://ankarasepetlivinc.com/logo.png',
+        image: `${siteUrl}/logo.png`,
         telephone: '+905516066878',
         email: 'info@ankarasepetlivinc.com',
         priceRange: '₺₺',
@@ -37,7 +39,7 @@ export default function Home() {
           opens: '00:00',
           closes: '23:59',
         },
-        url: 'https://ankarasepetlivinc.com',
+        url: siteUrl,
       },
       {
         '@type': 'FAQPage',

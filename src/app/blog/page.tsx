@@ -8,11 +8,13 @@ import Footer from '@/components/Footer';
 import FloatingCTA from '@/components/FloatingCTA';
 import Breadcrumb from '@/components/Breadcrumb';
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+
 export const metadata: Metadata = {
     title: 'Bilgi Merkezi ve Blog | Ankara Sepetli Vinç',
     description: 'Ankara sepetli vinç kiralama, yüksekte çalışma güvenliği ve platform seçimi hakkında uzman rehberleri ve güncel yazılar.',
     alternates: {
-        canonical: 'https://ankarasepetlivinc.com/blog',
+        canonical: `${siteUrl}/blog`,
     },
 };
 
@@ -31,7 +33,7 @@ export default function BlogList() {
             '@type': 'ListItem',
             position: index + 1,
             name: item.label,
-            item: `https://ankarasepetlivinc.com${item.href}`
+            item: `${siteUrl}${item.href}`
         }))
     };
 
