@@ -12,11 +12,11 @@ export default function Hero() {
           {/* Text Content */}
           <div className="w-full lg:w-1/2 flex flex-col space-y-6 text-center lg:text-left">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight tracking-tight">
-              Ankara <span className="text-primary">Sepetli Vinç</span> Kiralama
+              Ankara <span className="text-primary">Vinç Kiralama</span> & Sepetli Vinç
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium">
-              Ankara&apos;nın her bölgesine 7/24, sertifikalı operatörlerimizle hızlı, güvenilir ve
-              uygun fiyatlı sepetli vinç, platform ve hiyap kiralama hizmeti sunuyoruz.
+              Ankara'nın her bölgesinde hızlı ve güvenilir <strong>ankara vinç kiralama</strong> ve <strong>sepetli vinç kiralama ankara</strong> hizmetleri sunuyoruz.
+              Sertifikalı ekibimizle profesyonel <strong>operatörlü vinç kiralama</strong>, projelerinize uygun <strong>saatlik vinç kiralama</strong> veya uzun soluklu işleriniz için <strong>günlük vinç kiralama</strong> çözümleri ile 7/24 yanınızdayız.
             </p>
 
             <div className="hidden lg:flex flex-col sm:flex-row gap-4 pt-4">

@@ -5,6 +5,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingCTA from '@/components/FloatingCTA';
 import Breadcrumb from '@/components/Breadcrumb';
+import FAQ from '@/components/FAQ';
 
 export const metadata: Metadata = {
     title: 'Ankara Sepetli Vinç Kiralama | 7/24 Operatörlü Vinç Hizmeti',
@@ -246,6 +247,11 @@ export default function AnkaraSepetliVincKiralamaPage() {
                     </div>
                 </div>
             </main>
+
+            {/* FAQ Block */}
+            <div className="bg-white pb-20">
+                <FAQ />
+            </div>
 
             <Footer />
             <FloatingCTA />

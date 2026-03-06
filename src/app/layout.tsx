@@ -16,11 +16,11 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | Ankara Sepetli Vinç',
-    default: 'Ankara Sepetli Vinç Kiralama | 7/24 Operatörlü Hizmet',
+    template: '%s | Ankara Vinç Kiralama',
+    default: 'Ankara Vinç Kiralama | Sepetli Vinç ve Platform Hizmetleri',
   },
   description:
-    'Ankara sepetli vinç kiralama hizmeti. Ostim, Etimesgut, Sincan ve tüm Ankara’da profesyonel operatörlü vinç kiralama. En uygun sepetli vinç kiralama fiyatları.',
+    'Ankara vinç kiralama alanında lider çözüm ortağınız. Ostim, Etimesgut, Sincan ve tüm Ankara’da profesyonel sepetli vinç kiralama ankara hizmetleri. Operatörlü, saatlik ve günlük kiralama.',
   metadataBase: new URL(siteUrl),
   alternates: {
     canonical: '/',
@@ -30,9 +30,9 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: 'Ankara Sepetli Vinç Kiralama | 7/24 Operatörlü Hizmet',
+    title: 'Ankara Vinç Kiralama | Sepetli Vinç ve Platform Hizmetleri',
     description:
-      'Ankara sepetli vinç kiralama hizmeti. Ostim, Etimesgut, Sincan ve tüm Ankara’da profesyonel operatörlü vinç kiralama. En uygun sepetli vinç kiralama fiyatları.',
+      'Ankara vinç kiralama ve sepetli platform alanında profesyonel çözümler. Güvenli operatörlü araçlarla saatlik, günlük kiralama hizmeti.',
     url: siteUrl,
     siteName: 'Ankara Sepetli Vinç Kiralama',
     locale: 'tr_TR',
