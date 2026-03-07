@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Clock, Calendar, ChevronRight, Phone, MessageCircle } from 'lucide-react';
-import { getAllPosts, getPostBySlug } from '@/lib/mdx';
+import { getAllPosts, getPostBySlug, getPublishedPosts } from '@/lib/mdx';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingCTA from '@/components/FloatingCTA';
@@ -33,6 +33,20 @@ export async function generateMetadata({ params }: BlogPostProps): Promise<Metad
         return {
             title: 'Yazı Bulunamadı | Ankara Sepetli Vinç',
         };
+    }
+
+    const publishedPosts = getPublishedPosts();
+    const isPublished = publishedPosts.some(p => p.slug === post.slug);
+
+    if (!isPublished) {
+        return {
+            title: `${post.title} | Ankara Sepetli Vinç Blog`,
+            description: post.excerpt,
+            robots: {
+                index: false,
+                follow: false
+            }
+        }
     }
 
     return {
@@ -72,6 +86,9 @@ export default async function BlogPost({ params }: BlogPostProps) {
     if (!post) {
         notFound();
     }
+
+    const publishedPosts = getPublishedPosts();
+    const isPublished = publishedPosts.some(p => p.slug === post.slug);
 
     const breadcrumbItems = [
         { label: 'Ana Sayfa', href: '/' },
@@ -113,10 +130,12 @@ export default async function BlogPost({ params }: BlogPostProps) {
 
     return (
         <div className="flex flex-col min-h-screen bg-gray-50">
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-            />
+            {isPublished && (
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+                />
+            )}
             <Header />
 
             <main className="flex-grow pt-8 pb-20">
@@ -217,7 +236,7 @@ export default async function BlogPost({ params }: BlogPostProps) {
                                 <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hidden lg:block">
                                     <h3 className="text-lg font-bold text-gray-900 mb-4 border-b border-gray-100 pb-3">Diğer Yazılar</h3>
                                     <ul className="space-y-4">
-                                        {getAllPosts().filter(p => p.slug !== post.slug).slice(0, 3).map(otherPost => (
+                                        {publishedPosts.filter(p => p.slug !== post.slug).slice(0, 3).map(otherPost => (
                                             <li key={otherPost.slug}>
                                                 <Link href={`/blog/${otherPost.slug}`} className="group flex gap-3">
                                                     <div className="relative w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">

@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { getAllPosts } from '@/lib/mdx';
+import { getPublishedPosts } from '@/lib/mdx';
 import { BookOpen } from 'lucide-react';
 
 export default function BlogSection() {
-    const allPosts = getAllPosts();
+    const allPosts = getPublishedPosts();
     const latestPosts = allPosts.slice(0, 3);
 
     return (

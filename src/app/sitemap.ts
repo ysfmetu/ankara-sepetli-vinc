@@ -1,26 +1,19 @@
 import { MetadataRoute } from 'next';
-import { getAllPosts } from '@/lib/mdx';
+import { getPublishedPosts } from '@/lib/mdx';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
   const routes = [
     '',
-    '/hizmetler',
-    '/hizmetler/tabela-montaj',
-    '/hizmetler/cephe-temizligi',
-    '/hizmetler/elektrik-bakim',
-    '/hizmetler/agac-budama',
-    '/bolgeler',
-    '/bolgeler/cankaya-sepetli-vinc-kiralama',
-    '/bolgeler/yenimahalle-sepetli-vinc-kiralama',
-    '/bolgeler/ostim-sepetli-vinc-kiralama',
-    '/bolgeler/ivedik-sepetli-vinc-kiralama',
-    '/fiyatlar',
-    '/iletisim',
-    '/hakkimizda',
     '/blog',
-    ...getAllPosts().map((post) => `/blog/${post.slug}`),
+    '/hizmetler',
+    '/iletisim',
+    '/sepetli-vinc-kiralama',
+    '/operatorlu-vinc-kiralama',
+    '/saatlik-vinc-kiralama',
+    '/gunluk-vinc-kiralama',
+    ...getPublishedPosts().map((post) => `/blog/${post.slug}`),
   ];
 
   return routes.map((route) => ({

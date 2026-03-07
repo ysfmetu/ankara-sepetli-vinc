@@ -66,42 +66,66 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  href="#hizmetler"
+                  href="/"
                   className="text-sm hover:text-white transition-colors flex items-center gap-2"
                 >
-                  <span className="text-primary">›</span> Hizmetlerimiz
+                  <span className="text-primary">›</span> Ana Sayfa
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#neden-biz"
+                  href="/hizmetler"
                   className="text-sm hover:text-white transition-colors flex items-center gap-2"
                 >
-                  <span className="text-primary">›</span> Neden Biz?
+                  <span className="text-primary">›</span> Hizmetler
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#bolgeler"
+                  href="/blog"
                   className="text-sm hover:text-white transition-colors flex items-center gap-2"
                 >
-                  <span className="text-primary">›</span> Hizmet Bölgeleri
+                  <span className="text-primary">›</span> Blog (Bilgi Merkezi)
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#sss"
+                  href="/iletisim"
                   className="text-sm hover:text-white transition-colors flex items-center gap-2"
                 >
-                  <span className="text-primary">›</span> S.S.S
+                  <span className="text-primary">›</span> İletişim
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#teklif-formu"
+                  href="/sepetli-vinc-kiralama"
+                  className="text-sm hover:text-white transition-colors flex items-center gap-2 mt-4 pt-4 border-t border-gray-800"
+                >
+                  <span className="text-primary">›</span> Sepetli Vinç Kiralama
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/operatorlu-vinc-kiralama"
                   className="text-sm hover:text-white transition-colors flex items-center gap-2"
                 >
-                  <span className="text-primary">›</span> Fiyat Teklifi Al
+                  <span className="text-primary">›</span> Operatörlü Vinç
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/saatlik-vinc-kiralama"
+                  className="text-sm hover:text-white transition-colors flex items-center gap-2"
+                >
+                  <span className="text-primary">›</span> Saatlik Vinç
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/gunluk-vinc-kiralama"
+                  className="text-sm hover:text-white transition-colors flex items-center gap-2"
+                >
+                  <span className="text-primary">›</span> Günlük Vinç
                 </Link>
               </li>
             </ul>

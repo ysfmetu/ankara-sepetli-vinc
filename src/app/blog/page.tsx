@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { BookOpen } from 'lucide-react';
-import { getAllPosts } from '@/lib/mdx';
+import { getPublishedPosts } from '@/lib/mdx';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingCTA from '@/components/FloatingCTA';
@@ -24,7 +24,7 @@ export default function BlogList() {
         { label: 'Blog', href: '/blog' },
     ];
 
-    const allPosts = getAllPosts();
+    const allPosts = getPublishedPosts();
 
     const breadcrumbJsonLd = {
         '@context': 'https://schema.org',

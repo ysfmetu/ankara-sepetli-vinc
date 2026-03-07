@@ -135,29 +135,63 @@ export default function Header() {
           <div className="px-4 pt-2 pb-6 space-y-4 shadow-inner">
             <nav className="flex flex-col space-y-3 py-4 text-gray-800 font-medium">
               <Link
-                href="#hizmetler"
+                href="/"
                 onClick={() => setIsOpen(false)}
                 className="hover:text-primary"
               >
-                Hizmetlerimiz
+                Ana Sayfa
               </Link>
               <Link
-                href="#neden-biz"
+                href="/hizmetler"
                 onClick={() => setIsOpen(false)}
                 className="hover:text-primary"
               >
-                Neden Biz?
+                Hizmetler
               </Link>
               <Link
-                href="#bolgeler"
+                href="/blog"
                 onClick={() => setIsOpen(false)}
                 className="hover:text-primary"
               >
-                Hizmet Bölgeleri
+                Blog
               </Link>
-              <Link href="#sss" onClick={() => setIsOpen(false)} className="hover:text-primary">
-                Sıkça Sorulan Sorular
+              <Link
+                href="/iletisim"
+                onClick={() => setIsOpen(false)}
+                className="hover:text-primary"
+              >
+                İletişim
               </Link>
+              <div className="border-t border-gray-100 my-1 pt-2 flex flex-col space-y-3">
+                <Link
+                  href="/sepetli-vinc-kiralama"
+                  onClick={() => setIsOpen(false)}
+                  className="text-gray-600 hover:text-primary pl-2 border-l-2 border-transparent hover:border-primary transition-all"
+                >
+                  Sepetli Vinç Kiralama
+                </Link>
+                <Link
+                  href="/operatorlu-vinc-kiralama"
+                  onClick={() => setIsOpen(false)}
+                  className="text-gray-600 hover:text-primary pl-2 border-l-2 border-transparent hover:border-primary transition-all"
+                >
+                  Operatörlü Vinç
+                </Link>
+                <Link
+                  href="/saatlik-vinc-kiralama"
+                  onClick={() => setIsOpen(false)}
+                  className="text-gray-600 hover:text-primary pl-2 border-l-2 border-transparent hover:border-primary transition-all"
+                >
+                  Saatlik Vinç
+                </Link>
+                <Link
+                  href="/gunluk-vinc-kiralama"
+                  onClick={() => setIsOpen(false)}
+                  className="text-gray-600 hover:text-primary pl-2 border-l-2 border-transparent hover:border-primary transition-all"
+                >
+                  Günlük Vinç
+                </Link>
+              </div>
             </nav>
             <div className="flex flex-col gap-3">
               <a

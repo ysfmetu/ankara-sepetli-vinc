@@ -28,7 +28,7 @@ function ensureDirectory() {
 }
 
 /**
- * Gets all MDX files parsed with frontmatter, sorted by date.
+ * Gets ALL MDX files (published and unpublished)
  */
 export function getAllPosts(): BlogPost[] {
     ensureDirectory();
@@ -78,7 +78,19 @@ export function getAllPosts(): BlogPost[] {
 }
 
 /**
- * Get a specific post by its slug.
+ * Gets only published MDX files (date <= today), sorted by date.
+ */
+export function getPublishedPosts(): BlogPost[] {
+    const allPosts = getAllPosts();
+    const now = new Date();
+    // Normalize generic dates by ignoring time of day differences (optional, but robust)
+    now.setHours(23, 59, 59, 999);
+
+    return allPosts.filter(post => new Date(post.date).getTime() <= now.getTime());
+}
+
+/**
+ * Get a specific post by its slug (can be published or unpublished).
  */
 export function getPostBySlug(slug: string): BlogPost | undefined {
     const posts = getAllPosts();

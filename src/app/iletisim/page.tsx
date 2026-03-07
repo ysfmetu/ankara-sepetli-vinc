@@ -8,18 +8,20 @@ import LeadForm from '@/components/LeadForm';
 
 import Breadcrumb from '@/components/Breadcrumb';
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ankarasepetlivinc.com';
+
 export const metadata: Metadata = {
-  title: 'İletişim | Ankara Sepetli Vinç',
+  title: 'Ankara Vinç Kiralama İletişim',
   description:
-    'Ankara Sepetli Vinç Kiralama iletişim bilgileri, nöbetçi telefon numarası, e-posta adresi ve ofis lokasyonumuz.',
+    'Ankara sepetli vinç kiralama hizmeti için bizimle iletişime geçin. Ostim, Etimesgut, Çankaya, Yenimahalle bölgelerinde operatörlü vinç kiralama 7/24 hizmetinizde.',
   alternates: {
-    canonical: '/iletisim',
+    canonical: `${siteUrl}/iletisim`,
   },
   openGraph: {
-    title: 'İletişim | Ankara Sepetli Vinç',
+    title: 'Ankara Vinç Kiralama İletişim | Ankara Sepetli Vinç',
     description:
-      'Ankara Sepetli Vinç Kiralama iletişim bilgileri, nöbetçi telefon numarası, e-posta adresi ve ofis lokasyonumuz.',
-    url: 'https://ankarasepetlivinc.com/iletisim',
+      'Ankara sepetli vinç kiralama hizmeti için bizimle iletişime geçin. Ostim ve tüm bölgelerde operatörlü kiralama 7/24 hizmet.',
+    url: `${siteUrl}/iletisim`,
   },
 };
 
@@ -27,8 +29,38 @@ export default function IletisimPage() {
   const phone = '0551 606 68 78';
   const telLink = 'tel:+905516066878';
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    name: 'Ankara Sepetli Vinç Kiralama',
+    telephone: '+905516066878',
+    email: 'info@ankarasepetlivinc.com',
+    url: siteUrl,
+    image: `${siteUrl}/logo.png`,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Ostim Organize Sanayi Bölgesi',
+      addressLocality: 'Yenimahalle',
+      addressRegion: 'Ankara',
+      addressCountry: 'TR',
+    },
+    areaServed: 'Ankara',
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+905516066878',
+      contactType: 'customer service',
+      contactOption: 'TollFree',
+      areaServed: 'TR',
+      availableLanguage: 'Turkish'
+    }
+  };
+
   return (
     <div className="flex flex-col min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
 
       <main className="flex-grow">
@@ -41,11 +73,10 @@ export default function IletisimPage() {
               ]}
             />
             <h1 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6">
-              Bizimle <span className="text-primary">İletişime Geçin</span>
+              <span className="text-primary">İletişim</span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-600">
-              7 gün 24 saat aktif çağrı merkezimiz ve nöbetçi ekiplerimizle sorularınızı yanıtlamaya
-              ve araç tahsis etmeye hazırız.
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+              <strong>Ankara vinç kiralama</strong> ve <strong>sepetli vinç kiralama Ankara</strong> çözümleri için bize 7 gün 24 saat ulaşabilirsiniz. Acil durumlarda <strong>operatörlü vinç kiralama</strong> taleplerinize anında yanıt veriyor, Ostim merkezimizden aracı derhal yola çıkarıyoruz. Size en yakın vinci yönlendirebilmemiz için çalışma lokasyonunuzu iletmeniz yeterlidir.
             </p>
           </div>
         </div>
@@ -113,6 +144,31 @@ export default function IletisimPage() {
                     ekstra mesai talep etmiyoruz.
                   </p>
                 </div>
+              </div>
+
+              {/* Service Areas */}
+              <div className="flex items-start gap-4">
+                <div className="bg-red-50 p-4 rounded-xl text-primary flex-shrink-0">
+                  <MapPin size={28} />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900">Hizmet Bölgelerimiz</h3>
+                  <p className="text-lg text-gray-600 font-medium mt-1">
+                    <strong>Ankara ve çevresi:</strong><br />
+                    Ostim, Etimesgut, Çankaya, Yenimahalle, Sincan, Keçiören, Mamak başta olmak üzere tüm merkez ve çevre ilçelere hızlı sevk.
+                  </p>
+                </div>
+              </div>
+
+              {/* Trust Section */}
+              <div className="mt-8 pt-8 border-t border-gray-200">
+                <h4 className="text-2xl font-bold text-gray-900 mb-4">Neden Biz?</h4>
+                <ul className="space-y-3 text-gray-600 text-lg">
+                  <li className="flex items-center gap-2"><span className="text-primary font-bold">✓</span> Periyodik Bakımlı Güvenli Filo</li>
+                  <li className="flex items-center gap-2"><span className="text-primary font-bold">✓</span> G Sınıfı Sertifikalı Operatörler</li>
+                  <li className="flex items-center gap-2"><span className="text-primary font-bold">✓</span> Söz Verilen Saatte Teslimat</li>
+                  <li className="flex items-center gap-2"><span className="text-primary font-bold">✓</span> Rekabetçi ve Şeffaf Fiyatlandırma</li>
+                </ul>
               </div>
 
               {/* Map Placeholder */}
