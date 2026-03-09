@@ -6,18 +6,20 @@ import CallToAction from '@/components/CallToAction';
 
 import Breadcrumb from '@/components/Breadcrumb';
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ankarasepetlivinckirala.com';
+
 export const metadata: Metadata = {
   title: 'Çankaya Sepetli Vinç Kiralama',
   description:
     'Ankara Çankaya bölgesinde uygun fiyatlı, 7/24 kiralık sepetli vinç ve platform hizmetleri.',
   alternates: {
-    canonical: '/bolgeler/cankaya-sepetli-vinc-kiralama',
+    canonical: `${siteUrl}/bolgeler/cankaya-sepetli-vinc-kiralama`,
   },
   openGraph: {
     title: 'Çankaya Sepetli Vinç Kiralama | Ankara Sepetli Vinç',
     description:
       'Ankara Çankaya bölgesinde uygun fiyatlı, 7/24 kiralık sepetli vinç ve platform hizmetleri.',
-    url: 'https://ankarasepetlivinc.com/bolgeler/cankaya-sepetli-vinc-kiralama',
+    url: `${siteUrl}/bolgeler/cankaya-sepetli-vinc-kiralama`,
   },
 };
 

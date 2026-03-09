@@ -6,18 +6,20 @@ import CallToAction from '@/components/CallToAction';
 
 import Breadcrumb from '@/components/Breadcrumb';
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ankarasepetlivinckirala.com';
+
 export const metadata: Metadata = {
   title: 'Yenimahalle Sepetli Vinç Kiralama',
   description:
     'Ankara Yenimahalle sepetli vinç kiralama. Şaşmaz, Batıkent ve OSTİM bölgesi anında sevk avantajı.',
   alternates: {
-    canonical: '/bolgeler/yenimahalle-sepetli-vinc-kiralama',
+    canonical: `${siteUrl}/bolgeler/yenimahalle-sepetli-vinc-kiralama`,
   },
   openGraph: {
     title: 'Yenimahalle Sepetli Vinç | Ankara Sepetli Vinç',
     description:
       'Ankara Yenimahalle sepetli vinç kiralama. Şaşmaz, Batıkent ve OSTİM bölgesi anında sevk avantajı.',
-    url: 'https://ankarasepetlivinc.com/bolgeler/yenimahalle-sepetli-vinc-kiralama',
+    url: `${siteUrl}/bolgeler/yenimahalle-sepetli-vinc-kiralama`,
   },
 };
 

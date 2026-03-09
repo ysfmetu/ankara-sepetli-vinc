@@ -6,11 +6,13 @@ import Footer from '@/components/Footer';
 import FloatingCTA from '@/components/FloatingCTA';
 import Breadcrumb from '@/components/Breadcrumb';
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ankarasepetlivinckirala.com';
+
 export const metadata: Metadata = {
     title: 'Etimesgut Sepetli Vinç Kiralama | Eryaman ve Bağlıca Bölgesi',
     description: 'Ankara Etimesgut, Eryaman, Elvankent ve Bağlıca bölgelerinde kiralık sepetli vinç, hiyap ve operatörlü vinç hizmetimiz 7/24 devam etmektedir.',
     alternates: {
-        canonical: 'https://ankarasepetlivinc.com/etimesgut-sepetli-vinc',
+        canonical: `${siteUrl}/etimesgut-sepetli-vinc`,
     },
 };
 

@@ -20,7 +20,7 @@ export default function Home() {
         name: 'Ankara Sepetli Vinç',
         image: `${siteUrl}/logo.png`,
         telephone: '+905516066878',
-        email: 'info@ankarasepetlivinc.com',
+        email: 'info@ankarasepetlivinckirala.com',
         priceRange: '₺₺',
         address: {
           '@type': 'PostalAddress',

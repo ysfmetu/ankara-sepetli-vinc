@@ -37,7 +37,7 @@ export default function CallToAction({
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             {/* Teklif Al Form Yönlendirmesi */}
             <Link
-              href="/#teklif-formu"
+              href="/iletisim"
               className="w-full sm:w-auto flex items-center justify-center gap-2 bg-white text-primary hover:bg-gray-50 px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg hover:shadow-xl"
             >
               Hemen Teklif Al

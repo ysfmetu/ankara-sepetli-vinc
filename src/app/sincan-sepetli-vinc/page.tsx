@@ -6,11 +6,13 @@ import Footer from '@/components/Footer';
 import FloatingCTA from '@/components/FloatingCTA';
 import Breadcrumb from '@/components/Breadcrumb';
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ankarasepetlivinckirala.com';
+
 export const metadata: Metadata = {
     title: 'Sincan Sepetli Vinç | Sincan Organize Kiralık Vinç',
     description: 'Ankara Sincan OSB, Fatih ve Törekent bölgelerinde fabrika bakımları ve şantiye hizmetleri için 7/24 sepetli vinç, örümcek platform kiralama.',
     alternates: {
-        canonical: 'https://ankarasepetlivinc.com/sincan-sepetli-vinc',
+        canonical: `${siteUrl}/sincan-sepetli-vinc`,
     },
 };
 

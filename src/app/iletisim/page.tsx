@@ -8,7 +8,7 @@ import LeadForm from '@/components/LeadForm';
 
 import Breadcrumb from '@/components/Breadcrumb';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ankarasepetlivinc.com';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ankarasepetlivinckirala.com';
 
 export const metadata: Metadata = {
   title: 'Ankara Vinç Kiralama İletişim',

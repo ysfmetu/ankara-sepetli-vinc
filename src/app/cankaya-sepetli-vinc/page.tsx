@@ -6,11 +6,13 @@ import Footer from '@/components/Footer';
 import FloatingCTA from '@/components/FloatingCTA';
 import Breadcrumb from '@/components/Breadcrumb';
 
-export const const_metadata: Metadata = {
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ankarasepetlivinckirala.com';
+
+export const metadata: Metadata = {
     title: 'Çankaya Sepetli Vinç | Merkez Vinç Kiralama',
     description: 'Ankara Çankaya ilçesinde iş güvenliği standartlarına uygun sepetli platform, vinç kiralama ve hiyap hizmeti. Kızılay, Tunalı ve tüm mahallelere acil servis.',
     alternates: {
-        canonical: 'https://ankarasepetlivinc.com/cankaya-sepetli-vinc',
+        canonical: `${siteUrl}/cankaya-sepetli-vinc`,
     },
 };
 

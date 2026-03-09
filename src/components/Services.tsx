@@ -39,7 +39,10 @@ export default function Services() {
           </div>
           <p className="text-gray-600 text-lg">
             Ankara&apos;nın her noktasına farklı yükseklik ve çalışma alanlarına uygun araç
-            filomuzla profesyonel çözümler üretiyoruz.
+            filomuzla profesyonel çözümler üretiyoruz.{' '}
+            <Link href="/sepetli-vinc-kiralama" className="text-primary hover:underline hover:text-primary-hover font-medium transition-colors">
+              Sepetli vinç kiralama hizmeti hakkında detaylı bilgi için sayfamızı inceleyin.
+            </Link>
           </p>
         </div>
 
@@ -79,7 +82,7 @@ export default function Services() {
 
         <div className="mt-12 text-center">
           <Link
-            href="#teklif-formu"
+            href="/hizmetler"
             className="inline-flex max-w-sm justify-center rounded-full bg-primary hover:bg-primary-hover text-white font-bold py-3 px-8 transition-colors shadow-lg"
           >
             Tüm Hizmetlerimiz

@@ -6,18 +6,20 @@ import CallToAction from '@/components/CallToAction';
 
 import Breadcrumb from '@/components/Breadcrumb';
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ankarasepetlivinckirala.com';
+
 export const metadata: Metadata = {
   title: 'Elektrik ve Bakım İşleri Sepetli Vinç',
   description:
     'Ankara sokak aydınlatması, trafo, yüksek gerilim hatları elektrik ve bakım işleri için 7/24 sepetli vinç kiralama.',
   alternates: {
-    canonical: '/hizmetler/elektrik-bakim',
+    canonical: `${siteUrl}/hizmetler/elektrik-bakim`,
   },
   openGraph: {
     title: 'Elektrik Bakım Sepetli Vinç Kiralama | Ankara Sepetli Vinç',
     description:
       'Ankara sokak aydınlatması, trafo, yüksek gerilim hatları elektrik ve bakım işleri için 7/24 sepetli vinç kiralama.',
-    url: 'https://ankarasepetlivinc.com/hizmetler/elektrik-bakim',
+    url: `${siteUrl}/hizmetler/elektrik-bakim`,
   },
 };
 

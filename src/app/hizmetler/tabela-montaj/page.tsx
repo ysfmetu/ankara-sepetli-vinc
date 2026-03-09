@@ -6,18 +6,20 @@ import CallToAction from '@/components/CallToAction';
 
 import Breadcrumb from '@/components/Breadcrumb';
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ankarasepetlivinckirala.com';
+
 export const metadata: Metadata = {
   title: 'Tabela Montajı İçin Sepetli Vinç Kiralama',
   description:
     'Ankara tabela, totem ve dış cephe reklam montajlarınız için güvenilir, uygun fiyatlı sepetli vinç kiralama hizmeti.',
   alternates: {
-    canonical: '/hizmetler/tabela-montaj',
+    canonical: `${siteUrl}/hizmetler/tabela-montaj`,
   },
   openGraph: {
     title: 'Tabela Montajı İçin Sepetli Vinç | Ankara Sepetli Vinç',
     description:
       'Ankara tabela, totem ve dış cephe reklam montajlarınız için güvenilir, uygun fiyatlı sepetli vinç kiralama hizmeti.',
-    url: 'https://ankarasepetlivinc.com/hizmetler/tabela-montaj',
+    url: `${siteUrl}/hizmetler/tabela-montaj`,
   },
 };
 

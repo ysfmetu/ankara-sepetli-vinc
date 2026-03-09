@@ -7,11 +7,13 @@ import FloatingCTA from '@/components/FloatingCTA';
 import Breadcrumb from '@/components/Breadcrumb';
 import FAQ from '@/components/FAQ';
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ankarasepetlivinckirala.com';
+
 export const metadata: Metadata = {
     title: 'Sepetli Vinç Kiralama Fiyatları Ankara 2025 | Güncel Tarife',
     description: 'Saatlik, günlük ve aylık periyotlarla sepetli vinç kiralama fiyatları. Metraj ve yüksekliğe göre Ankara vinç kiralama ücretleri rehberi.',
     alternates: {
-        canonical: 'https://ankarasepetlivinc.com/sepetli-vinc-kiralama-fiyatlari',
+        canonical: `${siteUrl}/sepetli-vinc-kiralama-fiyatlari`,
     },
 };
 

@@ -8,7 +8,7 @@ import Services from '@/components/Services';
 import Breadcrumb from '@/components/Breadcrumb';
 import FAQ from '@/components/FAQ';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ankarasepetlivinc.com';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ankarasepetlivinckirala.com';
 
 export const metadata: Metadata = {
   title: 'Ankara Vinç Kiralama Hizmetleri',

@@ -6,18 +6,20 @@ import CallToAction from '@/components/CallToAction';
 
 import Breadcrumb from '@/components/Breadcrumb';
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ankarasepetlivinckirala.com';
+
 export const metadata: Metadata = {
   title: 'Cephe Temizliği İçin Sepetli Vinç',
   description:
     'Ankara genelinde plaza, rezidans, dış cephe cam temizliği için sepetli vinç ve platform kiralama.',
   alternates: {
-    canonical: '/hizmetler/cephe-temizligi',
+    canonical: `${siteUrl}/hizmetler/cephe-temizligi`,
   },
   openGraph: {
     title: 'Cephe Temizliği Sepetli Vinç Kiralama | Ankara Sepetli Vinç',
     description:
       'Ankara genelinde plaza, rezidans, dış cephe cam temizliği için sepetli vinç ve platform kiralama.',
-    url: 'https://ankarasepetlivinc.com/hizmetler/cephe-temizligi',
+    url: `${siteUrl}/hizmetler/cephe-temizligi`,
   },
 };
 

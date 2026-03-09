@@ -5,18 +5,20 @@ import FloatingCTA from '@/components/FloatingCTA';
 import CallToAction from '@/components/CallToAction';
 import Breadcrumb from '@/components/Breadcrumb';
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ankarasepetlivinckirala.com';
+
 export const metadata: Metadata = {
   title: 'Vinç Kiralama Fiyatları | Ankara 2024',
   description:
     'Saatlik, günlük ve haftalık sepetli vinç kiralama fiyatları, fiyatlandırma kriterleri ve örnek tablolar.',
   alternates: {
-    canonical: '/fiyatlar',
+    canonical: `${siteUrl}/fiyatlar`,
   },
   openGraph: {
     title: 'Sepetli Vinç Kiralama Fiyatları | Ankara Sepetli Vinç',
     description:
       'Saatlik, günlük ve haftalık sepetli vinç kiralama fiyatları, fiyatlandırma kriterleri ve örnek tablolar.',
-    url: 'https://ankarasepetlivinc.com/fiyatlar',
+    url: `${siteUrl}/fiyatlar`,
   },
 };
 

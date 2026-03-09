@@ -6,18 +6,20 @@ import CallToAction from '@/components/CallToAction';
 
 import Breadcrumb from '@/components/Breadcrumb';
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ankarasepetlivinckirala.com';
+
 export const metadata: Metadata = {
   title: 'Etimesgut Sepetli Vinç Kiralama',
   description:
     'Ankara Etimesgut bölgesinde uygun fiyatlı, 7/24 kiralık sepetli vinç ve platform hizmetleri.',
   alternates: {
-    canonical: '/bolgeler/etimesgut-sepetli-vinc-kiralama',
+    canonical: `${siteUrl}/bolgeler/etimesgut-sepetli-vinc-kiralama`,
   },
   openGraph: {
     title: 'Etimesgut Sepetli Vinç Kiralama | Ankara Sepetli Vinç',
     description:
       'Ankara Etimesgut bölgesinde uygun fiyatlı, 7/24 kiralık sepetli vinç ve platform hizmetleri.',
-    url: 'https://ankarasepetlivinc.com/bolgeler/etimesgut-sepetli-vinc-kiralama',
+    url: `${siteUrl}/bolgeler/etimesgut-sepetli-vinc-kiralama`,
   },
 };
 

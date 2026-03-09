@@ -6,11 +6,13 @@ import Footer from '@/components/Footer';
 import FloatingCTA from '@/components/FloatingCTA';
 import Breadcrumb from '@/components/Breadcrumb';
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ankarasepetlivinckirala.com';
+
 export const metadata: Metadata = {
     title: 'Ostim Sepetli Vinç | Organize Sanayi Kiralık Platform',
     description: 'Ankara Ostim endüstri ve sanayi bölgesinde kurumsal sepetli vinç kiralama hizmetleri. 7/24 saatlik ve günlük platform kiralama.',
     alternates: {
-        canonical: 'https://ankarasepetlivinc.com/ostim-sepetli-vinc',
+        canonical: `${siteUrl}/ostim-sepetli-vinc`,
     },
 };
 

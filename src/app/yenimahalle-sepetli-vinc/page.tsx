@@ -6,11 +6,13 @@ import Footer from '@/components/Footer';
 import FloatingCTA from '@/components/FloatingCTA';
 import Breadcrumb from '@/components/Breadcrumb';
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ankarasepetlivinckirala.com';
+
 export const metadata: Metadata = {
     title: 'Yenimahalle Sepetli Vinç | Saatlik ve Günlük Kiralama',
     description: 'Ankara Yenimahalle, Batıkent, Demetevler ve Macunköy sanayi sahalarına özel operatörlü kiralık sepetli vinç, hiyap platform çözümleri. Şok fiyatlar!',
     alternates: {
-        canonical: 'https://ankarasepetlivinc.com/yenimahalle-sepetli-vinc',
+        canonical: `${siteUrl}/yenimahalle-sepetli-vinc`,
     },
 };
 

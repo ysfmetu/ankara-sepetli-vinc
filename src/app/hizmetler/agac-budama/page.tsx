@@ -6,18 +6,20 @@ import CallToAction from '@/components/CallToAction';
 
 import Breadcrumb from '@/components/Breadcrumb';
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ankarasepetlivinckirala.com';
+
 export const metadata: Metadata = {
   title: 'Ağaç Budama Sepetli Vinç | Ankara',
   description:
     "Ankara'da peyzaj, site içi ve riskli ağaç budama işleriniz için uygun fiyatlı sepetli vinç kiralama hizmeti.",
   alternates: {
-    canonical: '/hizmetler/agac-budama',
+    canonical: `${siteUrl}/hizmetler/agac-budama`,
   },
   openGraph: {
     title: 'Ağaç Budama İçin Sepetli Vinç | Ankara Sepetli Vinç',
     description:
       "Ankara'da peyzaj, site içi ve riskli ağaç budama işleriniz için uygun fiyatlı sepetli vinç kiralama hizmeti.",
-    url: 'https://ankarasepetlivinc.com/hizmetler/agac-budama',
+    url: `${siteUrl}/hizmetler/agac-budama`,
   },
 };
 

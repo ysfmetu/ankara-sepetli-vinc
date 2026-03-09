@@ -19,7 +19,7 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
       '@type': 'ListItem',
       position: index + 1,
       name: item.label,
-      item: `https://ankarasepetlivinc.com${item.href}`,
+      item: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://ankarasepetlivinckirala.com'}${item.href}`,
     })),
   };
 
