@@ -70,6 +70,48 @@ function markdownToHtml(md: string): string {
             continue;
         }
 
+        // Markdown table detection
+        if (line.trim().startsWith('|') && line.trim().endsWith('|')) {
+            if (inList) {
+                htmlLines.push(listType === 'ul' ? '</ul>' : '</ol>');
+                inList = false;
+            }
+            // Collect all table rows
+            const tableRows: string[] = [line];
+            while (i + 1 < lines.length && lines[i + 1].trim().startsWith('|') && lines[i + 1].trim().endsWith('|')) {
+                i++;
+                tableRows.push(lines[i]);
+            }
+            // Parse table
+            const parseCells = (row: string) => row.trim().replace(/^\|/, '').replace(/\|$/, '').split('|').map(c => c.trim());
+            const isSeparator = (row: string) => /^\|[\s\-:|]+\|$/.test(row.trim());
+
+            let tableHtml = '<div class="overflow-x-auto my-8"><table class="min-w-full border-collapse border border-gray-200 rounded-lg overflow-hidden">';
+            let headerDone = false;
+
+            for (let r = 0; r < tableRows.length; r++) {
+                if (isSeparator(tableRows[r])) continue; // Skip separator row
+                const cells = parseCells(tableRows[r]);
+                if (!headerDone) {
+                    tableHtml += '<thead class="bg-gray-100"><tr>';
+                    cells.forEach(cell => {
+                        tableHtml += `<th class="border border-gray-200 px-4 py-3 text-left text-sm font-bold text-gray-900">${inlineMarkdown(cell)}</th>`;
+                    });
+                    tableHtml += '</tr></thead><tbody>';
+                    headerDone = true;
+                } else {
+                    tableHtml += '<tr class="even:bg-gray-50">';
+                    cells.forEach(cell => {
+                        tableHtml += `<td class="border border-gray-200 px-4 py-3 text-sm text-gray-700">${inlineMarkdown(cell)}</td>`;
+                    });
+                    tableHtml += '</tr>';
+                }
+            }
+            tableHtml += '</tbody></table></div>';
+            htmlLines.push(tableHtml);
+            continue;
+        }
+
         // Headings
         const h4Match = line.match(/^####\s+(.+)/);
         const h3Match = line.match(/^###\s+(.+)/);
