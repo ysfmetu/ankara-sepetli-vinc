@@ -10,7 +10,7 @@ import Footer from '@/components/Footer';
 import FloatingCTA from '@/components/FloatingCTA';
 
 export default function Home() {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -29,10 +29,17 @@ export default function Home() {
           addressRegion: 'Ankara',
           addressCountry: 'TR',
         },
-        areaServed: {
+        serviceArea: {
           '@type': 'City',
           name: 'Ankara',
         },
+        areaServed: [
+          { '@type': 'City', name: 'Çankaya' },
+          { '@type': 'City', name: 'Yenimahalle' },
+          { '@type': 'City', name: 'Etimesgut' },
+          { '@type': 'City', name: 'Sincan' },
+          { '@type': 'City', name: 'Keçiören' },
+        ],
         openingHoursSpecification: {
           '@type': 'OpeningHoursSpecification',
           dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],

@@ -37,6 +37,7 @@ export function getAllPosts(): BlogPost[] {
 
     const posts: BlogPost[] = files
         .filter((fileName) => fileName.endsWith('.mdx'))
+        .filter((fileName) => fileName !== 'cephe-temizligi-sepetli-vinc.mdx')
         .map((fileName) => {
             const fullPath = path.join(CONTENT_PATH, fileName);
             const fileContents = fs.readFileSync(fullPath, 'utf8');
