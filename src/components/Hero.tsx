@@ -12,11 +12,10 @@ export default function Hero() {
           {/* Text Content */}
           <div className="w-full lg:w-1/2 flex flex-col space-y-6 text-center lg:text-left">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight tracking-tight">
-              Ankara <span className="text-primary">Vinç Kiralama</span> & Sepetli Vinç
+              Ankara Sepetli Vinç <span className="text-primary">Kiralama Hizmeti</span>
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium">
-              Ankara'nın her bölgesinde hızlı ve güvenilir <strong>ankara vinç kiralama</strong> ve <strong>sepetli vinç kiralama ankara</strong> hizmetleri sunuyoruz.
-              Sertifikalı ekibimizle profesyonel <strong>operatörlü vinç kiralama</strong>, projelerinize uygun <strong>saatlik vinç kiralama</strong> veya uzun soluklu işleriniz için <strong>günlük vinç kiralama</strong> çözümleri ile 7/24 yanınızdayız.
+              <strong>Ankara sepetli vinç kiralama</strong> hizmeti kapsamında şehrin tüm ilçelerinde hızlı ve güvenli çözümler sunuyoruz. Profesyonel operatörlerimiz ve bakımlı araç filomuz ile tabela montajı, dış cephe çalışmaları, elektrik bakım ve yüksek erişim gerektiren tüm işlerinizde yanınızdayız. <strong>Ankara vinç kiralama</strong> ihtiyaçlarınız için 7/24 hizmet veriyoruz.
             </p>
 
             <div className="hidden lg:flex flex-col sm:flex-row gap-4 pt-4">
@@ -38,6 +37,13 @@ export default function Hero() {
                 </div>
                 <span className="text-gray-700 font-medium">Yeni Ekipman</span>
               </div>
+            </div>
+            
+            <div className="mt-8 pt-4">
+              <p className="text-lg font-bold text-gray-800 bg-white/60 p-4 rounded-xl shadow-sm border border-gray-100 inline-block">
+                Ankara sepetli vinç kiralama hizmeti için hemen arayın:{' '}
+                <a href="tel:+905516066878" className="text-primary hover:underline whitespace-nowrap">0551 606 68 78</a>
+              </p>
             </div>
           </div>
 

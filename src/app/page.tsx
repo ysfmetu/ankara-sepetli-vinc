@@ -4,6 +4,7 @@ import TrustBar from '@/components/TrustBar';
 import Services from '@/components/Services';
 import WhyUs from '@/components/WhyUs';
 import ServiceAreas from '@/components/ServiceAreas';
+import SEOBlock from '@/components/SEOBlock';
 import FAQ from '@/components/FAQ';
 import BlogSection from '@/components/BlogSection';
 import Footer from '@/components/Footer';
@@ -103,6 +104,7 @@ export default function Home() {
         <Services />
         <WhyUs />
         <ServiceAreas />
+        <SEOBlock />
         <FAQ />
         <BlogSection />
       </main>

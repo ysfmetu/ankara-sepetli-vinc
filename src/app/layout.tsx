@@ -17,11 +17,11 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | Ankara Vinç Kiralama',
-    default: 'Ankara Vinç Kiralama | Sepetli Vinç ve Platform Hizmetleri',
+    template: '%s | Ankara Sepetli Vinç Kiralama',
+    default: 'Ankara Sepetli Vinç Kiralama | Hızlı Servis & Uygun Fiyat',
   },
   description:
-    'Ankara vinç kiralama alanında lider çözüm ortağınız. Ostim, Etimesgut, Sincan ve tüm Ankara’da profesyonel sepetli vinç kiralama ankara hizmetleri. Operatörlü, saatlik ve günlük kiralama.',
+    'Ankara sepetli vinç kiralama hizmeti. 7/24 hızlı servis, uygun fiyat ve güvenli vinç çözümleri için hemen arayın: 0551 606 68 78',
   metadataBase: new URL(siteUrl),
   alternates: {
     canonical: '/',
@@ -31,9 +31,9 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: 'Ankara Vinç Kiralama | Sepetli Vinç ve Platform Hizmetleri',
+    title: 'Ankara Sepetli Vinç Kiralama | Hızlı Servis & Uygun Fiyat',
     description:
-      'Ankara vinç kiralama ve sepetli platform alanında profesyonel çözümler. Güvenli operatörlü araçlarla saatlik, günlük kiralama hizmeti.',
+      'Ankara sepetli vinç kiralama hizmeti. 7/24 hızlı servis, uygun fiyat ve güvenli vinç çözümleri için hemen arayın: 0551 606 68 78',
     url: siteUrl,
     siteName: 'Ankara Sepetli Vinç Kiralama',
     locale: 'tr_TR',
@@ -41,9 +41,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ankara Sepetli Vinç Kiralama | 7/24 Operatörlü Hizmet',
+    title: 'Ankara Sepetli Vinç Kiralama | Hızlı Servis & Uygun Fiyat',
     description:
-      'Ankara sepetli vinç kiralama hizmeti. Ostim, Etimesgut, Sincan ve tüm Ankara’da profesyonel operatörlü vinç kiralama. En uygun fiyatlar.',
+      'Ankara sepetli vinç kiralama hizmeti. 7/24 hızlı servis, uygun fiyat ve güvenli vinç çözümleri için hemen arayın: 0551 606 68 78',
   },
 };
 
@@ -52,10 +52,10 @@ const jsonLd = {
   '@type': 'LocalBusiness',
   name: 'Ankara Sepetli Vinç Kiralama',
   image: `${siteUrl}/images/hero-bg.jpg`,
-  description: 'Ankara sepetli vinç kiralama hizmeti. Ostim, Etimesgut, Sincan ve tüm Ankara’da profesyonel operatörlü vinç kiralama.',
+  description: 'Ankara sepetli vinç kiralama hizmeti. 7/24 hızlı servis, uygun fiyat ve güvenli vinç çözümleri için hemen arayın: 0551 606 68 78',
   '@id': siteUrl,
   url: siteUrl,
-  telephone: '+905320000000',
+  telephone: '+905516066878',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Yenimahalle',

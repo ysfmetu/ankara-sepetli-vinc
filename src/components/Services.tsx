@@ -56,7 +56,7 @@ export default function Services() {
               <div className="relative w-full h-[220px] overflow-hidden rounded-t-2xl">
                 <Image
                   src={service.image}
-                  alt={service.title}
+                  alt={`Ankara sepetli vinç kiralama hizmeti - ${service.title}`}
                   fill
                   sizes="(max-width: 768px) 100vw, 25vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
