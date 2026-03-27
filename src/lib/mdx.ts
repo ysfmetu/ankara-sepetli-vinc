@@ -204,14 +204,30 @@ export function getAllPosts(): BlogPost[] {
 
     const files = fs.readdirSync(CONTENT_PATH);
 
-    const posts: BlogPost[] = files
+    const posts = files
         .filter((fileName) => fileName.endsWith('.mdx'))
         .filter((fileName) => fileName !== 'cephe-temizligi-sepetli-vinc.mdx')
         .map((fileName) => {
             const fullPath = path.join(CONTENT_PATH, fileName);
+            
+            try {
+                const stats = fs.statSync(fullPath);
+                if (stats.isDirectory() || stats.size === 0) return null;
+            } catch (e) {
+                return null;
+            }
+
             const fileContents = fs.readFileSync(fullPath, 'utf8');
 
+            if (!fileContents || fileContents.trim() === '') {
+                return null;
+            }
+
             const { data, content } = matter(fileContents);
+
+            if (!data || !data.title || !data.date) {
+                return null; // Skip invalid frontmatter posts
+            }
 
             let slugParsed = data.slug || fileName.replace(/\.mdx$/, '');
             let imagePath = data.image || `/images/blog/${slugParsed}-cover.webp`;
@@ -238,16 +254,27 @@ export function getAllPosts(): BlogPost[] {
             return {
                 title: data.title,
                 slug: slugParsed,
-                excerpt: data.description || data.excerpt, // Handle both common variants
+                excerpt: data.description || data.excerpt || '', // Handle both common variants
                 date: data.date,
                 image: imagePath,
                 readTime: data.readTime || '5 dk',
                 content: htmlContent,
             } as BlogPost;
-        });
+        })
+        .filter((post): post is BlogPost => post !== null); // Removing nulls
+
+    // Log all detected blog slugs during build for debugging
+    console.log(`[MDX] Detected ${posts.length} valid blog posts:`, posts.map(p => p.slug).join(', '));
 
     // Sort by date (descending)
-    return posts.sort((a, b) => (new Date(b.date).getTime() - new Date(a.date).getTime()));
+    return posts.sort((a, b) => {
+        const dateA = new Date(a.date).getTime();
+        const dateB = new Date(b.date).getTime();
+        // Handle invalid dates gracefully, placing them at the end
+        if (isNaN(dateA)) return 1;
+        if (isNaN(dateB)) return -1;
+        return dateB - dateA;
+    });
 }
 
 /**
