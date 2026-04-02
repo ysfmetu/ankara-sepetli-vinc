@@ -8,21 +8,25 @@ export default function Services() {
       title: 'Tabela & Montaj',
       description: 'Açık hava reklamcılığı, totem ve dış cephe tabelalarının güvenli montajı.',
       image: '/images/services/tabela-montaj.jpg',
+      href: '/hizmetler/tabela-montaj',
     },
     {
       title: 'Cephe Temizliği',
       description: 'Plaza, iş merkezi ve yüksek katlı binaların dış cephe ve cam temizliği.',
       image: '/images/services/cephe-temizligi.jpg',
+      href: '/hizmetler/cephe-temizligi-sepetli-vinc',
     },
     {
       title: 'Elektrik & Bakım',
       description: 'Sokak aydınlatmaları, yüksek gerilim hatları ve direk bakım onarım işleri.',
       image: '/images/services/elektrik-bakim.jpg',
+      href: '/hizmetler/elektrik-bakim',
     },
     {
       title: 'Ağaç Budama',
       description: 'Park, bahçe ve yol kenarlarındaki yüksek ağaçların güvenli şekilde budanması.',
       image: '/images/services/agac-budama.jpg',
+      href: '/hizmetler/agac-budama',
     },
   ];
 
@@ -69,7 +73,7 @@ export default function Services() {
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
                 <p className="text-gray-600 mb-6 text-sm">{service.description}</p>
                 <Link
-                  href="#teklif-formu"
+                  href={service.href}
                   className="inline-flex items-center text-primary font-semibold hover:text-primary-hover transition-colors"
                 >
                   Detay

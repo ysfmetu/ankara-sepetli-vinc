@@ -104,6 +104,14 @@ export default function HizmetlerPage() {
                 <Link href="/gunluk-vinc-kiralama" className="inline-block mt-4 text-primary font-bold hover:underline">Günlük Seçenekler →</Link>
               </section>
 
+              <section id="cephe-temizligi" className="bg-gray-50 border border-gray-100 rounded-2xl p-6 md:p-8">
+                <h2 className="mt-0">Cephe Temizliği İçin Sepetli Vinç</h2>
+                <p>
+                  Ankara&apos;da plaza, AVM ve yüksek katlı binalarda <strong>dış cephe cam temizliği</strong> ve bina yüzey temizliği operasyonları için operatörlü sepetli vinç hizmeti sunuyoruz. İskele kurmanıza gerek kalmadan, çok daha hızlı ve güvenli erişim sağlıyoruz. <Link href="/hizmetler/cephe-temizligi-sepetli-vinc">Ankara cephe temizliği sepetli vinç kiralama</Link> sayfamızda detaylı bilgi ve teklif formu yer almaktadır.
+                </p>
+                <Link href="/hizmetler/cephe-temizligi-sepetli-vinc" className="inline-block mt-4 text-primary font-bold hover:underline">Cephe Temizliği Hizmeti Detayları →</Link>
+              </section>
+
               <section id="hizmet-bolgeleri" className="bg-white border text-center border-gray-100 rounded-2xl p-6 md:p-8">
                 <h2 className="mt-0">Ankara'da Hangi Bölgelerde Hizmet Veriyoruz?</h2>
                 <p>

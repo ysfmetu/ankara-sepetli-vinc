@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '',
     '/blog',
     '/hizmetler',
+    '/hizmetler/cephe-temizligi-sepetli-vinc',
     '/iletisim',
     '/sepetli-vinc-kiralama',
     '/operatorlu-vinc-kiralama',
@@ -25,15 +26,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     let changeFrequency: 'daily' | 'weekly' | 'monthly' = 'monthly';
     if (route === '' || route === '/blog') {
       changeFrequency = 'daily';
+    } else if (route === '/hizmetler/cephe-temizligi-sepetli-vinc') {
+      changeFrequency = 'weekly';
     } else if (route.startsWith('/blog/')) {
       changeFrequency = 'weekly';
     }
+
+    let priority = 0.8;
+    if (route === '') priority = 1;
+    else if (route === '/blog') priority = 0.9;
+    else if (route === '/hizmetler/cephe-temizligi-sepetli-vinc') priority = 0.85;
+    else if (route.startsWith('/blog/')) priority = 0.7;
 
     return {
       url: `${baseUrl}${route}`,
       lastModified: new Date(),
       changeFrequency,
-      priority: route === '' ? 1 : route === '/blog' ? 0.9 : route.startsWith('/blog/') ? 0.7 : 0.8,
+      priority,
     };
   });
 }
+
