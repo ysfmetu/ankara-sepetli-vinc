@@ -6,7 +6,12 @@ const nextConfig: NextConfig = {
       {
         source: '/blog/cephe-temizligi-sepetli-vinc',
         destination: '/hizmetler/cephe-temizligi-sepetli-vinc',
-        permanent: true, // 301 redirect
+        permanent: true, // 308 redirect in next.js
+      },
+      {
+        source: '/blog/sepetli-vinc-kac-metreye-cikar',
+        destination: '/blog/sepetli-vinc-kac-metreye-kadar-cikar',
+        permanent: true, // 308 redirect
       },
     ];
   },
