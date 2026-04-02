@@ -112,6 +112,30 @@ export default function HizmetlerPage() {
                 <Link href="/hizmetler/cephe-temizligi-sepetli-vinc" className="inline-block mt-4 text-primary font-bold hover:underline">Cephe Temizliği Hizmeti Detayları →</Link>
               </section>
 
+              <section id="tabela-montaj" className="bg-gray-50 border border-gray-100 rounded-2xl p-6 md:p-8">
+                <h2 className="mt-0">Tabela Montaj Hizmeti</h2>
+                <p>
+                  Mağaza tabelasından bina cephesine, ışıklı toteme kadar <strong>tabela montajı ve söküm</strong> operasyonlarında operatörlü sepetli vinç desteği sunuyoruz. Ankara genelinde hızlı sevkiyat, iş güvenliğine tam uyum. <Link href="/hizmetler/tabela-montaj">Ankara tabela montaj hizmeti</Link> sayfamızda detaylı bilgi ve teklif formu yer almaktadır.
+                </p>
+                <Link href="/hizmetler/tabela-montaj" className="inline-block mt-4 text-primary font-bold hover:underline">Tabela Montaj Hizmeti Detayları →</Link>
+              </section>
+
+              <section id="elektrik-bakim" className="bg-gray-50 border border-gray-100 rounded-2xl p-6 md:p-8">
+                <h2 className="mt-0">Elektrik Bakım ve Arıza Müdahalesi</h2>
+                <p>
+                  Sokak lambası değişiminden yüksek gerilim direklerine, bina dış cephe aydınlatmalarından projektör arızalarına kadar tüm yüksek alan elektrik müdahalelerinde <strong>7/24 sepetli vinç</strong> desteği veriyoruz. Hızlı sevk ve güvenli çalışma için detaylar <Link href="/hizmetler/elektrik-bakim">Ankara elektrik bakım hizmeti</Link> sayfamızda.
+                </p>
+                <Link href="/hizmetler/elektrik-bakim" className="inline-block mt-4 text-primary font-bold hover:underline">Elektrik Bakım Hizmeti Detayları →</Link>
+              </section>
+
+              <section id="agac-budama" className="bg-gray-50 border border-gray-100 rounded-2xl p-6 md:p-8">
+                <h2 className="mt-0">Ağaç Budama Hizmeti</h2>
+                <p>
+                  Yol kenarlarına sarkan, binaların camlarına veya çatısına temas eden tehlikeli ve yüksek ağaçların <strong>kontrollü budama işlemleri</strong> için operatörlü vinç kiralama hizmeti sunuyoruz. Güvenli ağaç kesimi ve budama erişimi konusunda detaylı planlamalarımız için <Link href="/hizmetler/agac-budama">Ankara ağaç budama hizmeti</Link> sayfamızı inceleyin.
+                </p>
+                <Link href="/hizmetler/agac-budama" className="inline-block mt-4 text-primary font-bold hover:underline">Ağaç Budama Hizmeti Detayları →</Link>
+              </section>
+
               <section id="hizmet-bolgeleri" className="bg-white border text-center border-gray-100 rounded-2xl p-6 md:p-8">
                 <h2 className="mt-0">Ankara'da Hangi Bölgelerde Hizmet Veriyoruz?</h2>
                 <p>

@@ -241,6 +241,7 @@ export default function LeadForm() {
             <option value="Tabela Montaj">Tabela Montaj</option>
             <option value="Cephe Temizliği">Cephe Temizliği</option>
             <option value="Ağaç Budama">Ağaç Budama</option>
+            <option value="Elektrik Bakım">Elektrik Bakım</option>
             <option value="Diğer">Diğer / Bilmiyorum</option>
           </select>
         </div>
