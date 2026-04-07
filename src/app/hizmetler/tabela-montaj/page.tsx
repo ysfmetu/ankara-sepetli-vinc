@@ -11,7 +11,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ankarasepetlivincki
 export const metadata: Metadata = {
   title: 'Ankara Tabela Montaj Hizmeti | Sepetli Vinç ile Güvenli Uygulama',
   description:
-    "Ankara'da tabela montajı, söküm ve yüksek alan uygulamaları için operatörlü sepetli vinç desteği. Mağaza, iş yeri, plaza ve bina cephe tabelaları için hızlı teklif alın.",
+    "Ankara'da Altınçiçek Kuyumculuk gibi prestijli mağazaların tercihi; tabela montajı, söküm ve yüksek alan uygulamaları için operatörlü sepetli vinç desteği. Hızlı ve güvenli çözüm.",
   alternates: {
     canonical: `${siteUrl}/hizmetler/tabela-montaj`,
   },
@@ -116,14 +116,13 @@ export default function TabelaMontajPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-6">
               <div>
                 <h1 className="text-3xl md:text-5xl font-extrabold text-white leading-tight mb-6">
-                  Ankara&apos;da{' '}
-                  <span className="text-red-400">Tabela Montaj</span>{' '}
-                  Hizmeti
+                  Ankara&apos;da <span className="text-red-400">Profesyonel</span>{' '}
+                  Tabela Montaj Hizmeti
                 </h1>
                 <p className="text-lg text-gray-300 leading-relaxed mb-8">
-                  Mağaza tabelasından bina cephesine, ışıklı toteme kadar tüm tabela montaj
-                  işleriniz için operatörlü sepetli vinç desteği sağlıyoruz. Ankara genelinde
-                  hızlı sevkiyat, iş güvenliğine tam uyum ve sertifikalı operatör güvencesi.
+                  Altınçiçek Kuyumculuk gibi prestijli işletmelerin tercihi olan sepetli vinç
+                  destekli tabela montaj hizmetimizle, Ankara genelinde profesyonel ve güvenli
+                  çözümler sunuyoruz. 7/24 operatörlü kiralama ve hızlı sevkiyat.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a
@@ -206,8 +205,8 @@ export default function TabelaMontajPage() {
                   desc: 'Binanın zemin katı üzerinde kalan, standart merdivenle ulaşılamayan noktalara tabela sabitleme ve kablo bağlantıları.',
                 },
                 {
-                  title: 'Mağaza ve İş Yeri Tabelaları',
-                  desc: 'AVM girişleri, cadde mağazaları ve iş merkezlerindeki kutu harf, tabela kasası ve LED panel montajları.',
+                  title: 'Kuyumcu ve Mağaza Tabelaları',
+                  desc: 'Altınçiçek Kuyumculuk gibi hassas işçilik gerektiren mağaza cephelerinde, tabela montajı ve LED aydınlatma bakımları için sepetli vinç desteği.',
                 },
                 {
                   title: 'Totem ve Yol Kenarı Reklamları',
@@ -267,8 +266,12 @@ export default function TabelaMontajPage() {
                   desc: 'Binalar arası dar geçitler, arka cepheler veya yüksek duvarların arkasındaki alanlar için sepetli vinç bom kolu uzantısıyla erişim sağlayabilir.',
                 },
                 {
+                  title: 'Dar Alan Esnekliği',
+                  desc: "Ankara'nın yoğun caddelerinde ve dar kaldırımlarında, trafiği ve yaya geçişini engellemeden operasyon yapabilen yüksek manevra kabiliyetli araçlar.",
+                },
+                {
                   title: 'Operatörlü Hizmetin Önemi',
-                  desc: "Aracı kendi başına sürmek veya operatörsüz kiralamak, tabela montaj ekibinin hem aracı kullanmasını hem de üstte çalışmasını gerektirir — bu hem verimsiz hem tehlikelidir. Operatörlü hizmetimizde bu sorun yoktur.",
+                  desc: "Aracı kendi başına sürmek veya operatörsüz kiralamak yerine, profesyonel operatörümüz vincin tüm dengesini sağlarken siz sadece montaja odaklanırsınız.",
                 },
               ].map((item) => (
                 <li

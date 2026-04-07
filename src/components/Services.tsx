@@ -6,7 +6,7 @@ export default function Services() {
   const services = [
     {
       title: 'Tabela & Montaj',
-      description: 'Açık hava reklamcılığı, totem ve dış cephe tabelalarının güvenli montajı.',
+      description: 'Kuyumcu ve butik mağaza tabelalarından totem uygulamalarına, profesyonel montaj çözümleri.',
       image: '/images/services/tabela-montaj.jpg',
       href: '/hizmetler/tabela-montaj',
     },
