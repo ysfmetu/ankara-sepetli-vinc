@@ -8,20 +8,19 @@ import Services from '@/components/Services';
 import Breadcrumb from '@/components/Breadcrumb';
 import FAQ from '@/components/FAQ';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ankarasepetlivinckirala.com';
+import { getMetadataAlternates, getCanonicalUrl } from '@/lib/seo-utils';
+import { SEO_CONFIG } from '@/config/seo';
 
 export const metadata: Metadata = {
   title: 'Ankara Vinç Kiralama Hizmetleri',
   description:
     "Ankara'da sepetli vinç kiralama, operatörlü vinç kiralama, saatlik ve günlük vinç kiralama hizmetleri.",
-  alternates: {
-    canonical: `${siteUrl}/hizmetler`,
-  },
+  alternates: getMetadataAlternates('/hizmetler'),
   openGraph: {
     title: 'Ankara Vinç Kiralama Hizmetleri | Ankara Sepetli Vinç',
     description:
       "Ankara'da sepetli vinç kiralama, operatörlü vinç kiralama, saatlik ve günlük vinç kiralama hizmetleri.",
-    url: `${siteUrl}/hizmetler`,
+    url: getCanonicalUrl('/hizmetler'),
   },
 };
 
@@ -32,15 +31,15 @@ export default function HizmetlerPage() {
     name: 'Ankara Vinç Kiralama Hizmetleri',
     provider: {
       '@type': 'LocalBusiness',
-      name: 'Ankara Sepetli Vinç Kiralama',
-      url: siteUrl
+      name: SEO_CONFIG.siteName,
+      url: SEO_CONFIG.baseUrl
     },
     areaServed: {
       '@type': 'City',
       name: 'Ankara'
     },
     description: "Ankara'da sepetli vinç kiralama, operatörlü vinç kiralama, saatlik ve günlük vinç kiralama hizmetleri.",
-    url: `${siteUrl}/hizmetler`
+    url: getCanonicalUrl('/hizmetler')
   };
   return (
     <div className="flex flex-col min-h-screen bg-white">

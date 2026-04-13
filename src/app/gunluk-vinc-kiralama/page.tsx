@@ -7,19 +7,18 @@ import FloatingCTA from '@/components/FloatingCTA';
 import Breadcrumb from '@/components/Breadcrumb';
 import FAQ from '@/components/FAQ';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+import { getMetadataAlternates, getCanonicalUrl } from '@/lib/seo-utils';
+import { SEO_CONFIG } from '@/config/seo';
 
 export const metadata: Metadata = {
+  title: 'Ankara Günlük Vinç Kiralama',
+  description: "Ankara günlük vinç kiralama hizmetleri ile tam gün profesyonel kaldırma ve erişim çözümleri.",
+  alternates: getMetadataAlternates('/gunluk-vinc-kiralama'),
+  openGraph: {
     title: 'Ankara Günlük Vinç Kiralama',
     description: "Ankara günlük vinç kiralama hizmetleri ile tam gün profesyonel kaldırma ve erişim çözümleri.",
-    alternates: {
-        canonical: `${siteUrl}/gunluk-vinc-kiralama`,
-    },
-    openGraph: {
-        title: 'Ankara Günlük Vinç Kiralama',
-        description: "Ankara günlük vinç kiralama hizmetleri ile tam gün profesyonel kaldırma ve erişim çözümleri.",
-        url: `${siteUrl}/gunluk-vinc-kiralama`,
-    }
+    url: getCanonicalUrl('/gunluk-vinc-kiralama'),
+  },
 };
 
 export default function GunlukVincKiralamaPage() {
@@ -35,11 +34,11 @@ export default function GunlukVincKiralamaPage() {
         name: 'Günlük Vinç Kiralama',
         provider: {
             '@type': 'LocalBusiness',
-            name: 'Ankara Sepetli Vinç',
-            url: siteUrl
+            name: SEO_CONFIG.siteName,
+            url: SEO_CONFIG.baseUrl
         },
         description: "Ankara günlük vinç kiralama hizmetleri ile tam gün profesyonel kaldırma ve erişim çözümleri.",
-        url: `${siteUrl}/gunluk-vinc-kiralama`
+        url: getCanonicalUrl('/gunluk-vinc-kiralama')
     };
 
     return (

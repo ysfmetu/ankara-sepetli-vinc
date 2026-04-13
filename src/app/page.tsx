@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import TrustBar from '@/components/TrustBar';
@@ -10,8 +11,17 @@ import BlogSection from '@/components/BlogSection';
 import Footer from '@/components/Footer';
 import FloatingCTA from '@/components/FloatingCTA';
 
+import { SEO_CONFIG } from '@/config/seo';
+import { getMetadataAlternates } from '@/lib/seo-utils';
+
+export const metadata: Metadata = {
+  title: SEO_CONFIG.defaultTitle,
+  description: SEO_CONFIG.defaultDescription,
+  alternates: getMetadataAlternates('/'),
+};
+
 export default function Home() {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+  const siteUrl = SEO_CONFIG.baseUrl;
 
   const jsonLd = {
     '@context': 'https://schema.org',

@@ -7,19 +7,18 @@ import FloatingCTA from '@/components/FloatingCTA';
 import Breadcrumb from '@/components/Breadcrumb';
 import FAQ from '@/components/FAQ';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+import { getMetadataAlternates, getCanonicalUrl } from '@/lib/seo-utils';
+import { SEO_CONFIG } from '@/config/seo';
 
 export const metadata: Metadata = {
+  title: 'Ankara Sepetli Vinç Kiralama',
+  description: "Ankara'da sepetli vinç kiralama hizmeti, operatörlü ve güvenli platform çözümleri.",
+  alternates: getMetadataAlternates('/sepetli-vinc-kiralama'),
+  openGraph: {
     title: 'Ankara Sepetli Vinç Kiralama',
     description: "Ankara'da sepetli vinç kiralama hizmeti, operatörlü ve güvenli platform çözümleri.",
-    alternates: {
-        canonical: `${siteUrl}/sepetli-vinc-kiralama`,
-    },
-    openGraph: {
-        title: 'Ankara Sepetli Vinç Kiralama',
-        description: "Ankara'da sepetli vinç kiralama hizmeti, operatörlü ve güvenli platform çözümleri.",
-        url: `${siteUrl}/sepetli-vinc-kiralama`,
-    }
+    url: getCanonicalUrl('/sepetli-vinc-kiralama'),
+  },
 };
 
 export default function SepetliVincKiralamaPage() {
@@ -35,15 +34,15 @@ export default function SepetliVincKiralamaPage() {
         name: 'Sepetli Vinç Kiralama',
         provider: {
             '@type': 'LocalBusiness',
-            name: 'Ankara Sepetli Vinç Kiralama',
-            url: siteUrl
+            name: SEO_CONFIG.siteName,
+            url: SEO_CONFIG.baseUrl
         },
         areaServed: {
             '@type': 'City',
             name: 'Ankara'
         },
         description: "Ankara'da sepetli vinç kiralama hizmeti, operatörlü ve güvenli platform çözümleri.",
-        url: `${siteUrl}/sepetli-vinc-kiralama`,
+        url: getCanonicalUrl('/sepetli-vinc-kiralama'),
         hasOfferCatalog: {
             '@type': 'OfferCatalog',
             name: 'Kiralama Hizmetleri',

@@ -8,20 +8,19 @@ import LeadForm from '@/components/LeadForm';
 
 import Breadcrumb from '@/components/Breadcrumb';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ankarasepetlivinckirala.com';
+import { getMetadataAlternates, getCanonicalUrl } from '@/lib/seo-utils';
+import { SEO_CONFIG } from '@/config/seo';
 
 export const metadata: Metadata = {
   title: 'Ankara Vinç Kiralama İletişim',
   description:
     'Ankara sepetli vinç kiralama hizmeti için bizimle iletişime geçin. Ostim, Etimesgut, Çankaya, Yenimahalle bölgelerinde operatörlü vinç kiralama 7/24 hizmetinizde.',
-  alternates: {
-    canonical: `${siteUrl}/iletisim`,
-  },
+  alternates: getMetadataAlternates('/iletisim'),
   openGraph: {
     title: 'Ankara Vinç Kiralama İletişim | Ankara Sepetli Vinç',
     description:
       'Ankara sepetli vinç kiralama hizmeti için bizimle iletişime geçin. Ostim ve tüm bölgelerde operatörlü kiralama 7/24 hizmet.',
-    url: `${siteUrl}/iletisim`,
+    url: getCanonicalUrl('/iletisim'),
   },
 };
 
@@ -32,11 +31,11 @@ export default function IletisimPage() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: 'Ankara Sepetli Vinç Kiralama',
+    name: SEO_CONFIG.siteName,
     telephone: '+905516066878',
     email: 'info@ankarasepetlivinc.com',
-    url: siteUrl,
-    image: `${siteUrl}/logo.png`,
+    url: SEO_CONFIG.baseUrl,
+    image: `${SEO_CONFIG.baseUrl}/logo.png`,
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Ostim Organize Sanayi Bölgesi',

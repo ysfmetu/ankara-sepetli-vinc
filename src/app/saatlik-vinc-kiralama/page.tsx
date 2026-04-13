@@ -7,19 +7,18 @@ import FloatingCTA from '@/components/FloatingCTA';
 import Breadcrumb from '@/components/Breadcrumb';
 import FAQ from '@/components/FAQ';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+import { getMetadataAlternates, getCanonicalUrl } from '@/lib/seo-utils';
+import { SEO_CONFIG } from '@/config/seo';
 
 export const metadata: Metadata = {
+  title: 'Ankara Saatlik Vinç Kiralama',
+  description: "Ankara'da saatlik vinç kiralama hizmeti ile kısa süreli işler için ekonomik çözümler.",
+  alternates: getMetadataAlternates('/saatlik-vinc-kiralama'),
+  openGraph: {
     title: 'Ankara Saatlik Vinç Kiralama',
     description: "Ankara'da saatlik vinç kiralama hizmeti ile kısa süreli işler için ekonomik çözümler.",
-    alternates: {
-        canonical: `${siteUrl}/saatlik-vinc-kiralama`,
-    },
-    openGraph: {
-        title: 'Ankara Saatlik Vinç Kiralama',
-        description: "Ankara'da saatlik vinç kiralama hizmeti ile kısa süreli işler için ekonomik çözümler.",
-        url: `${siteUrl}/saatlik-vinc-kiralama`,
-    }
+    url: getCanonicalUrl('/saatlik-vinc-kiralama'),
+  },
 };
 
 export default function SaatlikVincKiralamaPage() {
@@ -35,11 +34,11 @@ export default function SaatlikVincKiralamaPage() {
         name: 'Saatlik Vinç Kiralama',
         provider: {
             '@type': 'LocalBusiness',
-            name: 'Ankara Sepetli Vinç',
-            url: siteUrl
+            name: SEO_CONFIG.siteName,
+            url: SEO_CONFIG.baseUrl
         },
         description: "Ankara'da saatlik vinç kiralama hizmeti ile kısa süreli işler için ekonomik çözümler.",
-        url: `${siteUrl}/saatlik-vinc-kiralama`
+        url: getCanonicalUrl('/saatlik-vinc-kiralama')
     };
 
     return (

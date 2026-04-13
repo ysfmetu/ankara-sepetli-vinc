@@ -6,20 +6,18 @@ import CallToAction from '@/components/CallToAction';
 
 import Breadcrumb from '@/components/Breadcrumb';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ankarasepetlivinckirala.com';
+import { getMetadataAlternates, getCanonicalUrl } from '@/lib/seo-utils';
 
 export const metadata: Metadata = {
   title: 'İvedik Sepetli Vinç Kiralama',
   description:
     'Ankara İvedik OSB ve çevresindeki ağır sanayi tesisleri, matbaalar ve imalathaneler için özel sepetli vinç.',
-  alternates: {
-    canonical: `${siteUrl}/bolgeler/ivedik-sepetli-vinc-kiralama`,
-  },
+  alternates: getMetadataAlternates('/bolgeler/ivedik-sepetli-vinc-kiralama'),
   openGraph: {
     title: 'İvedik Sepetli Vinç | Ankara Sepetli Vinç',
     description:
       'Ankara İvedik OSB ve çevresindeki ağır sanayi tesisleri, matbaalar ve imalathaneler için özel sepetli vinç.',
-    url: `${siteUrl}/bolgeler/ivedik-sepetli-vinc-kiralama`,
+    url: getCanonicalUrl('/bolgeler/ivedik-sepetli-vinc-kiralama'),
   },
 };
 

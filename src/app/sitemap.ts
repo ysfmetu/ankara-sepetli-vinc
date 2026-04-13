@@ -1,13 +1,12 @@
 import { MetadataRoute } from 'next';
-import { getAllPosts } from '@/lib/mdx';
+import { getAllPosts, getPublishedPosts } from '@/lib/mdx';
+import { getCanonicalUrl } from '@/lib/seo-utils';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
-
-  const posts = getAllPosts();
+  const posts = getPublishedPosts();
 
   const routes = [
     '',
@@ -17,11 +16,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/hizmetler/tabela-montaj',
     '/hizmetler/elektrik-bakim',
     '/hizmetler/agac-budama',
+    '/hakkimizda',
     '/iletisim',
     '/sepetli-vinc-kiralama',
     '/operatorlu-vinc-kiralama',
     '/saatlik-vinc-kiralama',
     '/gunluk-vinc-kiralama',
+    '/sepetli-vinc-kiralama-fiyatlari',
+    '/bolgeler',
+    '/bolgeler/etimesgut-sepetli-vinc-kiralama',
+    '/bolgeler/ostim-sepetli-vinc-kiralama',
+    '/bolgeler/yenimahalle-sepetli-vinc-kiralama',
+    '/bolgeler/cankaya-sepetli-vinc-kiralama',
+    '/bolgeler/mamak-sepetli-vinc-kiralama',
+    '/bolgeler/ivedik-sepetli-vinc-kiralama',
     ...posts.map((post) => `/blog/${post.slug}`),
   ];
 
@@ -30,10 +38,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     if (route === '' || route === '/blog') {
       changeFrequency = 'daily';
     } else if (
-      route === '/hizmetler/cephe-temizligi-sepetli-vinc' ||
-      route === '/hizmetler/tabela-montaj' ||
-      route === '/hizmetler/elektrik-bakim' ||
-      route === '/hizmetler/agac-budama'
+      route.startsWith('/hizmetler/') ||
+      route.startsWith('/bolgeler/') ||
+      route === '/sepetli-vinc-kiralama'
     ) {
       changeFrequency = 'weekly';
     } else if (route.startsWith('/blog/')) {
@@ -43,16 +50,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     let priority = 0.8;
     if (route === '') priority = 1;
     else if (route === '/blog') priority = 0.9;
-    else if (
-      route === '/hizmetler/cephe-temizligi-sepetli-vinc' ||
-      route === '/hizmetler/tabela-montaj' ||
-      route === '/hizmetler/elektrik-bakim' ||
-      route === '/hizmetler/agac-budama'
-    ) priority = 0.85;
+    else if (route.startsWith('/hizmetler/')) priority = 0.85;
+    else if (route.startsWith('/bolgeler/')) priority = 0.75;
     else if (route.startsWith('/blog/')) priority = 0.7;
 
     return {
-      url: `${baseUrl}${route}`,
+      url: getCanonicalUrl(route),
       lastModified: new Date(),
       changeFrequency,
       priority,

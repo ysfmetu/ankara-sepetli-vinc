@@ -6,15 +6,14 @@ import FloatingCTA from '@/components/FloatingCTA';
 import Breadcrumb from '@/components/Breadcrumb';
 import LeadForm from '@/components/LeadForm';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ankarasepetlivinckirala.com';
+import { getMetadataAlternates, getCanonicalUrl } from '@/lib/seo-utils';
+import { SEO_CONFIG } from '@/config/seo';
 
 export const metadata: Metadata = {
   title: 'Ankara Cephe Temizliği İçin Sepetli Vinç Kiralama | Operatörlü Hizmet',
   description:
     "Ankara'da dış cephe temizliği için operatörlü sepetli vinç kiralama. Plaza, AVM ve yüksek katlı yapılar için güvenli çalışma, hızlı çözüm. Ücretsiz teklif alın.",
-  alternates: {
-    canonical: `${siteUrl}/hizmetler/cephe-temizligi-sepetli-vinc`,
-  },
+  alternates: getMetadataAlternates('/hizmetler/cephe-temizligi-sepetli-vinc'),
   robots: {
     index: true,
     follow: true,
@@ -23,7 +22,7 @@ export const metadata: Metadata = {
     title: 'Ankara Cephe Temizliği İçin Sepetli Vinç Kiralama | Operatörlü Hizmet',
     description:
       "Ankara'da dış cephe temizliği için operatörlü sepetli vinç kiralama. Plaza, AVM ve yüksek katlı yapılar için güvenli çalışma, hızlı çözüm. Ücretsiz teklif alın.",
-    url: `${siteUrl}/hizmetler/cephe-temizligi-sepetli-vinc`,
+    url: getCanonicalUrl('/hizmetler/cephe-temizligi-sepetli-vinc'),
     type: 'website',
     locale: 'tr_TR',
   },
@@ -35,8 +34,8 @@ const jsonLd = {
   name: 'Ankara Cephe Temizliği İçin Sepetli Vinç Kiralama',
   provider: {
     '@type': 'LocalBusiness',
-    name: 'Ankara Sepetli Vinç Kiralama',
-    url: siteUrl,
+    name: SEO_CONFIG.siteName,
+    url: SEO_CONFIG.baseUrl,
     telephone: '+905516066878',
     address: {
       '@type': 'PostalAddress',
@@ -50,7 +49,7 @@ const jsonLd = {
   },
   description:
     "Ankara'da dış cephe temizliği için operatörlü sepetli vinç kiralama hizmeti. Plaza, AVM ve yüksek katlı yapılar için iş güvenliğine tam uyumlu profesyonel çözüm.",
-  url: `${siteUrl}/hizmetler/cephe-temizligi-sepetli-vinc`,
+  url: getCanonicalUrl('/hizmetler/cephe-temizligi-sepetli-vinc'),
 };
 
 const faqItems = [

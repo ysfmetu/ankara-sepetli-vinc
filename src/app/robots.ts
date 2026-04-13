@@ -1,8 +1,7 @@
 import { MetadataRoute } from 'next';
+import { SEO_CONFIG } from '@/config/seo';
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
-
   return {
     rules: {
       userAgent: '*',
@@ -23,6 +22,6 @@ export default function robots(): MetadataRoute.Robots {
         '/unused-posts'
       ],
     },
-    sitemap: `${baseUrl}/sitemap.xml`,
+    sitemap: `${SEO_CONFIG.baseUrl}/sitemap.xml`,
   };
 }

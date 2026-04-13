@@ -7,20 +7,18 @@ import TrustBar from '@/components/TrustBar';
 import WhyUs from '@/components/WhyUs';
 import Breadcrumb from '@/components/Breadcrumb';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ankarasepetlivinckirala.com';
+import { getMetadataAlternates, getCanonicalUrl } from '@/lib/seo-utils';
 
 export const metadata: Metadata = {
   title: 'Hakkımızda | Ankara Sepetli Vinç',
   description:
     'Yılların tecrübesi, geniş araç filomuz ve iş güvenliği odaklı hizmet anlayışımızla Ankara kiralık sepetli vinç sektörünün öncüsüyüz.',
-  alternates: {
-    canonical: `${siteUrl}/hakkimizda`,
-  },
+  alternates: getMetadataAlternates('/hakkimizda'),
   openGraph: {
     title: 'Kurumsal | Ankara Sepetli Vinç',
     description:
       'Yılların tecrübesi, geniş araç filomuz ve iş güvenliği odaklı hizmet anlayışımızla Ankara kiralık sepetli vinç sektörünün öncüsüyüz.',
-    url: `${siteUrl}/hakkimizda`,
+    url: getCanonicalUrl('/hakkimizda'),
   },
 };
 

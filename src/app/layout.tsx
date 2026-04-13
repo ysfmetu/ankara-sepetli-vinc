@@ -3,6 +3,9 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
 import './globals.css';
 
+import { SEO_CONFIG } from '@/config/seo';
+import { getMetadataAlternates } from '@/lib/seo-utils';
+
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
@@ -13,48 +16,41 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
-
 export const metadata: Metadata = {
   title: {
-    template: '%s | Ankara Sepetli Vinç Kiralama',
-    default: 'Ankara Sepetli Vinç Kiralama | Hızlı Servis & Uygun Fiyat',
+    template: `%s | ${SEO_CONFIG.siteName}`,
+    default: SEO_CONFIG.defaultTitle,
   },
-  description:
-    'Ankara sepetli vinç kiralama hizmeti. 7/24 hızlı servis, uygun fiyat ve güvenli vinç çözümleri için hemen arayın: 0551 606 68 78',
-  metadataBase: new URL(siteUrl),
-  alternates: {
-    canonical: '/',
-  },
+  description: SEO_CONFIG.defaultDescription,
+  metadataBase: new URL(SEO_CONFIG.baseUrl),
+  alternates: getMetadataAlternates('/'),
   robots: {
     index: true,
     follow: true,
   },
   openGraph: {
-    title: 'Ankara Sepetli Vinç Kiralama | Hızlı Servis & Uygun Fiyat',
-    description:
-      'Ankara sepetli vinç kiralama hizmeti. 7/24 hızlı servis, uygun fiyat ve güvenli vinç çözümleri için hemen arayın: 0551 606 68 78',
-    url: siteUrl,
-    siteName: 'Ankara Sepetli Vinç Kiralama',
-    locale: 'tr_TR',
+    title: SEO_CONFIG.defaultTitle,
+    description: SEO_CONFIG.defaultDescription,
+    url: SEO_CONFIG.baseUrl,
+    siteName: SEO_CONFIG.siteName,
+    locale: SEO_CONFIG.locale,
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ankara Sepetli Vinç Kiralama | Hızlı Servis & Uygun Fiyat',
-    description:
-      'Ankara sepetli vinç kiralama hizmeti. 7/24 hızlı servis, uygun fiyat ve güvenli vinç çözümleri için hemen arayın: 0551 606 68 78',
+    title: SEO_CONFIG.defaultTitle,
+    description: SEO_CONFIG.defaultDescription,
   },
 };
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'Ankara Sepetli Vinç Kiralama',
-  image: `${siteUrl}/images/hero-bg.jpg`,
-  description: 'Ankara sepetli vinç kiralama hizmeti. 7/24 hızlı servis, uygun fiyat ve güvenli vinç çözümleri için hemen arayın: 0551 606 68 78',
-  '@id': siteUrl,
-  url: siteUrl,
+  name: SEO_CONFIG.siteName,
+  image: `${SEO_CONFIG.baseUrl}/images/hero-bg.jpg`,
+  description: SEO_CONFIG.defaultDescription,
+  '@id': SEO_CONFIG.baseUrl,
+  url: SEO_CONFIG.baseUrl,
   telephone: '+905516066878',
   address: {
     '@type': 'PostalAddress',

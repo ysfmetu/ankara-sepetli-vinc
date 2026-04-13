@@ -6,15 +6,14 @@ import FloatingCTA from '@/components/FloatingCTA';
 import Breadcrumb from '@/components/Breadcrumb';
 import LeadForm from '@/components/LeadForm';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ankarasepetlivinckirala.com';
+import { getMetadataAlternates, getCanonicalUrl } from '@/lib/seo-utils';
+import { SEO_CONFIG } from '@/config/seo';
 
 export const metadata: Metadata = {
   title: 'Ankara Elektrik Bakım Hizmeti | Sepetli Vinç ile Güvenli Müdahale',
   description:
-    "Ankara'da elektrik bakım, dış aydınlatma arızası ve yüksek alan elektrik müdahaleleri için operatörlü sepetli vinç desteği. Hızlı teklif alın.",
-  alternates: {
-    canonical: `${siteUrl}/hizmetler/elektrik-bakim`,
-  },
+    "Ankara'da elektrik bakım, dış aydınlatma arızası and yüksek alan elektrik müdahaleleri için operatörlü sepetli vinç desteği. Hızlı teklif alın.",
+  alternates: getMetadataAlternates('/hizmetler/elektrik-bakim'),
   robots: {
     index: true,
     follow: true,
@@ -22,8 +21,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Ankara Elektrik Bakım Hizmeti | Sepetli Vinç ile Güvenli Müdahale',
     description:
-      "Ankara'da elektrik bakım, dış aydınlatma arızası ve yüksek alan elektrik müdahaleleri için operatörlü sepetli vinç desteği. Hızlı teklif alın.",
-    url: `${siteUrl}/hizmetler/elektrik-bakim`,
+      "Ankara'da elektrik bakım, dış aydınlatma arızası and yüksek alan elektrik müdahaleleri için operatörlü sepetli vinç desteği. Hızlı teklif alın.",
+    url: getCanonicalUrl('/hizmetler/elektrik-bakim'),
     type: 'website',
     locale: 'tr_TR',
   },
@@ -35,8 +34,8 @@ const jsonLd = {
   name: 'Ankara Elektrik Bakım Hizmeti',
   provider: {
     '@type': 'LocalBusiness',
-    name: 'Ankara Sepetli Vinç Kiralama',
-    url: siteUrl,
+    name: SEO_CONFIG.siteName,
+    url: SEO_CONFIG.baseUrl,
     telephone: '+905516066878',
     address: {
       '@type': 'PostalAddress',
@@ -49,8 +48,8 @@ const jsonLd = {
     name: 'Ankara',
   },
   description:
-    "Ankara'da sokak aydınlatması, projektör değişimi, tabela aydınlatmaları ve bina dışı elektrik ekipmanları arıza müdahaleleri için profesyonel sepetli vinç hizmeti.",
-  url: `${siteUrl}/hizmetler/elektrik-bakim`,
+    "Ankara'da sokak aydınlatması, projektör değişimi, tabela aydınlatmaları and bina dışı elektrik ekipmanları arıza müdahaleleri için profesyonel sepetli vinç hizmeti.",
+  url: getCanonicalUrl('/hizmetler/elektrik-bakim'),
 };
 
 const faqItems = [

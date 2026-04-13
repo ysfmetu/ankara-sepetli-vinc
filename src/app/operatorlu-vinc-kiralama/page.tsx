@@ -7,19 +7,18 @@ import FloatingCTA from '@/components/FloatingCTA';
 import Breadcrumb from '@/components/Breadcrumb';
 import FAQ from '@/components/FAQ';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+import { getMetadataAlternates, getCanonicalUrl } from '@/lib/seo-utils';
+import { SEO_CONFIG } from '@/config/seo';
 
 export const metadata: Metadata = {
+  title: 'Ankara Operatörlü Vinç Kiralama',
+  description: "Ankara operatörlü vinç kiralama hizmetleri ile güvenli ve profesyonel kaldırma çözümleri.",
+  alternates: getMetadataAlternates('/operatorlu-vinc-kiralama'),
+  openGraph: {
     title: 'Ankara Operatörlü Vinç Kiralama',
     description: "Ankara operatörlü vinç kiralama hizmetleri ile güvenli ve profesyonel kaldırma çözümleri.",
-    alternates: {
-        canonical: `${siteUrl}/operatorlu-vinc-kiralama`,
-    },
-    openGraph: {
-        title: 'Ankara Operatörlü Vinç Kiralama',
-        description: "Ankara operatörlü vinç kiralama hizmetleri ile güvenli ve profesyonel kaldırma çözümleri.",
-        url: `${siteUrl}/operatorlu-vinc-kiralama`,
-    }
+    url: getCanonicalUrl('/operatorlu-vinc-kiralama'),
+  },
 };
 
 export default function OperatorluVincKiralamaPage() {
@@ -35,11 +34,11 @@ export default function OperatorluVincKiralamaPage() {
         name: 'Operatörlü Vinç Kiralama',
         provider: {
             '@type': 'LocalBusiness',
-            name: 'Ankara Sepetli Vinç',
-            url: siteUrl
+            name: SEO_CONFIG.siteName,
+            url: SEO_CONFIG.baseUrl
         },
         description: "Ankara operatörlü vinç kiralama hizmetleri ile güvenli ve profesyonel kaldırma çözümleri.",
-        url: `${siteUrl}/operatorlu-vinc-kiralama`
+        url: getCanonicalUrl('/operatorlu-vinc-kiralama')
     };
 
     return (

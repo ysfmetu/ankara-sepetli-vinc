@@ -6,14 +6,13 @@ import Footer from '@/components/Footer';
 import FloatingCTA from '@/components/FloatingCTA';
 import Breadcrumb from '@/components/Breadcrumb';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ankarasepetlivinckirala.com';
+import { getMetadataAlternates, getCanonicalUrl } from '@/lib/seo-utils';
 
 export const metadata: Metadata = {
-    title: 'Etimesgut Sepetli Vinç Kiralama | Eryaman ve Bağlıca Bölgesi',
-    description: 'Ankara Etimesgut, Eryaman, Elvankent ve Bağlıca bölgelerinde kiralık sepetli vinç, hiyap ve operatörlü vinç hizmetimiz 7/24 devam etmektedir.',
-    alternates: {
-        canonical: `${siteUrl}/etimesgut-sepetli-vinc`,
-    },
+  title: 'Etimesgut Sepetli Vinç Kiralama | Eryaman ve Bağlıca Bölgesi',
+  description:
+    'Ankara Etimesgut, Eryaman, Elvankent ve Bağlıca bölgelerinde kiralık sepetli vinç, hiyap ve operatörlü vinç hizmetimiz 7/24 devam etmektedir.',
+  alternates: getMetadataAlternates('/etimesgut-sepetli-vinc'),
 };
 
 export default function EtimesgutSepetliVincPage() {
@@ -62,7 +61,7 @@ export default function EtimesgutSepetliVincPage() {
 
                             <h2>Etimesgut, Eryaman ve Bağlıca'da Vinç Hizmetleri</h2>
                             <p>
-                                Ankara'nın konutlaşma ve kentsel gelişim açısından en hızlı büyüyen ilçelerinden olan Etimesgut, yüzlerce yeni toplu konut alanını, geniş bulvarları ve her gün büyüyen ticari kompleksleri barındırır. Bu hızlı kentleşme beraberinde sürekli bir altyapı, mantolama, inşaat revizyonu ihtiyacı doğurur. Firmamız, <Link href="/ankara-sepetli-vinc-kiralama">Ankara sepetli vinç kiralama</Link> ağının önemli bir modülü olarak <strong>Etimesgut sepetli vinç</strong> ihtiyaçlarına jet hızıyla cevap vermektedir.
+                                Ankara'nın konutlaşma ve kentsel gelişim açısından en hızlı büyüyen ilçelerinden olan Etimesgut, yüzlerce yeni toplu konut alanını, geniş bulvarları ve her gün büyüyen ticari kompleksleri barındırır. Bu hızlı kentleşme beraberinde sürekli bir altyapı, mantolama, inşaat revizyonu ihtiyacı doğurur. Firmamız, <Link href="/sepetli-vinc-kiralama">Ankara sepetli vinç kiralama</Link> ağının önemli bir modülü olarak <strong>Etimesgut sepetli vinç</strong> ihtiyaçlarına jet hızıyla cevap vermektedir.
                             </p>
 
                             <hr className="my-6" />
@@ -107,9 +106,9 @@ export default function EtimesgutSepetliVincPage() {
                             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
                                 <h3 className="text-lg font-bold text-gray-900 mb-4 border-b border-gray-100 pb-3 flex items-center gap-2"><MapPin className="w-5 h-5 text-gray-400" /> Yakın Bölgeler</h3>
                                 <ul className="flex flex-col gap-3">
-                                    <li><Link href="/sincan-sepetli-vinc" className="text-gray-600 hover:text-primary">Sincan Sepetli Vinç</Link></li>
-                                    <li><Link href="/ostim-sepetli-vinc" className="text-gray-600 hover:text-primary">Ostim Sepetli Vinç</Link></li>
-                                    <li><Link href="/yenimahalle-sepetli-vinc" className="text-gray-600 hover:text-primary">Yenimahalle Sepetli Vinç</Link></li>
+                                    <li><Link href="/bolgeler/sincan-sepetli-vinc-kiralama" className="text-gray-600 hover:text-primary">Sincan Sepetli Vinç</Link></li>
+                                    <li><Link href="/bolgeler/ostim-sepetli-vinc-kiralama" className="text-gray-600 hover:text-primary">Ostim Sepetli Vinç</Link></li>
+                                    <li><Link href="/bolgeler/yenimahalle-sepetli-vinc-kiralama" className="text-gray-600 hover:text-primary">Yenimahalle Sepetli Vinç</Link></li>
                                 </ul>
                             </div>
                         </aside>

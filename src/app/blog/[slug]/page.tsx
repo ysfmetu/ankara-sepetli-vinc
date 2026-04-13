@@ -8,9 +8,9 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingCTA from '@/components/FloatingCTA';
 import Breadcrumb from '@/components/Breadcrumb';
-import { getPhoneUrl, getWhatsAppUrl, siteConfig } from '@/config/site';
-
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+import { SEO_CONFIG } from '@/config/seo';
+import { getMetadataAlternates, getCanonicalUrl } from '@/lib/seo-utils';
+import { getWhatsAppUrl, getPhoneUrl, siteConfig } from '@/config/site';
 
 interface BlogPostProps {
     params: Promise<{ slug: string }>;
@@ -50,20 +50,18 @@ export async function generateMetadata({ params }: BlogPostProps): Promise<Metad
     }
 
     return {
-        title: `${post.title} | Ankara Sepetli Vinç Blog`,
+        title: `${post.title} | ${SEO_CONFIG.siteName} Blog`,
         description: post.excerpt,
-        alternates: {
-            canonical: `${siteUrl}/blog/${post.slug}`,
-        },
+        alternates: getMetadataAlternates(`/blog/${slug}`),
         openGraph: {
             title: post.title,
             description: post.excerpt,
-            url: `${siteUrl}/blog/${post.slug}`,
+            url: getCanonicalUrl(`/blog/${slug}`),
             type: 'article',
             publishedTime: post.date,
             images: [
                 {
-                    url: `${siteUrl}${post.image}`,
+                    url: `${SEO_CONFIG.baseUrl}${post.image}`,
                     width: 1200,
                     height: 630,
                     alt: post.title,
@@ -74,7 +72,7 @@ export async function generateMetadata({ params }: BlogPostProps): Promise<Metad
             card: 'summary_large_image',
             title: post.title,
             description: post.excerpt,
-            images: [`${siteUrl}${post.image}`],
+            images: [`${SEO_CONFIG.baseUrl}${post.image}`],
         }
     };
 }
@@ -105,24 +103,24 @@ export default async function BlogPost({ params }: BlogPostProps) {
         '@context': 'https://schema.org',
         '@type': 'Article',
         headline: post.title,
-        image: [`${siteUrl}${post.image}`],
-        datePublished: post.date, // In a real app, use ISO string
+        image: [`${SEO_CONFIG.baseUrl}${post.image}`],
+        datePublished: post.date,
         dateModified: post.date,
         author: [{
             '@type': 'Organization',
-            name: 'Ankara Sepetli Vinç',
-            url: siteUrl
+            name: SEO_CONFIG.siteName,
+            url: SEO_CONFIG.baseUrl
         }],
         mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': `${siteUrl}/blog/${post.slug}`
+            '@id': getCanonicalUrl(`/blog/${post.slug}`)
         },
         publisher: {
             '@type': 'Organization',
-            name: 'Ankara Sepetli Vinç Kiralama',
+            name: SEO_CONFIG.siteName,
             logo: {
                 '@type': 'ImageObject',
-                url: `${siteUrl}/logo.png`
+                url: `${SEO_CONFIG.baseUrl}/logo.png`
             }
         },
         description: post.excerpt

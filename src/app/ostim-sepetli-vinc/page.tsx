@@ -6,14 +6,13 @@ import Footer from '@/components/Footer';
 import FloatingCTA from '@/components/FloatingCTA';
 import Breadcrumb from '@/components/Breadcrumb';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ankarasepetlivinckirala.com';
+import { getMetadataAlternates, getCanonicalUrl } from '@/lib/seo-utils';
 
 export const metadata: Metadata = {
-    title: 'Ostim Sepetli Vinç | Organize Sanayi Kiralık Platform',
-    description: 'Ankara Ostim endüstri ve sanayi bölgesinde kurumsal sepetli vinç kiralama hizmetleri. 7/24 saatlik ve günlük platform kiralama.',
-    alternates: {
-        canonical: `${siteUrl}/ostim-sepetli-vinc`,
-    },
+  title: 'Ostim Sepetli Vinç | Organize Sanayi Kiralık Platform',
+  description:
+    'Ankara Ostim endüstri ve sanayi bölgesinde kurumsal sepetli vinç kiralama hizmetleri. 7/24 saatlik ve günlük platform kiralama.',
+  alternates: getMetadataAlternates('/ostim-sepetli-vinc'),
 };
 
 export default function OstimSepetliVincPage() {
@@ -69,7 +68,7 @@ export default function OstimSepetliVincPage() {
 
                             <h2>Ostim'de Sepetli Vinç Hangi İşlerde Kullanılır?</h2>
                             <p>
-                                Fabrika ve endüstriyel sahalarda <Link href="/ankara-sepetli-vinc-kiralama">Ankara sepetli vinç kiralama</Link> sistemlerimiz birçok kritik senaryoda hayat kurtarır.
+                                Fabrika ve endüstriyel sahalarda <Link href="/sepetli-vinc-kiralama">Ankara sepetli vinç kiralama</Link> sistemlerimiz birçok kritik senaryoda hayat kurtarır.
                             </p>
                             <ul>
                                 <li><strong>Fabrika Çatı İzolasyon ve Onarımı:</strong> Depo ve üretim alanlarında akıtan, rüzgârdan devrilen veya izolasyonu zayıflayan çelik konstrüksiyonlu veya sandviç panelli çatıların güvenli bakımı.</li>
@@ -110,9 +109,9 @@ export default function OstimSepetliVincPage() {
                             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
                                 <h3 className="text-lg font-bold text-gray-900 mb-4 border-b border-gray-100 pb-3 flex items-center gap-2"><MapPin className="w-5 h-5 text-gray-400" /> Diğer Bölgeler</h3>
                                 <ul className="flex flex-col gap-3">
-                                    <li><Link href="/etimesgut-sepetli-vinc" className="text-gray-600 hover:text-primary">Etimesgut Sepetli Vinç</Link></li>
-                                    <li><Link href="/sincan-sepetli-vinc" className="text-gray-600 hover:text-primary">Sincan Sepetli Vinç</Link></li>
-                                    <li><Link href="/yenimahalle-sepetli-vinc" className="text-gray-600 hover:text-primary">Yenimahalle Sepetli Vinç</Link></li>
+                                    <li><Link href="/bolgeler/etimesgut-sepetli-vinc-kiralama" className="text-gray-600 hover:text-primary">Etimesgut Sepetli Vinç</Link></li>
+                                    <li><Link href="/bolgeler/sincan-sepetli-vinc-kiralama" className="text-gray-600 hover:text-primary">Sincan Sepetli Vinç</Link></li>
+                                    <li><Link href="/bolgeler/yenimahalle-sepetli-vinc-kiralama" className="text-gray-600 hover:text-primary">Yenimahalle Sepetli Vinç</Link></li>
                                 </ul>
                             </div>
                         </aside>

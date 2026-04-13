@@ -6,15 +6,14 @@ import FloatingCTA from '@/components/FloatingCTA';
 import Breadcrumb from '@/components/Breadcrumb';
 import LeadForm from '@/components/LeadForm';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ankarasepetlivinckirala.com';
+import { getMetadataAlternates, getCanonicalUrl } from '@/lib/seo-utils';
+import { SEO_CONFIG } from '@/config/seo';
 
 export const metadata: Metadata = {
   title: 'Ankara Ağaç Budama Hizmeti | Sepetli Vinç ile Güvenli Çalışma',
   description:
     "Ankara'da yüksek ağaç budama, riskli dal kesimi ve bina çevresi budama işleri için operatörlü sepetli vinç desteği. Hızlı teklif alın.",
-  alternates: {
-    canonical: `${siteUrl}/hizmetler/agac-budama`,
-  },
+  alternates: getMetadataAlternates('/hizmetler/agac-budama'),
   robots: {
     index: true,
     follow: true,
@@ -23,7 +22,7 @@ export const metadata: Metadata = {
     title: 'Ankara Ağaç Budama Hizmeti | Sepetli Vinç ile Güvenli Çalışma',
     description:
       "Ankara'da yüksek ağaç budama, riskli dal kesimi ve bina çevresi budama işleri için operatörlü sepetli vinç desteği. Hızlı teklif alın.",
-    url: `${siteUrl}/hizmetler/agac-budama`,
+    url: getCanonicalUrl('/hizmetler/agac-budama'),
     type: 'website',
     locale: 'tr_TR',
   },
@@ -35,8 +34,8 @@ const jsonLd = {
   name: 'Ankara Ağaç Budama Hizmeti',
   provider: {
     '@type': 'LocalBusiness',
-    name: 'Ankara Sepetli Vinç Kiralama',
-    url: siteUrl,
+    name: SEO_CONFIG.siteName,
+    url: SEO_CONFIG.baseUrl,
     telephone: '+905516066878',
     address: {
       '@type': 'PostalAddress',
@@ -50,7 +49,7 @@ const jsonLd = {
   },
   description:
     "Ankara'nın tüm ilçelerinde yola, binalara veya elektrik hatlarına sarkan tehlikeli ve yüksek ağaçların budanması için profesyonel sepetli vinç hizmeti.",
-  url: `${siteUrl}/hizmetler/agac-budama`,
+  url: getCanonicalUrl('/hizmetler/agac-budama'),
 };
 
 const faqItems = [

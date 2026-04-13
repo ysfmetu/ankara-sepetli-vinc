@@ -6,20 +6,18 @@ import CallToAction from '@/components/CallToAction';
 
 import Breadcrumb from '@/components/Breadcrumb';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ankarasepetlivinckirala.com';
+import { getMetadataAlternates, getCanonicalUrl } from '@/lib/seo-utils';
 
 export const metadata: Metadata = {
   title: 'Mamak Sepetli Vinç Kiralama',
   description:
     'Ankara Mamak bölgesinde uygun fiyatlı, 7/24 kiralık sepetli vinç ve platform hizmetleri.',
-  alternates: {
-    canonical: `${siteUrl}/bolgeler/mamak-sepetli-vinc-kiralama`,
-  },
+  alternates: getMetadataAlternates('/bolgeler/mamak-sepetli-vinc-kiralama'),
   openGraph: {
     title: 'Mamak Sepetli Vinç Kiralama | Ankara Sepetli Vinç',
     description:
       'Ankara Mamak bölgesinde uygun fiyatlı, 7/24 kiralık sepetli vinç ve platform hizmetleri.',
-    url: `${siteUrl}/bolgeler/mamak-sepetli-vinc-kiralama`,
+    url: getCanonicalUrl('/bolgeler/mamak-sepetli-vinc-kiralama'),
   },
 };
 

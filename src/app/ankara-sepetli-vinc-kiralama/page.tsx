@@ -124,7 +124,7 @@ export default function AnkaraSepetliVincKiralamaPage() {
                                 <li><strong>Dış Cephe Mantolama ve Boyama:</strong> İnşaat ve tadilat aşamasındaki dairelerin veya müstakil projelerin dış cephe yalıtım faaliyetleri.</li>
                             </ul>
                             <p>
-                                Gerek <Link href="/ostim-sepetli-vinc">ostim sepetli vinç</Link> talepleri gibi endüstriyel yoğunluklu alanlarda, gerekse <Link href="/etimesgut-sepetli-vinc">etimesgut sepetli vinç</Link> gibi gelişen konut projelerinde her türlü altyapı faaliyetine uygun bom uzanımı olan araç tedarik etmekteyiz. Amacımız her bölgeye saatler içinde ulaşıp süreci hızlandırmaktır.
+                                Gerek <Link href="/bolgeler/ostim-sepetli-vinc-kiralama">ostim sepetli vinç</Link> talepleri gibi endüstriyel yoğunluklu alanlarda, gerekse <Link href="/bolgeler/etimesgut-sepetli-vinc-kiralama">etimesgut sepetli vinç</Link> gibi gelişen konut projelerinde her türlü altyapı faaliyetine uygun bom uzanımı olan araç tedarik etmekteyiz. Amacımız her bölgeye saatler içinde ulaşıp süreci hızlandırmaktır.
                             </p>
 
                             <hr className="my-8" />
@@ -198,31 +198,31 @@ export default function AnkaraSepetliVincKiralamaPage() {
                                 </h3>
                                 <ul className="flex flex-col gap-3">
                                     <li>
-                                        <Link href="/ostim-sepetli-vinc" className="flex items-center justify-between text-gray-600 hover:text-primary transition-colors group">
+                                        <Link href="/bolgeler/ostim-sepetli-vinc-kiralama" className="flex items-center justify-between text-gray-600 hover:text-primary transition-colors group">
                                             <span>Ostim Sepetli Vinç</span>
                                             <span className="text-gray-300 group-hover:text-primary transition-colors">→</span>
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/etimesgut-sepetli-vinc" className="flex items-center justify-between text-gray-600 hover:text-primary transition-colors group">
+                                        <Link href="/bolgeler/etimesgut-sepetli-vinc-kiralama" className="flex items-center justify-between text-gray-600 hover:text-primary transition-colors group">
                                             <span>Etimesgut Sepetli Vinç</span>
                                             <span className="text-gray-300 group-hover:text-primary transition-colors">→</span>
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/sincan-sepetli-vinc" className="flex items-center justify-between text-gray-600 hover:text-primary transition-colors group">
+                                        <Link href="/bolgeler/sincan-sepetli-vinc-kiralama" className="flex items-center justify-between text-gray-600 hover:text-primary transition-colors group">
                                             <span>Sincan Sepetli Vinç</span>
                                             <span className="text-gray-300 group-hover:text-primary transition-colors">→</span>
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/cankaya-sepetli-vinc" className="flex items-center justify-between text-gray-600 hover:text-primary transition-colors group">
+                                        <Link href="/bolgeler/cankaya-sepetli-vinc-kiralama" className="flex items-center justify-between text-gray-600 hover:text-primary transition-colors group">
                                             <span>Çankaya Sepetli Vinç</span>
                                             <span className="text-gray-300 group-hover:text-primary transition-colors">→</span>
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/yenimahalle-sepetli-vinc" className="flex items-center justify-between text-gray-600 hover:text-primary transition-colors group">
+                                        <Link href="/bolgeler/yenimahalle-sepetli-vinc-kiralama" className="flex items-center justify-between text-gray-600 hover:text-primary transition-colors group">
                                             <span>Yenimahalle Sepetli Vinç</span>
                                             <span className="text-gray-300 group-hover:text-primary transition-colors">→</span>
                                         </Link>

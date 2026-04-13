@@ -7,14 +7,13 @@ import FloatingCTA from '@/components/FloatingCTA';
 import Breadcrumb from '@/components/Breadcrumb';
 import FAQ from '@/components/FAQ';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ankarasepetlivinckirala.com';
+import { getMetadataAlternates, getCanonicalUrl } from '@/lib/seo-utils';
 
 export const metadata: Metadata = {
-    title: 'Sepetli Vinç Kiralama Fiyatları Ankara 2025 | Güncel Tarife',
-    description: 'Saatlik, günlük ve aylık periyotlarla sepetli vinç kiralama fiyatları. Metraj ve yüksekliğe göre Ankara vinç kiralama ücretleri rehberi.',
-    alternates: {
-        canonical: `${siteUrl}/sepetli-vinc-kiralama-fiyatlari`,
-    },
+  title: 'Sepetli Vinç Kiralama Fiyatları Ankara 2025 | Güncel Tarife',
+  description:
+    'Saatlik, günlük ve aylık periyotlarla sepetli vinç kiralama fiyatları. Metraj ve yüksekliğe göre Ankara vinç kiralama ücretleri rehberi.',
+  alternates: getMetadataAlternates('/sepetli-vinc-kiralama-fiyatlari'),
 };
 
 export default function SepetliVincKiralamaFiyatlariPage() {
@@ -171,7 +170,7 @@ export default function SepetliVincKiralamaFiyatlariPage() {
                             <ul>
                                 <li>Fiyat teklifi aldığınız firmanın <Link href="/blog/ankara-sepetli-vinc-guvenlik-standartlari">ISO, TSE Kalite Belgeleri</Link> ve personellerinin G sınıfı ehliyete sahip olduğunu daima teyit edin.</li>
                                 <li>Telefonda adresi belirtirken, vincin çalışma sahasının dar veya geniş olduğunu, arazide meyil olup olmadığını operasyon ekibine mutlaka aktarın ki, son dakika fiyat farkları sürpriziyle karşılaşmayın.</li>
-                                <li>İhtiyacınıza en uygun metrajı tahmin edemiyorsanız, kurumsal <Link href="/ankara-sepetli-vinc-kiralama">Ankara Sepetli Vinç Kiralama</Link> uzmanlarımızdan ücretsiz saha ekspertizi talebinde bulunun.</li>
+                                <li>İhtiyacınıza en uygun metrajı tahmin edemiyorsanız, kurumsal <Link href="/sepetli-vinc-kiralama">Ankara Sepetli Vinç Kiralama</Link> uzmanlarımızdan ücretsiz saha ekspertizi talebinde bulunun.</li>
                             </ul>
 
                             <div className="mt-12 bg-primary/5 p-6 rounded-xl border border-primary/20 text-center">
@@ -199,19 +198,19 @@ export default function SepetliVincKiralamaFiyatlariPage() {
                                 </h3>
                                 <ul className="flex flex-col gap-3">
                                     <li>
-                                        <Link href="/ostim-sepetli-vinc" className="flex items-center justify-between text-gray-600 hover:text-primary transition-colors group">
+                                        <Link href="/bolgeler/ostim-sepetli-vinc-kiralama" className="flex items-center justify-between text-gray-600 hover:text-primary transition-colors group">
                                             <span>Ostim Sepetli Vinç Kiralama</span>
                                             <span className="text-gray-300 group-hover:text-primary transition-colors">→</span>
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/etimesgut-sepetli-vinc" className="flex items-center justify-between text-gray-600 hover:text-primary transition-colors group">
+                                        <Link href="/bolgeler/etimesgut-sepetli-vinc-kiralama" className="flex items-center justify-between text-gray-600 hover:text-primary transition-colors group">
                                             <span>Etimesgut Saatlik Vinç</span>
                                             <span className="text-gray-300 group-hover:text-primary transition-colors">→</span>
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/sincan-sepetli-vinc" className="flex items-center justify-between text-gray-600 hover:text-primary transition-colors group">
+                                        <Link href="/bolgeler/sincan-sepetli-vinc-kiralama" className="flex items-center justify-between text-gray-600 hover:text-primary transition-colors group">
                                             <span>Sincan Organize Vinç Fiyatları</span>
                                             <span className="text-gray-300 group-hover:text-primary transition-colors">→</span>
                                         </Link>

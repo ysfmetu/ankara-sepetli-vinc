@@ -6,20 +6,18 @@ import CallToAction from '@/components/CallToAction';
 import ServiceAreas from '@/components/ServiceAreas';
 import Breadcrumb from '@/components/Breadcrumb';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ankarasepetlivinckirala.com';
+import { getMetadataAlternates, getCanonicalUrl } from '@/lib/seo-utils';
 
 export const metadata: Metadata = {
   title: 'Ankara Sepetli Vinç Hizmet Bölgeleri',
   description:
     "Ankara'da Çankaya, Yenimahalle, Ostim, İvedik ve tüm ilçelere 7/24 hızlı sevk imkanıyla kiralık sepetli vinç.",
-  alternates: {
-    canonical: `${siteUrl}/bolgeler`,
-  },
+  alternates: getMetadataAlternates('/bolgeler'),
   openGraph: {
     title: 'Hizmet Bölgelerimiz | Ankara Sepetli Vinç',
     description:
       "Ankara'da Çankaya, Yenimahalle, Ostim, İvedik ve tüm ilçelere 7/24 hızlı sevk imkanıyla kiralık sepetli vinç.",
-    url: `${siteUrl}/bolgeler`,
+    url: getCanonicalUrl('/bolgeler'),
   },
 };
 

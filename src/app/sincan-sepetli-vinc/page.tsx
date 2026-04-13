@@ -6,14 +6,13 @@ import Footer from '@/components/Footer';
 import FloatingCTA from '@/components/FloatingCTA';
 import Breadcrumb from '@/components/Breadcrumb';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ankarasepetlivinckirala.com';
+import { getMetadataAlternates, getCanonicalUrl } from '@/lib/seo-utils';
 
 export const metadata: Metadata = {
-    title: 'Sincan Sepetli Vinç | Sincan Organize Kiralık Vinç',
-    description: 'Ankara Sincan OSB, Fatih ve Törekent bölgelerinde fabrika bakımları ve şantiye hizmetleri için 7/24 sepetli vinç, örümcek platform kiralama.',
-    alternates: {
-        canonical: `${siteUrl}/sincan-sepetli-vinc`,
-    },
+  title: 'Sincan Sepetli Vinç | Sincan Organize Kiralık Vinç',
+  description:
+    'Ankara Sincan OSB, Fatih ve Törekent bölgelerinde fabrika bakımları ve şantiye hizmetleri için 7/24 sepetli vinç, örümcek platform kiralama.',
+  alternates: getMetadataAlternates('/sincan-sepetli-vinc'),
 };
 
 export default function SincanSepetliVincPage() {
@@ -69,7 +68,7 @@ export default function SincanSepetliVincPage() {
 
                             <h2>Sincan ve Yenikent İçin Kesintisiz Çözümler</h2>
                             <p>
-                                Tüm Ankara geneline hızla tahsis ettiğimiz <Link href="/ankara-sepetli-vinc-kiralama">Ankara sepetli vinç kiralama</Link> sistemlerimiz, Sincan coğrafyasında şu işlemleri rutine bindirmiştir:
+                                Tüm Ankara geneline hızla tahsis ettiğimiz <Link href="/sepetli-vinc-kiralama">Ankara sepetli vinç kiralama</Link> sistemlerimiz, Sincan coğrafyasında şu işlemleri rutine bindirmiştir:
                             </p>
                             <ul>
                                 <li><strong>Fabrika Silo ve Boru Montajı:</strong> Yüksek beton santrallerinde kaynayan devasa çelik boruların güvenlikle lehimlenmesi.</li>
@@ -107,9 +106,9 @@ export default function SincanSepetliVincPage() {
                             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
                                 <h3 className="text-lg font-bold text-gray-900 mb-4 border-b border-gray-100 pb-3 flex items-center gap-2"><MapPin className="w-5 h-5 text-gray-400" /> Bağlantılı Güzergâhlar</h3>
                                 <ul className="flex flex-col gap-3">
-                                    <li><Link href="/etimesgut-sepetli-vinc" className="text-gray-600 hover:text-primary">Etimesgut Sepetli Vinç</Link></li>
-                                    <li><Link href="/ostim-sepetli-vinc" className="text-gray-600 hover:text-primary">Ostim Sepetli Vinç</Link></li>
-                                    <li><Link href="/ankara-sepetli-vinc-kiralama" className="text-gray-600 hover:text-primary">Ankara Merkez Vinç Kiralama</Link></li>
+                                    <li><Link href="/bolgeler/etimesgut-sepetli-vinc-kiralama" className="text-gray-600 hover:text-primary">Etimesgut Sepetli Vinç</Link></li>
+                                    <li><Link href="/bolgeler/ostim-sepetli-vinc-kiralama" className="text-gray-600 hover:text-primary">Ostim Sepetli Vinç</Link></li>
+                                    <li><Link href="/sepetli-vinc-kiralama" className="text-gray-600 hover:text-primary">Ankara Merkez Vinç Kiralama</Link></li>
                                 </ul>
                             </div>
                         </aside>

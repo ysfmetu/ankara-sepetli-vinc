@@ -6,14 +6,13 @@ import Footer from '@/components/Footer';
 import FloatingCTA from '@/components/FloatingCTA';
 import Breadcrumb from '@/components/Breadcrumb';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ankarasepetlivinckirala.com';
+import { getMetadataAlternates, getCanonicalUrl } from '@/lib/seo-utils';
 
 export const metadata: Metadata = {
-    title: 'Yenimahalle Sepetli Vinç | Saatlik ve Günlük Kiralama',
-    description: 'Ankara Yenimahalle, Batıkent, Demetevler ve Macunköy sanayi sahalarına özel operatörlü kiralık sepetli vinç, hiyap platform çözümleri. Şok fiyatlar!',
-    alternates: {
-        canonical: `${siteUrl}/yenimahalle-sepetli-vinc`,
-    },
+  title: 'Yenimahalle Sepetli Vinç | Saatlik ve Günlük Kiralama',
+  description:
+    'Ankara Yenimahalle, Batıkent, Demetevler ve Macunköy sanayi sahalarına özel operatörlü kiralık sepetli vinç, hiyap platform çözümleri. Şok fiyatlar!',
+  alternates: getMetadataAlternates('/yenimahalle-sepetli-vinc'),
 };
 
 export default function YenimahalleSepetliVincPage() {
@@ -62,7 +61,7 @@ export default function YenimahalleSepetliVincPage() {
 
                             <h2>Yenimahalle'nin Yüksek Çözüm Adresi</h2>
                             <p>
-                                Hem köklü bir ilçe kültürü barındıran hem de Batıkent gibi modern ve geniş yeşil alanlı rekreasyon alanlarına uzanan Yenimahalle, yoğun iş temposuna sahip dev bir alandır. Ticari işletmelerin ve yüksek site bloklarının yan yana yer aldığı bu geniş ilçede onarım ve montaj işlerinde güvenilir bir çözüm ortağı elzemdir. Bizler, genel <Link href="/ankara-sepetli-vinc-kiralama">Ankara sepetli vinç kiralama</Link> rotamızın tam merkezinde kalan <strong>Yenimahalle sepetli vinç</strong> istasyonumuzla acil çağrılara 20 dakika gibi kısa sürelerde yanıt verebilmekteyiz.
+                                Hem köklü bir ilçe kültürü barındıran hem de Batıkent gibi modern ve geniş yeşil alanlı rekreasyon alanlarına uzanan Yenimahalle, yoğun iş temposuna sahip dev bir alandır. Ticari işletmelerin ve yüksek site bloklarının yan yana yer aldığı bu geniş ilçede onarım ve montaj işlerinde güvenilir bir çözüm ortağı elzemdir. Bizler, genel <Link href="/sepetli-vinc-kiralama">Ankara sepetli vinç kiralama</Link> rotamızın tam merkezinde kalan <strong>Yenimahalle sepetli vinç</strong> istasyonumuzla acil çağrılara 20 dakika gibi kısa sürelerde yanıt verebilmekteyiz.
                             </p>
 
                             <hr className="my-6" />
@@ -106,9 +105,9 @@ export default function YenimahalleSepetliVincPage() {
                             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
                                 <h3 className="text-lg font-bold text-gray-900 mb-4 border-b border-gray-100 pb-3 flex items-center gap-2"><MapPin className="w-5 h-5 text-gray-400" /> Diğer Koordinatlar</h3>
                                 <ul className="flex flex-col gap-3">
-                                    <li><Link href="/ostim-sepetli-vinc" className="text-gray-600 hover:text-primary">Ostim Sepetli Vinç</Link></li>
-                                    <li><Link href="/cankaya-sepetli-vinc" className="text-gray-600 hover:text-primary">Çankaya Sepetli Vinç</Link></li>
-                                    <li><Link href="/ankara-sepetli-vinc-kiralama" className="text-gray-600 hover:text-primary">Merkez Sepetli Vinç</Link></li>
+                                    <li><Link href="/bolgeler/ostim-sepetli-vinc-kiralama" className="text-gray-600 hover:text-primary">Ostim Sepetli Vinç</Link></li>
+                                    <li><Link href="/bolgeler/cankaya-sepetli-vinc-kiralama" className="text-gray-600 hover:text-primary">Çankaya Sepetli Vinç</Link></li>
+                                    <li><Link href="/sepetli-vinc-kiralama" className="text-gray-600 hover:text-primary">Merkez Sepetli Vinç</Link></li>
                                 </ul>
                             </div>
                         </aside>
