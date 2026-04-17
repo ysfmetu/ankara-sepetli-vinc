@@ -499,12 +499,12 @@ export default function ElektrikBakimPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
                 {
-                  href: '/sepetli-vinc-kiralama',
+                  href: '/hizmetler/sepetli-vinc-kiralama',
                   title: 'Sepetli Vinç Kiralama',
                   desc: 'Ankara genelinde operatörlü sepetli vinç',
                 },
                 {
-                  href: '/operatorlu-vinc-kiralama',
+                  href: '/hizmetler/operatorlu-vinc-kiralama',
                   title: 'Operatörlü Vinç Kiralama',
                   desc: 'Sertifikalı operatörle güvenli kiralama',
                 },

@@ -98,7 +98,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/sepetli-vinc-kiralama"
+                  href="/hizmetler/sepetli-vinc-kiralama"
                   className="text-sm hover:text-white transition-colors flex items-center gap-2 mt-4 pt-4 border-t border-gray-800"
                 >
                   <span className="text-primary">›</span> Sepetli Vinç Kiralama
@@ -106,7 +106,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/operatorlu-vinc-kiralama"
+                  href="/hizmetler/operatorlu-vinc-kiralama"
                   className="text-sm hover:text-white transition-colors flex items-center gap-2"
                 >
                   <span className="text-primary">›</span> Operatörlü Vinç
@@ -114,7 +114,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/saatlik-vinc-kiralama"
+                  href="/hizmetler/saatlik-vinc-kiralama"
                   className="text-sm hover:text-white transition-colors flex items-center gap-2"
                 >
                   <span className="text-primary">›</span> Saatlik Vinç
@@ -122,7 +122,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/gunluk-vinc-kiralama"
+                  href="/hizmetler/gunluk-vinc-kiralama"
                   className="text-sm hover:text-white transition-colors flex items-center gap-2"
                 >
                   <span className="text-primary">›</span> Günlük Vinç

@@ -13,11 +13,11 @@ import { SEO_CONFIG } from '@/config/seo';
 export const metadata: Metadata = {
   title: 'Ankara Sepetli Vinç Kiralama',
   description: "Ankara'da sepetli vinç kiralama hizmeti, operatörlü ve güvenli platform çözümleri.",
-  alternates: getMetadataAlternates('/sepetli-vinc-kiralama'),
+  alternates: getMetadataAlternates('/hizmetler/sepetli-vinc-kiralama'),
   openGraph: {
     title: 'Ankara Sepetli Vinç Kiralama',
     description: "Ankara'da sepetli vinç kiralama hizmeti, operatörlü ve güvenli platform çözümleri.",
-    url: getCanonicalUrl('/sepetli-vinc-kiralama'),
+    url: getCanonicalUrl('/hizmetler/sepetli-vinc-kiralama'),
   },
 };
 
@@ -25,7 +25,7 @@ export default function SepetliVincKiralamaPage() {
     const breadcrumbItems = [
         { label: 'Ana Sayfa', href: '/' },
         { label: 'Hizmetler', href: '/hizmetler' },
-        { label: 'Sepetli Vinç Kiralama', href: '/sepetli-vinc-kiralama' },
+        { label: 'Sepetli Vinç Kiralama', href: '/hizmetler/sepetli-vinc-kiralama' },
     ];
 
     const jsonLd = {
@@ -42,7 +42,7 @@ export default function SepetliVincKiralamaPage() {
             name: 'Ankara'
         },
         description: "Ankara'da sepetli vinç kiralama hizmeti, operatörlü ve güvenli platform çözümleri.",
-        url: getCanonicalUrl('/sepetli-vinc-kiralama'),
+        url: getCanonicalUrl('/hizmetler/sepetli-vinc-kiralama'),
         hasOfferCatalog: {
             '@type': 'OfferCatalog',
             name: 'Kiralama Hizmetleri',
@@ -201,7 +201,7 @@ export default function SepetliVincKiralamaPage() {
 
                             <h2>Sepetli Vinç Kiralamanın Avantajları</h2>
                             <p>
-                                Ankara metropolünde iş yapıyorsanız süreciniz hem hızlı hem de esnek olmalıdır. <Link href="/operatorlu-vinc-kiralama">Operatörlü vinç kiralama</Link> paketimiz eşliğinde sahaya davet edeceğiniz aracımız, projenize şu büyük avantajları sağlar:
+                                Ankara metropolünde iş yapıyorsanız süreciniz hem hızlı hem de esnek olmalıdır. <Link href="/hizmetler/operatorlu-vinc-kiralama">Operatörlü vinç kiralama</Link> paketimiz eşliğinde sahaya davet edeceğiniz aracımız, projenize şu büyük avantajları sağlar:
                             </p>
                             <ol>
                                 <li><strong>Portatiflik ve Hız:</strong> Araç istenilen sokağa geldiğinde en fazla 10-15 dakika içerisinde hidrolik ayaklarını sabitleyip kolları yukarı doğru şaha kaldırır. İskeleye oranla kurulum sıfıra yakındır.</li>
@@ -211,7 +211,7 @@ export default function SepetliVincKiralamaPage() {
 
                             <h2>Fiyatları Etkileyen Faktörler</h2>
                             <p>
-                                Ankara vinç pazarında fiyatlandırma yapılırken en çok dikkate alınan iki ana kriter bulunur: Sepetin çıkacağı maksimum yükseklik (buna makine metrajı da denir) ve işin planlanan mesai süresi. Hızlı giderilen durumlar için tasarlanan <Link href="/saatlik-vinc-kiralama">saatlik vinç</Link> kendi özel ve dar kalıplı maliyet sınırını çizer. Ancak eğer bir temizlik ya da tabela çalışması akşama kadar sürecekse <Link href="/gunluk-vinc-kiralama">günlük (yevmiye) vinç kiralama</Link> devreye alınır ki bu da işletmelere muazzam bir indirim imkanı sunar.
+                                Ankara vinç pazarında fiyatlandırma yapılırken en çok dikkate alınan iki ana kriter bulunur: Sepetin çıkacağı maksimum yükseklik (buna makine metrajı da denir) ve işin planlanan mesai süresi. Hızlı giderilen durumlar için tasarlanan <Link href="/hizmetler/saatlik-vinc-kiralama">saatlik vinç</Link> kendi özel ve dar kalıplı maliyet sınırını çizer. Ancak eğer bir temizlik ya da tabela çalışması akşama kadar sürecekse <Link href="/hizmetler/gunluk-vinc-kiralama">günlük (yevmiye) vinç kiralama</Link> devreye alınır ki bu da işletmelere muazzam bir indirim imkanı sunar.
                             </p>
                             <p>
                                 Ayrıca sevk edileceği bölgenin Sincan veya Çankaya olması gibi konum mesafeleri de çok küçük oranlarda fiyatlara etki edebilir. Tam teşekküllü fiyat ve zaman matrisi hakkında maliyet çıkarımlarına <Link href="/hizmetler">Ankara vinç hizmetleri</Link> sayfamız üzerinden ya da daha da doğrusu hemen bizi arayarak ulaşabilirsiniz.
@@ -269,19 +269,19 @@ export default function SepetliVincKiralamaPage() {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/operatorlu-vinc-kiralama" className="flex items-center justify-between text-gray-600 hover:text-primary transition-colors group">
+                                        <Link href="/hizmetler/operatorlu-vinc-kiralama" className="flex items-center justify-between text-gray-600 hover:text-primary transition-colors group">
                                             <span>Operatörlü Hizmetler</span>
                                             <span className="text-gray-300 group-hover:text-primary transition-colors">→</span>
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/saatlik-vinc-kiralama" className="flex items-center justify-between text-gray-600 hover:text-primary transition-colors group">
+                                        <Link href="/hizmetler/saatlik-vinc-kiralama" className="flex items-center justify-between text-gray-600 hover:text-primary transition-colors group">
                                             <span>Saatlik Kiralamalar</span>
                                             <span className="text-gray-300 group-hover:text-primary transition-colors">→</span>
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/gunluk-vinc-kiralama" className="flex items-center justify-between text-gray-600 hover:text-primary transition-colors group">
+                                        <Link href="/hizmetler/gunluk-vinc-kiralama" className="flex items-center justify-between text-gray-600 hover:text-primary transition-colors group">
                                             <span>Günlük (Yevmiye) Opsiyonları</span>
                                             <span className="text-gray-300 group-hover:text-primary transition-colors">→</span>
                                         </Link>

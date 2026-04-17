@@ -10,10 +10,10 @@ export default function robots(): MetadataRoute.Robots {
         '/blog',
         '/hizmetler',
         '/iletisim',
-        '/sepetli-vinc-kiralama',
-        '/operatorlu-vinc-kiralama',
-        '/saatlik-vinc-kiralama',
-        '/gunluk-vinc-kiralama'
+        '/hizmetler/sepetli-vinc-kiralama',
+        '/hizmetler/operatorlu-vinc-kiralama',
+        '/hizmetler/saatlik-vinc-kiralama',
+        '/hizmetler/gunluk-vinc-kiralama'
       ],
       disallow: [
         '/admin',

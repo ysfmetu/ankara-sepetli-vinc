@@ -44,7 +44,7 @@ export default function Services() {
           <p className="text-gray-600 text-lg">
             Ankara&apos;nın her noktasına farklı yükseklik ve çalışma alanlarına uygun araç
             filomuzla profesyonel çözümler üretiyoruz.{' '}
-            <Link href="/sepetli-vinc-kiralama" className="text-primary hover:underline hover:text-primary-hover font-medium transition-colors">
+            <Link href="/hizmetler/sepetli-vinc-kiralama" className="text-primary hover:underline hover:text-primary-hover font-medium transition-colors">
               Sepetli vinç kiralama hizmeti hakkında detaylı bilgi için sayfamızı inceleyin.
             </Link>
           </p>

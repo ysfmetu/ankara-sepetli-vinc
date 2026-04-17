@@ -10,10 +10,10 @@ import FAQ from '@/components/FAQ';
 import { getMetadataAlternates, getCanonicalUrl } from '@/lib/seo-utils';
 
 export const metadata: Metadata = {
-  title: 'Sepetli Vinç Kiralama Fiyatları Ankara 2025 | Güncel Tarife',
-  description:
-    'Saatlik, günlük ve aylık periyotlarla sepetli vinç kiralama fiyatları. Metraj ve yüksekliğe göre Ankara vinç kiralama ücretleri rehberi.',
-  alternates: getMetadataAlternates('/sepetli-vinc-kiralama-fiyatlari'),
+    title: 'Sepetli Vinç Kiralama Fiyatları Ankara 2025 | Güncel Tarife',
+    description:
+        'Saatlik, günlük ve aylık periyotlarla sepetli vinç kiralama fiyatları. Metraj ve yüksekliğe göre Ankara vinç kiralama ücretleri rehberi.',
+    alternates: getMetadataAlternates('/sepetli-vinc-kiralama-fiyatlari'),
 };
 
 export default function SepetliVincKiralamaFiyatlariPage() {
@@ -51,7 +51,7 @@ export default function SepetliVincKiralamaFiyatlariPage() {
                                 className="flex items-center gap-2 bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-xl font-bold transition-all hover:scale-105 shadow-lg shadow-primary/30"
                             >
                                 <PhoneCall className="w-5 h-5" />
-                                <span>Canlı Fiyat Al: 0532 000 00 00</span>
+                                <span>Canlı Fiyat Al: 0551 606 68 78</span>
                             </a>
                         </div>
                     </div>
@@ -170,7 +170,7 @@ export default function SepetliVincKiralamaFiyatlariPage() {
                             <ul>
                                 <li>Fiyat teklifi aldığınız firmanın <Link href="/blog/ankara-sepetli-vinc-guvenlik-standartlari">ISO, TSE Kalite Belgeleri</Link> ve personellerinin G sınıfı ehliyete sahip olduğunu daima teyit edin.</li>
                                 <li>Telefonda adresi belirtirken, vincin çalışma sahasının dar veya geniş olduğunu, arazide meyil olup olmadığını operasyon ekibine mutlaka aktarın ki, son dakika fiyat farkları sürpriziyle karşılaşmayın.</li>
-                                <li>İhtiyacınıza en uygun metrajı tahmin edemiyorsanız, kurumsal <Link href="/sepetli-vinc-kiralama">Ankara Sepetli Vinç Kiralama</Link> uzmanlarımızdan ücretsiz saha ekspertizi talebinde bulunun.</li>
+                                <li>İhtiyacınıza en uygun metrajı tahmin edemiyorsanız, kurumsal <Link href="/hizmetler/sepetli-vinc-kiralama">Ankara Sepetli Vinç Kiralama</Link> uzmanlarımızdan ücretsiz saha ekspertizi talebinde bulunun.</li>
                             </ul>
 
                             <div className="mt-12 bg-primary/5 p-6 rounded-xl border border-primary/20 text-center">

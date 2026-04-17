@@ -473,7 +473,7 @@ export default function CepheTemizligiSepetliVincPage() {
             <h2 className="text-xl font-bold text-gray-900 mb-6">İlgili Hizmetler</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <Link
-                href="/sepetli-vinc-kiralama"
+                href="/hizmetler/sepetli-vinc-kiralama"
                 className="block bg-gray-50 hover:bg-red-50 border border-gray-200 hover:border-red-200 rounded-xl p-5 transition-colors group"
               >
                 <span className="font-semibold text-gray-900 group-hover:text-red-700 block mb-1">
@@ -484,7 +484,7 @@ export default function CepheTemizligiSepetliVincPage() {
                 </span>
               </Link>
               <Link
-                href="/operatorlu-vinc-kiralama"
+                href="/hizmetler/operatorlu-vinc-kiralama"
                 className="block bg-gray-50 hover:bg-red-50 border border-gray-200 hover:border-red-200 rounded-xl p-5 transition-colors group"
               >
                 <span className="font-semibold text-gray-900 group-hover:text-red-700 block mb-1">

@@ -13,11 +13,11 @@ import { SEO_CONFIG } from '@/config/seo';
 export const metadata: Metadata = {
   title: 'Ankara Operatörlü Vinç Kiralama',
   description: "Ankara operatörlü vinç kiralama hizmetleri ile güvenli ve profesyonel kaldırma çözümleri.",
-  alternates: getMetadataAlternates('/operatorlu-vinc-kiralama'),
+  alternates: getMetadataAlternates('/hizmetler/operatorlu-vinc-kiralama'),
   openGraph: {
     title: 'Ankara Operatörlü Vinç Kiralama',
     description: "Ankara operatörlü vinç kiralama hizmetleri ile güvenli ve profesyonel kaldırma çözümleri.",
-    url: getCanonicalUrl('/operatorlu-vinc-kiralama'),
+    url: getCanonicalUrl('/hizmetler/operatorlu-vinc-kiralama'),
   },
 };
 
@@ -25,7 +25,7 @@ export default function OperatorluVincKiralamaPage() {
     const breadcrumbItems = [
         { label: 'Ana Sayfa', href: '/' },
         { label: 'Hizmetler', href: '/hizmetler' },
-        { label: 'Operatörlü Vinç Kiralama', href: '/operatorlu-vinc-kiralama' },
+        { label: 'Operatörlü Vinç Kiralama', href: '/hizmetler/operatorlu-vinc-kiralama' },
     ];
 
     const jsonLd = {
@@ -38,7 +38,7 @@ export default function OperatorluVincKiralamaPage() {
             url: SEO_CONFIG.baseUrl
         },
         description: "Ankara operatörlü vinç kiralama hizmetleri ile güvenli ve profesyonel kaldırma çözümleri.",
-        url: getCanonicalUrl('/operatorlu-vinc-kiralama')
+        url: getCanonicalUrl('/hizmetler/operatorlu-vinc-kiralama')
     };
 
     return (
@@ -95,7 +95,7 @@ export default function OperatorluVincKiralamaPage() {
 
                             <h2>Operatörlerimiz Hangi Alanlarda Yanınızda?</h2>
                             <p>
-                                <Link href="/sepetli-vinc-kiralama">Sepetli vinç kiralama ankara</Link> taleplerinin hemen hemen tamamına operatörlü hizmet eşlik eder. Peki teknik personelimiz nerelerde müdahale sağlar?
+                                <Link href="/hizmetler/sepetli-vinc-kiralama">Sepetli vinç kiralama ankara</Link> taleplerinin hemen hemen tamamına operatörlü hizmet eşlik eder. Peki teknik personelimiz nerelerde müdahale sağlar?
                             </p>
                             <ul className="list-none space-y-4 pl-0">
                                 <li className="flex items-start gap-3">
@@ -126,12 +126,12 @@ export default function OperatorluVincKiralamaPage() {
                                 </h3>
                                 <ul className="flex flex-col gap-3">
                                     <li>
-                                        <Link href="/saatlik-vinc-kiralama" className="flex items-center justify-between text-gray-600 hover:text-primary transition-colors group">
+                                        <Link href="/hizmetler/saatlik-vinc-kiralama" className="flex items-center justify-between text-gray-600 hover:text-primary transition-colors group">
                                             <span>Saatlik Kiralamalar →</span>
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/gunluk-vinc-kiralama" className="flex items-center justify-between text-gray-600 hover:text-primary transition-colors group">
+                                        <Link href="/hizmetler/gunluk-vinc-kiralama" className="flex items-center justify-between text-gray-600 hover:text-primary transition-colors group">
                                             <span>Günlük Vinç İhtiyacı →</span>
                                         </Link>
                                     </li>

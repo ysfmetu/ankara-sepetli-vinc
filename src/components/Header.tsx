@@ -164,28 +164,28 @@ export default function Header() {
               </Link>
               <div className="border-t border-gray-100 my-1 pt-2 flex flex-col space-y-3">
                 <Link
-                  href="/sepetli-vinc-kiralama"
+                  href="/hizmetler/sepetli-vinc-kiralama"
                   onClick={() => setIsOpen(false)}
                   className="text-gray-600 hover:text-primary pl-2 border-l-2 border-transparent hover:border-primary transition-all"
                 >
                   Sepetli Vinç Kiralama
                 </Link>
                 <Link
-                  href="/operatorlu-vinc-kiralama"
+                  href="/hizmetler/operatorlu-vinc-kiralama"
                   onClick={() => setIsOpen(false)}
                   className="text-gray-600 hover:text-primary pl-2 border-l-2 border-transparent hover:border-primary transition-all"
                 >
                   Operatörlü Vinç
                 </Link>
                 <Link
-                  href="/saatlik-vinc-kiralama"
+                  href="/hizmetler/saatlik-vinc-kiralama"
                   onClick={() => setIsOpen(false)}
                   className="text-gray-600 hover:text-primary pl-2 border-l-2 border-transparent hover:border-primary transition-all"
                 >
                   Saatlik Vinç
                 </Link>
                 <Link
-                  href="/gunluk-vinc-kiralama"
+                  href="/hizmetler/gunluk-vinc-kiralama"
                   onClick={() => setIsOpen(false)}
                   className="text-gray-600 hover:text-primary pl-2 border-l-2 border-transparent hover:border-primary transition-all"
                 >

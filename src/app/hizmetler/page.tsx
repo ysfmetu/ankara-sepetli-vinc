@@ -74,33 +74,33 @@ export default function HizmetlerPage() {
               <section id="sepetli-vinc-kiralama" className="bg-gray-50 border border-gray-100 rounded-2xl p-6 md:p-8">
                 <h2 className="mt-0">Sepetli Vinç Kiralama</h2>
                 <p>
-                  Yüksek katlı binaların dış cephe temizlikleri, tabela montajları ve açık hava reklamcılığında güvenlik gerektiren tüm işlemleriniz için idealdir. <Link href="/sepetli-vinc-kiralama">Ankara sepetli vinç kiralama</Link> departmanımız, dar ara sokaklarda bile manevra kabiliyeti yüksek modern araç filosu sunar.
+                  Yüksek katlı binaların dış cephe temizlikleri, tabela montajları ve açık hava reklamcılığında güvenlik gerektiren tüm işlemleriniz için idealdir. <Link href="/hizmetler/sepetli-vinc-kiralama">Ankara sepetli vinç kiralama</Link> departmanımız, dar ara sokaklarda bile manevra kabiliyeti yüksek modern araç filosu sunar.
                 </p>
-                <Link href="/sepetli-vinc-kiralama" className="inline-block mt-4 text-primary font-bold hover:underline">Sepetli Vinç Detayları →</Link>
+                <Link href="/hizmetler/sepetli-vinc-kiralama" className="inline-block mt-4 text-primary font-bold hover:underline">Sepetli Vinç Detayları →</Link>
               </section>
 
               <section id="operatorlu-vinc-kiralama" className="bg-gray-50 border border-gray-100 rounded-2xl p-6 md:p-8">
                 <h2 className="mt-0">Operatörlü Vinç Kiralama</h2>
                 <p>
-                  Vincin kiralanması sürecinde, iş güvenliği lisanslı ve tecrübeli operatörlerimiz aracı sizin için bizzat yönetir. Yükseltici platformların profesyonellerce kullanılması sıfır iş kazası prensibi için kaçınılmazdır. Daha fazla bilgi için <Link href="/operatorlu-vinc-kiralama">operatörlü hizmet sürecimizi</Link> inceleyin.
+                  Vincin kiralanması sürecinde, iş güvenliği lisanslı ve tecrübeli operatörlerimiz aracı sizin için bizzat yönetir. Yükseltici platformların profesyonellerce kullanılması sıfır iş kazası prensibi için kaçınılmazdır. Daha fazla bilgi için <Link href="/hizmetler/operatorlu-vinc-kiralama">operatörlü hizmet sürecimizi</Link> inceleyin.
                 </p>
-                <Link href="/operatorlu-vinc-kiralama" className="inline-block mt-4 text-primary font-bold hover:underline">Operatörlü Hizmet Detayları →</Link>
+                <Link href="/hizmetler/operatorlu-vinc-kiralama" className="inline-block mt-4 text-primary font-bold hover:underline">Operatörlü Hizmet Detayları →</Link>
               </section>
 
               <section id="saatlik-vinc-kiralama" className="bg-gray-50 border border-gray-100 rounded-2xl p-6 md:p-8">
                 <h2 className="mt-0">Saatlik Vinç Kiralama</h2>
                 <p>
-                  Kısa süreli tabela onarımları veya lambası değişimleri için bütçe dostu <strong>saatlik vinç kiralama</strong> seçeneklerimiz mevcuttur. Daha az maliyetle hızlı müdahale arayanlar için <Link href="/saatlik-vinc-kiralama">saatlik vinç kiralama servisimiz</Link> 7/24 hizmettedir.
+                  Kısa süreli tabela onarımları veya lambası değişimleri için bütçe dostu <strong>saatlik vinç kiralama</strong> seçeneklerimiz mevcuttur. Daha az maliyetle hızlı müdahale arayanlar için <Link href="/hizmetler/saatlik-vinc-kiralama">saatlik vinç kiralama servisimiz</Link> 7/24 hizmettedir.
                 </p>
-                <Link href="/saatlik-vinc-kiralama" className="inline-block mt-4 text-primary font-bold hover:underline">Saatlik Rezervasyon →</Link>
+                <Link href="/hizmetler/saatlik-vinc-kiralama" className="inline-block mt-4 text-primary font-bold hover:underline">Saatlik Rezervasyon →</Link>
               </section>
 
               <section id="gunluk-vinc-kiralama" className="bg-gray-50 border border-gray-100 rounded-2xl p-6 md:p-8">
                 <h2 className="mt-0">Günlük Vinç Kiralama</h2>
                 <p>
-                  Dış cephe izolasyon projeleri veya şantiyelerde <strong>günlük vinç kiralama</strong> alternatifimiz daha ekonomik fayda sağlar. Detaylar ve kiralama avantajları için <Link href="/gunluk-vinc-kiralama">günlük kiralama opsiyonumuza</Link> veya direkt <Link href="/iletisim">İletişim sayfamıza</Link> göz atın.
+                  Dış cephe izolasyon projeleri veya şantiyelerde <strong>günlük vinç kiralama</strong> alternatifimiz daha ekonomik fayda sağlar. Detaylar ve kiralama avantajları için <Link href="/hizmetler/gunluk-vinc-kiralama">günlük kiralama opsiyonumuza</Link> veya direkt <Link href="/iletisim">İletişim sayfamıza</Link> göz atın.
                 </p>
-                <Link href="/gunluk-vinc-kiralama" className="inline-block mt-4 text-primary font-bold hover:underline">Günlük Seçenekler →</Link>
+                <Link href="/hizmetler/gunluk-vinc-kiralama" className="inline-block mt-4 text-primary font-bold hover:underline">Günlük Seçenekler →</Link>
               </section>
 
               <section id="cephe-temizligi" className="bg-gray-50 border border-gray-100 rounded-2xl p-6 md:p-8">

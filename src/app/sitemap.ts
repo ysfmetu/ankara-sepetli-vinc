@@ -18,10 +18,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/hizmetler/agac-budama',
     '/hakkimizda',
     '/iletisim',
-    '/sepetli-vinc-kiralama',
-    '/operatorlu-vinc-kiralama',
-    '/saatlik-vinc-kiralama',
-    '/gunluk-vinc-kiralama',
+    '/hizmetler/sepetli-vinc-kiralama',
+    '/hizmetler/operatorlu-vinc-kiralama',
+    '/hizmetler/saatlik-vinc-kiralama',
+    '/hizmetler/gunluk-vinc-kiralama',
     '/sepetli-vinc-kiralama-fiyatlari',
     '/bolgeler',
     '/bolgeler/etimesgut-sepetli-vinc-kiralama',
@@ -30,6 +30,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/bolgeler/cankaya-sepetli-vinc-kiralama',
     '/bolgeler/mamak-sepetli-vinc-kiralama',
     '/bolgeler/ivedik-sepetli-vinc-kiralama',
+    '/bolgeler/sincan-sepetli-vinc-kiralama',
+    '/bolgeler/kecioren-sepetli-vinc-kiralama',
+    '/bolgeler/altindag-sepetli-vinc-kiralama',
+    '/bolgeler/pursaklar-sepetli-vinc-kiralama',
+    '/bolgeler/golbasi-sepetli-vinc-kiralama',
+    '/bolgeler/kahramankazan-sepetli-vinc-kiralama',
     ...posts.map((post) => `/blog/${post.slug}`),
   ];
 
@@ -40,7 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     } else if (
       route.startsWith('/hizmetler/') ||
       route.startsWith('/bolgeler/') ||
-      route === '/sepetli-vinc-kiralama'
+      route === '/hizmetler/sepetli-vinc-kiralama'
     ) {
       changeFrequency = 'weekly';
     } else if (route.startsWith('/blog/')) {

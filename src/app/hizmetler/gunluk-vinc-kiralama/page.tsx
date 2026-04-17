@@ -13,11 +13,11 @@ import { SEO_CONFIG } from '@/config/seo';
 export const metadata: Metadata = {
   title: 'Ankara Günlük Vinç Kiralama',
   description: "Ankara günlük vinç kiralama hizmetleri ile tam gün profesyonel kaldırma ve erişim çözümleri.",
-  alternates: getMetadataAlternates('/gunluk-vinc-kiralama'),
+  alternates: getMetadataAlternates('/hizmetler/gunluk-vinc-kiralama'),
   openGraph: {
     title: 'Ankara Günlük Vinç Kiralama',
     description: "Ankara günlük vinç kiralama hizmetleri ile tam gün profesyonel kaldırma ve erişim çözümleri.",
-    url: getCanonicalUrl('/gunluk-vinc-kiralama'),
+    url: getCanonicalUrl('/hizmetler/gunluk-vinc-kiralama'),
   },
 };
 
@@ -25,7 +25,7 @@ export default function GunlukVincKiralamaPage() {
     const breadcrumbItems = [
         { label: 'Ana Sayfa', href: '/' },
         { label: 'Hizmetler', href: '/hizmetler' },
-        { label: 'Günlük Vinç Kiralama', href: '/gunluk-vinc-kiralama' },
+        { label: 'Günlük Vinç Kiralama', href: '/hizmetler/gunluk-vinc-kiralama' },
     ];
 
     const jsonLd = {
@@ -38,7 +38,7 @@ export default function GunlukVincKiralamaPage() {
             url: SEO_CONFIG.baseUrl
         },
         description: "Ankara günlük vinç kiralama hizmetleri ile tam gün profesyonel kaldırma ve erişim çözümleri.",
-        url: getCanonicalUrl('/gunluk-vinc-kiralama')
+        url: getCanonicalUrl('/hizmetler/gunluk-vinc-kiralama')
     };
 
     return (
@@ -84,17 +84,17 @@ export default function GunlukVincKiralamaPage() {
 
                             <h2>Günlük Vinç İhtiyacı Hangi Hizmetlerde Kaçınılmazdır?</h2>
                             <p>
-                                Eğer aracı 4 saatin üzerinde sabitleyip ağır ve ritmik bir tempoyla çalışmanız gerekiyorsa <Link href="/saatlik-vinc-kiralama">saatlik kiralama</Link> modeli bütçenize eksi yönde zarar verecektir. Büyük boyutta işlemlerde daima günlük sistem tercih edilir:
+                                Eğer aracı 4 saatin üzerinde sabitleyip ağır ve ritmik bir tempoyla çalışmanız gerekiyorsa <Link href="/hizmetler/saatlik-vinc-kiralama">saatlik kiralama</Link> modeli bütçenize eksi yönde zarar verecektir. Büyük boyutta işlemlerde daima günlük sistem tercih edilir:
                             </p>
                             <ul>
-                                <li><strong>Kompleks Dış Cephe Yalıtımı ve Cam Silimi:</strong> 15, 20 katlı plazaların, bakanlık binalarının temizliği ve silikon yalıtımlarının yenilenmesi günler veya aylar sürer. <Link href="/sepetli-vinc-kiralama">Sepetli vinç</Link> burada iş için demirbaş haline gelir.</li>
+                                <li><strong>Kompleks Dış Cephe Yalıtımı ve Cam Silimi:</strong> 15, 20 katlı plazaların, bakanlık binalarının temizliği ve silikon yalıtımlarının yenilenmesi günler veya aylar sürer. <Link href="/hizmetler/sepetli-vinc-kiralama">Sepetli vinç</Link> burada iş için demirbaş haline gelir.</li>
                                 <li><strong>Özel Etkinlik Organizasyon Konserleri:</strong> Dev ses kolonlarının veya sahne demir mekanizmalarının havaya askılanması.</li>
                                 <li><strong>Müstakil Yaşam Konutları ve Villa Projeleri:</strong> Çatı oluk sistemlerinin sıfırdan oluşturulması süreci.</li>
                             </ul>
 
                             <h2>Anlaşma ve İskonto Avantajları</h2>
                             <p>
-                                Bir araç, bulunduğu noktada şantiyeden ayrılmadan <Link href="/operatorlu-vinc-kiralama">operatörlü bir şekilde</Link> mesailere iştirak ediyorsa, kiralama periyodu saatliğin aksine oldukça ucuza mal edilmiş olur. Ayrıca kurumsal departmanlarla aylık veya dönemsel kiralama protokolleri sağlanarak kâr/zarar eğrisinde büyük optimizasyon elde edilebilir. Tüm proje süreçleriniz ve sözleşmeli vinç parkur iskontoları ile ilgili bilgi almak maksadıyla bizlere derhal <Link href="/iletisim">iletisim panosundan</Link> veya doğrudan telefonla ulaşarak fikir danışabilirsiniz.
+                                Bir araç, bulunduğu noktada şantiyeden ayrılmadan <Link href="/hizmetler/operatorlu-vinc-kiralama">operatörlü bir şekilde</Link> mesailere iştirak ediyorsa, kiralama periyodu saatliğin aksine oldukça ucuza mal edilmiş olur. Ayrıca kurumsal departmanlarla aylık veya dönemsel kiralama protokolleri sağlanarak kâr/zarar eğrisinde büyük optimizasyon elde edilebilir. Tüm proje süreçleriniz ve sözleşmeli vinç parkur iskontoları ile ilgili bilgi almak maksadıyla bizlere derhal <Link href="/iletisim">iletisim panosundan</Link> veya doğrudan telefonla ulaşarak fikir danışabilirsiniz.
                             </p>
 
                         </article>

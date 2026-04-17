@@ -13,11 +13,11 @@ import { SEO_CONFIG } from '@/config/seo';
 export const metadata: Metadata = {
   title: 'Ankara Saatlik Vinç Kiralama',
   description: "Ankara'da saatlik vinç kiralama hizmeti ile kısa süreli işler için ekonomik çözümler.",
-  alternates: getMetadataAlternates('/saatlik-vinc-kiralama'),
+  alternates: getMetadataAlternates('/hizmetler/saatlik-vinc-kiralama'),
   openGraph: {
     title: 'Ankara Saatlik Vinç Kiralama',
     description: "Ankara'da saatlik vinç kiralama hizmeti ile kısa süreli işler için ekonomik çözümler.",
-    url: getCanonicalUrl('/saatlik-vinc-kiralama'),
+    url: getCanonicalUrl('/hizmetler/saatlik-vinc-kiralama'),
   },
 };
 
@@ -25,7 +25,7 @@ export default function SaatlikVincKiralamaPage() {
     const breadcrumbItems = [
         { label: 'Ana Sayfa', href: '/' },
         { label: 'Hizmetler', href: '/hizmetler' },
-        { label: 'Saatlik Vinç Kiralama', href: '/saatlik-vinc-kiralama' },
+        { label: 'Saatlik Vinç Kiralama', href: '/hizmetler/saatlik-vinc-kiralama' },
     ];
 
     const jsonLd = {
@@ -38,7 +38,7 @@ export default function SaatlikVincKiralamaPage() {
             url: SEO_CONFIG.baseUrl
         },
         description: "Ankara'da saatlik vinç kiralama hizmeti ile kısa süreli işler için ekonomik çözümler.",
-        url: getCanonicalUrl('/saatlik-vinc-kiralama')
+        url: getCanonicalUrl('/hizmetler/saatlik-vinc-kiralama')
     };
 
     return (
@@ -84,7 +84,7 @@ export default function SaatlikVincKiralamaPage() {
 
                             <h2>Saatlik Sepetli Vinç Kiralamanın Sıklıkla Kullanıldığı Yerler</h2>
                             <p>
-                                Ankara'daki yoğun tempoda pek çok müdahale pratik bitmek zorundadır. <Link href="/sepetli-vinc-kiralama">Sepetli vinç</Link> mekaniği bu aşamada aşağıdaki hizmetlerde başı çeker:
+                                Ankara'daki yoğun tempoda pek çok müdahale pratik bitmek zorundadır. <Link href="/hizmetler/sepetli-vinc-kiralama">Sepetli vinç</Link> mekaniği bu aşamada aşağıdaki hizmetlerde başı çeker:
                             </p>
                             <ul>
                                 <li><strong>Tabela ve Pano:</strong> Rüzgardan kopmuş tehlikeli sallanan totem bir tabelanın anlık vida yenilemesi.</li>
@@ -94,7 +94,7 @@ export default function SaatlikVincKiralamaPage() {
 
                             <h2>Nasıl Hesaplanır?</h2>
                             <p>
-                                Genel olarak <Link href="/operatorlu-vinc-kiralama">operatörlü kiraladığınız</Link> araç, merkezinizden hareket edip deponunuza ulaştığı an itibariyle minimum servis bedeli ile sürece başlar ve 1, 2, veya 3 saatlik taksimetre dilimleriyle size en ideal ve net maliyeti çıkarır. Randevunuzu önceden rezerve etmek için daima profesyonel çağrı ekibimizle <Link href="/iletisim">iletişim</Link> içerisinde bulunmanız tavsiye edilir.
+                                Genel olarak <Link href="/hizmetler/operatorlu-vinc-kiralama">operatörlü kiraladığınız</Link> araç, merkezinizden hareket edip deponunuza ulaştığı an itibariyle minimum servis bedeli ile sürece başlar ve 1, 2, veya 3 saatlik taksimetre dilimleriyle size en ideal ve net maliyeti çıkarır. Randevunuzu önceden rezerve etmek için daima profesyonel çağrı ekibimizle <Link href="/iletisim">iletişim</Link> içerisinde bulunmanız tavsiye edilir.
                             </p>
 
                         </article>
@@ -106,7 +106,7 @@ export default function SaatlikVincKiralamaPage() {
                                 </h3>
                                 <ul className="flex flex-col gap-3">
                                     <li>
-                                        <Link href="/gunluk-vinc-kiralama" className="flex items-center justify-between text-gray-600 hover:text-primary transition-colors group">
+                                        <Link href="/hizmetler/gunluk-vinc-kiralama" className="flex items-center justify-between text-gray-600 hover:text-primary transition-colors group">
                                             <span>İşim Uzun Sürer, Günlük Kirala →</span>
                                         </Link>
                                     </li>
