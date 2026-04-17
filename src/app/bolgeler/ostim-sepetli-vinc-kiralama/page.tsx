@@ -1,94 +1,106 @@
 import { Metadata } from 'next';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import FloatingCTA from '@/components/FloatingCTA';
-import CallToAction from '@/components/CallToAction';
-
-import Breadcrumb from '@/components/Breadcrumb';
-
+import DistrictPageLayout from '@/components/DistrictPageLayout';
 import { getMetadataAlternates, getCanonicalUrl } from '@/lib/seo-utils';
 
 export const metadata: Metadata = {
-  title: 'Ostim Sepetli Vinç Kiralama',
+  title: 'Ostim Sepetli Vinç Kiralama — Uygun Fiyat & 24 Saat Hizmet',
   description:
-    'Ankara Ostim OSB bölgesinde fabrikalar, atölyeler ve sanayi tesisleri için vinç kiralama hizmeti.',
+    'Ostim bölgesinde dış cephe, tabela ve sanayi montaj işleri için profesyonel sepetli vinç kiralama. 20 dakikada adresteyiz.',
+  keywords:
+    'ostim sepetli vinç kiralama, ostim vinç kiralama, ankara sepetli vinç, ostim kiralık vinç, sepetli vinç kiralama ankara',
   alternates: getMetadataAlternates('/bolgeler/ostim-sepetli-vinc-kiralama'),
   openGraph: {
-    title: 'Ostim Sepetli Vinç | Ankara Sepetli Vinç',
+    title: 'Ostim Sepetli Vinç Kiralama — Uygun Fiyat & 24 Saat Hizmet',
     description:
-      'Ankara Ostim OSB bölgesinde fabrikalar, atölyeler ve sanayi tesisleri için vinç kiralama hizmeti.',
+      'Ostim bölgesinde dış cephe, tabela ve sanayi montaj işleri için profesyonel sepetli vinç kiralama. 20 dakikada adresteyiz.',
     url: getCanonicalUrl('/bolgeler/ostim-sepetli-vinc-kiralama'),
   },
 };
 
 export default function OstimPage() {
   return (
-    <div className="flex flex-col min-h-screen bg-white">
-      <Header />
-
-      <main className="flex-grow">
-        <div className="bg-gray-50 py-16 md:py-24 border-b border-gray-200">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl text-center">
-            <Breadcrumb
-              items={[
-                { label: 'Ana Sayfa', href: '/' },
-                { label: 'Hizmet Bölgeleri', href: '/bolgeler' },
-                { label: 'Ostim', href: '/bolgeler/ostim-sepetli-vinc-kiralama' },
-              ]}
-            />
-            <h1 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6">
-              Ostim <span className="text-primary">Sepetli Vinç Kiralama</span>
-            </h1>
-            <p className="text-lg md:text-xl text-gray-600">
-              Sanayinin tam kalbindeyiz. Ostim içerisindeki asma kat yapımları, havalandırma
-              montajları ve fabrika revizyonları için özel çözümler.
-            </p>
-          </div>
-        </div>
-
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 max-w-4xl">
-          <div className="prose prose-lg prose-red max-w-none text-gray-700">
-            <p className="lead font-medium text-xl text-gray-700">
-              Ankara Ostim bölgesi ve çevresinde yılların deneyimiyle en hızlı, en güvenli sepetli vinç kiralama hizmetini sunuyoruz. Geniş makine parkurumuz sayesinde 10 metreden 70+ metreye kadar tüm yükseklik ihtiyaçlarınıza aynı gün çözüm üretiyoruz.
-            </p>
-
-            <h3 className="text-2xl font-bold mt-10 mb-4 text-gray-900">En Sık Kullanım Alanları</h3>
-            <ul>
-              <li><strong>Dış Cephe İşlemleri:</strong> Cam temizliği, boya, mantolama ve tamirat.</li>
-              <li><strong>Tabela ve Reklam:</strong> Totem tabela montajı, afiş asımı ve sökümü.</li>
-              <li><strong>Ağaç Bakımı:</strong> Tehlike arz eden ve yüksek ağaçların budanması.</li>
-              <li><strong>Elektrik ve Aydınlatma:</strong> Sokak lambaları ve yüksek direk arızaları.</li>
-            </ul>
-
-            <h3 className="text-2xl font-bold mt-10 mb-4 text-gray-900">Kiralama Sürecimiz (3 Adım)</h3>
-            <ol className="space-y-2">
-              <li><strong>1. İhtiyaç Analizi:</strong> Bizi arayın veya form doldurun. Ücretsiz keşif veya telefonda durum tespiti yapalım.</li>
-              <li><strong>2. Doğru Araç Seçimi:</strong> Metraj ve kullanım alanına en uygun sepetli vincimizi hemen hazırlayalım.</li>
-              <li><strong>3. Hızlı Operasyon:</strong> Sertifikalı operatörümüzle birlikte aracımız tam saatinde adresinizde olsun ve işiniz güvenle tamamlansın.</li>
-            </ol>
-
-            <h3 className="text-2xl font-bold mt-10 mb-4 text-gray-900">Sıkça Sorulan Sorular</h3>
-            <div className="space-y-4 not-prose mt-6 mb-8">
-              <div className="bg-gray-50 p-4 rounded-xl border border-gray-100">
-                <h4 className="font-bold text-gray-900 mb-2">Ostim bölgesine ne kadar sürede araç gönderebilirsiniz?</h4>
-                <p className="text-gray-600 text-sm">Bölgelerdeki hazır araçlarımız sayesinde genellikle 30-45 dakika içerisinde acil sevkiyat sağlayabiliyoruz.</p>
-              </div>
-              <div className="bg-gray-50 p-4 rounded-xl border border-gray-100">
-                <h4 className="font-bold text-gray-900 mb-2">Operatör hizmeti fiyata dahil mi?</h4>
-                <p className="text-gray-600 text-sm">Evet, tüm kiralama hizmetlerimizde alanında uzman, iş güvenliği sertifikalı operatörlerimiz aracı kullanmak üzere fiyata dahildir.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <CallToAction
-          title="Ostim Merkezli Hızlı Yardım"
-          message="Merhaba, Ostim içi kiralık vinç için bilgi alabilir miyim?"
-        />
-      </main>
-
-      <Footer />
-      <FloatingCTA />
-    </div>
+    <DistrictPageLayout
+      districtName="Ostim"
+      districtSlug="ostim"
+      heroSubtitle="Ankara organize sanayisinin kalbi OSTİM'de tüm fabrika ve atölyeler için vinç ile malzeme ve personel yüksek erişim hizmeti veriyoruz."
+      arrivalTime="10-15"
+      introText="Türkiye'nin en köklü ve dev üretim bölgesi OSTİM Organize Sanayi Bölgesi. Dar imalat atölyelerinden, tavan yüksekliği devasa boyutlara varan üretim hangarlarına değin yüzlerce yapıda güvenli tamirat gereklidir. Fabrika iç aydınlatma arızaları, tavan vinci onarımı, dış cephe çatı yalıtımları ve üretim makinesi hortum tesisat rotaları gibi işlerde OSTİM firmalarına komşu olan işletme lokasyonumuz avantajıyla hızla"
+      image1={{
+        src: '/images/bolge/ostim-sepetli-vinc-calisma2.png',
+        alt: 'Ostim sepetli platform vinç çalışması',
+      }}
+      image2={{
+        src: '/images/bolge/ostim-sepetli-vinc-kiralama-1.jpg',
+        alt: 'Ostim platform kiralama dış cephe montajı',
+      }}
+      services={[
+        {
+          title: 'Fabrika İçi Elektrik ve Vinç Bakımı',
+          description:
+            "Kompakt dizaynlı platform araçlarımız, depo ve hangar kapılarından içeri girerek tavan aydınlatma veya tavana asılı portal vinçlerin tamirine erişim sağlar.",
+        },
+        {
+          title: 'Fabrika Çatı Onarımı ve Sızdırmazlık',
+          description:
+            "Endüstriyel tesislerin metal sandviç panellerinin yalıtımı ve rüzgardan sökülen sacların vidalanması için çatı metrajlarına ve rampa erişimlerine uygun bomlara sahibiz.",
+        },
+        {
+          title: 'Büyük Çaplı Endüstriyel Havalandırma Montajı',
+          description:
+            "Ağır sanayi parçası, havalandırma motorları veya bacaların OSTİM semalarında yukarı çekilmesi ve montaj işlemi.",
+        },
+        {
+          title: 'İş Tabelası ve Afiş Uygulamaları',
+          description:
+            "Ostim bulvarı üzerinde çalışan işletmelere LED dükkan tabelaları ve endüstriyel boy branda/totem asımlarında güvenli sepet araçları.",
+        },
+        {
+          title: 'Dış Cephe Kompozit Tamiri',
+          description:
+            "İş merkezi haline gelmiş yeni Ostim Mega veya Prestij binalarının aynalı cam temizliği ile cephe boyama servisleri.",
+        },
+      ]}
+      whyCards={[
+        {
+          icon: '📍',
+          title: 'Tam Merkezdeyiz',
+          description:
+            "Garajımızın da bulunduğu lokasyon dolayısıyla Ostim içerisinde herhangi bir cadde ve sokağa saatler hatta günler beklemeden ulaşıyoruz.",
+        },
+        {
+          icon: '🏭',
+          title: 'Sanayi Makineleri Uzmanı',
+          description:
+            "Fabrika içi hareket ve makineler arası alan darlığını hesap edebilen usta sepet operatörlerimiz makineye/ekipmana asla fiziksel hasar vermeden sıfır kaza ile çalışır.",
+        },
+        {
+          icon: '💼',
+          title: 'Kurumsal Faturalandırma',
+          description:
+            "Organize sanayi bölgesinin yoğun işleyişinde aylık bakım çerçeve anlaşmaları ve anında e-fatura/fiş gibi kurumsal altyapı hizmeti.",
+        },
+      ]}
+      neighbors={[
+        { name: 'İvedik', href: '/bolgeler/ivedik-sepetli-vinc-kiralama', icon: '⚙️' },
+        { name: 'Yenimahalle', href: '/bolgeler/yenimahalle-sepetli-vinc-kiralama', icon: '🏙️' },
+        { name: 'Etimesgut', href: '/bolgeler/etimesgut-sepetli-vinc-kiralama', icon: '🏘️' },
+        { name: 'Sincan', href: '/bolgeler/sincan-sepetli-vinc-kiralama', icon: '🏭' },
+      ]}
+      faq={[
+        {
+          q: "Ostim atölyemin içerisine yüksek tavan lamba onarımı için vinç girer mi?",
+          a: "Eğer kepenk yüksekliğiniz en az 2.20 - 2.50 metre seviyesini karşılıyorsa kısa şase (örneğin Isuzu) araçlarımız atölyenizin içine güvenle girerek stabilizatör ayaklarını açar.",
+        },
+        {
+          q: "Ostim bölgesindeki fabrikama gelmeniz ne kadar sürer?",
+          a: "Aynı lokasyonda (Merkez) konumlandığımız için uygun olan ilk vincimiz size en fazla <strong>10-15 dakika</strong> içerisinde teslim edilmektedir.",
+        },
+        {
+          q: 'Operatör saat kaçta mesaisini bitiriyor? Pazarları Ostim açık mı?',
+          a: "Biz 7-24 sisteminde hizmet ettiğimiz için atölyelerinizin üretim duruşlarını fırsat bilip pazar dahil veya gece yarısı tavan tamirlerinizi yapmanız için operatör ve vinç ayarlıyoruz.",
+        },
+      ]}
+      ctaMessage="Merhaba, Ostim içi acil bir sepetli platform vinç kiralaması planlıyorum. Fabrikam için fiyat alabilir miyim?"
+    />
   );
 }

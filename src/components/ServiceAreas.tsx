@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { MapPin } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function ServiceAreas() {
   const [activeDistrict, setActiveDistrict] = useState<string | null>(null);
@@ -61,35 +62,14 @@ export default function ServiceAreas() {
 
           {/* Map/Illustration Area */}
           <div className="w-full lg:w-[60%] relative">
-            <div className="relative w-full h-[420px] overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm group">
-              {/* OpenStreetMap Iframe */}
-              <iframe
-                src="https://www.openstreetmap.org/export/embed.html?bbox=32.650,39.900,32.850,40.000&amp;layer=mapnik&amp;marker=39.970,32.750"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen={false}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="absolute inset-0 z-0 grayscale-[20%] contrast-[1.1]"
-                title="Ankara Hizmet Bölgeleri Haritası"
+            <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-md border border-gray-200 bg-white">
+              <Image
+                src="/images/blog/sepetli-vinc-kiralama-ankara-1.png"
+                alt="Ankara Geneli Sepetli Vinç Kiralama Hizmet Bölgelerimiz"
+                fill
+                sizes="(max-width: 1024px) 100vw, 60vw"
+                className="object-cover"
               />
-
-              {/* Overlay Label */}
-              <div className="absolute top-6 left-1/2 -translate-x-1/2 z-10 bg-white/95 backdrop-blur-sm px-5 py-3 rounded-2xl shadow-lg border border-gray-100 flex items-center gap-3 transition-all duration-300">
-                <div className="bg-primary/10 p-2.5 rounded-full relative">
-                  <span className="absolute -top-0 -right-0 w-3 h-3 rounded-full bg-green-500 border-2 border-white animate-pulse"></span>
-                  <MapPin size={20} className="text-primary" />
-                </div>
-                <div className="text-left w-max">
-                  <h3 className="font-bold text-gray-900 text-[15px] leading-tight transition-all duration-300">
-                    {activeDistrict ? activeDistrict : 'Ostim OSB Merkez'}
-                  </h3>
-                  <p className="text-xs text-gray-500 font-medium">
-                    {activeDistrict ? 'Hızlı Sevk Bölgesi' : 'Yenimahalle / Ankara'}
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </div>

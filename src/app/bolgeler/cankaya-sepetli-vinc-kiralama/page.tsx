@@ -1,95 +1,106 @@
 import { Metadata } from 'next';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import FloatingCTA from '@/components/FloatingCTA';
-import CallToAction from '@/components/CallToAction';
-
-import Breadcrumb from '@/components/Breadcrumb';
-
+import DistrictPageLayout from '@/components/DistrictPageLayout';
 import { getMetadataAlternates, getCanonicalUrl } from '@/lib/seo-utils';
 
 export const metadata: Metadata = {
-  title: 'Çankaya Sepetli Vinç Kiralama',
+  title: 'Çankaya Sepetli Vinç Kiralama — Uygun Fiyat & 24 Saat Hizmet',
   description:
-    'Ankara Çankaya bölgesinde uygun fiyatlı, 7/24 kiralık sepetli vinç ve platform hizmetleri.',
+    'Çankaya bölgesinde dış cephe, tabela ve montaj işleri için profesyonel sepetli vinç kiralama. 20 dakikada adresteyiz.',
+  keywords:
+    'çankaya sepetli vinç kiralama, çankaya vinç kiralama, ankara sepetli vinç, çankaya kiralık vinç, sepetli vinç kiralama ankara',
   alternates: getMetadataAlternates('/bolgeler/cankaya-sepetli-vinc-kiralama'),
   openGraph: {
-    title: 'Çankaya Sepetli Vinç Kiralama | Ankara Sepetli Vinç',
+    title: 'Çankaya Sepetli Vinç Kiralama — Uygun Fiyat & 24 Saat Hizmet',
     description:
-      'Ankara Çankaya bölgesinde uygun fiyatlı, 7/24 kiralık sepetli vinç ve platform hizmetleri.',
+      'Çankaya bölgesinde dış cephe, tabela ve montaj işleri için profesyonel sepetli vinç kiralama. 20 dakikada adresteyiz.',
     url: getCanonicalUrl('/bolgeler/cankaya-sepetli-vinc-kiralama'),
   },
 };
 
 export default function CankayaPage() {
   return (
-    <div className="flex flex-col min-h-screen bg-white">
-      <Header />
-
-      <main className="flex-grow">
-        <div className="bg-gray-50 py-16 md:py-24 border-b border-gray-200">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl text-center">
-            <Breadcrumb
-              items={[
-                { label: 'Ana Sayfa', href: '/' },
-                { label: 'Hizmet Bölgeleri', href: '/bolgeler' },
-                { label: 'Çankaya', href: '/bolgeler/cankaya-sepetli-vinc-kiralama' },
-              ]}
-            />
-            <h1 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6">
-              Çankaya <span className="text-primary">Sepetli Vinç Kiralama</span>
-            </h1>
-            <p className="text-lg md:text-xl text-gray-600">
-              Ankara&apos;nın kalbi Çankaya&apos;da; iş merkezi, plaza ve rezidans bölgelerine özel
-              hızlı kiralama seçenekleri.
-            </p>
-          </div>
-        </div>
-
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 max-w-4xl">
-          <div className="prose prose-lg prose-red max-w-none">
-            <p className="lead font-medium text-xl text-gray-700">
-              Ankara Çankaya bölgesi ve çevresinde yılların deneyimiyle en hızlı, en güvenli sepetli vinç kiralama hizmetini sunuyoruz. Geniş makine parkurumuz sayesinde 10 metreden 70+ metreye kadar tüm yükseklik ihtiyaçlarınıza aynı gün çözüm üretiyoruz.
-            </p>
-
-            <h3 className="text-2xl font-bold mt-10 mb-4 text-gray-900">En Sık Kullanım Alanları</h3>
-            <ul>
-              <li><strong>Dış Cephe İşlemleri:</strong> Cam temizliği, boya, mantolama ve tamirat.</li>
-              <li><strong>Tabela ve Reklam:</strong> Totem tabela montajı, afiş asımı ve sökümü.</li>
-              <li><strong>Ağaç Bakımı:</strong> Tehlike arz eden ve yüksek ağaçların budanması.</li>
-              <li><strong>Elektrik ve Aydınlatma:</strong> Sokak lambaları ve yüksek direk arızaları.</li>
-            </ul>
-
-            <h3 className="text-2xl font-bold mt-10 mb-4 text-gray-900">Kiralama Sürecimiz (3 Adım)</h3>
-            <ol className="space-y-2">
-              <li><strong>1. İhtiyaç Analizi:</strong> Bizi arayın veya form doldurun. Ücretsiz keşif veya telefonda durum tespiti yapalım.</li>
-              <li><strong>2. Doğru Araç Seçimi:</strong> Metraj ve kullanım alanına en uygun sepetli vincimizi hemen hazırlayalım.</li>
-              <li><strong>3. Hızlı Operasyon:</strong> Sertifikalı operatörümüzle birlikte aracımız tam saatinde adresinizde olsun ve işiniz güvenle tamamlansın.</li>
-            </ol>
-
-            <h3 className="text-2xl font-bold mt-10 mb-4 text-gray-900">Sıkça Sorulan Sorular</h3>
-            <div className="space-y-4 not-prose mt-6 mb-8">
-              <div className="bg-gray-50 p-4 rounded-xl border border-gray-100">
-                <h4 className="font-bold text-gray-900 mb-2">Çankaya bölgesine ne kadar sürede araç gönderebilirsiniz?</h4>
-                <p className="text-gray-600 text-sm">Bölgelerdeki hazır araçlarımız sayesinde genellikle 30-45 dakika içerisinde acil sevkiyat sağlayabiliyoruz.</p>
-              </div>
-              <div className="bg-gray-50 p-4 rounded-xl border border-gray-100">
-                <h4 className="font-bold text-gray-900 mb-2">Operatör hizmeti fiyata dahil mi?</h4>
-                <p className="text-gray-600 text-sm">Evet, tüm kiralama hizmetlerimizde alanında uzman, iş güvenliği sertifikalı operatörlerimiz aracı kullanmak üzere fiyata dahildir.</p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <CallToAction
-          title="Çankaya Bölgesi İçin Vinç Çağırın"
-          message="Merhaba, Çankaya bölgesi için sepetli vinç kiralama hakkında bilgi almak istiyorum."
-        />
-      </main>
-
-      <Footer />
-      <FloatingCTA />
-    </div>
+    <DistrictPageLayout
+      districtName="Çankaya"
+      districtSlug="cankaya"
+      heroSubtitle="Plazalar, iş merkezleri ve büyükelçilikler bölgesi Çankaya'ya özel, yüksek güvenlik standartlarına sahip sepetli vinç filomuzla 20 dakikada yanınızdayız."
+      arrivalTime="20-35"
+      introText="Ankara'nın kalbi Çankaya, Kızılay'dan Çukurambar'a uzanan modern iş merkezleri, yüksek plazalar ve yoğun yerleşim alanlarıyla dikkat çeker. Yüksek katlı binalarda dış cephe cam temizliği, rezidans mantolama işlemleri, büyükelçilik bina bakımları ve AVM tabela montajı gibi işlemler sıkça ihtiyaç duyulan çalışmalardır. Klasik iskele kurmanın zor ve yavaş olduğu bu alanlarda, saatlik periyotta hızlı çözüm üretiyoruz."
+      image1={{
+        src: '/images/bolge/cankaya-sepetli-vinc-calisma.png',
+        alt: 'Çankaya sepetli platform vinç çalışması',
+      }}
+      image2={{
+        src: '/images/bolge/cankaya-platform-kiralama.png',
+        alt: 'Çankaya platform kiralama ve cephe temizliği',
+      }}
+      services={[
+        {
+          title: 'Plaza ve Rezidans Cam Temizliği',
+          description:
+            "Çukurambar, Söğütözü ve Gaziosmanpaşa'daki yüksek plazaların ve iş merkezlerinin dış cephe cam temizleme işleri için özel sepetli platformlar.",
+        },
+        {
+          title: 'Tabela ve İlan Montajı',
+          description:
+            "AVM ve mağazaların aydınlatmalı tabela değişimi, totem tabela montajı ve kurumsal logo uygulamaları; araç ve yaya trafiğine engel olmadan gece mesaisi ile.",
+        },
+        {
+          title: 'Dış Cephe Boya, Yalıtım ve Bakım',
+          description:
+            "Dikmen, Ayrancı ve Bahçelievler'deki çok katlı yapıların dış cephe mantolama, silikon çekimi ve boya tadilatları.",
+        },
+        {
+          title: 'Ağaç Budama',
+          description:
+            "Yoğun trafiğin olduğu bulvarlarda, elçilik bahçelerinde ve parklarda uzman gözetiminde güvenli ve çevreye duyarlı ağaç budama.",
+        },
+        {
+          title: 'İklimlendirme ve Klima Motor Montajı',
+          description:
+            "İş merkezlerinde yüksek katlara dış ünite klima motorlarının çıkarılması ve hassas montajı.",
+        },
+      ]}
+      whyCards={[
+        {
+          icon: '🏢',
+          title: 'Plaza Deneyimi',
+          description:
+            "Çankaya'nın modern plaza çevrelerine zarar vermeden pozisyon alabilen ve iş güvenliğini en üst seviyede tutan uzman kadro.",
+        },
+        {
+          icon: '🚦',
+          title: 'Esnek Çalışma Saatleri',
+          description:
+            "Gündüz trafiğinin yoğun olduğu iş merkezi bölgelerinde gece veya hafta sonu planlanan bakım operasyonları için 7/24 hizmet.",
+        },
+        {
+          icon: '⚡',
+          title: 'Acil Çözüm',
+          description:
+            "Tüm Çankaya mahallelerine merkezi konumumuz sayesinde hızla araç yönlendiriyoruz. Maksimum <strong>20-35 dakika</strong> garantisi.",
+        },
+      ]}
+      neighbors={[
+        { name: 'Altındağ', href: '/bolgeler/altindag-sepetli-vinc-kiralama', icon: '🏛️' },
+        { name: 'Yenimahalle', href: '/bolgeler/yenimahalle-sepetli-vinc-kiralama', icon: '🏙️' },
+        { name: 'Mamak', href: '/bolgeler/mamak-sepetli-vinc-kiralama', icon: '🏗️' },
+        { name: 'Gölbaşı', href: '/bolgeler/golbasi-sepetli-vinc-kiralama', icon: '🏡' },
+      ]}
+      faq={[
+        {
+          q: "Çankaya'nın dik yokuşlu dar sokaklarına uygun vinciniz var mı?",
+          a: "Evet, özellikle Dikmen, Ayrancı, Seyranbağları gibi yokuşlu bölgeler için özel stabilizatörlü ayakları olan kısa dingilli platform araçlarımız her mahalleye hizmet verebilir.",
+        },
+        {
+          q: 'Trafik olan caddelerde izin almamıza gerek var mı?',
+          a: "Kısa süreli (saatlik) bakım ve tabela işlemlerinde geniş güvenlik dubaları kullanılarak trafiği kilitlemeyen çalışmalar yapıyoruz. Ancak bulvarı tamamen kapatacak hacimli büyük tamirat operasyonları için ilgili belediyelerden izin alınması konusunda sizlere danışmanlık yapabiliyoruz.",
+        },
+        {
+          q: 'Plaza bölgelerine ne kadar sürede ulaşıyorsunuz?',
+          a: "Çukurambar ve Söğütözü gibi iş merkezlerine genellikle yoğun saatler harici 20 dakikada, tüm Çankaya bölgesine ortalama 30-35 dakikada ulaşabiliyoruz.",
+        },
+      ]}
+      ctaMessage="Merhaba, Çankaya bölgesi için sepetli vinç kiralama maliyetlerini öğrenmek istiyorum."
+    />
   );
 }
