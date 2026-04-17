@@ -238,10 +238,10 @@ export default function AnkaraSepetliVincKiralamaPage() {
                                     Araç parkımızdan size en yakın olan sepetli vinci anında yönlendiriyoruz. Fiyat ve randevu için bizi arayın.
                                 </p>
                                 <a
-                                    href="tel:+905320000000"
+                                    href="tel:+905516066878"
                                     className="block w-full bg-primary hover:bg-primary-hover text-white py-3 rounded-xl font-bold transition-all shadow-md"
                                 >
-                                    0532 000 00 00
+                                    0551 606 68 78
                                 </a>
                             </div>
 

@@ -72,7 +72,7 @@ export default function ServiceAreas() {
           <div className="w-full lg:w-[60%] relative">
             <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-md border border-gray-200 bg-white">
               <Image
-                src="/images/blog/hizmetler/sepetli-vinc-kiralama-ankara-1.png"
+                src="/images/blog/sepetli-vinc-kiralama-ankara-1.png"
                 alt="Ankara Geneli Sepetli Vinç Kiralama Hizmet Bölgelerimiz"
                 fill
                 sizes="(max-width: 1024px) 100vw, 60vw"
