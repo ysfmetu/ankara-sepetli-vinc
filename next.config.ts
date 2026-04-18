@@ -1,20 +1,42 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
+  // Trailing slash olmayan yapıyı zorunlu kıl (sitemap & canonical ile tutarlılık)
+  trailingSlash: false,
+
   async redirects() {
     return [
-      // Legacy Blog Redirects
+      // ─── 1. WWW → Non-WWW (301 Kalıcı Yönlendirme) ───────────────────────
       {
-        source: '/blog/cephe-temizligi-sepetli-vinc',
-        destination: '/hizmetler/cephe-temizligi-sepetli-vinc',
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.ankarasepetlivinckirala.com' }],
+        destination: 'https://ankarasepetlivinckirala.com/:path*',
+        permanent: true,
+      },
+
+      // ─── 2. Eski Hizmet Sayfaları → /hizmetler/ Altına ───────────────────
+      {
+        source: '/sepetli-vinc-kiralama',
+        destination: '/hizmetler/sepetli-vinc-kiralama',
         permanent: true,
       },
       {
-        source: '/blog/sepetli-vinc-kac-metreye-cikar',
-        destination: '/blog/sepetli-vinc-kac-metreye-kadar-cikar',
+        source: '/operatorlu-vinc-kiralama',
+        destination: '/hizmetler/operatorlu-vinc-kiralama',
         permanent: true,
       },
-      // Duplicate Region Redirects (Root to /bolgeler)
+      {
+        source: '/saatlik-vinc-kiralama',
+        destination: '/hizmetler/saatlik-vinc-kiralama',
+        permanent: true,
+      },
+      {
+        source: '/gunluk-vinc-kiralama',
+        destination: '/hizmetler/gunluk-vinc-kiralama',
+        permanent: true,
+      },
+
+      // ─── 3. Eski Bölge URL'leri → /bolgeler/ Altına (301) ─────────────────
       {
         source: '/cankaya-sepetli-vinc',
         destination: '/bolgeler/cankaya-sepetli-vinc-kiralama',
@@ -37,10 +59,11 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/sincan-sepetli-vinc',
-        destination: '/bolgeler/sincan-sepetli-vinc-kiralama', // Sincan had a root page too
+        destination: '/bolgeler/sincan-sepetli-vinc-kiralama',
         permanent: true,
       },
-      // Service and Price Redirects
+
+      // ─── 4. Eski Hizmet/Fiyat Sayfaları (Legacy) ─────────────────────────
       {
         source: '/fiyatlar',
         destination: '/sepetli-vinc-kiralama-fiyatlari',
@@ -53,7 +76,19 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/ankara-sepetli-vinc-kiralama',
-        destination: '/sepetli-vinc-kiralama',
+        destination: '/hizmetler/sepetli-vinc-kiralama',
+        permanent: true,
+      },
+
+      // ─── 5. Eski Blog URL'leri ─────────────────────────────────────────────
+      {
+        source: '/blog/cephe-temizligi-sepetli-vinc',
+        destination: '/hizmetler/cephe-temizligi-sepetli-vinc',
+        permanent: true,
+      },
+      {
+        source: '/blog/sepetli-vinc-kac-metreye-cikar',
+        destination: '/blog/sepetli-vinc-kac-metreye-kadar-cikar',
         permanent: true,
       },
     ];
