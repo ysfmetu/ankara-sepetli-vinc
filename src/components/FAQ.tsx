@@ -34,9 +34,9 @@ export default function FAQ() {
   };
 
   return (
-    <section id="sss" className="py-20 bg-white">
+    <section id="sss" className="py-12 md:py-16 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 md:mb-10">
           <div className="flex items-center justify-center gap-4 mb-4">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Sıkça Sorulan Sorular</h2>
           </div>

@@ -24,9 +24,9 @@ export default function ServiceAreas() {
   ];
 
   return (
-    <section id="bolgeler" className="py-20 bg-gray-50 border-t border-gray-100 overflow-hidden">
+    <section id="bolgeler" className="py-12 md:py-16 bg-gray-50 border-t border-gray-100 overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-8 md:mb-10">
           <div className="flex items-center justify-center gap-4 mb-4">
             <div className="h-px bg-gray-300 w-12 sm:w-24"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
@@ -60,10 +60,10 @@ export default function ServiceAreas() {
 
             <div className="pt-2">
               <Link
-                href="#teklif-formu"
+                href="/bolgeler"
                 className="inline-flex w-full justify-center rounded-xl bg-primary hover:bg-primary-hover text-white font-bold py-4 px-8 transition-colors shadow-lg"
               >
-                Tüm Ankara / Fiyat Sor
+                Tüm Bölgeleri Gör
               </Link>
             </div>
           </div>

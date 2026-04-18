@@ -21,9 +21,9 @@ export default function WhyUs() {
   ];
 
   return (
-    <section id="neden-biz" className="py-20 bg-white">
+    <section id="neden-biz" className="py-12 md:py-16 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-10 md:mb-12">
           <div className="flex items-center justify-center gap-4 mb-4">
             <div className="h-px bg-gray-300 w-12 sm:w-24"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">

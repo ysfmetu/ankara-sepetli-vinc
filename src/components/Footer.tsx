@@ -82,6 +82,14 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  href="/bolgeler"
+                  className="text-sm hover:text-white transition-colors flex items-center gap-2"
+                >
+                  <span className="text-primary">›</span> Bölgelerimiz
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/blog"
                   className="text-sm hover:text-white transition-colors flex items-center gap-2"
                 >
@@ -94,38 +102,6 @@ export default function Footer() {
                   className="text-sm hover:text-white transition-colors flex items-center gap-2"
                 >
                   <span className="text-primary">›</span> İletişim
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/hizmetler/sepetli-vinc-kiralama"
-                  className="text-sm hover:text-white transition-colors flex items-center gap-2 mt-4 pt-4 border-t border-gray-800"
-                >
-                  <span className="text-primary">›</span> Sepetli Vinç Kiralama
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/hizmetler/operatorlu-vinc-kiralama"
-                  className="text-sm hover:text-white transition-colors flex items-center gap-2"
-                >
-                  <span className="text-primary">›</span> Operatörlü Vinç
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/hizmetler/saatlik-vinc-kiralama"
-                  className="text-sm hover:text-white transition-colors flex items-center gap-2"
-                >
-                  <span className="text-primary">›</span> Saatlik Vinç
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/hizmetler/gunluk-vinc-kiralama"
-                  className="text-sm hover:text-white transition-colors flex items-center gap-2"
-                >
-                  <span className="text-primary">›</span> Günlük Vinç
                 </Link>
               </li>
             </ul>

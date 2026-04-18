@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function SEOBlock() {
   return (
-    <section className="py-16 bg-gray-50 border-t border-gray-200">
+    <section className="py-10 md:py-14 bg-gray-50 border-t border-gray-200">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
         <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-6">
           Ankara Sepetli Vinç Kiralama Hizmeti

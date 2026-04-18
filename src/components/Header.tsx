@@ -85,6 +85,15 @@ export default function Header() {
             </div>
           </Link>
 
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-8 font-semibold text-gray-700">
+            <Link href="/" className={`hover:text-primary transition-colors ${pathname === '/' ? 'text-primary' : ''}`}>Ana Sayfa</Link>
+            <Link href="/hizmetler" className={`hover:text-primary transition-colors ${pathname.startsWith('/hizmetler') ? 'text-primary' : ''}`}>Hizmetler</Link>
+            <Link href="/bolgeler" className={`hover:text-primary transition-colors ${pathname.startsWith('/bolgeler') ? 'text-primary' : ''}`}>Bölgelerimiz</Link>
+            <Link href="/blog" className={`hover:text-primary transition-colors ${pathname.startsWith('/blog') ? 'text-primary' : ''}`}>Blog</Link>
+            <Link href="/iletisim" className={`hover:text-primary transition-colors ${pathname === '/iletisim' ? 'text-primary' : ''}`}>İletişim</Link>
+          </nav>
+
           {/* Actions & Menu */}
           <div className="flex items-center gap-3">
             {/* WhatsApp Button (Visible on both Mobile and Desktop) */}
@@ -120,7 +129,7 @@ export default function Header() {
             {/* Mobile Menu Button (Hamburger) */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden text-gray-700 hover:text-primary focus:outline-none p-2 ml-1"
+              className="lg:hidden text-gray-700 hover:text-primary focus:outline-none p-2 ml-1"
               aria-label="Menüyü aç/kapat"
             >
               {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -131,67 +140,44 @@ export default function Header() {
 
       {/* Mobile Menu Dropdown */}
       {isOpen && (
-        <div className="md:hidden border-t border-gray-100 bg-white">
+        <div className="lg:hidden border-t border-gray-100 bg-white">
           <div className="px-4 pt-2 pb-6 space-y-4 shadow-inner">
             <nav className="flex flex-col space-y-3 py-4 text-gray-800 font-medium">
               <Link
                 href="/"
                 onClick={() => setIsOpen(false)}
-                className="hover:text-primary"
+                className={`hover:text-primary ${pathname === '/' ? 'text-primary' : ''}`}
               >
                 Ana Sayfa
               </Link>
               <Link
                 href="/hizmetler"
                 onClick={() => setIsOpen(false)}
-                className="hover:text-primary"
+                className={`hover:text-primary ${pathname.startsWith('/hizmetler') ? 'text-primary' : ''}`}
               >
                 Hizmetler
               </Link>
               <Link
+                href="/bolgeler"
+                onClick={() => setIsOpen(false)}
+                className={`hover:text-primary ${pathname.startsWith('/bolgeler') ? 'text-primary' : ''}`}
+              >
+                Bölgelerimiz
+              </Link>
+              <Link
                 href="/blog"
                 onClick={() => setIsOpen(false)}
-                className="hover:text-primary"
+                className={`hover:text-primary ${pathname.startsWith('/blog') ? 'text-primary' : ''}`}
               >
                 Blog
               </Link>
               <Link
                 href="/iletisim"
                 onClick={() => setIsOpen(false)}
-                className="hover:text-primary"
+                className={`hover:text-primary ${pathname === '/iletisim' ? 'text-primary' : ''}`}
               >
                 İletişim
               </Link>
-              <div className="border-t border-gray-100 my-1 pt-2 flex flex-col space-y-3">
-                <Link
-                  href="/hizmetler/sepetli-vinc-kiralama"
-                  onClick={() => setIsOpen(false)}
-                  className="text-gray-600 hover:text-primary pl-2 border-l-2 border-transparent hover:border-primary transition-all"
-                >
-                  Sepetli Vinç Kiralama
-                </Link>
-                <Link
-                  href="/hizmetler/operatorlu-vinc-kiralama"
-                  onClick={() => setIsOpen(false)}
-                  className="text-gray-600 hover:text-primary pl-2 border-l-2 border-transparent hover:border-primary transition-all"
-                >
-                  Operatörlü Vinç
-                </Link>
-                <Link
-                  href="/hizmetler/saatlik-vinc-kiralama"
-                  onClick={() => setIsOpen(false)}
-                  className="text-gray-600 hover:text-primary pl-2 border-l-2 border-transparent hover:border-primary transition-all"
-                >
-                  Saatlik Vinç
-                </Link>
-                <Link
-                  href="/hizmetler/gunluk-vinc-kiralama"
-                  onClick={() => setIsOpen(false)}
-                  className="text-gray-600 hover:text-primary pl-2 border-l-2 border-transparent hover:border-primary transition-all"
-                >
-                  Günlük Vinç
-                </Link>
-              </div>
             </nav>
             <div className="flex flex-col gap-3">
               <a

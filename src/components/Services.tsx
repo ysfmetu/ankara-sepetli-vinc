@@ -31,9 +31,9 @@ export default function Services() {
   ];
 
   return (
-    <section id="hizmetler" className="py-20 bg-gray-50 border-t border-gray-100">
+    <section id="hizmetler" className="py-12 md:py-16 bg-gray-50 border-t border-gray-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-10 md:mb-12">
           <div className="flex items-center justify-center gap-4 mb-4">
             <div className="h-px bg-gray-300 w-12 sm:w-24"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
@@ -84,7 +84,7 @@ export default function Services() {
           ))}
         </div>
 
-        <div className="mt-12 text-center">
+        <div className="mt-8 text-center">
           <Link
             href="/hizmetler"
             className="inline-flex max-w-sm justify-center rounded-full bg-primary hover:bg-primary-hover text-white font-bold py-3 px-8 transition-colors shadow-lg"
