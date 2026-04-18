@@ -85,6 +85,27 @@ export default function DistrictPageLayout({
 
   return (
     <div className="flex flex-col min-h-screen bg-white">
+      {/* ── SEO: Bölgesel Schema (JSON-LD) ──────────────────────── */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Service',
+            'serviceType': 'Sepetli Vinç Kiralama',
+            'provider': {
+              '@type': 'LocalBusiness',
+              'name': 'Ankara Sepetli Vinç Kiralama',
+            },
+            'areaServed': {
+              '@type': 'City',
+              'name': districtName,
+            },
+            'description': `${districtName} bölgesinde 7/24 hızlı servis garantisi ile sepetli vinç ve platform kiralama hizmeti.`,
+          }),
+        }}
+      />
+
       <Header />
 
       <main className="flex-grow pb-20 md:pb-0">

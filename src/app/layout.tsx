@@ -52,8 +52,13 @@ const jsonLd = {
   '@id': SEO_CONFIG.baseUrl,
   url: SEO_CONFIG.baseUrl,
   telephone: '+905516066878',
+  hasMap: 'https://maps.app.goo.gl/Lan3WcJZBdS5fsyp6',
+  sameAs: [
+    'https://maps.app.goo.gl/Lan3WcJZBdS5fsyp6'
+  ],
   address: {
     '@type': 'PostalAddress',
+    streetAddress: 'Ostim Organize Sanayi Bölgesi',
     addressLocality: 'Yenimahalle',
     addressRegion: 'Ankara',
     addressCountry: 'TR',

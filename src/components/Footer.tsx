@@ -136,6 +136,22 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Map Section */}
+        <div className="mb-10 w-full h-[200px] md:h-[280px] rounded-2xl overflow-hidden border border-gray-800 shadow-lg relative group">
+          <div className="absolute inset-0 bg-primary/10 pointer-events-none group-hover:bg-transparent transition-colors z-10" />
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10000!2d32.687041!3d39.9204302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d349f7765f1d07%3A0x5ac02dee9687ff08!2sAnkara%20Sepetli%20Vin%C3%A7%20Kiralama!5e0!3m2!1str!2str!4v1713360210000!5m2!1str!2str"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen={false}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="w-full h-full grayscale-[25%] opacity-90 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
+            title="Ankara Sepetli Vinç Kiralama Google Haritalar Konumu"
+          ></iframe>
+        </div>
+
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
           <div className="text-sm text-gray-500">
             <p className="mb-1 md:mb-0 md:inline-block">
