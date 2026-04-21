@@ -37,9 +37,9 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/icon.svg',
-        width: 800,
-        height: 600,
+        url: '/logo.png', // WhatsApp/Twitter SVG desteklemez, PNG veya JPG olmalı
+        width: 1200,
+        height: 630,
         alt: SEO_CONFIG.siteName,
       },
     ],
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: SEO_CONFIG.defaultTitle,
     description: SEO_CONFIG.defaultDescription,
-    images: ['/icon.svg'],
+    images: ['/logo.png'],
   },
 };
 
