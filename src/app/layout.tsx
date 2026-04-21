@@ -35,11 +35,20 @@ export const metadata: Metadata = {
     siteName: SEO_CONFIG.siteName,
     locale: SEO_CONFIG.locale,
     type: 'website',
+    images: [
+      {
+        url: '/icon.svg',
+        width: 800,
+        height: 600,
+        alt: SEO_CONFIG.siteName,
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: SEO_CONFIG.defaultTitle,
     description: SEO_CONFIG.defaultDescription,
+    images: ['/icon.svg'],
   },
 };
 
