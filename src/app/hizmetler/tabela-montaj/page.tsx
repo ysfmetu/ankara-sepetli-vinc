@@ -1,597 +1,638 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
+import { Phone, MessageCircle, MapPin, CheckCircle2, ArrowRight, HardHat, Building2, Zap, PenTool, MonitorPlay, Focus, Trash2, Lightbulb, MonitorUp, Camera, CalendarDays, ChevronRight, Clock } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import FloatingCTA from '@/components/FloatingCTA';
 import Breadcrumb from '@/components/Breadcrumb';
-import LeadForm from '@/components/LeadForm';
 
 import { getMetadataAlternates, getCanonicalUrl } from '@/lib/seo-utils';
 import { SEO_CONFIG } from '@/config/seo';
 
 export const metadata: Metadata = {
-  title: 'Ankara Tabela Montaj Hizmeti | Sepetli Vinç ile Güvenli Uygulama',
-  description:
-    "Ankara'da Altınçiçek Kuyumculuk gibi prestijli mağazaların tercihi; tabela montajı, söküm and yüksek alan uygulamaları için operatörlü sepetli vinç desteği. Hızlı ve güvenli çözüm.",
+  title: 'Ankara Tabela Montaj İçin Sepetli Vinç | Hızlı ve Güvenli Kurulum',
+  description: "Ankara’da tabela montajı için sepetli vinç kiralama hizmeti. AVM, iş merkezi, fabrika ve yüksek binalarda güvenli montaj için hemen arayın: 0551 606 68 78",
   alternates: getMetadataAlternates('/hizmetler/tabela-montaj'),
-  robots: {
-    index: true,
-    follow: true,
-  },
   openGraph: {
-    title: 'Ankara Tabela Montaj Hizmeti | Sepetli Vinç ile Güvenli Uygulama',
-    description:
-      "Ankara'da tabela montajı, söküm and yüksek alan uygulamaları için operatörlü sepetli vinç desteği. Mağaza, iş yeri, plaza and bina cephe tabelaları için hızlı teklif alın.",
+    title: 'Ankara Tabela Montaj İçin Sepetli Vinç | Hızlı ve Güvenli Kurulum',
+    description: "Ankara’da tabela montajı için sepetli vinç kiralama hizmeti. AVM, iş merkezi, fabrika ve yüksek binalarda güvenli montaj için hemen arayın: 0551 606 68 78",
     url: getCanonicalUrl('/hizmetler/tabela-montaj'),
-    type: 'website',
-    locale: 'tr_TR',
   },
 };
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  name: 'Ankara Tabela Montaj Hizmeti',
-  provider: {
-    '@type': 'LocalBusiness',
-    name: SEO_CONFIG.siteName,
-    url: SEO_CONFIG.baseUrl,
-    telephone: '+905516066878',
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'Ankara',
-      addressCountry: 'TR',
-    },
-  },
-  areaServed: {
-    '@type': 'City',
-    name: 'Ankara',
-  },
-  description:
-    "Ankara'da tabela montajı, söküm and yüksek alan uygulamaları için operatörlü sepetli vinç desteği. Mağaza, iş yeri, plaza and bina cephe tabelaları için profesyonel çözüm.",
-  url: getCanonicalUrl('/hizmetler/tabela-montaj'),
-};
-
-const faqItems = [
+const faqs = [
   {
-    q: 'Tabela montajı için sepetli vinç gerekli midir?',
-    a: "Her tabela işi sepetli vinç gerektirmez; ancak binanın 2. katı ve üzerindeki alanlarda, dar cephelerde veya zemin ekipmanlarının ulaşamadığı noktalarda sepetli vinç en güvenli ve hızlı çözümdür. Özellikle ışıklı tabela, büyük format totem ve bina cephesi uygulamalarında vinç kullanımı hem iş güvenliği hem de uygulama kalitesi açısından fark yaratır.",
+    q: 'Tabela montajı için sepetli vinç gerekir mi?',
+    a: 'Kesinlikle. Özellikle mağaza üstleri, AVM dış cepheleri ve plaza girişleri gibi yüksek ve iskele kurmanın zor olduğu noktalara tabela asabilmek için en pratik ve güvenli yöntem sepetli vinç kullanımıdır.'
   },
   {
-    q: "Ankara'da aynı gün tabela montaj hizmeti alabilir miyim?",
-    a: 'Araç müsaitliğine göre aynı gün sevkiyat mümkün olabilmektedir. Ancak özellikle yoğun dönemlerde bir gün öncesinde rezervasyon yapılması tavsiye edilir. Acil talepler için doğrudan hattımızı arayabilirsiniz.',
+    q: 'Sepetli vinç ile tabela montajı güvenli mi?',
+    a: 'Çok güvenlidir. İş güvenliği sertifikalı operatörlerimiz aracı sabitler ve rüzgar direncine göre pozisyon alarak tabelayı asacak olan ekibe sıfır sarsıntı ve %100 güvenli bir platform sunar.'
   },
   {
-    q: 'Tabela söküm ve yeniden montaj yapıyor musunuz?',
-    a: "Evet. Mevcut bir tabelanın sökülmesi, yeniden konumlandırılması veya yeni bir tabelayla değiştirilmesi işlemlerinin tümüne destek veriyoruz. Söküm + yeni montaj paket olarak planlandığında hem süre hem de maliyet açısından daha verimli sonuç alınır.",
+    q: 'Tabela montajı kaç saat sürer?',
+    a: 'Tabelanın boyutuna, bağlantı noktalarının durumuna ve montajlanacak yerin yüksekliğine bağlı olarak değişmekle birlikte genellikle standart mağaza tabelaları 1-3 saat arasında tamamlanmaktadır.'
   },
   {
-    q: 'Operatör hizmete dahil mi?',
-    a: "Evet, tüm vinclerimiz iş güvenliği sertifikalı ve deneyimli operatörlerimizle birlikte teslim edilmektedir. Araç kullanımı tamamen bizim sorumluluğumuzdadır; siz yalnızca montaj ekibinizi sahaya getirin.",
-  },
-  {
-    q: 'Hangi yüksekliklere kadar tabela montajı yapılabiliyor?',
-    a: 'Araç filomuz 15 metreden başlayıp 70 metreye kadar farklı yükseklik seçenekleri sunmaktadır. Binanın yüksekliğini ve montaj noktasını belirtmeniz yeterli; uygun araç kapasitesini birlikte belirleriz.',
-  },
-  {
-    q: 'Mağaza tabelası montajı için ön keşif gerekiyor mu?',
-    a: "Çoğu standart mağaza tabelası işlemi için adres, yaklaşık yükseklik ve tabela boyutunu bilmek yeterli olmaktadır. Ancak karmaşık cephe yapıları veya özel konumlandırma gerektiren projelerde kısa bir ön değerlendirme yapılabilir.",
-  },
-  {
-    q: 'İlçeye göre hizmet süresi değişir mi?',
-    a: "Ankara merkez ve çevresi için sevkiyat süreleri oldukça kısadır. Etimesgut, Sincan, Pursaklar veya Gölbaşı gibi biraz daha uç ilçelerde araç ulaşımı için küçük bir fark oluşabilir. Her durumda önceden bilgilendirme yapıyoruz.",
-  },
-  {
-    q: 'Teklif almak için hangi bilgileri paylaşmalıyım?',
-    a: 'Montaj yapılacak ilçe/konum, tabelanın türü ve boyutu, montaj yapılacak yükseklik ve tercih edilen tarih bilgilerini paylaşmanız yeterlidir. Bu bilgilerle size en kısa sürede net bir fiyat teklifi sunabiliriz.',
-  },
+    q: 'Aynı gün vinç gelir mi?',
+    a: 'Rüzgardan hasar görmüş acil tabela onarımları ve sökümleri veya ani gelişen montaj ihtiyaçlarınız için Ankara genelinde aynı gün araç yönlendirmesi yapabiliyoruz.'
+  }
 ];
 
 export default function TabelaMontajPage() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Service',
+        name: 'Ankara Tabela Montaj Sepetli Vinç',
+        provider: {
+          '@type': 'LocalBusiness',
+          name: 'AS Ankara Sepetli Vinç Kiralama Hizmetleri',
+          url: SEO_CONFIG.baseUrl
+        },
+        telephone: '+905516066878',
+        areaServed: {
+          '@type': 'City',
+          name: 'Ankara'
+        },
+        serviceType: 'Tabela Montaj Vinç Hizmeti',
+        description: "Ankara’da tabela montajı için sepetli vinç kiralama hizmeti. AVM, iş merkezi, fabrika ve yüksek binalarda güvenli montaj.",
+        url: getCanonicalUrl('/hizmetler/tabela-montaj')
+      },
+      {
+        '@type': 'LocalBusiness',
+        name: 'AS Ankara Sepetli Vinç Kiralama Hizmetleri',
+        url: SEO_CONFIG.baseUrl,
+        telephone: '+905516066878',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: 'Ostim Organize Sanayi Bölgesi',
+          addressLocality: 'Yenimahalle',
+          addressRegion: 'Ankara',
+          addressCountry: 'TR'
+        },
+        areaServed: {
+          '@type': 'City',
+          name: 'Ankara'
+        }
+      },
+      {
+        '@type': 'FAQPage',
+        mainEntity: faqs.map(faq => ({
+          '@type': 'Question',
+          name: faq.q,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.a
+          }
+        }))
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Ana Sayfa',
+            item: SEO_CONFIG.baseUrl
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Hizmetler',
+            item: `${SEO_CONFIG.baseUrl}/hizmetler`
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'Tabela Montajı',
+            item: `${SEO_CONFIG.baseUrl}/hizmetler/tabela-montaj`
+          }
+        ]
+      }
+    ]
+  };
+
   return (
-    <div className="flex flex-col min-h-screen bg-white">
+    <div className="flex flex-col min-h-screen bg-gray-50 pb-20 md:pb-0">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-
       <Header />
 
-      <main className="flex-grow">
-        {/* ── HERO ─────────────────────────────────────────────────── */}
-        <section className="relative bg-gradient-to-br from-gray-900 to-gray-800 py-20 md:py-28 overflow-hidden">
-          <div
-            className="absolute inset-0 opacity-10 bg-[url('/images/services/tabela-montaj.jpg')] bg-cover bg-center"
-            aria-hidden="true"
-          />
-          <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
-            <Breadcrumb
-              items={[
-                { label: 'Ana Sayfa', href: '/' },
-                { label: 'Hizmetlerimiz', href: '/hizmetler' },
-                { label: 'Tabela Montaj', href: '/hizmetler/tabela-montaj' },
-              ]}
+      <main className="flex-grow pt-24 pb-0">
+        
+        {/* 1. Hero Alanı */}
+        <section className="relative bg-gray-900 text-white overflow-hidden py-16 md:py-24">
+          <div className="absolute inset-0 opacity-40">
+            <Image
+              src="/images/hero-bg.jpg"
+              alt="ankara tabela montaj sepetli vinç"
+              fill
+              className="object-cover"
+              priority
             />
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-6">
-              <div>
-                <h1 className="text-3xl md:text-5xl font-extrabold text-white leading-tight mb-6">
-                  Ankara&apos;da <span className="text-red-400">Profesyonel</span>{' '}
-                  Tabela Montaj Hizmeti
-                </h1>
-                <p className="text-lg text-gray-300 leading-relaxed mb-8">
-                  Altınçiçek Kuyumculuk gibi prestijli işletmelerin tercihi olan sepetli vinç
-                  destekli tabela montaj hizmetimizle, Ankara genelinde profesyonel ve güvenli
-                  çözümler sunuyoruz. 7/24 operatörlü kiralama ve hızlı sevkiyat.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <a
-                    href="tel:+905516066878"
-                    id="hero-call-cta-tabela"
-                    className="inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold py-3.5 px-7 rounded-xl transition-all shadow-lg text-lg"
-                  >
-                    📞 Hemen Ara: 0551 606 68 78
-                  </a>
-                  <a
-                    href="#teklif-formu"
-                    id="hero-form-cta-tabela"
-                    className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold py-3.5 px-7 rounded-xl transition-all text-lg"
-                  >
-                    Ücretsiz Teklif Al →
-                  </a>
-                </div>
-              </div>
-
-              {/* Güven unsurları */}
-              <div className="hidden lg:grid grid-cols-2 gap-4" aria-hidden="true">
-                {[
-                  { icon: '🏗️', label: 'Operatörlü Hizmet' },
-                  { icon: '⚡', label: 'Hızlı Sevkiyat' },
-                  { icon: '🛡️', label: 'İş Güvenliği Odaklı' },
-                  { icon: '📍', label: 'Ankara Geneli' },
-                ].map((item) => (
-                  <div
-                    key={item.label}
-                    className="bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-5 text-center text-white"
-                  >
-                    <div className="text-3xl mb-2">{item.icon}</div>
-                    <div className="font-semibold text-sm">{item.label}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <div className="absolute inset-0 bg-gradient-to-r from-orange-900 via-gray-900/90 to-transparent"></div>
           </div>
-        </section>
-
-        {/* ── GİRİŞ ───────────────────────────────────────────────── */}
-        <section className="py-16 md:py-20 bg-white">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Tabela montajı, görünürde basit bir işlem gibi görünse de yüksek alanlarda yapılan
-              uygulamalar ciddi bir ekipman planlaması gerektirir. İskele kurulumu zaman alır,
-              merdiven yetmez ve kaldırım üzerinde uzun süre alan kaplamak hem yasal hem de
-              pratik açıdan sorun yaratabilir. Sepetli vinç ise tüm bu kısıtları ortadan kaldıran
-              esnek bir çözum sunar.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Mağaza tabelasından çok katlı plaza cephesine, karayolu reklamından bina üstü LED
-              sistemine kadar farklı ölçekteki tabela işlerinde operatörlü sepetli vinç hizmeti;
-              hem zamandan hem güvenlik maliyetinden tasarruf sağlar. Operatörümüz aracı
-              konumlandırırken, montaj ekibiniz platformdan güvenle çalışır.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Ankara&apos;da tabela firmaları, reklam ajansları ve inşaat müteahhitleri artık
-              kendi işçi güvenliği sorumluluklarını azaltmak için kiralamayı tercih ediyor. Tek
-              operasyon, tek araç, sıfır iskele kurulum süresi.
-            </p>
-          </div>
-        </section>
-
-        {/* ── H2: Tabela Montaj Hizmeti ───────────────────────────── */}
-        <section className="py-16 md:py-20 bg-gray-50 border-y border-gray-100">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
-              Ankara&apos;da Tabela Montaj Hizmeti
-            </h2>
-            <p className="text-gray-700 leading-relaxed mb-6">
-              Hizmetimiz; tabela firmaları, reklam ajansları, mağaza sahipleri ve kurumsal müşteriler
-              için sepetli vinç ile yüksek alan erişimi sağlamak üzerine kurgulanmıştır. Kendi
-              montaj ekibiniz olmasa bile ihtiyaca göre yönlendirme yapıyoruz.
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {[
-                {
-                  title: 'Dış Cephe Tabela Montajı',
-                  desc: 'Binanın zemin katı üzerinde kalan, standart merdivenle ulaşılamayan noktalara tabela sabitleme ve kablo bağlantıları.',
-                },
-                {
-                  title: 'Kuyumcu ve Mağaza Tabelaları',
-                  desc: 'Altınçiçek Kuyumculuk gibi hassas işçilik gerektiren mağaza cephelerinde, tabela montajı ve LED aydınlatma bakımları için sepetli vinç desteği.',
-                },
-                {
-                  title: 'Totem ve Yol Kenarı Reklamları',
-                  desc: "Yüksek formatlı totem, pylon ve karayolu kenarındaki reklam panosu kurulum işleri için sepetli vinç erişimi.",
-                },
-                {
-                  title: 'Plaza ve Kurumsal Cephe İşleri',
-                  desc: 'Kurumsal kimlik uygulamaları, bina logoları, kat tabelaları ve büyük format dış cephe grafik uygulamaları.',
-                },
-                {
-                  title: 'Işıklı Tabela ve LED Sistemler',
-                  desc: 'Elektrik bağlantısı gerektiren ışıklı tabela, neon sistem ve LED ekran kurulumlarında güvenli çalışma platformu.',
-                },
-                {
-                  title: 'Tabela Söküm ve Yeniden Montaj',
-                  desc: 'Mevcut tabelanın yerinden sökülerek yeni tabela ile değiştirilmesi veya farklı bir konuma taşınması işlemleri.',
-                },
-              ].map((item) => (
-                <div
-                  key={item.title}
-                  className="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm"
-                >
-                  <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── H2: Neden Sepetli Vinç ───────────────────────────────── */}
-        <section className="py-16 md:py-20 bg-white">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
-              Sepetli Vinç ile Tabela Montajı Neden Tercih Edilir?
-            </h2>
-            <p className="text-gray-700 leading-relaxed mb-8">
-              Yüksek alanlarda tabela işleri için farklı erişim yöntemleri mevcut olmakla birlikte,
-              sepetli vinç birçok durumda en pratik ve güvenli seçenek olarak öne çıkmaktadır:
-            </p>
-            <ul className="space-y-4">
-              {[
-                {
-                  title: 'Hızlı Kurulum',
-                  desc: 'İskele kurmak saatler alabilir. Sepetli vinç sahaya gelir, konumlanır ve çalışma başlar. İş bittiğinde araç ayrılır — sokakta uzun süre alan kaplamaz.',
-                },
-                {
-                  title: 'Kontrollü Erişim',
-                  desc: "Platform sabit ve dengeli tutulur; operatör yatay ve dikey konumlamayı milimetrik hassasiyetle ayarlar. Tabela hizalama ve sabitleme işlemleri çok daha kolay yapılır.",
-                },
-                {
-                  title: 'İş Güvenliği',
-                  desc: 'Yüksekte çalışma mevzuatına uygun sertifikalı ekipman ve operatök ile çalışıldığında iş kazası riski minimize edilir. Montaj ekibi platformdan güvenle hareket edebilir.',
-                },
-                {
-                  title: 'Erişimi Zor Alanlarda Avantaj',
-                  desc: 'Binalar arası dar geçitler, arka cepheler veya yüksek duvarların arkasındaki alanlar için sepetli vinç bom kolu uzantısıyla erişim sağlayabilir.',
-                },
-                {
-                  title: 'Dar Alan Esnekliği',
-                  desc: "Ankara'nın yoğun caddelerinde ve dar kaldırımlarında, trafiği ve yaya geçişini engellemeden operasyon yapabilen yüksek manevra kabiliyetli araçlar.",
-                },
-                {
-                  title: 'Operatörlü Hizmetin Önemi',
-                  desc: "Aracı kendi başına sürmek veya operatörsüz kiralamak yerine, profesyonel operatörümüz vincin tüm dengesini sağlarken siz sadece montaja odaklanırsınız.",
-                },
-              ].map((item) => (
-                <li
-                  key={item.title}
-                  className="flex gap-4 items-start bg-gray-50 rounded-xl p-5 border border-gray-100"
-                >
-                  <span className="text-red-500 font-bold text-xl mt-0.5">✓</span>
-                  <div>
-                    <strong className="text-gray-900 block mb-1">{item.title}</strong>
-                    <span className="text-gray-600 text-sm leading-relaxed">{item.desc}</span>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
-        {/* ── H2: Hangi Tabela İşlerinde ───────────────────────────── */}
-        <section className="py-16 md:py-20 bg-gray-50 border-y border-gray-100">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
-              Hangi Tabela İşlerinde Hizmet Veriyoruz?
-            </h2>
-            <p className="text-gray-700 leading-relaxed mb-8">
-              Küçük ölçekli mağaza tabelasından büyük format plaza uygulamalarına geniş bir
-              yelpazede hizmet sunuyoruz. Aşağıdaki iş türlerinde operatörlü araç desteği
-              sağlıyoruz:
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {[
-                { icon: '🏪', label: 'Mağaza tabela montajı' },
-                { icon: '💡', label: 'Işıklı tabela montajı' },
-                { icon: '🗼', label: 'Totem tabela montaj desteği' },
-                { icon: '🏢', label: 'Cephe tabela montajı' },
-                { icon: '🔄', label: 'Tabela söküm ve yeniden montaj' },
-                { icon: '🔧', label: 'Tabela bakım / değişim erişimi' },
-                { icon: '📋', label: 'Yönlendirme tabelası montajı' },
-                { icon: '🌆', label: 'Bina logosu ve kurumsal kimlik uygulamaları' },
-                { icon: '📡', label: 'LED ve dijital ekran kurulumu' },
-              ].map((item) => (
-                <div
-                  key={item.label}
-                  className="bg-white rounded-xl p-5 border border-gray-200 flex items-center gap-3 shadow-sm"
-                >
-                  <span className="text-2xl">{item.icon}</span>
-                  <span className="text-gray-700 font-medium text-sm">{item.label}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── H2: Neden Bizimle ────────────────────────────────────── */}
-        <section className="py-16 md:py-20 bg-gray-900 text-white">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
-            <h2 className="text-2xl md:text-3xl font-bold mb-10">
-              Neden Bizimle Çalışmalısınız?
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                {
-                  icon: '👷',
-                  title: 'Operatörlü Ekipman',
-                  desc: 'Sertifikalı ve sahada deneyimli operatörlerimiz aracı yönetir; siz yalnızca montaj işine odaklanırsınız.',
-                },
-                {
-                  icon: '🔧',
-                  title: 'Bakımlı Araçlar',
-                  desc: 'Filodaki tüm vincler periyodik teknik bakımdan geçer. Sahaya her zaman çalışmaya hazır araç gelir.',
-                },
-                {
-                  icon: '🚀',
-                  title: 'Ankara İçi Hızlı Planlama',
-                  desc: "Ankara'nın her ilçesine kısa sürede araç yönlendirebiliyoruz. Zamanınız kısıtlı olsa da çözüm buluyoruz.",
-                },
-                {
-                  icon: '🛡️',
-                  title: 'İş Güvenliği Odaklı',
-                  desc: 'Yüksekte çalışma mevzuatına tam uygun ekipman ve operasyon planlaması. İş kazası riskini minimize ediyoruz.',
-                },
-                {
-                  icon: '📅',
-                  title: 'Esnek Planlama',
-                  desc: 'Saatlik veya günlük kiralama seçeneğiyle projenizin gerçek ihtiyacına göre plan yapabilirsiniz.',
-                },
-                {
-                  icon: '⏱️',
-                  title: 'Zamanında Uygulama',
-                  desc: 'Belirlenen tarih ve saatte saha teslimatını taahhüt ediyoruz. Siz de müşterinize söz verebilirsiniz.',
-                },
-              ].map((item) => (
-                <div
-                  key={item.title}
-                  className="bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-6"
-                >
-                  <div className="text-3xl mb-3">{item.icon}</div>
-                  <h3 className="font-bold text-white mb-2">{item.title}</h3>
-                  <p className="text-gray-300 text-sm leading-relaxed">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── H2: İlçeler ─────────────────────────────────────────── */}
-        <section className="py-16 md:py-20 bg-white">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
-              Ankara&apos;da Hangi İlçelere Hizmet Veriyoruz?
-            </h2>
-            <p className="text-gray-700 leading-relaxed mb-8">
-              Hizmet alanımız Ankara genelini kapsamaktadır. Çankaya ve Keçiören gibi merkezi
-              ilçelerden Ostim&apos;deki sanayi tesislerine, Etimesgut ve Sincan&apos;daki organize
-              sanayi bölgelerine kadar araç sevkiyatı sağlıyoruz. Pursaklar, Gölbaşı, Mamak ve
-              Altındağ dahil tüm ilçelere hizmet verebiliriz.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              {[
-                { label: 'Çankaya', href: '/cankaya-sepetli-vinc' },
-                { label: 'Keçiören', href: '/bolgeler' },
-                { label: 'Yenimahalle', href: '/yenimahalle-sepetli-vinc' },
-                { label: 'Etimesgut', href: '/etimesgut-sepetli-vinc' },
-                { label: 'Sincan', href: '/sincan-sepetli-vinc' },
-                { label: 'Ostim / İvedik', href: '/ostim-sepetli-vinc' },
-                { label: 'Pursaklar', href: '/bolgeler' },
-                { label: 'Gölbaşı', href: '/bolgeler' },
-                { label: 'Mamak', href: '/bolgeler' },
-                { label: 'Altındağ', href: '/bolgeler' },
-              ].map((b) => (
-                <Link
-                  key={b.label}
-                  href={b.href}
-                  className="bg-gray-100 hover:bg-red-50 hover:text-red-700 border border-gray-200 hover:border-red-200 text-gray-700 font-medium px-5 py-2.5 rounded-full text-sm transition-colors"
-                >
-                  {b.label}
-                </Link>
-              ))}
-            </div>
-            <p className="text-gray-500 text-sm mt-6">
-              Yukarıda bulunmayan bölgeler için de hizmet verebiliyoruz.{' '}
-              <Link href="/iletisim" className="text-red-600 hover:underline font-medium">
-                Bize ulaşın
-              </Link>{' '}
-              ve lokasyonunuzu paylaşın.
-            </p>
-          </div>
-        </section>
-
-        {/* ── H2: Fiyat ───────────────────────────────────────────── */}
-        <section className="py-16 md:py-20 bg-gray-50 border-y border-gray-100">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
-              Tabela Montaj Fiyatını Etkileyen Unsurlar
-            </h2>
-            <p className="text-gray-700 leading-relaxed mb-8">
-              Net bir fiyat verebilmek için her projeyi ayrı ayrı değerlendiriyoruz. Tabela
-              montajı için sepetli vinç hizmetinin maliyetini belirleyen başlıca etkenler şunlardır:
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              {[
-                {
-                  title: 'Tabela Boyutu ve Ağırlığı',
-                  desc: 'Büyük formatlı veya ağır tabelalar, daha güçlü araç kapasitesi gerektirebilir.',
-                },
-                {
-                  title: 'Montaj Yüksekliği',
-                  desc: 'Artan yükseklik, farklı kapasitede ekipman sınıflarını devreye sokabilir.',
-                },
-                {
-                  title: 'Montaj Alanı ve Erişim Zorluğu',
-                  desc: 'Dar sokak, arka cephe veya zemin engeli gibi etkenler planlamayı ve aracın konumlanmasını etkiler.',
-                },
-                {
-                  title: 'Çalışma Süresi',
-                  desc: 'Saatlik veya günlük bazda yapılan planlama, toplam maliyetin temel belirleyicisidir.',
-                },
-                {
-                  title: 'Söküm + Montaj Birlikte mi?',
-                  desc: 'Eski tabelanın söküm ve yeni montajın aynı seferda yapılması çoğu zaman daha ekonomik olur.',
-                },
-                {
-                  title: 'Lokasyon ve Ulaşım',
-                  desc: "Aracın ana üslerimize olan uzaklığı, Ankara'nın uç ilçelerinde küçük bir etki yaratabilir.",
-                },
-              ].map((item) => (
-                <div
-                  key={item.title}
-                  className="bg-white rounded-2xl p-5 border border-gray-200 shadow-sm"
-                >
-                  <h3 className="font-bold text-gray-900 mb-2 text-sm">{item.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-            <div className="mt-8 bg-red-50 border border-red-100 rounded-2xl p-6 text-center">
-              <p className="text-gray-700 mb-4 font-medium">
-                Projenizin detaylarını paylaşın; size özel ve net bir fiyat teklifi hazırlayalım.
+          
+          <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl">
+              <Breadcrumb
+                items={[
+                  { label: 'Ana Sayfa', href: '/' },
+                  { label: 'Hizmetler', href: '/hizmetler' },
+                  { label: 'Tabela Montajı', href: '/hizmetler/tabela-montaj' },
+                ]}
+              />
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mt-6 mb-6 tracking-tight leading-tight">
+                Ankara Tabela Montajı İçin Sepetli Vinç Hizmeti
+              </h1>
+              <p className="text-lg md:text-xl text-gray-200 leading-relaxed mb-10 max-w-3xl font-light">
+                Ankara genelinde yüksek noktalara tabela montajı, reklam panosu kurulumu, totem tabela yerleştirme ve tabela değişim işlemleri için operatörlü sepetli vinç hizmeti sunuyoruz. AVM, iş merkezi, fabrika ve cadde üzerindeki yüksek tabelalar için hızlı ve güvenli çözümler sağlıyoruz.
               </p>
+              
+              <div className="flex flex-col sm:flex-row items-center gap-4 mb-12">
+                <a
+                  href="tel:05516066878"
+                  className="w-full sm:w-auto flex items-center justify-center gap-2 bg-primary text-white hover:bg-primary-dark px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg shadow-primary/30"
+                >
+                  <Phone size={20} />
+                  Hemen Ara: 0551 606 68 78
+                </a>
+                <a
+                  href="https://wa.me/905516066878"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-full sm:w-auto flex items-center justify-center gap-2 bg-[#25D366] text-white hover:bg-[#1ebd5a] px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg shadow-green-500/30"
+                >
+                  <MessageCircle size={20} />
+                  WhatsApp
+                </a>
+                <a
+                  href="#fiyatlar"
+                  className="w-full sm:w-auto flex items-center justify-center gap-2 bg-white/10 text-white border border-white/20 hover:bg-white/20 px-8 py-4 rounded-xl font-bold text-lg transition-all"
+                >
+                  Tabela Montaj Fiyatı Al
+                </a>
+                <Link
+                  href="/bolgeler"
+                  className="w-full sm:w-auto flex items-center justify-center gap-2 bg-transparent text-white underline hover:text-gray-200 px-4 py-4 font-medium transition-all"
+                >
+                  Hizmet Bölgelerini Gör
+                </Link>
+              </div>
+
+              {/* Güven Sinyalleri */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8 border-t border-white/10">
+                <div className="flex items-center gap-3">
+                  <div className="bg-primary/20 p-2 rounded-lg"><Focus size={24} className="text-primary" /></div>
+                  <span className="font-semibold text-sm md:text-base">Yüksek Noktalara Güvenli Erişim</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="bg-primary/20 p-2 rounded-lg"><HardHat size={24} className="text-primary" /></div>
+                  <span className="font-semibold text-sm md:text-base">Operatörlü Vinç Hizmeti</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="bg-primary/20 p-2 rounded-lg"><Zap size={24} className="text-primary" /></div>
+                  <span className="font-semibold text-sm md:text-base">Ankara Geneli Hızlı Yönlendirme</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="bg-primary/20 p-2 rounded-lg"><Building2 size={24} className="text-primary" /></div>
+                  <span className="font-semibold text-sm md:text-base">AVM & Fabrika Deneyimi</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 2. Niyet Odaklı Giriş */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto prose prose-lg prose-headings:text-gray-900 prose-p:text-gray-600 prose-a:text-primary max-w-none">
+              <h2 className="text-3xl font-bold mt-0 mb-6">Tabela Montajı İçin Neden Sepetli Vinç Kullanılır?</h2>
+              <p>
+                Mağaza açılışları, kurumsal kimlik değişimleri veya reklam panolarının yenilenmesi gibi süreçlerde en zorlu aşama genellikle tabelanın yerine asılmasıdır. Tabela montajı genellikle yüksek ve ulaşılması zor alanlarda, bazen ana caddelerdeki trafik akışının tam üstünde veya plazaların yüksek girişlerinde yapılır. Bu denli zorlu lokasyonlarda işi şansa bırakmak mümkün değildir. Sepetli vinç sayesinde montaj ekibi havada güvenli bir şekilde çalışır, devasa tabela milimetrik olarak doğru konuma yerleştirilir ve işlem hiçbir güvenlik zafiyeti verilmeden kısa sürede tamamlanır.
+              </p>
+              <p>
+                Endüstri standardı olarak, <strong>ankara tabela montaj sepetli vinç</strong> uygulamaları iskele kurulumuna göre çok daha hızlı ve ekonomik bir çözümdür. İskele kurup sökmek günlerinizi alabilecekken, <Link href="/hizmetler/sepetli-vinc-kiralama" className="font-semibold underline">Ankara sepetli vinç kiralama</Link> sistemimizle sadece birkaç saat içinde işleminizi bitirebilirsiniz. Bu bilgi sektörel olarak kanıtlanmıştır; zira tabela montajı sepetli vinçlerin en yaygın, en çok talep gören ve en verimli olduğu kullanım alanlarından biridir.
+              </p>
+              <p>
+                Özellikle metrelerce yüksekteki devasa totem tabelaların kurulumu esnasında sarsıntısız ve kusursuz bir platform gereklidir. Bu nedenle sunduğumuz <Link href="/hizmetler/operatorlu-vinc-kiralama" className="font-semibold underline">operatörlü vinç kiralama</Link> paketimiz sayesinde vincin kontrolü tamamen profesyonel ellere bırakılır. Kısa süreli harf değişimleri veya arıza giderme işlemlerinde <Link href="/hizmetler/saatlik-vinc-kiralama" className="font-semibold underline">saatlik vinç kiralama</Link> esnekliğinden faydalanarak bütçenizi koruyabilirsiniz. İhtiyacınız olan her türlü yüksek erişim aracı için geniş filomuzla <Link href="/hizmetler" className="font-semibold underline">Ankara vinç kiralama hizmetleri</Link> olarak yanınızdayız.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* 3. Hizmet Kapsamı */}
+        <section className="py-16 bg-gray-50 border-y border-gray-100">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Tabela Montajında Verdiğimiz Hizmetler</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Kurumsal reklam süreçlerinizde her ebatta ve türdeki tabela işlemleri için platform desteği sunuyoruz.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+              
+              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col h-full hover:border-primary/50 transition-colors">
+                <div className="bg-primary/10 w-14 h-14 rounded-xl flex items-center justify-center text-primary mb-5">
+                  <Lightbulb size={28} />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Işıklı ve Işıksız Tabela Montajı</h3>
+                <p className="text-gray-600 text-sm leading-relaxed flex-grow mb-4">
+                  Standart mağaza cepheleri ve dükkan üstlerine konumlandırılacak her türlü kutu harf, pleksi ve florasan aydınlatmalı tabelaların güvenli ve terazisinde kurulumu.
+                </p>
+                <div className="bg-gray-50 p-3 rounded-lg text-center mt-auto border border-gray-100">
+                  <p className="text-xs font-semibold text-gray-800 m-0">Tabela montajı için hemen <br/> <a href="tel:05516066878" className="text-primary hover:underline text-sm">0551 606 68 78</a> numarasını arayın.</p>
+                </div>
+              </div>
+
+              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col h-full hover:border-primary/50 transition-colors">
+                <div className="bg-primary/10 w-14 h-14 rounded-xl flex items-center justify-center text-primary mb-5">
+                  <MonitorUp size={28} />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Totem Tabela Kurulumu</h3>
+                <p className="text-gray-600 text-sm leading-relaxed flex-grow mb-4">
+                  Fabrika girişleri, benzin istasyonları ve otoyol kenarlarında yer alan devasa yükseklikteki ağır totem tabelaların birleştirilmesi ve direk üzeri montajı işlemleri.
+                </p>
+                <div className="bg-gray-50 p-3 rounded-lg text-center mt-auto border border-gray-100">
+                  <p className="text-xs font-semibold text-gray-800 m-0">Tabela montajı için hemen <br/> <a href="tel:05516066878" className="text-primary hover:underline text-sm">0551 606 68 78</a> numarasını arayın.</p>
+                </div>
+              </div>
+
+              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col h-full hover:border-primary/50 transition-colors">
+                <div className="bg-primary/10 w-14 h-14 rounded-xl flex items-center justify-center text-primary mb-5">
+                  <Building2 size={28} />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">AVM ve Plaza Tabela Montajı</h3>
+                <p className="text-gray-600 text-sm leading-relaxed flex-grow mb-4">
+                  Yüksek katlı ticari binaların zirvesine yerleştirilen kurumsal çatı tabelalarının ve AVM dış cephe markalama işlemlerinin vinç ile emniyetli olarak yapılması.
+                </p>
+                <div className="bg-gray-50 p-3 rounded-lg text-center mt-auto border border-gray-100">
+                  <p className="text-xs font-semibold text-gray-800 m-0">Tabela montajı için hemen <br/> <a href="tel:05516066878" className="text-primary hover:underline text-sm">0551 606 68 78</a> numarasını arayın.</p>
+                </div>
+              </div>
+
+              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col h-full hover:border-primary/50 transition-colors">
+                <div className="bg-primary/10 w-14 h-14 rounded-xl flex items-center justify-center text-primary mb-5">
+                  <PenTool size={28} />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Reklam Panosu ve Billboard Montajı</h3>
+                <p className="text-gray-600 text-sm leading-relaxed flex-grow mb-4">
+                  Şehir içi duvar reklamları, bina giydirmeleri ve ayaklı billboardların afiş değişim veya metal konstrüksiyon kurum süreçlerinde sepetten güvenli çalışma ortamı.
+                </p>
+                <div className="bg-gray-50 p-3 rounded-lg text-center mt-auto border border-gray-100">
+                  <p className="text-xs font-semibold text-gray-800 m-0">Tabela montajı için hemen <br/> <a href="tel:05516066878" className="text-primary hover:underline text-sm">0551 606 68 78</a> numarasını arayın.</p>
+                </div>
+              </div>
+
+              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col h-full hover:border-primary/50 transition-colors">
+                <div className="bg-primary/10 w-14 h-14 rounded-xl flex items-center justify-center text-primary mb-5">
+                  <Trash2 size={28} />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Eski Tabela Söküm ve Değişim</h3>
+                <p className="text-gray-600 text-sm leading-relaxed flex-grow mb-4">
+                  Rüzgardan hasar görmüş, kopmak üzere olan tehlikeli tabelaların sökümü veya yer değiştiren mağazaların eski logolarının sökülüp yeni adrese güvenle taşınması.
+                </p>
+                <div className="bg-gray-50 p-3 rounded-lg text-center mt-auto border border-gray-100">
+                  <p className="text-xs font-semibold text-gray-800 m-0">Tabela montajı için hemen <br/> <a href="tel:05516066878" className="text-primary hover:underline text-sm">0551 606 68 78</a> numarasını arayın.</p>
+                </div>
+              </div>
+
+              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col h-full hover:border-primary/50 transition-colors">
+                <div className="bg-primary/10 w-14 h-14 rounded-xl flex items-center justify-center text-primary mb-5">
+                  <MonitorPlay size={28} />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">LED ve Dijital Tabela Kurulumu</h3>
+                <p className="text-gray-600 text-sm leading-relaxed flex-grow mb-4">
+                  Hassas elektronik bileşenler barındıran LED ekranların ve kayan yazı tabelalarının sarsılmadan, zarar görmeden bina cephesine özenle entegre edilmesi.
+                </p>
+                <div className="bg-gray-50 p-3 rounded-lg text-center mt-auto border border-gray-100">
+                  <p className="text-xs font-semibold text-gray-800 m-0">Tabela montajı için hemen <br/> <a href="tel:05516066878" className="text-primary hover:underline text-sm">0551 606 68 78</a> numarasını arayın.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* 4. Avantajlar */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Tabela Montajında Sepetli Vinç Kullanmanın Avantajları</h2>
+            <div className="bg-orange-50 border border-orange-100 rounded-3xl p-8 md:p-10">
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="text-orange-600 shrink-0 mt-1" size={24} />
+                  <span className="text-gray-800 text-lg">Personeliniz için %100 <strong>güvenli çalışma ortamı</strong> sunar, düşme riskini sıfırlar.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="text-orange-600 shrink-0 mt-1" size={24} />
+                  <span className="text-gray-800 text-lg">Platformun manevra kabiliyeti ile tabelada <strong>milimetrik konumlandırma</strong> yapmanızı sağlar.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="text-orange-600 shrink-0 mt-1" size={24} />
+                  <span className="text-gray-800 text-lg">Hazırlık gerektirmeyen araçlarla sahada anında işe başlayarak <strong>hızlı kurulum</strong> gerçekleştirilir.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="text-orange-600 shrink-0 mt-1" size={24} />
+                  <span className="text-gray-800 text-lg">Saatler alan ve masraflı olan <strong>iskeleye göre daha ekonomik</strong> ve akıllıca bir çözümdür.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="text-orange-600 shrink-0 mt-1" size={24} />
+                  <span className="text-gray-800 text-lg">Araç park sorunu olan noktalarda <strong>trafik ve dar alanlara uyum</strong> sağlayan kompakt makine seçenekleri mevcuttur.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="text-orange-600 shrink-0 mt-1" size={24} />
+                  <span className="text-gray-800 text-lg">Ankara içi geniş araç ağımızla talebinize <strong>Ankara'da hızlı hizmet</strong> yanıtı verilir.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Ara CTA */}
+        <section className="bg-primary py-12">
+          <div className="container mx-auto px-4 text-center">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">Tabelanız İçin Güvenli Platform Hemen Hazır</h3>
+            <p className="text-primary-foreground mb-8 text-lg">Montaj yapılacak yerin fotoğrafını WhatsApp üzerinden paylaşın, operasyonu anında planlayalım.</p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a
-                href="#teklif-formu"
-                id="fiyat-teklif-cta-tabela"
-                className="inline-flex items-center justify-center bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-xl transition-all shadow"
+                href="tel:05516066878"
+                className="inline-flex items-center gap-2 bg-white text-primary hover:bg-gray-100 px-8 py-4 rounded-xl font-bold text-xl transition-all shadow-xl justify-center"
               >
-                Tabela Montajı İçin Teklif Al
+                <Phone size={24} />
+                0551 606 68 78
+              </a>
+              <a
+                href="https://wa.me/905516066878"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 bg-[#25D366] text-white hover:bg-[#1ebd5a] px-8 py-4 rounded-xl font-bold text-xl transition-all shadow-xl justify-center"
+              >
+                <MessageCircle size={24} />
+                Hızlı Teklif Al
               </a>
             </div>
           </div>
         </section>
 
-        {/* ── H2: SSS ─────────────────────────────────────────────── */}
-        <section className="py-16 md:py-20 bg-white">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-10">
-              Sıkça Sorulan Sorular
-            </h2>
-            <div className="space-y-5">
-              {faqItems.map((item, i) => (
-                <div
-                  key={i}
-                  className="bg-gray-50 rounded-2xl p-6 border border-gray-100"
-                >
-                  <h3 className="font-bold text-gray-900 mb-3">{item.q}</h3>
-                  <p className="text-gray-600 leading-relaxed text-sm">{item.a}</p>
-                </div>
-              ))}
+        {/* 5. Lokal SEO */}
+        <section className="py-16 bg-gray-50 border-b border-gray-100">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto prose prose-lg prose-headings:text-gray-900 prose-p:text-gray-600 prose-a:text-primary max-w-none">
+              <h2 className="text-3xl font-bold mt-0 mb-6">Ankara’da Tabela Montajı İçin Vinç Hizmeti Verdiğimiz Bölgeler</h2>
+              <p>
+                Reklamcılık sektörünün en aktif olduğu ve sürekli mağaza/mekan döngüsünün yaşandığı Ankara’da, <strong>tabela montaj vinç kiralama</strong> talepleri şehrin her lokasyonundan gelmektedir. Ticari akışın yoğun olduğu merkez ilçelerde ve sanayinin kalbi olan bölgelerde sokağın yapısına en uygun aracı yönlendirmek bizim uzmanlık alanımızdır. Çankaya, Kızılay, Etimesgut, Eryaman, Bağlıca, Yenimahalle, Ostim, Keçiören, Mamak ve Sincan hattı boyunca vinç ağımız kesintisiz çalışmaktadır.
+              </p>
+              
+              <p>
+                Özellikle ticaretin ve yaya trafiğinin en yoğun olduğu Çankaya ve Kızılay bölgelerinde, cadde üstü lüks mağaza ve kurumsal marka tabela montaj işlemleri çok sıktır. Buralarda yaya güvenliğini tehlikeye atmadan, gece veya sabahın erken saatlerinde <Link href="/bolgeler/cankaya-sepetli-vinc-kiralama" className="font-semibold underline">Çankaya sepetli vinç kiralama</Link> ekiplerimiz tabela değişim işlemlerini profesyonelce yürütür. 
+              </p>
+
+              <p>
+                Öte yandan ağır sanayinin ve toptan ticaretin merkezi olan Ostim ve Yenimahalle bölgesinde ise durum daha çok endüstriyel boyutlardadır. Dev harflerden oluşan sanayi tabela işleri, fabrika çatı logoları ve depolama alanı marka giydirmelerinde platformlarımız sürekli görev alır. Bu hat üzerinde ve daha batıya açılan Sincan ile Kazan bölgelerinde de büyük fabrika tabelaları ve yönlendirme totemleri için büyük metrajlı vinçlerimiz sıklıkla tercih edilmektedir.
+              </p>
+
+              <p>
+                Şehrin yoğun yaşam alanları olan Etimesgut, Eryaman ve Bağlıca üçgeninde ise genellikle yeni yapılan devasa site yönetimlerinin giriş tabelaları, otoyol kenarı reklam panoları ve yerel AVM iş merkezi tabelaları öne çıkmaktadır. Bu bölgelerdeki montaj işlerinde <Link href="/bolgeler/etimesgut-sepetli-vinc-kiralama" className="font-semibold underline">Etimesgut sepetli vinç kiralama</Link> departmanımız esnek çalışma saatleri sunarak markaların görünürlüğünü artırır. İşletmenizin konumu veya tabela boyutunuz ne olursa olsun, operasyonunuza tam uyumlu bir planlama yapmak için <Link href="/bolgeler" className="font-semibold underline">Ankara hizmet bölgeleri</Link> sayfamız üzerinden tüm lokasyon kapsamımızı inceleyebilirsiniz.
+              </p>
             </div>
           </div>
         </section>
 
-        {/* ── TEKLİF FORMU ─────────────────────────────────────────── */}
-        <section
-          id="teklif-formu"
-          className="py-16 md:py-24 bg-gradient-to-br from-gray-900 to-gray-800"
-        >
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-              <div className="text-white">
-                <h2 className="text-2xl md:text-3xl font-bold mb-4">
-                  Tabela Montajı İçin Ücretsiz Teklif Alın
-                </h2>
-                <p className="text-gray-300 leading-relaxed mb-8">
-                  Tabela türünü, montaj noktasını ve tarihi belirtin; uzman ekibimiz size en
-                  kısa sürede geri dönsün. Ön keşif gerekmez — ilk teması formdan kurun,
-                  detayları planlamaya birlikte karar verelim.
-                </p>
-                <ul className="space-y-3 text-gray-300">
-                  {[
-                    '15 dakika içinde uzman ekibimiz sizi arar',
-                    'Kesin fiyat teklifi — gizli maliyet yok',
-                    'Ankara genelinde hızlı araç sevkiyatı',
-                    'Operatörlü, iş güvenliği tam uyumlu hizmet',
-                    'Söküm + montaj paket desteği',
-                  ].map((item) => (
-                    <li key={item} className="flex items-center gap-3">
-                      <span className="text-green-400 font-bold">✓</span>
-                      <span className="text-sm">{item}</span>
-                    </li>
-                  ))}
+        {/* 6. Saatlik / Günlük Bağlantı */}
+        <section className="py-16 bg-white border-b border-gray-100">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">Tabela Montajı İçin Saatlik mi Günlük mü Vinç?</h2>
+            
+            <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+              
+              <div className="bg-gray-50 border border-gray-200 rounded-3xl p-8 hover:shadow-md transition-shadow">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                  <Clock className="text-blue-600 w-8 h-8" />
+                  Saatlik Kiralama
+                </h3>
+                <ul className="space-y-4 mb-8">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="text-blue-600 shrink-0 mt-1" size={20} />
+                    <span className="text-gray-700 font-medium">Hızlı tabela harf sökümü ve montajı</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="text-blue-600 shrink-0 mt-1" size={20} />
+                    <span className="text-gray-700 font-medium">Küçük dükkan ve işletme vitrin üstü işleri</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="text-blue-600 shrink-0 mt-1" size={20} />
+                    <span className="text-gray-700 font-medium">Aydınlatma arızası tamiri veya folyo yenilemesi</span>
+                  </li>
                 </ul>
-                <div className="mt-10 border-t border-white/20 pt-8">
-                  <p className="text-gray-400 text-sm mb-2">Telefon ile ulaşmak için:</p>
-                  <a
-                    href="tel:+905516066878"
-                    className="text-2xl font-bold text-white hover:text-red-400 transition-colors"
-                  >
-                    0551 606 68 78
+                <Link href="/hizmetler/saatlik-vinc-kiralama" className="inline-flex items-center justify-center w-full py-4 rounded-xl border-2 border-blue-600 text-blue-700 font-bold hover:bg-blue-50 transition-colors gap-2">
+                  saatlik vinç <ArrowRight size={18} />
+                </Link>
+              </div>
+
+              <div className="bg-primary/5 border-2 border-primary/30 rounded-3xl p-8 hover:shadow-lg transition-shadow">
+                <h3 className="text-2xl font-bold text-primary mb-6 flex items-center gap-3">
+                  <CalendarDays className="text-primary w-8 h-8" />
+                  Günlük Kiralama
+                </h3>
+                <ul className="space-y-4 mb-8">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="text-primary shrink-0 mt-1" size={20} />
+                    <span className="text-gray-800 font-medium">Büyük projeler ve çok şubeli mağaza giydirmeleri</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="text-primary shrink-0 mt-1" size={20} />
+                    <span className="text-gray-800 font-medium">AVM çatı tabelası veya ağır totem direk montajı</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="text-primary shrink-0 mt-1" size={20} />
+                    <span className="text-gray-800 font-medium">Uzun süren kompozit oyma ve LED döşeme süreçleri</span>
+                  </li>
+                </ul>
+                <Link href="/hizmetler/gunluk-vinc-kiralama" className="inline-flex items-center justify-center w-full py-4 rounded-xl bg-primary text-white font-bold hover:bg-primary-dark transition-colors gap-2">
+                  günlük vinç <ArrowRight size={18} />
+                </Link>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* 7. Fiyat Bölümü */}
+        <section id="fiyatlar" className="py-16 bg-white border-b border-gray-100">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="bg-gray-50 p-8 md:p-12 rounded-3xl shadow-sm border border-gray-200 max-w-4xl mx-auto text-center">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Ankara Tabela Montaj Vinç Fiyatları</h2>
+              <div className="prose prose-gray max-w-none mb-8 text-left">
+                <p>
+                  <strong>Tabela montajı için vinç</strong> kiralama ücretleri, işin karmaşıklığına ve montajın yapılacağı alanın fiziksel şartlarına göre değişir. Montaj esnasında en doğru platformu size rezerve edebilmek adına, fiyatlarımızı şu faktörlere göre esnek olarak belirliyoruz:
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6 max-w-2xl mx-auto">
+                  <ul className="space-y-3 m-0">
+                    <li className="flex items-center gap-2 text-gray-700 m-0"><CheckCircle2 className="text-primary shrink-0" size={18} /> <strong>Tabela boyutu</strong> ve ağırlığı</li>
+                    <li className="flex items-center gap-2 text-gray-700 m-0"><CheckCircle2 className="text-primary shrink-0" size={18} /> Tabelanın asılacağı <strong>yükseklik</strong></li>
+                    <li className="flex items-center gap-2 text-gray-700 m-0"><CheckCircle2 className="text-primary shrink-0" size={18} /> Tahmini montaj <strong>çalışma süresi</strong></li>
+                  </ul>
+                  <ul className="space-y-3 m-0">
+                    <li className="flex items-center gap-2 text-gray-700 m-0"><CheckCircle2 className="text-primary shrink-0" size={18} /> İşlem yapılacak olan <strong>lokasyon</strong></li>
+                    <li className="flex items-center gap-2 text-gray-700 m-0"><CheckCircle2 className="text-primary shrink-0" size={18} /> Kurulum sahasının ve <strong>işin zorluğu</strong></li>
+                  </ul>
+                </div>
+              </div>
+              <div className="bg-primary/5 border border-primary/20 rounded-xl p-6 shadow-sm inline-block w-full">
+                <p className="text-gray-900 font-bold mb-4 text-xl">Fiyat almak için 0551 606 68 78 numarasını arayın veya WhatsApp’tan yazın.</p>
+                <div className="flex flex-col sm:flex-row justify-center gap-3">
+                  <a href="tel:05516066878" className="inline-flex justify-center items-center gap-2 bg-primary text-white px-8 py-4 rounded-xl font-bold hover:bg-primary-dark transition-colors text-lg">
+                    <Phone size={22} /> Hemen Ara
                   </a>
                 </div>
               </div>
-              <div>
-                <LeadForm />
+            </div>
+          </div>
+        </section>
+
+        {/* 8. Süreç Bölümü */}
+        <section className="py-16 bg-gray-50 border-b border-gray-100">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">Tabela Montaj Süreci Nasıl İşler?</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center relative mt-6 lg:mt-0">
+                <div className="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-xl absolute -top-5 left-1/2 transform -translate-x-1/2">1</div>
+                <div className="mt-4 mb-3 text-primary flex justify-center"><Phone size={32} /></div>
+                <h3 className="font-bold text-gray-900 mb-2">Arayın / WhatsApp Yazın</h3>
+                <p className="text-gray-600 text-sm">Bize çağrı merkezimizden veya doğrudan mesaj yoluyla montaj talebinizi iletin.</p>
+              </div>
+              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center relative mt-6 lg:mt-0">
+                <div className="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-xl absolute -top-5 left-1/2 transform -translate-x-1/2">2</div>
+                <div className="mt-4 mb-3 text-primary flex justify-center"><Camera size={32} /></div>
+                <h3 className="font-bold text-gray-900 mb-2">Tabela ve Konum Gönderin</h3>
+                <p className="text-gray-600 text-sm">Asılacak tabelanın görselini, tahmini ağırlığını ve binanın adresini iletin.</p>
+              </div>
+              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center relative mt-6 lg:mt-0">
+                <div className="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-xl absolute -top-5 left-1/2 transform -translate-x-1/2">3</div>
+                <div className="mt-4 mb-3 text-primary flex justify-center"><CalendarDays size={32} /></div>
+                <h3 className="font-bold text-gray-900 mb-2">Planlama Yapılır</h3>
+                <p className="text-gray-600 text-sm">Uzman ekibimiz, en güvenli yükseklik sınıfına sahip sepetli vinci işiniz için rezerve eder.</p>
+              </div>
+              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center relative mt-6 lg:mt-0">
+                <div className="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-xl absolute -top-5 left-1/2 transform -translate-x-1/2">4</div>
+                <div className="mt-4 mb-3 text-primary flex justify-center"><ArrowRight size={32} /></div>
+                <h3 className="font-bold text-gray-900 mb-2">Vinç Yönlendirilir</h3>
+                <p className="text-gray-600 text-sm">Araç sahaya belirtilen saatte gelir ve tabela montajı sorunsuz bir şekilde tamamlanır.</p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ── İLGİLİ HİZMETLER ─────────────────────────────────────── */}
-        <section className="py-14 bg-white border-t border-gray-100">
+        {/* 9. İç Link Bloğu */}
+        <section className="py-16 bg-white border-b border-gray-100">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">İlgili Hizmetler</h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <Link href="/hizmetler/sepetli-vinc-kiralama" className="bg-gray-50 border border-gray-200 p-4 rounded-xl hover:border-primary hover:bg-white hover:shadow-md transition-all flex items-center justify-between group">
+                <span className="font-semibold text-gray-800 group-hover:text-primary transition-colors text-sm">Sepetli Vinç Kiralama</span>
+                <ChevronRight size={16} className="text-gray-400 group-hover:text-primary shrink-0" />
+              </Link>
+              <Link href="/hizmetler/operatorlu-vinc-kiralama" className="bg-gray-50 border border-gray-200 p-4 rounded-xl hover:border-primary hover:bg-white hover:shadow-md transition-all flex items-center justify-between group">
+                <span className="font-semibold text-gray-800 group-hover:text-primary transition-colors text-sm">Operatörlü Vinç</span>
+                <ChevronRight size={16} className="text-gray-400 group-hover:text-primary shrink-0" />
+              </Link>
+              <Link href="/hizmetler/saatlik-vinc-kiralama" className="bg-gray-50 border border-gray-200 p-4 rounded-xl hover:border-primary hover:bg-white hover:shadow-md transition-all flex items-center justify-between group">
+                <span className="font-semibold text-gray-800 group-hover:text-primary transition-colors text-sm">Saatlik Vinç</span>
+                <ChevronRight size={16} className="text-gray-400 group-hover:text-primary shrink-0" />
+              </Link>
+              <Link href="/hizmetler/gunluk-vinc-kiralama" className="bg-gray-50 border border-gray-200 p-4 rounded-xl hover:border-primary hover:bg-white hover:shadow-md transition-all flex items-center justify-between group">
+                <span className="font-semibold text-gray-800 group-hover:text-primary transition-colors text-sm">Günlük Vinç</span>
+                <ChevronRight size={16} className="text-gray-400 group-hover:text-primary shrink-0" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* 10. FAQ Bölümü */}
+        <section className="py-16 bg-white border-b border-gray-100">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-            <h2 className="text-xl font-bold text-gray-900 mb-6">İlgili Hizmetler</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              {[
-                {
-                  href: '/hizmetler/sepetli-vinc-kiralama',
-                  title: 'Sepetli Vinç Kiralama',
-                  desc: 'Ankara genelinde operatörlü sepetli vinç',
-                },
-                {
-                  href: '/hizmetler/operatorlu-vinc-kiralama',
-                  title: 'Operatörlü Vinç Kiralama',
-                  desc: 'Sertifikalı operatörle güvenli kiralama',
-                },
-                {
-                  href: '/hizmetler/cephe-temizligi-sepetli-vinc',
-                  title: 'Cephe Temizliği',
-                  desc: 'Dış cephe cam ve yüzey temizliği',
-                },
-                {
-                  href: '/hizmetler/elektrik-bakim',
-                  title: 'Elektrik & Bakım',
-                  desc: 'Sokak lambası ve direk bakım işleri',
-                },
-              ].map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="block bg-gray-50 hover:bg-red-50 border border-gray-200 hover:border-red-200 rounded-xl p-5 transition-colors group"
-                >
-                  <span className="font-semibold text-gray-900 group-hover:text-red-700 block mb-1 text-sm">
-                    {item.title}
-                  </span>
-                  <span className="text-gray-500 text-xs leading-relaxed">{item.desc}</span>
-                </Link>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Sıkça Sorulan Sorular</h2>
+              <p className="text-lg text-gray-600">Tabela montajı süreçleri hakkında merak edilenler.</p>
+            </div>
+
+            <div className="space-y-4">
+              {faqs.map((faq, index) => (
+                <details key={index} className="group bg-gray-50 border border-gray-200 rounded-2xl [&_summary::-webkit-details-marker]:hidden">
+                  <summary className="flex items-center justify-between cursor-pointer p-6 font-bold text-lg text-gray-900 group-hover:text-primary transition-colors">
+                    {faq.q}
+                    <span className="transition group-open:rotate-180 bg-white p-2 rounded-full shadow-sm border border-gray-100">
+                      <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                    </span>
+                  </summary>
+                  <div className="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-100 pt-4 mt-2">
+                    {faq.a}
+                  </div>
+                </details>
               ))}
             </div>
           </div>
         </section>
+
+        {/* Alt CTA */}
+        <section className="bg-gray-900 py-16 text-center text-white">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Tabelanız İçin Hızlı ve Güvenilir Çözüm Ortağınız</h2>
+            <p className="text-gray-400 mb-10 text-lg max-w-2xl mx-auto">Markanızın en önemli temsilcisi olan tabelalarınızı, güvenilir operatörlerimiz ve modern sepetli vinçlerimizle aynı gün içinde yerine asıyoruz.</p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <a
+                href="tel:05516066878"
+                className="inline-flex items-center justify-center gap-2 bg-primary text-white hover:bg-primary-dark px-8 py-4 rounded-xl font-bold text-xl transition-all shadow-xl"
+              >
+                <Phone size={24} />
+                Hemen Ara: 0551 606 68 78
+              </a>
+              <a
+                href="https://wa.me/905516066878"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white hover:bg-[#1ebd5a] px-8 py-4 rounded-xl font-bold text-xl transition-all shadow-xl"
+              >
+                <MessageCircle size={24} />
+                WhatsApp'tan Konum Gönder
+              </a>
+            </div>
+          </div>
+        </section>
+
       </main>
 
       <Footer />
-      <FloatingCTA />
+
+      {/* MOBİL STICKY BAR (ÇOK ÖNEMLİ) */}
+      <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-[0_-10px_20px_-10px_rgba(0,0,0,0.15)] z-[100] flex p-2 gap-2">
+        <a
+          href="tel:05516066878"
+          className="flex-1 bg-blue-600 hover:bg-blue-700 text-white flex flex-col items-center justify-center py-2.5 rounded-xl transition-colors"
+        >
+          <Phone size={22} className="mb-1" />
+          <span className="text-xs font-extrabold uppercase tracking-wide">Ara</span>
+        </a>
+        <a
+          href="https://wa.me/905516066878"
+          target="_blank"
+          rel="noreferrer"
+          className="flex-1 bg-[#25D366] hover:bg-[#1ebd5a] text-white flex flex-col items-center justify-center py-2.5 rounded-xl transition-colors"
+        >
+          <MessageCircle size={22} className="mb-1" />
+          <span className="text-xs font-extrabold uppercase tracking-wide">WhatsApp</span>
+        </a>
+      </div>
+      
+      {/* Sayfa içeriğinin sonuna boşluk ekliyoruz ki mobil sticky bar footer'ın son kısımlarını kapatmasın. */}
+      <div className="h-[72px] md:hidden w-full bg-transparent"></div>
+
     </div>
   );
 }

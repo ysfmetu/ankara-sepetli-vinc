@@ -1,545 +1,636 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
+import { Phone, MessageCircle, MapPin, CheckCircle2, ArrowRight, Trees, Leaf, ShieldAlert, Camera, CalendarDays, ChevronRight, HardHat, Clock, AlertTriangle, Wind, Scissors, ShieldCheck, Building2 } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import FloatingCTA from '@/components/FloatingCTA';
 import Breadcrumb from '@/components/Breadcrumb';
-import LeadForm from '@/components/LeadForm';
 
 import { getMetadataAlternates, getCanonicalUrl } from '@/lib/seo-utils';
 import { SEO_CONFIG } from '@/config/seo';
 
 export const metadata: Metadata = {
-  title: 'Ankara Ağaç Budama Hizmeti | Sepetli Vinç ile Güvenli Çalışma',
-  description:
-    "Ankara'da yüksek ağaç budama, riskli dal kesimi ve bina çevresi budama işleri için operatörlü sepetli vinç desteği. Hızlı teklif alın.",
+  title: 'Ankara Ağaç Budama İçin Sepetli Vinç | Güvenli Vinç Hizmeti',
+  description: "Ankara’da yüksek ve tehlikeli ağaç budama işleri için sepetli vinç kiralama hizmeti. Bahçe, site ve park alanları için güvenli çözüm. Hemen arayın: 0551 606 68 78",
   alternates: getMetadataAlternates('/hizmetler/agac-budama'),
-  robots: {
-    index: true,
-    follow: true,
-  },
   openGraph: {
-    title: 'Ankara Ağaç Budama Hizmeti | Sepetli Vinç ile Güvenli Çalışma',
-    description:
-      "Ankara'da yüksek ağaç budama, riskli dal kesimi ve bina çevresi budama işleri için operatörlü sepetli vinç desteği. Hızlı teklif alın.",
+    title: 'Ankara Ağaç Budama İçin Sepetli Vinç | Güvenli Vinç Hizmeti',
+    description: "Ankara’da yüksek ve tehlikeli ağaç budama işleri için sepetli vinç kiralama hizmeti. Bahçe, site ve park alanları için güvenli çözüm. Hemen arayın: 0551 606 68 78",
     url: getCanonicalUrl('/hizmetler/agac-budama'),
-    type: 'website',
-    locale: 'tr_TR',
   },
 };
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  name: 'Ankara Ağaç Budama Hizmeti',
-  provider: {
-    '@type': 'LocalBusiness',
-    name: SEO_CONFIG.siteName,
-    url: SEO_CONFIG.baseUrl,
-    telephone: '+905516066878',
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'Ankara',
-      addressCountry: 'TR',
-    },
-  },
-  areaServed: {
-    '@type': 'City',
-    name: 'Ankara',
-  },
-  description:
-    "Ankara'nın tüm ilçelerinde yola, binalara veya elektrik hatlarına sarkan tehlikeli ve yüksek ağaçların budanması için profesyonel sepetli vinç hizmeti.",
-  url: getCanonicalUrl('/hizmetler/agac-budama'),
-};
-
-const faqItems = [
+const faqs = [
   {
-    q: 'Ağaç budama için sepetli vinç gerekli midir?',
-    a: "Özellikle 2-3 metreyi aşan, yüksek, ince dallara sahip veya bina cephesine aşırı yaklaşmış ağaçlarda merdivenle budama yapmak yüksek kaza riski taşır. Sepetli vinç ile ağacın herhangi bir noktasına güvenle erişebilir ve dengeli bir şekilde testere kullanılabilir.",
+    q: 'Ağaç budama için vinç gerekir mi?',
+    a: 'Kesinlikle. 3 metreyi aşan, dalları binalara veya elektrik hatlarına yaklaşan ağaçların merdivenle budanması son derece tehlikelidir. Hem personelin güvenliği hem de çevreye zarar vermemek için sepetli vinç zorunludur.'
   },
   {
-    q: "Ankara'da aynı gün budama hizmeti alabilir miyim?",
-    a: 'Eğer devrilme tehlikesi veya yola taşma gibi acil bir risk söz konusu ise, filomuzun uygunluk durumuna göre Ankara içindeki adresinize aynı gün intikal sağlamaktayız.',
+    q: 'Yüksek ağaç nasıl kesilir?',
+    a: 'Sepetli vinç yardımıyla ağacın en tepe noktasına güvenle ulaşılır. Motorlu testere kullanan personel sepet içinde emniyet kemeriyle sabitlenir ve ağaç yukarıdan aşağıya doğru ufak parçalar halinde kesilerek indirilir.'
   },
   {
-    q: 'Bina kenarındaki ağaçlar için güvenli çalışma yapıyor musunuz?',
-    a: "Kesinlikle. Bina camlarına veya çatı oluklarına sürtünen dalları sepet üzerinden, çevreye veya binaya zarar vermeden kontrollü bir şekilde kesip alıyoruz.",
+    q: 'Aynı gün hizmet var mı?',
+    a: 'Fırtına sonrası devrilme tehlikesi olan veya aniden kırılarak bina/araç üzerine düşme riski barındıran ağaçlar için Ankara genelinde aynı gün acil vinç yönlendirmesi yapabiliyoruz.'
   },
   {
-    q: 'Operatör hizmete dahil mi?',
-    a: "Evet, tüm vinç kiralama hizmetlerimizde olduğu gibi ağaç budama işlemlerinde de araçlarımızı sadece sertifikalı ve tecrübeli operatörlerimiz kullanmaktadır.",
-  },
-  {
-    q: 'Hangi yüksekliklerde çalışma yapılabiliyor?',
-    a: 'Araçlarımızın dikey erişim boyları 70 metreye kadar ulaşabildiği için orman veya site içlerindeki en yüksek kavak ve çam ağaçlarının tepe budama işlemlerine kadar tüm yüksek alan çalışmalarını güvenle yapabiliyoruz.',
-  },
-  {
-    q: 'Riskli dallar kontrollü şekilde alınabiliyor mu?',
-    a: "Evet. Aşağıda park halinde araçlar veya özel peyzaj alanları varsa dallar doğrudan aşağı bırakılmaz; sepet içerisinden küçük parçalara ayrılarak güvenli alana taşınır.",
-  },
-  {
-    q: 'İlçelere göre hizmet süresi değişir mi?',
-    a: "Vinçlerimiz Ankara'nın farklı merkez lokasyonlarından hareket etmektedir. Çankaya'dan Eryaman'a kadar her ilçeye mümkün olan en kısa planlama süresinde ulaşım sağlanmaktadır.",
-  },
-  {
-    q: 'Teklif almak için hangi bilgileri paylaşmalıyım?',
-    a: 'Ağacın bulunduğu ilçe ve mahalleyi, ağacın yaklaşık tepe yüksekliğini ve çalışma ortamının dar/geniş (önüne araç park edebilir mi vs) bilgisini paylaşarak anında net bir teklif alabilirsiniz.',
-  },
+    q: 'Operatör dahil mi?',
+    a: 'Evet. Sepetli vinç kiralama hizmetimizde, aracı sabitleyen ve budama yapan personeli sepet ile en doğru açıya güvenle yönlendiren iş güvenliği sertifikalı operatörümüz fiyata dahildir.'
+  }
 ];
 
 export default function AgacBudamaPage() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Service',
+        name: 'Ankara Ağaç Budama Sepetli Vinç',
+        provider: {
+          '@type': 'LocalBusiness',
+          name: 'AS Ankara Sepetli Vinç Kiralama Hizmetleri',
+          url: SEO_CONFIG.baseUrl
+        },
+        telephone: '+905516066878',
+        areaServed: {
+          '@type': 'City',
+          name: 'Ankara'
+        },
+        serviceType: 'Ağaç Budama Vinç Hizmeti',
+        description: "Ankara’da yüksek ve tehlikeli ağaç budama işleri için sepetli vinç kiralama hizmeti. Bahçe, site ve park alanları için güvenli çözüm.",
+        url: getCanonicalUrl('/hizmetler/agac-budama')
+      },
+      {
+        '@type': 'LocalBusiness',
+        name: 'AS Ankara Sepetli Vinç Kiralama Hizmetleri',
+        url: SEO_CONFIG.baseUrl,
+        telephone: '+905516066878',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: 'Ostim Organize Sanayi Bölgesi',
+          addressLocality: 'Yenimahalle',
+          addressRegion: 'Ankara',
+          addressCountry: 'TR'
+        },
+        areaServed: {
+          '@type': 'City',
+          name: 'Ankara'
+        }
+      },
+      {
+        '@type': 'FAQPage',
+        mainEntity: faqs.map(faq => ({
+          '@type': 'Question',
+          name: faq.q,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.a
+          }
+        }))
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Ana Sayfa',
+            item: SEO_CONFIG.baseUrl
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Hizmetler',
+            item: `${SEO_CONFIG.baseUrl}/hizmetler`
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'Ağaç Budama',
+            item: `${SEO_CONFIG.baseUrl}/hizmetler/agac-budama`
+          }
+        ]
+      }
+    ]
+  };
+
   return (
-    <div className="flex flex-col min-h-screen bg-white">
+    <div className="flex flex-col min-h-screen bg-gray-50 pb-20 md:pb-0">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Header />
-      <main className="flex-grow">
-        {/* ── HERO ─────────────────────────────────────────────────── */}
-        <section className="relative bg-gradient-to-br from-green-900 to-green-800 py-20 md:py-28 overflow-hidden">
-          <div
-            className="absolute inset-0 opacity-20 bg-[url('/images/services/agac-budama.jpg')] bg-cover bg-center"
-            aria-hidden="true"
-          />
-          <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
-            <Breadcrumb
-              items={[
-                { label: 'Ana Sayfa', href: '/' },
-                { label: 'Hizmetlerimiz', href: '/hizmetler' },
-                { label: 'Ağaç Budama', href: '/hizmetler/agac-budama' },
-              ]}
+
+      <main className="flex-grow pt-24 pb-0">
+        
+        {/* 1. Hero Alanı */}
+        <section className="relative bg-gray-900 text-white overflow-hidden py-16 md:py-24">
+          <div className="absolute inset-0 opacity-40">
+            <Image
+              src="/images/hero-bg.jpg"
+              alt="ankara ağaç budama sepetli vinç"
+              fill
+              className="object-cover"
+              priority
             />
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-6">
-              <div>
-                <h1 className="text-3xl md:text-5xl font-extrabold text-white leading-tight mb-6">
-                  Ankara&apos;da <span className="text-green-400">Ağaç Budama</span> Hizmeti
-                </h1>
-                <p className="text-lg text-gray-200 leading-relaxed mb-8">
-                  Yüksek ve riskli ağaçlarınızın, tehlikeli dalların çevreye zarar vermeden kontrollü kesimi için operatörlü sepetli vinç desteği. Site, iş yeri ve park ortamlarında güvenli erişim çözümleri.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <a
-                    href="tel:+905516066878"
-                    id="hero-call-cta-budama"
-                    className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold py-3.5 px-7 rounded-xl transition-all shadow-lg text-lg"
-                  >
-                    📞 Hemen Ara: 0551 606 68 78
-                  </a>
-                  <a
-                    href="#teklif-formu"
-                    id="hero-form-cta-budama"
-                    className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold py-3.5 px-7 rounded-xl transition-all text-lg"
-                  >
-                    Ücretsiz Teklif Al →
-                  </a>
-                </div>
-              </div>
-
-              {/* Güven unsurları */}
-              <div className="hidden lg:grid grid-cols-2 gap-4" aria-hidden="true">
-                {[
-                  { icon: '🛡️', label: 'Güvenli Ulaşım' },
-                  { icon: '✂️', label: 'Kontrollü Kesim' },
-                  { icon: '🏗️', label: 'Operatörlü Ekipman' },
-                  { icon: '⏱️', label: 'Hızlı Planlama' },
-                ].map((item) => (
-                  <div
-                    key={item.label}
-                    className="bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-5 text-center text-white"
-                  >
-                    <div className="text-3xl mb-2">{item.icon}</div>
-                    <div className="font-semibold text-sm">{item.label}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <div className="absolute inset-0 bg-gradient-to-r from-green-900 via-gray-900/90 to-transparent"></div>
           </div>
-        </section>
-
-        {/* ── GİRİŞ ───────────────────────────────────────────────── */}
-        <section className="py-16 md:py-20 bg-white">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Ağaç budama işlemi doğayla uyumlu ve dikkat gerektiren bir eylemdir ancak çoğu zaman yüksekte çalışmanın riskleri göz ardı edilir. Elinde motorlu testere bulunan bir personelin yüksek ince dallarda veya çürümüş gövdelerde merdiven üzerinde durması ölümcül kazalara yol açabilir. <strong>Sepetli vinç ile budama</strong>, işçi güvenliğini maksimum seviyede tutarken uygulamanın çok daha kontrollü yapılmasını sağlar.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Özellikle site içi devasa çam ağaçları, rüzgarla birlikte apartman camlarına vuran dallar, dükkan ve tabela önünü kapatan peyzajlar veya elektrik direklerine dolaşmış tehlikeli dal yapıları için vinç desteği tek akılcı çözümdür. Operatörümüz sizi veya anlaştığınız budama personelini tam olarak müdahale edilecek noktaya, sarsıntısız ve güvenle taşır.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Ankara&apos;nın her bölgesinde; parklarda, okul bahçelerinde, kamu ve özel binaların çevresindeki ulaşılamayan tüm ağaçlar için araç filomuzla hizmetinizdeyiz. Can güvenliğini riske atmadan profesyonel destek alarak budama sürecini hızlandırın.
-            </p>
-          </div>
-        </section>
-
-        {/* ── H2: Ağaç Budama Hizmeti ───────────────────────────── */}
-        <section className="py-16 md:py-20 bg-gray-50 border-y border-gray-100">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
-              Ankara&apos;da Ağaç Budama Hizmeti
-            </h2>
-            <p className="text-gray-700 leading-relaxed mb-6">
-              Bireysel konutlardan yoğun plazaların çevre düzenlemelerine kadar bütün budama ihtiyaçlarında emniyetli erişim altyapısı kuruyoruz. Doğru alana konumlanan vinçlerimiz ile yüksek alan işlemleriniz eksiksiz gerçekleştirilmektedir.
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {[
-                {
-                  title: 'Yüksek Ağaç Budama',
-                  desc: 'Topraktan veya iskeleden erişimi imkansız olan yüksek gövdeli ağaç türlerinin tepe noktalarına kolayca ve sıfır sarsıntıyla uzanabilme desteği.',
-                },
-                {
-                  title: 'Riskli ve Çürük Dal Kesimi',
-                  desc: 'Yoğun kar ya da fırtına sonrası üstten kırılarak asılı kalan, her an altından geçen araç veya yaya üzerine düşme tehlikesi olan dalların toplanması.',
-                },
-                {
-                  title: 'Bina ve Çatı Kenarı Ağaç Budamaları',
-                  desc: 'Bina izolasyonuna, çatı oluklarına veya apartman camlarına baskı yapan sarkan dalların çevre yapılara zarar vermeden kesilmesi.',
-                },
-                {
-                  title: 'Site ve İş Yeri Çevresi',
-                  desc: 'Kurumsal dış görünümü optimize etmek için yapılan rutin peyzaj budamaları veya ışık kirliliğini - tabela engellemelerini ortadan kaldırma erişimi.',
-                },
-              ].map((item) => (
-                <div
-                  key={item.title}
-                  className="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm"
-                >
-                  <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── H2: Neden Sepetli Vinç ───────────────────────────────── */}
-        <section className="py-16 md:py-20 bg-white">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
-              Sepetli Vinç ile Ağaç Budama Neden Tercih Edilir?
-            </h2>
-            <p className="text-gray-700 leading-relaxed mb-8">
-              Ağaçlara tırmanarak veya yüksek seyyar merdivenler kullanarak gerçekleştirilen budamalar ciddi tehlikelere ev sahipliği yapar. Bunun yerine sepetli platformlar tercih edilmelidir çünkü:
-            </p>
-            <ul className="space-y-4">
-              {[
-                {
-                  title: 'Maksimum Güvenli Erişim',
-                  desc: 'Budama esnasında denge kaybı yaşanması, motor testere ile birleştiğinde son derece kritiktir. Sepetlerimiz personeli emniyet kemeri noktalarıyla sabitler ve güvenle durmasını sağlar.',
-                },
-                {
-                  title: 'Hızlı ve Dengeli Müdahale',
-                  desc: "Kurulum gerekmez. İstenen cepheye araç yanaşır, ayaklar açılır ve dalın boyutuna göre operatör sepeti doğrudan kesim yapılacak noktaya iter.",
-                },
-                {
-                  title: 'Kontrollü İş Güvenliği',
-                  desc: 'Budanan dallar otonom bir şekilde sepete alınabilir, böylece aşağıda oynayan çocuklar veya park etmiş araçlar için tehlike oluşturan serbest düşüş senaryosu engellenir.',
-                },
-                {
-                  title: 'Zor Noktalar ve Operatör Kontrolü',
-                  desc: 'Duvar arkası, elektrik teli yanı gibi sadece usta bir operatörün hassas manevrası ile girilebilecek dar ve zor konumlarda benzersiz üstünlük sağlar.',
-                },
-              ].map((item) => (
-                <li
-                  key={item.title}
-                  className="flex gap-4 items-start bg-gray-50 rounded-xl p-5 border border-gray-100"
-                >
-                  <span className="text-green-500 font-bold text-xl mt-0.5">✓</span>
-                  <div>
-                    <strong className="text-gray-900 block mb-1">{item.title}</strong>
-                    <span className="text-gray-600 text-sm leading-relaxed">{item.desc}</span>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
-        {/* ── H2: Hangi Budama İşlerinde Hizmet Veriyoruz? ───────────── */}
-        <section className="py-16 md:py-20 bg-gray-50 border-y border-gray-100">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
-              Hangi Budama İşlerinde Hizmet Veriyoruz?
-            </h2>
-            <p className="text-gray-700 leading-relaxed mb-8">
-              Tek bir tehlikeli daldan devasa ormanlık otopark içlerine kadar tüm durumlarda kullanıma hazır filomuz beklemektedir:
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {[
-                { icon: '🌲', label: 'Yüksek ağaç budama erişimi' },
-                { icon: '✂️', label: 'Riskli ve çürüyen dal kesimi' },
-                { icon: '🏢', label: 'Bina yakını çatıyı çizen ağaç desteği' },
-                { icon: '🏡', label: 'Site ve apartman çevresi dengeleme' },
-                { icon: '🛣️', label: 'Araç yolu üstüne taşan sarkan dallar' },
-                { icon: '⚡', label: 'Elektrik hatlarına tehlike arz eden dallar' },
-                { icon: '⚖️', label: 'Dengeleme ve form budama çalışmaları' },
-                { icon: '🍂', label: 'Kış hazırlığı amaçlı derin budama' },
-                { icon: '🏗️', label: 'Erişimi zor şev noktalarında budama' },
-              ].map((item) => (
-                <div
-                  key={item.label}
-                  className="bg-white rounded-xl p-5 border border-gray-200 flex items-center gap-3 shadow-sm"
-                >
-                  <span className="text-2xl">{item.icon}</span>
-                  <span className="text-gray-700 font-medium text-sm">{item.label}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── H2: Neden Bizimle ────────────────────────────────────── */}
-        <section className="py-16 md:py-20 bg-gray-900 text-white">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
-            <h2 className="text-2xl md:text-3xl font-bold mb-10">
-              Neden Bizimle Çalışmalısınız?
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                {
-                  icon: '👷',
-                  title: 'Operatörlü Deneyim',
-                  desc: 'Sepetli aracımız sertifikalı operatörce kullanılır. Sizin ekipleriniz yalnızca kesime odaklanarak hız kazanır.',
-                },
-                {
-                  icon: '🚀',
-                  title: 'Ankara İçi Hızlı Planlama',
-                  desc: "Özellikle tehlike arz eden acil kesim işlemleri için hızlı filo koordinasyonu sağlayabiliyoruz.",
-                },
-                {
-                  icon: '⚙️',
-                  title: 'Tam Bakımlı Araçlar',
-                  desc: 'Hassas manevraların düzgün çalışabilmesi için hidrolik ve mekanik periyodik bakımları zamanında yapılır.',
-                },
-                {
-                  icon: '🛡️',
-                  title: 'İş Güvenliği Standartları',
-                  desc: 'Tüm sepetlerimizde emniyet kemeri bağlantı noktaları ve sarsıntı önleyici denge valfleri eksiksizdir.',
-                },
-                {
-                  icon: '📅',
-                  title: 'Zamanında Uygulama',
-                  desc: 'Söz verilen randevu ve planlama saatine titizlikle uyarak kesim ekiplerinizi boşa bekletmeyiz.',
-                },
-                {
-                  icon: '🤝',
-                  title: 'Kontrollü ve Düzenli Taahhüt',
-                  desc: 'Çok dar sokaklarda bile etraftaki araçlara zarar dokunmadan ağaç içi erişim teknikleri konularında deneyimliyiz.',
-                },
-              ].map((item) => (
-                <div
-                  key={item.title}
-                  className="bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-6"
-                >
-                  <div className="text-3xl mb-3">{item.icon}</div>
-                  <h3 className="font-bold text-white mb-2">{item.title}</h3>
-                  <p className="text-gray-300 text-sm leading-relaxed">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── H2: İlçeler ─────────────────────────────────────────── */}
-        <section className="py-16 md:py-20 bg-white">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
-              Ankara&apos;da Hangi İlçelere Hizmet Veriyoruz?
-            </h2>
-            <p className="text-gray-700 leading-relaxed mb-8">
-              Peyzaj alanlarının geniş olduğu Yenimahalle, Sincan, Etimesgut ve Gölbaşı ilçelerinden; eski binalara ve asırlık ağaçlara ev sahipliği yapan Çankaya, Keçiören, Mamak, Altındağ ve Pursaklar&apos;a kadar geniş bir rotada kiralama organizasyonu yapmaktayız. İşletmeler için Ostim, İvedik ve diğer sanayi bahçelerinde de güçlü servis desteğimiz aktiftir.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              {[
-                { label: 'Çankaya', href: '/cankaya-sepetli-vinc' },
-                { label: 'Keçiören', href: '/bolgeler' },
-                { label: 'Yenimahalle', href: '/yenimahalle-sepetli-vinc' },
-                { label: 'Etimesgut', href: '/etimesgut-sepetli-vinc' },
-                { label: 'Sincan', href: '/sincan-sepetli-vinc' },
-                { label: 'Ostim / İvedik', href: '/ostim-sepetli-vinc' },
-                { label: 'Pursaklar', href: '/bolgeler' },
-                { label: 'Gölbaşı', href: '/bolgeler' },
-                { label: 'Mamak', href: '/bolgeler' },
-                { label: 'Altındağ', href: '/bolgeler' },
-              ].map((b) => (
-                <Link
-                  key={b.label}
-                  href={b.href}
-                  className="bg-gray-100 hover:bg-green-50 hover:text-green-700 border border-gray-200 hover:border-green-200 text-gray-700 font-medium px-5 py-2.5 rounded-full text-sm transition-colors"
-                >
-                  {b.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── H2: Fiyat ───────────────────────────────────────────── */}
-        <section className="py-16 md:py-20 bg-gray-50 border-y border-gray-100">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
-              Ağaç Budama Fiyatını Etkileyen Unsurlar
-            </h2>
-            <p className="text-gray-700 leading-relaxed mb-8">
-              Budama operasyonları için kiralanacak olan sepetli vincin kiralama bedelleri işin sahadaki zorluk ve durumlarına göre hesaplanmaktadır:
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              {[
-                {
-                  title: 'Ağacın Yüksekliği',
-                  desc: '20 metreye çekilecek bir vinçle, 45 metrelik bir dev ağaca ulaşacak vincin sınıfı ve yakıt gideri farklı olduğundan maliyeti değiştirir.',
-                },
-                {
-                  title: 'Lokasyon ve Çevre Erişimi',
-                  desc: 'Dar sokaklar veya yokuş alanlar kullanılacak aracın aks mesafesini belirler.',
-                },
-                {
-                  title: 'Çalışma Süresi',
-                  desc: 'Bir adet kırık dal kesimi için saatlik kiralama yapılabilirken, tüm site peyzajı için günlük rezervasyon daha uygun maliyetli olacaktır.',
-                },
-                {
-                  title: 'Risk Durumu',
-                  desc: 'Parça asarak kesim gerektiren komplike elektrik hattı altı budamalar daha yavaş sürüp ekstra zaman gerektirebilir.',
-                },
-              ].map((item) => (
-                <div
-                  key={item.title}
-                  className="bg-white rounded-2xl p-5 border border-gray-200 shadow-sm"
-                >
-                  <h3 className="font-bold text-gray-900 mb-2 text-sm">{item.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-            <div className="mt-8 bg-green-50 border border-green-100 rounded-2xl p-6 text-center">
-              <p className="text-gray-700 mb-4 font-medium">
-                Müdahale edilecek ağacın yüksekliğini ve ilçenizi paylaşarak adresinize uygun aracın fiyat değerlendirmesini anında yapabiliriz.
+          
+          <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl">
+              <Breadcrumb
+                items={[
+                  { label: 'Ana Sayfa', href: '/' },
+                  { label: 'Hizmetler', href: '/hizmetler' },
+                  { label: 'Ağaç Budama', href: '/hizmetler/agac-budama' },
+                ]}
+              />
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mt-6 mb-6 tracking-tight leading-tight">
+                Ankara Ağaç Budama İçin Sepetli Vinç Hizmeti
+              </h1>
+              <p className="text-lg md:text-xl text-gray-200 leading-relaxed mb-10 max-w-3xl font-light">
+                Ankara genelinde yüksek, tehlikeli veya ulaşılması zor ağaçların budanması ve kesimi için operatörlü sepetli vinç hizmeti sunuyoruz. Site bahçeleri, park alanları, villa çevreleri ve kamu alanlarında güvenli ve hızlı çözümler sağlıyoruz.
               </p>
+              
+              <div className="flex flex-col sm:flex-row items-center gap-4 mb-12">
+                <a
+                  href="tel:05516066878"
+                  className="w-full sm:w-auto flex items-center justify-center gap-2 bg-primary text-white hover:bg-primary-dark px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg shadow-primary/30"
+                >
+                  <Phone size={20} />
+                  Hemen Ara: 0551 606 68 78
+                </a>
+                <a
+                  href="https://wa.me/905516066878"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-full sm:w-auto flex items-center justify-center gap-2 bg-[#25D366] text-white hover:bg-[#1ebd5a] px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg shadow-green-500/30"
+                >
+                  <MessageCircle size={20} />
+                  WhatsApp
+                </a>
+                <a
+                  href="#fiyatlar"
+                  className="w-full sm:w-auto flex items-center justify-center gap-2 bg-white/10 text-white border border-white/20 hover:bg-white/20 px-8 py-4 rounded-xl font-bold text-lg transition-all"
+                >
+                  Ağaç Budama Fiyatı Al
+                </a>
+                <Link
+                  href="/bolgeler"
+                  className="w-full sm:w-auto flex items-center justify-center gap-2 bg-transparent text-white underline hover:text-gray-200 px-4 py-4 font-medium transition-all"
+                >
+                  Hizmet Bölgelerini Gör
+                </Link>
+              </div>
+
+              {/* Güven Sinyalleri */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8 border-t border-white/10">
+                <div className="flex items-center gap-3">
+                  <div className="bg-primary/20 p-2 rounded-lg"><Trees size={24} className="text-green-400" /></div>
+                  <span className="font-semibold text-sm md:text-base">Yüksek Ağaçlara Güvenli Erişim</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="bg-primary/20 p-2 rounded-lg"><HardHat size={24} className="text-green-400" /></div>
+                  <span className="font-semibold text-sm md:text-base">Operatörlü Vinç Hizmeti</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="bg-primary/20 p-2 rounded-lg"><MapPin size={24} className="text-green-400" /></div>
+                  <span className="font-semibold text-sm md:text-base">Ankara Geneli Hizmet</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="bg-primary/20 p-2 rounded-lg"><Leaf size={24} className="text-green-400" /></div>
+                  <span className="font-semibold text-sm md:text-base">Bahçe ve Peyzaj Deneyimi</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 2. Niyet Odaklı Giriş */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto prose prose-lg prose-headings:text-gray-900 prose-p:text-gray-600 prose-a:text-primary max-w-none">
+              <h2 className="text-3xl font-bold mt-0 mb-6">Ağaç Budamada Neden Sepetli Vinç Kullanılır?</h2>
+              <p>
+                Ağaç budama, doğanın korunması ve kent estetiği için vazgeçilmez bir işlemdir. Ancak yüksek ve yaşlı ağaçların budanması, basit bir merdivenle yapılması imkansız ve son derece tehlikeli bir operasyondur. Dengenin kaybedilmesi, motorlu testere kullanımı esnasında yaşanacak anlık bir sarsıntı veya kesilen kalın bir dalın kontrolsüzce aşağı düşmesi hem çalışanlara hem de çevreye felaket getirebilir. İşte bu sebeple, <strong>ankara ağaç budama sepetli vinç</strong> hizmeti, bu riskleri tamamen ortadan kaldıran en profesyonel yöntemdir.
+              </p>
+              <p>
+                Sepetli vinç sayesinde budama işlemi son derece kontrollü, güvenli ve saniyeler içinde ulaşım sağlanarak gerçekleştirilir. Özellikle apartman diplerine kadar uzanmış dallar, devasa site bahçeleri, halka açık parklar ve lüks villa çevrelerinde büyük ağaçların kesimi için vinç kullanımı büyük avantaj sağlar. Bu noktada <Link href="/hizmetler/sepetli-vinc-kiralama" className="font-semibold underline">Ankara sepetli vinç kiralama</Link> araçlarımız, budama personelini tam istediği noktaya ulaştırır ve rahat bir çalışma platformu sunar.
+              </p>
+              <p>
+                Vincin manevra kabiliyeti ve sepetin sabitliği sayesinde devrilme riski sıfıra iner. Çevre güvenliğinin maksimum düzeyde sağlandığı <Link href="/hizmetler/operatorlu-vinc-kiralama" className="font-semibold underline">operatörlü vinç kiralama</Link> paketimizle personelin tüm odak noktası sadece kesim işi olur. Yalnızca birkaç tehlikeli dal alınacaksa <Link href="/hizmetler/saatlik-vinc-kiralama" className="font-semibold underline">saatlik vinç kiralama</Link>, geniş bir parkta veya tüm site bahçesinde kapsamlı bir temizlik yapılacaksa <Link href="/hizmetler/gunluk-vinc-kiralama" className="font-semibold underline">günlük vinç kiralama</Link> yöntemini seçerek bütçenizi optimize edebilirsiniz. Yeşilin her tonuna saygı duyarak çalışırken, her türlü yüksek erişim desteğinde <Link href="/hizmetler" className="font-semibold underline">Ankara vinç kiralama hizmetleri</Link> filomuz emrinizdedir.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* 3. Hizmet Kapsamı */}
+        <section className="py-16 bg-gray-50 border-y border-gray-100">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Ağaç Budama ve Kesim Hizmetleri</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Doğaya zarar vermeden ve çevre güvenliğini riske atmadan sunduğumuz peyzaj destek hizmetlerimiz.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+              
+              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col h-full hover:border-primary/50 transition-colors">
+                <div className="bg-primary/10 w-14 h-14 rounded-xl flex items-center justify-center text-primary mb-5">
+                  <Trees size={28} />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Yüksek Ağaç Budama</h3>
+                <p className="text-gray-600 text-sm leading-relaxed flex-grow mb-4">
+                  Normal merdivenlerle erişilemeyen 10-20 metre ve üzeri yükseklikteki yaşlı kavak, çınar ve çam ağaçlarının zirve noktalarına güvenle ulaşarak şekillendirme yapılması.
+                </p>
+                <div className="bg-gray-50 p-3 rounded-lg text-center mt-auto border border-gray-100">
+                  <p className="text-xs font-semibold text-gray-800 m-0">Ağaç budama vinç hizmeti için <br/> <a href="tel:05516066878" className="text-primary hover:underline text-sm">0551 606 68 78</a> numarasını arayın.</p>
+                </div>
+              </div>
+
+              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col h-full hover:border-primary/50 transition-colors">
+                <div className="bg-primary/10 w-14 h-14 rounded-xl flex items-center justify-center text-primary mb-5">
+                  <AlertTriangle size={28} />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Tehlikeli Ağaç Kesimi</h3>
+                <p className="text-gray-600 text-sm leading-relaxed flex-grow mb-4">
+                  Bina temellerine, elektrik hatlarına veya çatı yüzeylerine temas ederek risk oluşturan, kuruyan ve çevreye tehlike saçan ağaçların güvenli sökümü ve parçalı kesimi.
+                </p>
+                <div className="bg-gray-50 p-3 rounded-lg text-center mt-auto border border-gray-100">
+                  <p className="text-xs font-semibold text-gray-800 m-0">Ağaç budama vinç hizmeti için <br/> <a href="tel:05516066878" className="text-primary hover:underline text-sm">0551 606 68 78</a> numarasını arayın.</p>
+                </div>
+              </div>
+
+              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col h-full hover:border-primary/50 transition-colors">
+                <div className="bg-primary/10 w-14 h-14 rounded-xl flex items-center justify-center text-primary mb-5">
+                  <Scissors size={28} />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Dal Kesimi ve Temizleme</h3>
+                <p className="text-gray-600 text-sm leading-relaxed flex-grow mb-4">
+                  Yola taşan, yayaların veya araçların geçişine mani olan kalın dalların sepet içinden motorlu testereyle kontrollü kesilerek aşağıya güvenle indirilmesi işlemi.
+                </p>
+                <div className="bg-gray-50 p-3 rounded-lg text-center mt-auto border border-gray-100">
+                  <p className="text-xs font-semibold text-gray-800 m-0">Ağaç budama vinç hizmeti için <br/> <a href="tel:05516066878" className="text-primary hover:underline text-sm">0551 606 68 78</a> numarasını arayın.</p>
+                </div>
+              </div>
+
+              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col h-full hover:border-primary/50 transition-colors">
+                <div className="bg-primary/10 w-14 h-14 rounded-xl flex items-center justify-center text-primary mb-5">
+                  <Building2 size={28} />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Site ve Apartman Bahçeleri</h3>
+                <p className="text-gray-600 text-sm leading-relaxed flex-grow mb-4">
+                  Apartmanların ortak yaşam alanlarındaki ağaçların bakımının araçları çizmeden, peyzajı bozmadan ve camlara zarar vermeden özenle tamamlanması.
+                </p>
+                <div className="bg-gray-50 p-3 rounded-lg text-center mt-auto border border-gray-100">
+                  <p className="text-xs font-semibold text-gray-800 m-0">Ağaç budama vinç hizmeti için <br/> <a href="tel:05516066878" className="text-primary hover:underline text-sm">0551 606 68 78</a> numarasını arayın.</p>
+                </div>
+              </div>
+
+              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col h-full hover:border-primary/50 transition-colors">
+                <div className="bg-primary/10 w-14 h-14 rounded-xl flex items-center justify-center text-primary mb-5">
+                  <Leaf size={28} />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Park ve Peyzaj Alanları</h3>
+                <p className="text-gray-600 text-sm leading-relaxed flex-grow mb-4">
+                  Geniş kampüsler, millet bahçeleri, parklar ve otoyol refüjlerindeki ağaçların estetik amaçlı mevsimsel genel budamaları için platform desteği.
+                </p>
+                <div className="bg-gray-50 p-3 rounded-lg text-center mt-auto border border-gray-100">
+                  <p className="text-xs font-semibold text-gray-800 m-0">Ağaç budama vinç hizmeti için <br/> <a href="tel:05516066878" className="text-primary hover:underline text-sm">0551 606 68 78</a> numarasını arayın.</p>
+                </div>
+              </div>
+
+              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col h-full hover:border-primary/50 transition-colors">
+                <div className="bg-primary/10 w-14 h-14 rounded-xl flex items-center justify-center text-primary mb-5">
+                  <Wind size={28} />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Fırtına Sonrası Ağaç Müdahalesi</h3>
+                <p className="text-gray-600 text-sm leading-relaxed flex-grow mb-4">
+                  Şiddetli rüzgar ve fırtınalarda gövdesinden yarılmış, yola veya araç üzerine devrilmek üzere olan ağaçlar için acil vinç kurtarma ve temizlik çalışması.
+                </p>
+                <div className="bg-gray-50 p-3 rounded-lg text-center mt-auto border border-gray-100">
+                  <p className="text-xs font-semibold text-gray-800 m-0">Ağaç budama vinç hizmeti için <br/> <a href="tel:05516066878" className="text-primary hover:underline text-sm">0551 606 68 78</a> numarasını arayın.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* 4. GÜVENLİK */}
+        <section className="py-16 bg-red-50 border-y border-red-100">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+            <h2 className="text-3xl font-bold text-red-900 mb-8 text-center flex items-center justify-center gap-3">
+              <ShieldAlert size={36} className="text-red-600" />
+              Ağaç Budamada Sepetli Vinç ile Güvenli Çalışma
+            </h2>
+            <div className="bg-white rounded-3xl p-8 md:p-10 shadow-lg border border-red-100">
+              <p className="text-gray-800 text-lg mb-6 leading-relaxed">
+                Yüksek dal kesimi, sanıldığı kadar basit bir iş değildir; motorlu testerenin kullanıldığı bu alan <strong>sıfır hata prensibiyle</strong> yönetilmelidir. İş güvenliğini şansa bırakmamak adına vinç kiralama vazgeçilmezdir.
+              </p>
+              <ul className="space-y-5">
+                <li className="flex items-start gap-4">
+                  <div className="bg-red-100 p-2 rounded-full mt-1 shrink-0"><CheckCircle2 className="text-red-600" size={20} /></div>
+                  <span className="text-gray-800 text-lg"><strong>Yüksekten Düşme Riski:</strong> Ağaç dalları esnektir ve kırılgan yapıya sahiptir. Merdiven veya serbest tırmanışla çıkılan ağaçlarda denge kaybetmek veya dalın kırılması sonucu yere çakılmak an meselesidir. Vinç sepeti bu riski ortadan kaldırır.</span>
+                </li>
+                <li className="flex items-start gap-4">
+                  <div className="bg-red-100 p-2 rounded-full mt-1 shrink-0"><CheckCircle2 className="text-red-600" size={20} /></div>
+                  <span className="text-gray-800 text-lg"><strong>Kontrolsüz Dal Kesimi Tehlikesi:</strong> Ağır ve devasa bir dal aşağı düşerken bina camlarına, park halindeki araçlara veya yoldan geçenlere zarar verebilir. Sepetten yapılan kontrollü kesimde dallar ipe bağlanarak (halatla) aşağı indirilebilir.</span>
+                </li>
+                <li className="flex items-start gap-4">
+                  <div className="bg-red-100 p-2 rounded-full mt-1 shrink-0"><CheckCircle2 className="text-red-600" size={20} /></div>
+                  <span className="text-gray-800 text-lg"><strong>Operatörlü Kullanım Avantajı:</strong> Kesim yapan kişi testereye odaklanırken, operatör vincin sarsılmasını engeller, rüzgar hızını hesaplar ve kişiyi bir sonraki keseceği dala milimetrik olarak ulaştırır.</span>
+                </li>
+                <li className="flex items-start gap-4">
+                  <div className="bg-red-100 p-2 rounded-full mt-1 shrink-0"><CheckCircle2 className="text-red-600" size={20} /></div>
+                  <span className="text-gray-800 text-lg"><strong>Dar Alanlarda Güvenli Çalışma:</strong> Ağacın bulunduğu alan iki bina arası veya tellerle çevrili olabilir. Hidrolik bomlu sepetli vinç, yaprakların arasından süzülerek hedefe hiçbir yere çarpmadan ulaşır.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Ara CTA */}
+        <section className="bg-primary py-12">
+          <div className="container mx-auto px-4 text-center">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">Tehlikeli Ağaçları Güvenle Budayalım</h3>
+            <p className="text-primary-foreground mb-8 text-lg">Bahçenizdeki veya sitenizdeki yüksek ağaçların fotoğrafını WhatsApp'tan bize ulaştırarak anında vinç planlaması yapabilirsiniz.</p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a
-                href="#teklif-formu"
-                id="fiyat-teklif-cta-budama"
-                className="inline-flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-xl transition-all shadow"
+                href="tel:05516066878"
+                className="inline-flex items-center gap-2 bg-white text-primary hover:bg-gray-100 px-8 py-4 rounded-xl font-bold text-xl transition-all shadow-xl justify-center"
               >
-                Ağaç Budama İçin Hızlı Teklif Al
+                <Phone size={24} />
+                0551 606 68 78
+              </a>
+              <a
+                href="https://wa.me/905516066878"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 bg-[#25D366] text-white hover:bg-[#1ebd5a] px-8 py-4 rounded-xl font-bold text-xl transition-all shadow-xl justify-center"
+              >
+                <MessageCircle size={24} />
+                Fotoğraf Gönder Fiyat Al
               </a>
             </div>
           </div>
         </section>
 
-        {/* ── H2: SSS ─────────────────────────────────────────────── */}
-        <section className="py-16 md:py-20 bg-white">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-10">
-              Sıkça Sorulan Sorular
-            </h2>
-            <div className="space-y-5">
-              {faqItems.map((item, i) => (
-                <div
-                  key={i}
-                  className="bg-gray-50 rounded-2xl p-6 border border-gray-100"
-                >
-                  <h3 className="font-bold text-gray-900 mb-3">{item.q}</h3>
-                  <p className="text-gray-600 leading-relaxed text-sm">{item.a}</p>
-                </div>
-              ))}
+        {/* 5. Lokal SEO */}
+        <section className="py-16 bg-gray-50 border-b border-gray-100">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto prose prose-lg prose-headings:text-gray-900 prose-p:text-gray-600 prose-a:text-primary max-w-none">
+              <h2 className="text-3xl font-bold mt-0 mb-6">Ankara’da Ağaç Budama Vinç Hizmeti Verdiğimiz Bölgeler</h2>
+              <p>
+                Ankara gibi yeşil alanları bol, bahçeli nizamı yaygın bir şehirde bahar ve sonbahar aylarında <strong>ağaç budama vinç kiralama</strong> sektörü çok hareketlidir. Ağacın bulunduğu lokasyonun fiziksel şartları; sokağın darlığına veya bahçenin eğimine göre vinç seçimini doğrudan etkiler. Ekiplerimiz Çankaya, Gölbaşı, Etimesgut, Eryaman, Yenimahalle, Keçiören, Mamak ve Sincan hattı boyunca peyzaj projeleri ve acil budama işleri için kesintisiz sahada yer alır.
+              </p>
+              
+              <p>
+                Özellikle lüks villa kültürünün ve geniş müstakil bahçelerin yoğun olduğu Çankaya ve Gölbaşı ekseninde çam ağaçları ve ulu çınarların budanması titizlik gerektirir. Buralarda villalara ve camlara zarar vermeden <Link href="/bolgeler/cankaya-sepetli-vinc-kiralama" className="font-semibold underline">Çankaya sepetli vinç kiralama</Link> araçlarımız, peyzaj estetiğini koruyarak villa çevrelerinde güvenle hizmet verir.
+              </p>
+
+              <p>
+                Şehrin batısında konumlanan, çok katlı bloklardan oluşan devasa sitelerin yer aldığı Etimesgut ve Eryaman bölgesinde ise genellikle ortak peyzaj alanlarındaki kurumuş ağaç bakımları söz konusudur. Bu yüksek site bahçelerindeki tehlikeli kavak veya söğüt ağaçlarının araç park alanlarına devrilmesini engellemek adına <Link href="/bolgeler/etimesgut-sepetli-vinc-kiralama" className="font-semibold underline">Etimesgut sepetli vinç kiralama</Link> departmanımız yönetim kurullarıyla koordineli, gün boyu süren temizlik çalışmaları yapar.
+              </p>
+
+              <p>
+                Daha köklü mahalle kültürüne sahip Yenimahalle ve Keçiören’de apartman çevresinde binaların camlarına sürten dalların kesimi sıkça talep edilir. Mamak yokuşlarında dengeli kurulum gerektiren işlerden, Sincan’daki çok daha geniş sanayi ve park alanlarındaki kaba budama işlerine kadar başkentin her noktasında aracımız vardır. Ağacınızın nerede olduğu fark etmeksizin; vinç seçeneklerimizi incelemek için <Link href="/bolgeler" className="font-semibold underline">Ankara hizmet bölgeleri</Link> sayfamız üzerinden detayları inceleyebilirsiniz.
+              </p>
             </div>
           </div>
         </section>
 
-        {/* ── TEKLİF FORMU ─────────────────────────────────────────── */}
-        <section
-          id="teklif-formu"
-          className="py-16 md:py-24 bg-gradient-to-br from-green-900 to-green-800"
-        >
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-              <div className="text-white">
-                <h2 className="text-2xl md:text-3xl font-bold mb-4">
-                  Ağaç Budama İçin Hızlı Teklif Alın
-                </h2>
-                <p className="text-gray-200 leading-relaxed mb-8">
-                  Konumunuzu, budanacak ağaçların yaklaşık yüksekliğini ve sayısını iletin. Site veya binanıza erişim ölçütlerine en uygun sepetli vincimizi hemen planlayalım.
-                </p>
-                <ul className="space-y-3 text-gray-200">
-                  {[
-                    'Kısa süre içerisinde operasyon ekibi cevabı',
-                    'Ağaca uygun sepetli vinç boyutu yönlendirmesi',
-                    'Ankara geneline esnek sevk imkanı',
-                    'Sürpriz ek maliyetler sunmayan net araç fiyatı',
-                  ].map((item) => (
-                    <li key={item} className="flex items-center gap-3">
-                      <span className="text-green-400 font-bold">✓</span>
-                      <span className="text-sm">{item}</span>
-                    </li>
-                  ))}
+        {/* 6. Saatlik / Günlük Bağlantı */}
+        <section className="py-16 bg-white border-b border-gray-100">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">Ağaç Budama İçin Saatlik mi Günlük mü Vinç?</h2>
+            
+            <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+              
+              <div className="bg-gray-50 border border-gray-200 rounded-3xl p-8 hover:shadow-md transition-shadow">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                  <Clock className="text-green-600 w-8 h-8" />
+                  Saatlik Kiralama
+                </h3>
+                <ul className="space-y-4 mb-8">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="text-green-600 shrink-0 mt-1" size={20} />
+                    <span className="text-gray-700 font-medium">Bina camına çarpan veya tehlike yaratan 1-2 dalın kesimi</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="text-green-600 shrink-0 mt-1" size={20} />
+                    <span className="text-gray-700 font-medium">Fırtına sonrası kırılıp asılı kalan küçük ağaç müdahaleleri</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="text-green-600 shrink-0 mt-1" size={20} />
+                    <span className="text-gray-700 font-medium">Sadece 1 adet standart ağacın hızlıca tepesinin alınması</span>
+                  </li>
                 </ul>
-                <div className="mt-10 border-t border-white/20 pt-8">
-                  <p className="text-gray-300 text-sm mb-2">Acil riskli durumlar için hattımız:</p>
-                  <a
-                    href="tel:+905516066878"
-                    className="text-2xl font-bold text-white hover:text-green-400 transition-colors"
-                  >
-                    0551 606 68 78
+                <Link href="/hizmetler/saatlik-vinc-kiralama" className="inline-flex items-center justify-center w-full py-4 rounded-xl border-2 border-green-600 text-green-700 font-bold hover:bg-green-50 transition-colors gap-2">
+                  saatlik vinç kiralama <ArrowRight size={18} />
+                </Link>
+              </div>
+
+              <div className="bg-primary/5 border-2 border-primary/30 rounded-3xl p-8 hover:shadow-lg transition-shadow">
+                <h3 className="text-2xl font-bold text-primary mb-6 flex items-center gap-3">
+                  <CalendarDays className="text-primary w-8 h-8" />
+                  Günlük Kiralama
+                </h3>
+                <ul className="space-y-4 mb-8">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="text-primary shrink-0 mt-1" size={20} />
+                    <span className="text-gray-800 font-medium">Site veya kampüs içerisindeki tüm ağaçların peyzaj budaması</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="text-primary shrink-0 mt-1" size={20} />
+                    <span className="text-gray-800 font-medium">Devasa boyuttaki ve sökülmesi saatler sürecek köklü ağaç kesimi</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="text-primary shrink-0 mt-1" size={20} />
+                    <span className="text-gray-800 font-medium">Otoyol veya cadde boyu sıralı çam ağaçlarının toplu bakımı</span>
+                  </li>
+                </ul>
+                <Link href="/hizmetler/gunluk-vinc-kiralama" className="inline-flex items-center justify-center w-full py-4 rounded-xl bg-primary text-white font-bold hover:bg-primary-dark transition-colors gap-2">
+                  günlük vinç kiralama <ArrowRight size={18} />
+                </Link>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* 7. Fiyat Bölümü */}
+        <section id="fiyatlar" className="py-16 bg-white border-b border-gray-100">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="bg-gray-50 p-8 md:p-12 rounded-3xl shadow-sm border border-gray-200 max-w-4xl mx-auto text-center">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Ankara Ağaç Budama Vinç Fiyatları</h2>
+              <div className="prose prose-gray max-w-none mb-8 text-left">
+                <p>
+                  <strong>Yüksek ağaç budama vinç</strong> kiralama taleplerinde fiyatlar standart olmamakla birlikte, işin peyzaj zorluğuna göre dinamik olarak hesaplanmaktadır. Doğru makineyi tespit edebilmek ve net bir rakam verebilmek için fiyatı etkileyen şu faktörleri inceliyoruz:
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6 max-w-2xl mx-auto">
+                  <ul className="space-y-3 m-0">
+                    <li className="flex items-center gap-2 text-gray-700 m-0"><CheckCircle2 className="text-primary shrink-0" size={18} /> Kesilecek <strong>ağaç yüksekliği</strong> (Metre)</li>
+                    <li className="flex items-center gap-2 text-gray-700 m-0"><CheckCircle2 className="text-primary shrink-0" size={18} /> Budanacak olan <strong>ağaç sayısı</strong></li>
+                    <li className="flex items-center gap-2 text-gray-700 m-0"><CheckCircle2 className="text-primary shrink-0" size={18} /> Toplam operasyon <strong>süresi</strong> (Saat/Gün)</li>
+                  </ul>
+                  <ul className="space-y-3 m-0">
+                    <li className="flex items-center gap-2 text-gray-700 m-0"><CheckCircle2 className="text-primary shrink-0" size={18} /> Ağacın bulunduğu <strong>lokasyon</strong> ve bahçe darlığı</li>
+                    <li className="flex items-center gap-2 text-gray-700 m-0"><CheckCircle2 className="text-primary shrink-0" size={18} /> Çevre tehlikesi ve <strong>zorluk seviyesi</strong></li>
+                  </ul>
+                </div>
+              </div>
+              <div className="bg-primary/5 border border-primary/20 rounded-xl p-6 shadow-sm inline-block w-full">
+                <p className="text-gray-900 font-bold mb-4 text-xl">Fiyat almak için 0551 606 68 78 numarasını arayın.</p>
+                <div className="flex flex-col sm:flex-row justify-center gap-3">
+                  <a href="tel:05516066878" className="inline-flex justify-center items-center gap-2 bg-primary text-white px-8 py-4 rounded-xl font-bold hover:bg-primary-dark transition-colors text-lg">
+                    <Phone size={22} /> Hemen Ara
                   </a>
                 </div>
               </div>
-              <div>
-                <LeadForm />
+            </div>
+          </div>
+        </section>
+
+        {/* 8. Süreç Bölümü */}
+        <section className="py-16 bg-gray-50 border-b border-gray-100">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">Ağaç Budama Süreci Nasıl İşler?</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center relative mt-6 lg:mt-0">
+                <div className="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-xl absolute -top-5 left-1/2 transform -translate-x-1/2">1</div>
+                <div className="mt-4 mb-3 text-primary flex justify-center"><Phone size={32} /></div>
+                <h3 className="font-bold text-gray-900 mb-2">Arayın</h3>
+                <p className="text-gray-600 text-sm">Kesilecek ağaç veya genel peyzaj budama talebiniz için bizi arayın veya WhatsApp'tan yazın.</p>
+              </div>
+              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center relative mt-6 lg:mt-0">
+                <div className="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-xl absolute -top-5 left-1/2 transform -translate-x-1/2">2</div>
+                <div className="mt-4 mb-3 text-primary flex justify-center"><Camera size={32} /></div>
+                <h3 className="font-bold text-gray-900 mb-2">Fotoğraf Gönderin</h3>
+                <p className="text-gray-600 text-sm">Ağacın boyutunu ve etrafındaki alanın (bina/tel) net göründüğü bir fotoğraf iletin.</p>
+              </div>
+              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center relative mt-6 lg:mt-0">
+                <div className="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-xl absolute -top-5 left-1/2 transform -translate-x-1/2">3</div>
+                <div className="mt-4 mb-3 text-primary flex justify-center"><CalendarDays size={32} /></div>
+                <h3 className="font-bold text-gray-900 mb-2">Planlama</h3>
+                <p className="text-gray-600 text-sm">Ağacın yüksekliğine göre filomuzdan en uygun uzunluktaki sepetli vinç tarafınıza tahsis edilir.</p>
+              </div>
+              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center relative mt-6 lg:mt-0">
+                <div className="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-xl absolute -top-5 left-1/2 transform -translate-x-1/2">4</div>
+                <div className="mt-4 mb-3 text-primary flex justify-center"><ShieldCheck size={32} /></div>
+                <h3 className="font-bold text-gray-900 mb-2">Müdahale</h3>
+                <p className="text-gray-600 text-sm">Aracımız sahaya gelir, operatör emniyetli ortamı kurar ve ağaç kesimi başarıyla tamamlanır.</p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ── İLGİLİ HİZMETLER ─────────────────────────────────────── */}
-        <section className="py-14 bg-white border-t border-gray-100">
+        {/* 9. İç Link Bloğu */}
+        <section className="py-16 bg-white border-b border-gray-100">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">İlgili Hizmetler</h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <Link href="/hizmetler/sepetli-vinc-kiralama" className="bg-gray-50 border border-gray-200 p-4 rounded-xl hover:border-primary hover:bg-white hover:shadow-md transition-all flex items-center justify-between group">
+                <span className="font-semibold text-gray-800 group-hover:text-primary transition-colors text-sm">Sepetli Vinç Kiralama</span>
+                <ChevronRight size={16} className="text-gray-400 group-hover:text-primary shrink-0" />
+              </Link>
+              <Link href="/hizmetler/operatorlu-vinc-kiralama" className="bg-gray-50 border border-gray-200 p-4 rounded-xl hover:border-primary hover:bg-white hover:shadow-md transition-all flex items-center justify-between group">
+                <span className="font-semibold text-gray-800 group-hover:text-primary transition-colors text-sm">Operatörlü Vinç</span>
+                <ChevronRight size={16} className="text-gray-400 group-hover:text-primary shrink-0" />
+              </Link>
+              <Link href="/hizmetler/saatlik-vinc-kiralama" className="bg-gray-50 border border-gray-200 p-4 rounded-xl hover:border-primary hover:bg-white hover:shadow-md transition-all flex items-center justify-between group">
+                <span className="font-semibold text-gray-800 group-hover:text-primary transition-colors text-sm">Saatlik Vinç</span>
+                <ChevronRight size={16} className="text-gray-400 group-hover:text-primary shrink-0" />
+              </Link>
+              <Link href="/hizmetler/gunluk-vinc-kiralama" className="bg-gray-50 border border-gray-200 p-4 rounded-xl hover:border-primary hover:bg-white hover:shadow-md transition-all flex items-center justify-between group">
+                <span className="font-semibold text-gray-800 group-hover:text-primary transition-colors text-sm">Günlük Vinç</span>
+                <ChevronRight size={16} className="text-gray-400 group-hover:text-primary shrink-0" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* 10. FAQ Bölümü */}
+        <section className="py-16 bg-white border-b border-gray-100">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-            <h2 className="text-xl font-bold text-gray-900 mb-6">İlgili Hizmetler</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              {[
-                {
-                  href: '/hizmetler/sepetli-vinc-kiralama',
-                  title: 'Sepetli Vinç Kiralama',
-                  desc: 'Bütün yüksek işleriniz için operatörlü vinç kiralama',
-                },
-                {
-                  href: '/hizmetler/operatorlu-vinc-kiralama',
-                  title: 'Operatörlü Vinç Çözümleri',
-                  desc: 'Belgeli operatör ile sarsılmaz kesim desteği',
-                },
-                {
-                  href: '/hizmetler/elektrik-bakim',
-                  title: 'Elektrik Bakım Arıza',
-                  desc: 'Ağaca giren tellerin sökümü veya direk işlemleri',
-                },
-                {
-                  href: '/hizmetler/tabela-montaj',
-                  title: 'Tabela Montaj Asım',
-                  desc: 'Peyzaj ve dış alan reklam/afiş asımları',
-                },
-                {
-                  href: '/hizmetler/cephe-temizligi-sepetli-vinc',
-                  title: 'Bina Cephe Temizliği',
-                  desc: 'Dış cephelere uzanan dalların kesim sonrası temizliği',
-                },
-              ].map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="block bg-gray-50 hover:bg-green-50 border border-gray-200 hover:border-green-200 rounded-xl p-5 transition-colors group"
-                >
-                  <span className="font-semibold text-gray-900 group-hover:text-green-700 block mb-1 text-sm">
-                    {item.title}
-                  </span>
-                  <span className="text-gray-500 text-xs leading-relaxed">{item.desc}</span>
-                </Link>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Sıkça Sorulan Sorular</h2>
+              <p className="text-lg text-gray-600">Ağaç budama operasyonlarında vinç kiralama hakkında merak edilenler.</p>
+            </div>
+
+            <div className="space-y-4">
+              {faqs.map((faq, index) => (
+                <details key={index} className="group bg-gray-50 border border-gray-200 rounded-2xl [&_summary::-webkit-details-marker]:hidden">
+                  <summary className="flex items-center justify-between cursor-pointer p-6 font-bold text-lg text-gray-900 group-hover:text-primary transition-colors">
+                    {faq.q}
+                    <span className="transition group-open:rotate-180 bg-white p-2 rounded-full shadow-sm border border-gray-100">
+                      <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                    </span>
+                  </summary>
+                  <div className="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-100 pt-4 mt-2">
+                    {faq.a}
+                  </div>
+                </details>
               ))}
             </div>
           </div>
         </section>
+
+        {/* Alt CTA */}
+        <section className="bg-gray-900 py-16 text-center text-white">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ağaç Budamada Tehlikeyi Sıfırlayın</h2>
+            <p className="text-gray-400 mb-10 text-lg max-w-2xl mx-auto">Tehlikeli boyutlara ulaşan yüksek ağaçlarınızı, çevreye ve binalara hiçbir zarar vermeden, operatörlü sepetli vinçlerimizle güvenle temizliyoruz.</p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <a
+                href="tel:05516066878"
+                className="inline-flex items-center justify-center gap-2 bg-primary text-white hover:bg-primary-dark px-8 py-4 rounded-xl font-bold text-xl transition-all shadow-xl"
+              >
+                <Phone size={24} />
+                Hemen Ara: 0551 606 68 78
+              </a>
+              <a
+                href="https://wa.me/905516066878"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white hover:bg-[#1ebd5a] px-8 py-4 rounded-xl font-bold text-xl transition-all shadow-xl"
+              >
+                <MessageCircle size={24} />
+                Fotoğraf Gönder Fiyat Al
+              </a>
+            </div>
+          </div>
+        </section>
+
       </main>
 
       <Footer />
-      <FloatingCTA />
+
+      {/* MOBİL STICKY BAR (ÇOK ÖNEMLİ) */}
+      <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-[0_-10px_20px_-10px_rgba(0,0,0,0.15)] z-[100] flex p-2 gap-2">
+        <a
+          href="tel:05516066878"
+          className="flex-1 bg-blue-600 hover:bg-blue-700 text-white flex flex-col items-center justify-center py-2.5 rounded-xl transition-colors"
+        >
+          <Phone size={22} className="mb-1" />
+          <span className="text-xs font-extrabold uppercase tracking-wide">Ara</span>
+        </a>
+        <a
+          href="https://wa.me/905516066878"
+          target="_blank"
+          rel="noreferrer"
+          className="flex-1 bg-[#25D366] hover:bg-[#1ebd5a] text-white flex flex-col items-center justify-center py-2.5 rounded-xl transition-colors"
+        >
+          <MessageCircle size={22} className="mb-1" />
+          <span className="text-xs font-extrabold uppercase tracking-wide">WhatsApp</span>
+        </a>
+      </div>
+      
+      {/* Sayfa içeriğinin sonuna boşluk ekliyoruz ki mobil sticky bar footer'ın son kısımlarını kapatmasın. */}
+      <div className="h-[72px] md:hidden w-full bg-transparent"></div>
+
     </div>
   );
 }
