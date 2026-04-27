@@ -19,8 +19,9 @@ export default function robots(): MetadataRoute.Robots {
         ],
       },
     ],
-    // Host directive signals canonical domain to crawlers (Yandex etc.)
-    host: SEO_CONFIG.baseUrl,
+    // Host directive signals canonical domain to crawlers (Yandex).
+    // Must be the bare domain — no scheme prefix.
+    host: 'ankarasepetlivinckirala.com',
     sitemap: `${SEO_CONFIG.baseUrl}/sitemap.xml`,
   };
 }

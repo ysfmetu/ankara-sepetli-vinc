@@ -7,13 +7,14 @@ import FloatingCTA from '@/components/FloatingCTA';
 import Breadcrumb from '@/components/Breadcrumb';
 import FAQ from '@/components/FAQ';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ankarasepetlivinckirala.com';
-
+// Bu sayfa middleware tarafından /hizmetler/sepetli-vinc-kiralama'ya 301 yönlendirilir.
+// Canonical ve OG url ayarlanmaz; yalnızca noindex kullanılır.
 export const metadata: Metadata = {
     title: 'Ankara Sepetli Vinç Kiralama | 7/24 Operatörlü Vinç Hizmeti',
     description: 'Ankara sepetli vinç kiralama hizmeti. Ostim, Etimesgut, Sincan ve tüm Ankara’da profesyonel operatörlü vinç kiralama hizmeti.',
-    alternates: {
-        canonical: `${siteUrl}/ankara-sepetli-vinc-kiralama`,
+    robots: {
+        index: false,
+        follow: false,
     },
 };
 

@@ -2,8 +2,8 @@ import { MetadataRoute } from 'next';
 import { getAllPosts, getPublishedPosts } from '@/lib/mdx';
 import { getCanonicalUrl } from '@/lib/seo-utils';
 
-export const dynamic = 'force-dynamic';
-export const revalidate = 0;
+// Sitemap ISR — regenerate at most once per hour instead of on every request.
+export const revalidate = 3600;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getPublishedPosts();
