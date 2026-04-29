@@ -10,6 +10,7 @@ import FAQ from '@/components/FAQ';
 import BlogSection from '@/components/BlogSection';
 import Footer from '@/components/Footer';
 import FloatingCTA from '@/components/FloatingCTA';
+import HomeRegionalLinks from '@/components/HomeRegionalLinks';
 
 import { SEO_CONFIG } from '@/config/seo';
 import { getMetadataAlternates } from '@/lib/seo-utils';
@@ -112,6 +113,7 @@ export default function Home() {
         <Hero />
         <TrustBar />
         <Services />
+        <HomeRegionalLinks />
         <WhyUs />
         <ServiceAreas />
         <SEOBlock />

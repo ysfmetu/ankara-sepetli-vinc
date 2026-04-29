@@ -5,17 +5,18 @@ import { Phone, MessageCircle, CalendarDays, CheckCircle2, MapPin, ArrowRight, B
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
+import ServiceRegionalLinks from '@/components/ServiceRegionalLinks';
 
 import { getMetadataAlternates, getCanonicalUrl } from '@/lib/seo-utils';
 import { SEO_CONFIG } from '@/config/seo';
 
 export const metadata: Metadata = {
-  title: 'Ankara Günlük Vinç Kiralama | Operatörlü Sepetli Vinç Hizmeti',
-  description: "Ankara’da günlük vinç kiralama hizmetiyle şantiye, cephe, fabrika, depo, tabela ve bakım işleriniz için operatörlü sepetli vinç desteği alın. Hemen arayın: 0551 606 68 78",
+  title: 'Ankara Günlük Vinç Kiralama | Operatörlü Sepetli Vinç',
+  description: 'Ankara’da günlük vinç kiralama hizmeti. Şantiye, cephe, fabrika, depo ve site işleri için operatörlü vinç desteği alın: 0551 606 68 78',
   alternates: getMetadataAlternates('/hizmetler/gunluk-vinc-kiralama'),
   openGraph: {
-    title: 'Ankara Günlük Vinç Kiralama | Operatörlü Sepetli Vinç Hizmeti',
-    description: "Ankara’da günlük vinç kiralama hizmetiyle şantiye, cephe, fabrika, depo, tabela ve bakım işleriniz için operatörlü sepetli vinç desteği alın. Hemen arayın: 0551 606 68 78",
+    title: 'Ankara Günlük Vinç Kiralama | Operatörlü Sepetli Vinç',
+    description: 'Ankara’da günlük vinç kiralama hizmeti. Şantiye, cephe, fabrika, depo ve site işleri için operatörlü vinç desteği alın: 0551 606 68 78',
     url: getCanonicalUrl('/hizmetler/gunluk-vinc-kiralama'),
   },
 };
@@ -444,11 +445,13 @@ export default function GunlukVincKiralamaPage() {
               </p>
 
               <p>
-                Şehrin daha köklü ve sokakları dar olan Keçiören ve Mamak ilçelerinde ise uzun süreli bina bakım işleri veya belediye onarımlarında, mahalleyi rahatsız etmeden çalışan araçlarımız görev yapar. <Link href="/bolgeler/kecioren-sepetli-vinc-kiralama" className="font-semibold underline">Keçiören sepetli vinç hizmeti</Link> ve <Link href="/bolgeler/mamak-sepetli-vinc-kiralama" className="font-semibold underline">Mamak sepetli vinç kiralama</Link> hizmetlerimizle en dik yokuşlarda bile güvenle gün boyu çalışıyoruz. Lüks müstakil yaşamın adresi Gölbaşı’nda ise villa onarımı, site peyzajı ve bahçe düzenleme işleri için araçlarımızı gün boyu tahsis ediyoruz. İşletmenizin konumu ne olursa olsun, en uygun planlama için <Link href="/bolgeler" className="font-semibold underline">Ankara hizmet bölgeleri</Link> sayfamızdan detaylara ulaşabilirsiniz.
+                Şehrin daha köklü ve sokakları dar olan Keçiören ve Mamak ilçelerinde ise uzun süreli bina bakım işleri veya belediye onarımlarında, mahalleyi rahatsız etmeden çalışan araçlarımız görev yapar. Lüks müstakil yaşamın adresi Gölbaşı’nda ise villa onarımı, site peyzajı ve bahçe düzenleme işleri için araçlarımızı gün boyu tahsis ediyoruz. Ankara genelinde özellikle <Link href="/bolgeler/etimesgut-sepetli-vinc-kiralama" className="font-semibold underline text-primary">Etimesgut sepetli vinç kiralama</Link> taleplerine hızlı dönüş sağlıyoruz. <Link href="/bolgeler/kecioren-sepetli-vinc-kiralama" className="font-semibold underline text-primary">Keçiören sepetli vinç</Link> hizmetlerinde dar sokak ve apartman cephe işleri için uygun araç yönlendirmesi yapıyoruz. <Link href="/bolgeler/ostim-sepetli-vinc-kiralama" className="font-semibold underline text-primary">Ostim sepetli vinç kiralama</Link> hizmetlerinde fabrika, depo ve sanayi bakım işleri öne çıkarken, <Link href="/bolgeler/yenimahalle-sepetli-vinc-kiralama" className="font-semibold underline text-primary">Yenimahalle vinç kiralama</Link> taleplerinde hem sanayi hem konut bölgelerine hızlı hizmet veriyoruz. İşletmenizin konumu ne olursa olsun, en uygun planlama için <Link href="/bolgeler" className="font-semibold underline text-primary">Ankara hizmet bölgeleri</Link> sayfamızdan detaylara ulaşabilirsiniz.
               </p>
             </div>
           </div>
         </section>
+
+        <ServiceRegionalLinks variant="B" />
 
         {/* 6. Fiyat Bölümü */}
         <section id="fiyatlar" className="py-16 bg-white">
@@ -628,6 +631,33 @@ export default function GunlukVincKiralamaPage() {
                   </div>
                 </details>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* İç Link ve CTA Alanı */}
+        <section className="py-12 bg-white">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto text-center bg-gray-50 p-8 rounded-3xl border border-gray-100">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Bulunduğunuz İlçeye En Yakın Vinci Yönlendirelim</h2>
+              <p className="text-lg text-gray-600 mb-8">
+                Ankara’da bulunduğunuz ilçeye göre en yakın vinci yönlendiriyoruz. Konumunuzu ve yapılacak işi paylaşarak hızlı fiyat alabilirsiniz.
+              </p>
+              <div className="flex flex-wrap justify-center gap-3 mb-8">
+                <Link href="/bolgeler/etimesgut-sepetli-vinc-kiralama" className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm font-medium text-gray-700 hover:border-primary hover:text-primary transition-colors">Etimesgut sepetli vinç kiralama</Link>
+                <Link href="/bolgeler/kecioren-sepetli-vinc-kiralama" className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm font-medium text-gray-700 hover:border-primary hover:text-primary transition-colors">Keçiören vinç kiralama</Link>
+                <Link href="/bolgeler/yenimahalle-sepetli-vinc-kiralama" className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm font-medium text-gray-700 hover:border-primary hover:text-primary transition-colors">Yenimahalle sepetli vinç hizmeti</Link>
+                <Link href="/bolgeler/ostim-sepetli-vinc-kiralama" className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm font-medium text-gray-700 hover:border-primary hover:text-primary transition-colors">Ostim sanayi vinç hizmeti</Link>
+                <Link href="/bolgeler" className="px-4 py-2 bg-primary/10 border border-primary/20 rounded-lg text-sm font-bold text-primary hover:bg-primary hover:text-white transition-colors">Tüm hizmet bölgeleri</Link>
+              </div>
+              <div className="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="tel:05516066878" className="inline-flex items-center justify-center gap-2 bg-primary text-white px-6 py-3 rounded-xl font-bold hover:bg-primary-dark transition-colors">
+                  <Phone size={20} /> Hemen Ara: 0551 606 68 78
+                </a>
+                <a href="https://wa.me/905516066878" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-xl font-bold hover:bg-[#1ebd5a] transition-colors">
+                  <MessageCircle size={20} /> WhatsApp'tan Teklif Al
+                </a>
+              </div>
             </div>
           </div>
         </section>

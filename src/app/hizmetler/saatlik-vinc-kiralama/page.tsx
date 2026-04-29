@@ -5,18 +5,19 @@ import { Phone, MessageCircle, Clock, Zap, ShieldCheck, MapPin, CheckCircle2, Ar
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
+import ServiceRegionalLinks from '@/components/ServiceRegionalLinks';
 
 import { getMetadataAlternates, getCanonicalUrl } from '@/lib/seo-utils';
 import { SEO_CONFIG } from '@/config/seo';
 import { siteConfig } from '@/config/site';
 
 export const metadata: Metadata = {
-  title: 'Ankara Saatlik Vinç Kiralama | Hızlı & Uygun Fiyatlı Hizmet',
-  description: "Ankara’da saatlik vinç kiralama hizmeti ile kısa süreli işleriniz için hızlı ve uygun fiyatlı çözüm. Aynı gün vinç yönlendirme ve operatörlü hizmet. Hemen arayın: 0551 606 68 78",
+  title: 'Ankara Saatlik Vinç Kiralama | Hızlı ve Uygun Fiyatlı Hizmet',
+  description: 'Ankara’da kısa süreli işler için saatlik vinç kiralama. Tabela, elektrik, cephe ve bakım işleri için aynı gün hizmet: 0551 606 68 78',
   alternates: getMetadataAlternates('/hizmetler/saatlik-vinc-kiralama'),
   openGraph: {
-    title: 'Ankara Saatlik Vinç Kiralama | Hızlı & Uygun Fiyatlı Hizmet',
-    description: "Ankara’da saatlik vinç kiralama hizmeti ile kısa süreli işleriniz için hızlı ve uygun fiyatlı çözüm. Aynı gün vinç yönlendirme ve operatörlü hizmet. Hemen arayın: 0551 606 68 78",
+    title: 'Ankara Saatlik Vinç Kiralama | Hızlı ve Uygun Fiyatlı Hizmet',
+    description: 'Ankara’da kısa süreli işler için saatlik vinç kiralama. Tabela, elektrik, cephe ve bakım işleri için aynı gün hizmet: 0551 606 68 78',
     url: getCanonicalUrl('/hizmetler/saatlik-vinc-kiralama'),
   },
 };
@@ -143,7 +144,7 @@ export default function SaatlikVincKiralamaPage() {
                 <div>
                   <h3 className="font-bold text-gray-900 mt-0 mb-2">Aynı Gün Vinç Yönlendirme</h3>
                   <p className="m-0 text-gray-600 text-base">
-                    Acil müdahale gerektiren durumlarda veya aniden planlanan montaj işlerinde beklemeye tahammülünüz olmadığını biliyoruz. Geniş araç filomuz ve Ankara geneline yayılmış hizmet ağımız sayesinde, bize ulaştığınız anda uygun aracı belirler ve <strong>aynı gün vinç yönlendirme</strong> garantisiyle en kısa sürede sahanıza ulaştırırız.
+                    Acil müdahale gerektiren durumlarda veya aniden planlanan montaj işlerinde beklemeye tahammülünüz olmadığını biliyoruz. Geniş araç filomuz ve Ankara geneline yayılmış hizmet ağımız sayesinde, bize ulaştığınız anda uygun aracı belirler ve <strong>aynı gün vinç yönlendirme</strong> garantisiyle en kısa sürede sahanıza ulaştırırız. Ankara genelinde özellikle <Link href="/bolgeler/etimesgut-sepetli-vinc-kiralama" className="font-semibold underline text-primary">Etimesgut sepetli vinç kiralama</Link> taleplerine hızlı dönüş sağlıyoruz. <Link href="/bolgeler/kecioren-sepetli-vinc-kiralama" className="font-semibold underline text-primary">Keçiören sepetli vinç</Link> hizmetlerinde dar sokak ve apartman cephe işleri için uygun araç yönlendirmesi yapıyoruz. <Link href="/bolgeler/ostim-sepetli-vinc-kiralama" className="font-semibold underline text-primary">Ostim sepetli vinç kiralama</Link> hizmetlerinde fabrika, depo ve sanayi bakım işleri öne çıkarken, <Link href="/bolgeler/yenimahalle-sepetli-vinc-kiralama" className="font-semibold underline text-primary">Yenimahalle vinç kiralama</Link> taleplerinde hem sanayi hem konut bölgelerine hızlı hizmet veriyoruz.
                   </p>
                 </div>
               </div>
@@ -182,28 +183,7 @@ export default function SaatlikVincKiralamaPage() {
         </section>
 
         {/* 4. Lokal Linkler Bölümü */}
-        <section className="py-16 bg-gray-50 border-b border-gray-100">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto text-center mb-10">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Ankara'da Hızlı Ulaştığımız Bölgeler</h2>
-              <p className="text-lg text-gray-600">Başkentin kritik noktalarında konuşlanmış araçlarımızla size en yakın bölgeden yönlendirme yapıyoruz.</p>
-            </div>
-            
-            <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
-              <Link href="/bolgeler/etimesgut-sepetli-vinc-kiralama" className="bg-white border border-gray-200 hover:border-primary hover:text-primary px-6 py-4 rounded-xl font-medium transition-colors flex items-center gap-2 shadow-sm">
-                <MapPin size={18} className="text-primary" />
-                Etimesgut sepetli vinç kiralama
-              </Link>
-              <Link href="/bolgeler/cankaya-sepetli-vinc-kiralama" className="bg-white border border-gray-200 hover:border-primary hover:text-primary px-6 py-4 rounded-xl font-medium transition-colors flex items-center gap-2 shadow-sm">
-                <MapPin size={18} className="text-primary" />
-                Çankaya sepetli vinç kiralama
-              </Link>
-              <Link href="/bolgeler" className="bg-primary text-white border border-primary hover:bg-primary-dark px-6 py-4 rounded-xl font-bold transition-colors flex items-center gap-2 shadow-sm">
-                Tüm Hizmet Bölgeleri <ArrowRight size={18} />
-              </Link>
-            </div>
-          </div>
-        </section>
+        <ServiceRegionalLinks variant="A" />
 
         {/* 5. Internal Links (ZORUNLU) */}
         <section className="py-16 bg-white border-b border-gray-100">
@@ -229,15 +209,42 @@ export default function SaatlikVincKiralamaPage() {
                 <span className="text-primary font-semibold text-sm flex items-center gap-1 mt-auto">Sayfaya Git <ArrowRight size={16} /></span>
               </Link>
 
-              <Link href="/hizmetler" className="group bg-gray-50 border border-gray-200 p-6 rounded-2xl hover:border-primary hover:bg-white hover:shadow-md transition-all flex flex-col h-full">
+              <Link href="/hizmetler/gunluk-vinc-kiralama" className="group bg-gray-50 border border-gray-200 p-6 rounded-2xl hover:border-primary hover:bg-white hover:shadow-md transition-all flex flex-col h-full">
                 <div className="bg-primary/10 w-12 h-12 rounded-xl flex items-center justify-center text-primary mb-4">
-                  <Wrench size={24} />
+                  <Clock size={24} />
                 </div>
-                <h3 className="font-bold text-gray-900 text-lg mb-2 group-hover:text-primary transition-colors">Ankara vinç kiralama hizmetleri</h3>
-                <p className="text-gray-600 text-sm mb-4 flex-grow">Saatlik, günlük, haftalık kiralama seçenekleri ve hizmet verdiğimiz tüm operasyon alanlarının listesi.</p>
+                <h3 className="font-bold text-gray-900 text-lg mb-2 group-hover:text-primary transition-colors">Günlük vinç kiralama</h3>
+                <p className="text-gray-600 text-sm mb-4 flex-grow">Uzun süren dış cephe çalışmaları, şantiye işleri ve detaylı peyzaj düzenlemeleri için ekonomik günlük kiralama seçenekleri.</p>
                 <span className="text-primary font-semibold text-sm flex items-center gap-1 mt-auto">Sayfaya Git <ArrowRight size={16} /></span>
               </Link>
 
+            </div>
+          </div>
+        </section>
+
+        {/* İç Link ve CTA Alanı */}
+        <section className="py-12 bg-white">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto text-center bg-gray-50 p-8 rounded-3xl border border-gray-100">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Bulunduğunuz İlçeye En Yakın Vinci Yönlendirelim</h2>
+              <p className="text-lg text-gray-600 mb-8">
+                Ankara’da bulunduğunuz ilçeye göre en yakın vinci yönlendiriyoruz. Konumunuzu ve yapılacak işi paylaşarak hızlı fiyat alabilirsiniz.
+              </p>
+              <div className="flex flex-wrap justify-center gap-3 mb-8">
+                <Link href="/bolgeler/etimesgut-sepetli-vinc-kiralama" className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm font-medium text-gray-700 hover:border-primary hover:text-primary transition-colors">Etimesgut sepetli vinç kiralama</Link>
+                <Link href="/bolgeler/kecioren-sepetli-vinc-kiralama" className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm font-medium text-gray-700 hover:border-primary hover:text-primary transition-colors">Keçiören vinç kiralama</Link>
+                <Link href="/bolgeler/yenimahalle-sepetli-vinc-kiralama" className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm font-medium text-gray-700 hover:border-primary hover:text-primary transition-colors">Yenimahalle sepetli vinç hizmeti</Link>
+                <Link href="/bolgeler/ostim-sepetli-vinc-kiralama" className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm font-medium text-gray-700 hover:border-primary hover:text-primary transition-colors">Ostim sanayi vinç hizmeti</Link>
+                <Link href="/bolgeler" className="px-4 py-2 bg-primary/10 border border-primary/20 rounded-lg text-sm font-bold text-primary hover:bg-primary hover:text-white transition-colors">Tüm hizmet bölgeleri</Link>
+              </div>
+              <div className="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="tel:05516066878" className="inline-flex items-center justify-center gap-2 bg-primary text-white px-6 py-3 rounded-xl font-bold hover:bg-primary-dark transition-colors">
+                  <Phone size={20} /> Hemen Ara: 0551 606 68 78
+                </a>
+                <a href="https://wa.me/905516066878" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-xl font-bold hover:bg-[#1ebd5a] transition-colors">
+                  <MessageCircle size={20} /> WhatsApp'tan Teklif Al
+                </a>
+              </div>
             </div>
           </div>
         </section>

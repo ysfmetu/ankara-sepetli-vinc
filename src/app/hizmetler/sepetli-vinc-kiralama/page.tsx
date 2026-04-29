@@ -6,18 +6,19 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingCTA from '@/components/FloatingCTA';
 import Breadcrumb from '@/components/Breadcrumb';
+import ServiceRegionalLinks from '@/components/ServiceRegionalLinks';
 
 import { getMetadataAlternates, getCanonicalUrl } from '@/lib/seo-utils';
 import { SEO_CONFIG } from '@/config/seo';
 import { siteConfig } from '@/config/site';
 
 export const metadata: Metadata = {
-  title: 'Ankara Sepetli Vinç Kiralama | 7/24 Operatörlü Vinç Hizmeti',
-  description: "Ankara sepetli vinç kiralama hizmetiyle tabela montajı, cephe temizliği, ağaç budama ve yüksek erişim işleriniz için 7/24 operatörlü vinç desteği alın.",
+  title: 'Ankara Sepetli Vinç Kiralama | Operatörlü 7/24 Vinç Hizmeti',
+  description: 'Ankara sepetli vinç kiralama hizmetiyle tabela montajı, cephe temizliği, elektrik bakım ve ağaç budama işleriniz için hızlı teklif alın: 0551 606 68 78',
   alternates: getMetadataAlternates('/hizmetler/sepetli-vinc-kiralama'),
   openGraph: {
-    title: 'Ankara Sepetli Vinç Kiralama | 7/24 Operatörlü Vinç Hizmeti',
-    description: "Ankara sepetli vinç kiralama hizmetiyle tabela montajı, cephe temizliği, ağaç budama ve yüksek erişim işleriniz için 7/24 operatörlü vinç desteği alın.",
+    title: 'Ankara Sepetli Vinç Kiralama | Operatörlü 7/24 Vinç Hizmeti',
+    description: 'Ankara sepetli vinç kiralama hizmetiyle tabela montajı, cephe temizliği, elektrik bakım ve ağaç budama işleriniz için hızlı teklif alın: 0551 606 68 78',
     url: getCanonicalUrl('/hizmetler/sepetli-vinc-kiralama'),
   },
 };
@@ -372,11 +373,13 @@ export default function SepetliVincKiralamaPage() {
               </p>
 
               <p>
-                Hedefimiz, lokasyonunuz Gölbaşı, Pursaklar veya Altındağ neresi olursa olsun en doğru aracı kapınıza getirmektir. Tüm semtlere ait detaylı ağımızı görmek için <Link href="/bolgeler">Ankara hizmet bölgeleri</Link> sayfamızı inceleyebilir ve mahallenize özel çözümlerimiz hakkında bilgi alabilirsiniz.
+                Hedefimiz, lokasyonunuz Gölbaşı, Pursaklar veya Altındağ neresi olursa olsun en doğru aracı kapınıza getirmektir. Ankara genelinde özellikle <Link href="/bolgeler/etimesgut-sepetli-vinc-kiralama" className="font-semibold underline text-primary">Etimesgut sepetli vinç kiralama</Link> taleplerine hızlı dönüş sağlıyoruz. <Link href="/bolgeler/kecioren-sepetli-vinc-kiralama" className="font-semibold underline text-primary">Keçiören vinç hizmetlerinde</Link> dar sokak ve apartman cephe işleri için uygun araç yönlendirmesi yaparken, <Link href="/bolgeler/ostim-sepetli-vinc-kiralama" className="font-semibold underline text-primary">Ostim sanayi vinç hizmeti</Link> gibi sanayi bölgelerinde fabrika ve depo bakım işleri öne çıkmaktadır. Tüm semtlere ait detaylı ağımızı görmek için <Link href="/bolgeler" className="font-semibold underline text-primary">Ankara hizmet bölgeleri</Link> sayfamızı inceleyebilir ve mahallenize özel çözümlerimiz hakkında bilgi alabilirsiniz.
               </p>
             </div>
           </div>
         </section>
+
+        <ServiceRegionalLinks variant="B" />
 
         {/* Ara CTA */}
         <div className="bg-primary py-12">
@@ -594,6 +597,33 @@ export default function SepetliVincKiralamaPage() {
                   </div>
                 </details>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* İç Link ve CTA Alanı */}
+        <section className="py-12 bg-white">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto text-center bg-gray-50 p-8 rounded-3xl border border-gray-100">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Bulunduğunuz İlçeye En Yakın Vinci Yönlendirelim</h2>
+              <p className="text-lg text-gray-600 mb-8">
+                Ankara’da bulunduğunuz ilçeye göre en yakın vinci yönlendiriyoruz. Konumunuzu ve yapılacak işi paylaşarak hızlı fiyat alabilirsiniz.
+              </p>
+              <div className="flex flex-wrap justify-center gap-3 mb-8">
+                <Link href="/bolgeler/etimesgut-sepetli-vinc-kiralama" className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm font-medium text-gray-700 hover:border-primary hover:text-primary transition-colors">Etimesgut sepetli vinç kiralama</Link>
+                <Link href="/bolgeler/kecioren-sepetli-vinc-kiralama" className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm font-medium text-gray-700 hover:border-primary hover:text-primary transition-colors">Keçiören vinç kiralama</Link>
+                <Link href="/bolgeler/yenimahalle-sepetli-vinc-kiralama" className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm font-medium text-gray-700 hover:border-primary hover:text-primary transition-colors">Yenimahalle sepetli vinç hizmeti</Link>
+                <Link href="/bolgeler/ostim-sepetli-vinc-kiralama" className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm font-medium text-gray-700 hover:border-primary hover:text-primary transition-colors">Ostim sanayi vinç hizmeti</Link>
+                <Link href="/bolgeler" className="px-4 py-2 bg-primary/10 border border-primary/20 rounded-lg text-sm font-bold text-primary hover:bg-primary hover:text-white transition-colors">Tüm hizmet bölgeleri</Link>
+              </div>
+              <div className="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="tel:05516066878" className="inline-flex items-center justify-center gap-2 bg-primary text-white px-6 py-3 rounded-xl font-bold hover:bg-primary-dark transition-colors">
+                  <Phone size={20} /> Hemen Ara: 0551 606 68 78
+                </a>
+                <a href="https://wa.me/905516066878" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-xl font-bold hover:bg-[#1ebd5a] transition-colors">
+                  <MessageCircle size={20} /> WhatsApp'tan Teklif Al
+                </a>
+              </div>
             </div>
           </div>
         </section>
