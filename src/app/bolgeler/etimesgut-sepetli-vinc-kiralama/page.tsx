@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Phone, MessageCircle, MapPin, ChevronRight, Building2, Home, Store, Trees, Clock, ShieldCheck, Paintbrush, Zap } from 'lucide-react';
+import { Phone, MessageCircle, MapPin, ChevronRight, Building2, Home, Store, Trees, Clock, ShieldCheck, Paintbrush, Zap, ArrowRight, ShieldAlert, CheckCircle2 } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
@@ -10,115 +10,128 @@ import { getMetadataAlternates, getCanonicalUrl } from '@/lib/seo-utils';
 import { SEO_CONFIG } from '@/config/seo';
 
 export const metadata: Metadata = {
-  title: 'Etimesgut Sepetli Vinç Kiralama | Eryaman ve Bağlıca Vinç',
-  description: "Ankara Etimesgut, Eryaman, Bağlıca ve Elvankent'te site cephe işleri, yüksek katlı konut bakımı ve tabela montajı için sepetli vinç kiralama. Arayın: 0551 606 68 78",
+  title: 'Etimesgut Sepetli Vinç Kiralama | Aynı Gün Hızlı Vinç Hizmeti',
+  description: "Etimesgut, Eryaman, Bağlıca ve Elvankent’te sepetli vinç kiralama hizmeti. Site, apartman, tabela, cephe ve ağaç işleri için hızlı teklif: 0551 606 68 78",
   alternates: getMetadataAlternates('/bolgeler/etimesgut-sepetli-vinc-kiralama'),
   openGraph: {
-    title: 'Etimesgut Sepetli Vinç Kiralama | Eryaman ve Bağlıca Vinç',
-    description: "Ankara Etimesgut, Eryaman, Bağlıca ve Elvankent'te site cephe işleri, yüksek katlı konut bakımı ve tabela montajı için sepetli vinç kiralama. Arayın: 0551 606 68 78",
+    title: 'Etimesgut Sepetli Vinç Kiralama | Aynı Gün Hızlı Vinç Hizmeti',
+    description: "Etimesgut, Eryaman, Bağlıca ve Elvankent’te sepetli vinç kiralama hizmeti. Site, apartman, tabela, cephe ve ağaç işleri için hızlı teklif: 0551 606 68 78",
     url: getCanonicalUrl('/bolgeler/etimesgut-sepetli-vinc-kiralama'),
   },
 };
 
 const faqs = [
   {
-    q: 'Etimesgut’ta vinç ne kadar sürede gelir?',
-    a: 'Etimesgut\'un modern kentleşme yapısı ve geniş yolları sayesinde trafiğe takılmadan hızlıca hareket edebiliyoruz. İhtiyaç anında genellikle 30 dakika içerisinde adresinize araç yönlendiriyoruz.'
+    q: 'Etimesgut’ta sepetli vinç ne kadar sürede gelir?',
+    a: 'Etimesgut merkez, Eryaman, Bağlıca ve Şaşmaz bağlantı hattında sürekli hareket halinde olan araçlarımız sayesinde, trafiğin ve mesafenin uygunluğuna göre genellikle 30-45 dakika içinde hızlı yönlendirme yapıyoruz.'
   },
   {
-    q: 'Eryaman ve Bağlıca’ya hizmet var mı?',
-    a: 'Evet, özellikle Eryaman ve Bağlıca bölgelerindeki devasa yüksek katlı siteler ve lüks villaların cephe onarımı, dış cam temizliği ve ağaç budama işlemleri için günlük yoğun operasyonlar yürütüyoruz.'
+    q: 'Eryaman ve Bağlıca’ya aynı gün vinç yönlendirebilir misiniz?',
+    a: 'Evet, Eryaman ve Bağlıca bölgelerindeki yoğun site ve villa projeleri sebebiyle bölgeye her gün özel olarak araç sevk ediyoruz. Acil tabela veya cephe işleriniz için aynı gün içinde hizmet vermemiz mümkündür.'
   },
   {
-    q: 'Aynı gün vinç gelir mi?',
-    a: 'Kesinlikle. Rüzgarda sallanan tehlikeli tabela, kırılmış ve kopmak üzere olan büyük ağaç dalları veya acil dış cephe tamiratları için aynı gün içerisinde acil müdahale ekibimizi sevk ediyoruz.'
+    q: 'Etimesgut sepetli vinç fiyatları nasıl belirlenir?',
+    a: 'Fiyatlarımız çalışılacak yüksekliğe (metraja), işlemin süresine (saatlik, günlük), operatör gereksinimine ve işin niteliğine (ağaç budama, cephe temizliği vb.) göre belirlenmektedir. Net fiyat için WhatsApp üzerinden konum ve iş fotoğrafı gönderebilirsiniz.'
   },
   {
-    q: 'Saatlik kiralama yapılır mı?',
-    a: 'Etimesgut merkezde veya AVM cadde üstündeki dükkanların tabela montajı, klima söküm/takım işleri gibi kısa süreli operasyonlar için bütçe dostu saatlik kiralama paketimiz mevcuttur.'
+    q: 'Site içinde sepetli vinç çalışabilir mi?',
+    a: 'Kesinlikle. Modern Etimesgut, Eryaman ve Elvankent sitelerinin geniş bahçe ve yolları, vinçlerimizin kurulumu için oldukça müsaittir. Araçlarımız peyzaj alanlarına ve site zeminine zarar vermeden güvenle konumlandırılır.'
+  },
+  {
+    q: 'Saatlik vinç kiralama Etimesgut’ta mümkün mü?',
+    a: 'Evet, özellikle kısa süren tabela montajı, klima sökümü veya tek bir pencereden eşya çekme gibi işler için bütçe dostu saatlik vinç kiralama seçeneğimiz mevcuttur.'
+  },
+  {
+    q: 'Ağaç budama ve cephe temizliği için vinç kiralanabilir mi?',
+    a: 'Elbette. Etimesgut ve çevresinde, ulaşılması zor ağaçların kesimi ve çok katlı binaların cephe/cam temizliği işlemlerinde güvenle sepetli vinç hizmeti sağlamaktayız.'
+  },
+  {
+    q: 'Operatör hizmete dahil mi?',
+    a: 'Tüm sepetli vinç kiralama hizmetlerimiz, iş güvenliği (İSG) standartları gereği alanında uzman, belgeli ve deneyimli operatörümüz ile birlikte sunulmaktadır. Operatör ücreti fiyata dahildir.'
   }
 ];
 
 export default function EtimesgutPage() {
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@graph': [
-      {
-        '@type': 'Service',
-        name: 'Etimesgut Sepetli Vinç Kiralama',
-        provider: {
-          '@type': 'LocalBusiness',
-          name: 'AS Ankara Sepetli Vinç Kiralama Hizmetleri',
-          url: SEO_CONFIG.baseUrl
-        },
-        telephone: '+905516066878',
-        areaServed: [
-          {
-            '@type': 'City',
-            name: 'Etimesgut'
-          },
-          {
-            '@type': 'City',
-            name: 'Ankara'
-          }
-        ],
-        serviceType: 'Sepetli Vinç Kiralama',
-        description: "Etimesgut, Eryaman ve Bağlıca bölgelerinde lüks site cephe işleri, ağaç budama ve sepetli vinç hizmetleri.",
-        url: getCanonicalUrl('/bolgeler/etimesgut-sepetli-vinc-kiralama')
-      },
-      {
+  const jsonLd = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      name: 'Etimesgut Sepetli Vinç Kiralama',
+      provider: {
         '@type': 'LocalBusiness',
         name: 'AS Ankara Sepetli Vinç Kiralama Hizmetleri',
-        url: SEO_CONFIG.baseUrl,
-        telephone: '+905516066878',
-        address: {
-          '@type': 'PostalAddress',
-          streetAddress: 'Ostim Organize Sanayi Bölgesi',
-          addressLocality: 'Yenimahalle',
-          addressRegion: 'Ankara',
-          addressCountry: 'TR'
+        url: SEO_CONFIG.baseUrl
+      },
+      telephone: '+905516066878',
+      areaServed: [
+        {
+          '@type': 'City',
+          name: 'Etimesgut'
         },
-        areaServed: {
+        {
           '@type': 'City',
           name: 'Ankara'
         }
+      ],
+      serviceType: 'Sepetli Vinç Kiralama',
+      description: "Etimesgut, Eryaman, Bağlıca ve Elvankent’te sepetli vinç kiralama hizmeti. Site, apartman, tabela, cephe ve ağaç işleri için hızlı teklif: 0551 606 68 78",
+      url: getCanonicalUrl('/bolgeler/etimesgut-sepetli-vinc-kiralama')
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'LocalBusiness',
+      name: 'AS Ankara Sepetli Vinç Kiralama Hizmetleri',
+      url: SEO_CONFIG.baseUrl,
+      telephone: '+905516066878',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Ostim Organize Sanayi Bölgesi',
+        addressLocality: 'Yenimahalle',
+        addressRegion: 'Ankara',
+        addressCountry: 'TR'
       },
-      {
-        '@type': 'FAQPage',
-        mainEntity: faqs.map(faq => ({
-          '@type': 'Question',
-          name: faq.q,
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: faq.a
-          }
-        }))
-      },
-      {
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-          {
-            '@type': 'ListItem',
-            position: 1,
-            name: 'Ana Sayfa',
-            item: SEO_CONFIG.baseUrl
-          },
-          {
-            '@type': 'ListItem',
-            position: 2,
-            name: 'Bölgeler',
-            item: `${SEO_CONFIG.baseUrl}/bolgeler`
-          },
-          {
-            '@type': 'ListItem',
-            position: 3,
-            name: 'Etimesgut Sepetli Vinç',
-            item: `${SEO_CONFIG.baseUrl}/bolgeler/etimesgut-sepetli-vinc-kiralama`
-          }
-        ]
+      areaServed: {
+        '@type': 'City',
+        name: 'Ankara'
       }
-    ]
-  };
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqs.map(faq => ({
+        '@type': 'Question',
+        name: faq.q,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.a
+        }
+      }))
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Ana Sayfa',
+          item: SEO_CONFIG.baseUrl
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Bölgeler',
+          item: `${SEO_CONFIG.baseUrl}/bolgeler`
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Etimesgut Sepetli Vinç Kiralama',
+          item: `${SEO_CONFIG.baseUrl}/bolgeler/etimesgut-sepetli-vinc-kiralama`
+        }
+      ]
+    }
+  ];
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-50 pb-20 md:pb-0">
@@ -156,18 +169,18 @@ export default function EtimesgutPage() {
                 Etimesgut Sepetli Vinç Kiralama
               </h1>
               <h2 className="text-2xl md:text-3xl font-semibold text-teal-300 mb-6">
-                Ankara Etimesgut’ta 7/24 Vinç Hizmeti
+                Etimesgut, Eryaman, Bağlıca ve Elvankent’te 7/24 Vinç Hizmeti
               </h2>
               
               <div className="prose prose-lg text-gray-200 mb-10 max-w-3xl font-light">
                 <p>
-                  <strong>Türkiye’nin başkenti Ankara</strong>, batı koridoruna doğru genişlerken, bu modernleşmenin en önemli çekim merkezlerini <strong>İç Anadolu Bölgesi</strong>'nin planlı yerleşimleri oluşturmaktadır. Bu planlı büyümenin kalbi olan ve nüfus yoğunluğu ile <strong>Ankara’nın en hızlı gelişen ilçelerinden biri olan Etimesgut</strong>, geniş yolları, büyük site projeleri, lüks rezidansları ve devasa yeşil alanlarıyla vinç kullanımının en yoğun olduğu modern yaşam alanlarının başında gelir.
+                  <strong>Türkiye’nin başkenti Ankara</strong>, batı ekseninde muazzam bir hızla büyürken bu sürecin merkezinde <strong>Ankara’nın en hızlı gelişen ilçelerinden biri olan Etimesgut</strong> yer almaktadır. <strong>İç Anadolu Bölgesi</strong>'nin planlı şehirleşme örneklerinden biri olan ilçe, devasa inşaat, ticaret ve peyzaj alanları ile dikkat çekmektedir.
                 </p>
                 <p>
-                  Etimesgut'un sınırları içerisinde yer alan Eryaman, Elvankent, Bağlıca, Ahi Mesut, Etimesgut merkez ve Göksu Park çevresi gibi mahalleler, çok katlı mimari yapılarıyla dikkat çeker. Yüksek katlı bu binaların dış cephe izolasyon işleri, dış cephe cam temizliği, Fransız balkon tamiratları ve geniş site bahçelerindeki tehlike arz eden dev ağaçların budanması için <Link href="/hizmetler/sepetli-vinc-kiralama" className="text-teal-300 hover:text-white underline font-medium">Ankara sepetli vinç kiralama</Link> sistemlerine duyulan ihtiyaç aralıksız sürer. Göksu ve Eryaman etrafındaki dev konutlarda iş güvenliğinden taviz verilemeyeceği için operasyonlarımız tamamen <Link href="/hizmetler/operatorlu-vinc-kiralama" className="text-teal-300 hover:text-white underline font-medium">operatörlü vinç kiralama</Link> modeliyle yönetilir ve riskler sıfıra indirilir.
+                  Etimesgut, modern site projeleri, yüksek katlı apartmanlar, geniş yollar, yeni konut alanları ve ticari işletmeleriyle sepetli vinç kullanımının yoğun olduğu bölgelerden biridir. Eryaman, Bağlıca ve Elvankent çevresinde site cepheleri, ağaç budama, tabela montajı, elektrik bakım ve dış cephe işleri için sepetli vinç hizmeti sıkça tercih edilmektedir. İster <strong>Ahi Mesut</strong> mahallesindeki bir binanın çatı tamiratı, ister <strong>Etimesgut merkez</strong> veya <strong>Göksu Park çevresi</strong>'ndeki devasa rekreasyon alanlarının aydınlatma direklerinin bakımı olsun, güvenli erişim çözümlerine duyulan ihtiyaç kesintisiz devam etmektedir. Ayrıca <strong>Şaşmaz bağlantı hattı</strong> üzerindeki ağır sanayi işletmelerinin dış cephe veya çatı onarımlarında da profesyonel vinç kullanımı kritik bir role sahiptir.
                 </p>
                 <p>
-                  Etimesgut merkezdeki esnafın dükkan tabelasını yenilemesi veya Eryaman'daki bir dairenin klimasının dış ünitesinin takılması gibi işlemler için müşterilerimiz genellikle bütçe dostu <Link href="/hizmetler/saatlik-vinc-kiralama" className="text-teal-300 hover:text-white underline font-medium">saatlik vinç kiralama</Link> paketimizi değerlendirmektedir. Ancak Bağlıca ve Elvankent'teki lüks sitelerin haftalarca sürecek dış cephe boya ve onarım ihalelerinde iskele kurma zahmetini ortadan kaldıran ve çok daha avantajlı olan <Link href="/hizmetler/gunluk-vinc-kiralama" className="text-teal-300 hover:text-white underline font-medium">günlük vinç kiralama</Link> modelimiz site yönetimleri tarafından sıklıkla tercih edilmektedir.
+                  Geleneksel ve riskli iskele kurulumları yerine <Link href="/hizmetler/sepetli-vinc-kiralama" className="text-teal-300 hover:text-white underline font-medium">Ankara’da sepetli vinç hizmeti</Link> almak, projelerde büyük zaman ve maliyet avantajı yaratmaktadır. Bölgenin dinamik yapısına uygun olarak her daim hazır bulundurduğumuz filomuzla yüksek katlı yapılardaki işleri güvenle tamamlıyor, iş sağlığı standartlarından ödün vermiyoruz.
                 </p>
               </div>
               
@@ -176,8 +189,7 @@ export default function EtimesgutPage() {
                   href="tel:05516066878"
                   className="w-full sm:w-auto flex items-center justify-center gap-2 bg-primary text-white hover:bg-primary-dark px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg shadow-primary/30"
                 >
-                  <Phone size={20} />
-                  Hemen Ara: 0551 606 68 78
+                  <Phone size={20} /> Hemen Ara
                 </a>
                 <a
                   href="https://wa.me/905516066878"
@@ -185,204 +197,139 @@ export default function EtimesgutPage() {
                   rel="noreferrer"
                   className="w-full sm:w-auto flex items-center justify-center gap-2 bg-[#25D366] text-white hover:bg-[#1ebd5a] px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg shadow-green-500/30"
                 >
-                  <MessageCircle size={20} />
-                  WhatsApp
+                  <MessageCircle size={20} /> WhatsApp’tan Teklif Al
                 </a>
                 <a
                   href="#fiyatlar"
                   className="w-full sm:w-auto flex items-center justify-center gap-2 bg-white/10 text-white border border-white/20 hover:bg-white/20 px-8 py-4 rounded-xl font-bold text-lg transition-all"
                 >
-                  Hızlı teklif al
+                  Hızlı Fiyat Al
                 </a>
               </div>
             </div>
           </div>
         </section>
 
-        {/* 2. EN KRİTİK BÖLÜM: Etimesgut’ta Sepetli Vinç En Çok Nerelerde Kullanılır? */}
-        <section className="py-20 bg-white border-b border-gray-100">
+        {/* 2. ANA SAYFADAN GELEN GÜCÜ KARŞILAYAN İÇERİK BLOĞU */}
+        <section className="py-16 bg-white border-b border-gray-100">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4 tracking-tight">Etimesgut’ta Sepetli Vinç En Çok Nerelerde Kullanılır?</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">Modern yaşam alanlarında 3 farklı yapı tipine özel operasyonel vinç çözümleri.</p>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4 tracking-tight">Etimesgut’ta En Çok Talep Alan Vinç Hizmetleri</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">Modern yaşam alanlarında farklı yapı tiplerine özel operasyonel vinç senaryolarımız.</p>
             </div>
             
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              
-              {/* 1. SİTE YAŞAMI (ERYAMAN / BAĞLICA) */}
-              <div className="bg-gray-50 border border-gray-200 p-8 rounded-3xl hover:border-teal-500 transition-all shadow-sm hover:shadow-md relative overflow-hidden group">
-                <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
-                  <Building2 size={120} />
-                </div>
-                <div className="bg-teal-100 w-16 h-16 rounded-2xl flex items-center justify-center text-teal-600 mb-6 relative z-10">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Eryaman ve Bağlıca */}
+              <div className="bg-gray-50 border border-gray-200 p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
+                <div className="bg-teal-100 w-16 h-16 rounded-2xl flex items-center justify-center text-teal-600 mb-6">
                   <Building2 size={32} />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 relative z-10 border-b border-gray-200 pb-4">Site Yaşamı (Eryaman / Bağlıca)</h3>
-                <ul className="space-y-4 relative z-10 mt-6">
-                  <li className="flex items-start gap-3">
-                    <ShieldCheck className="text-teal-600 mt-1 shrink-0" size={20} />
-                    <div>
-                      <strong className="block text-gray-900">Site Cephe Temizliği</strong>
-                      <span className="text-gray-600 text-sm">Gökdelen ve yüksek rezidansların dış cam ve kompozit temizliği.</span>
-                    </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">1. Eryaman ve Bağlıca’da Site Cephe İşleri</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-2 text-gray-700">
+                    <CheckCircle2 className="text-teal-600 shrink-0 mt-1" size={18} />
+                    <span>Site dış cephe temizliği</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <ShieldCheck className="text-teal-600 mt-1 shrink-0" size={20} />
-                    <div>
-                      <strong className="block text-gray-900">Ağaç Budama</strong>
-                      <span className="text-gray-600 text-sm">Geniş peyzaj alanlarındaki uzun ağaçların kontrollü budanması.</span>
-                    </div>
+                  <li className="flex items-start gap-2 text-gray-700">
+                    <CheckCircle2 className="text-teal-600 shrink-0 mt-1" size={18} />
+                    <span>Yüksek katlı bina bakımı ve onarımı</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <ShieldCheck className="text-teal-600 mt-1 shrink-0" size={20} />
-                    <div>
-                      <strong className="block text-gray-900">Yüksek Katlı Bina Çalışmaları</strong>
-                      <span className="text-gray-600 text-sm">Oluk, izolasyon, Fransız balkon onarımı gibi bakım işleri.</span>
-                    </div>
+                  <li className="flex items-start gap-2 text-gray-700">
+                    <CheckCircle2 className="text-teal-600 shrink-0 mt-1" size={18} />
+                    <span>Geniş ortak alan aydınlatmaları bakımı</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-gray-700">
+                    <CheckCircle2 className="text-teal-600 shrink-0 mt-1" size={18} />
+                    <span>Güvenli <Link href="/hizmetler/operatorlu-vinc-kiralama" className="font-semibold text-primary underline">operatörlü sepetli vinç desteği</Link></span>
                   </li>
                 </ul>
               </div>
 
-              {/* 2. APARTMAN (MERKEZ) */}
-              <div className="bg-gray-50 border border-gray-200 p-8 rounded-3xl hover:border-indigo-500 transition-all shadow-sm hover:shadow-md relative overflow-hidden group">
-                <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
-                  <Home size={120} />
-                </div>
-                <div className="bg-indigo-100 w-16 h-16 rounded-2xl flex items-center justify-center text-indigo-600 mb-6 relative z-10">
+              {/* Elvankent ve Ahi Mesut */}
+              <div className="bg-gray-50 border border-gray-200 p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
+                <div className="bg-indigo-100 w-16 h-16 rounded-2xl flex items-center justify-center text-indigo-600 mb-6">
                   <Home size={32} />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 relative z-10 border-b border-gray-200 pb-4">Apartman (Merkez)</h3>
-                <ul className="space-y-4 relative z-10 mt-6">
-                  <li className="flex items-start gap-3">
-                    <ShieldCheck className="text-indigo-600 mt-1 shrink-0" size={20} />
-                    <div>
-                      <strong className="block text-gray-900">Cephe Boya ve Bakım</strong>
-                      <span className="text-gray-600 text-sm">Etimesgut merkezdeki eski binaların dış mantolama işleri.</span>
-                    </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">2. Elvankent ve Ahi Mesut’ta Apartman Bakım İşleri</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-2 text-gray-700">
+                    <CheckCircle2 className="text-indigo-600 shrink-0 mt-1" size={18} />
+                    <span>Apartman dış cephe yalıtım ve boya işleri</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <ShieldCheck className="text-indigo-600 mt-1 shrink-0" size={20} />
-                    <div>
-                      <strong className="block text-gray-900">Tabela Montaj</strong>
-                      <span className="text-gray-600 text-sm">Mahalle arası ticari işletmelerin ve zincir market tabelaları.</span>
-                    </div>
+                  <li className="flex items-start gap-2 text-gray-700">
+                    <CheckCircle2 className="text-indigo-600 shrink-0 mt-1" size={18} />
+                    <span>Tabela montajı ve cam değişimleri</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <ShieldCheck className="text-indigo-600 mt-1 shrink-0" size={20} />
-                    <div>
-                      <strong className="block text-gray-900">Elektrik Bakım</strong>
-                      <span className="text-gray-600 text-sm">Sokak aydınlatmaları ve apartmanların üst kat aydınlatma onarımı.</span>
-                    </div>
+                  <li className="flex items-start gap-2 text-gray-700">
+                    <CheckCircle2 className="text-indigo-600 shrink-0 mt-1" size={18} />
+                    <span>Balkon/çatı çevresi hasar onarımı</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-gray-700">
+                    <CheckCircle2 className="text-indigo-600 shrink-0 mt-1" size={18} />
+                    <span>Kısa süreli <Link href="/hizmetler/saatlik-vinc-kiralama" className="font-semibold text-primary underline">kısa süreli saatlik vinç çözümü</Link></span>
                   </li>
                 </ul>
               </div>
 
-              {/* 3. TİCARİ ALAN (AVM / CADDE) */}
-              <div className="bg-gray-50 border border-gray-200 p-8 rounded-3xl hover:border-rose-500 transition-all shadow-sm hover:shadow-md relative overflow-hidden group">
-                <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
-                  <Store size={120} />
-                </div>
-                <div className="bg-rose-100 w-16 h-16 rounded-2xl flex items-center justify-center text-rose-600 mb-6 relative z-10">
+              {/* Etimesgut Merkez */}
+              <div className="bg-gray-50 border border-gray-200 p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
+                <div className="bg-rose-100 w-16 h-16 rounded-2xl flex items-center justify-center text-rose-600 mb-6">
                   <Store size={32} />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 relative z-10 border-b border-gray-200 pb-4">Ticari Alan (AVM/Cadde)</h3>
-                <ul className="space-y-4 relative z-10 mt-6">
-                  <li className="flex items-start gap-3">
-                    <ShieldCheck className="text-rose-600 mt-1 shrink-0" size={20} />
-                    <div>
-                      <strong className="block text-gray-900">Reklam Tabelaları</strong>
-                      <span className="text-gray-600 text-sm">AVM dış cephe logoları ve büyük totem tabelaların kurulumu.</span>
-                    </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">3. Merkez ve Göksu Çevresinde Ticari İşler</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-2 text-gray-700">
+                    <CheckCircle2 className="text-rose-600 shrink-0 mt-1" size={18} />
+                    <span>Mağaza tabela montajı ve demontajı</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <ShieldCheck className="text-rose-600 mt-1 shrink-0" size={20} />
-                    <div>
-                      <strong className="block text-gray-900">Cephe Temizliği</strong>
-                      <span className="text-gray-600 text-sm">Ticari plazaların ve iş merkezlerinin dış cam temizlik işlemleri.</span>
-                    </div>
+                  <li className="flex items-start gap-2 text-gray-700">
+                    <CheckCircle2 className="text-rose-600 shrink-0 mt-1" size={18} />
+                    <span>Büyük totem ve reklam panosu kurulumu</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <ShieldCheck className="text-rose-600 mt-1 shrink-0" size={20} />
-                    <div>
-                      <strong className="block text-gray-900">Bakım İşleri</strong>
-                      <span className="text-gray-600 text-sm">Klimaların, dış ünitelerin ve AVM havalandırma motoru değişimi.</span>
-                    </div>
+                  <li className="flex items-start gap-2 text-gray-700">
+                    <CheckCircle2 className="text-rose-600 shrink-0 mt-1" size={18} />
+                    <span>Elektrik, klima ve aydınlatma çalışmaları</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-gray-700">
+                    <CheckCircle2 className="text-rose-600 shrink-0 mt-1" size={18} />
+                    <span>Aynı gün acil vinç yönlendirme hizmeti</span>
                   </li>
                 </ul>
               </div>
-
+            </div>
+            
+            <div className="mt-12 p-6 bg-teal-50 rounded-2xl border border-teal-100">
+              <p className="text-lg text-gray-700 leading-relaxed m-0">
+                Ayrıca plazalar ve iş merkezleri için <Link href="/hizmetler/cephe-temizligi-sepetli-vinc" className="font-semibold text-teal-700 underline">Etimesgut’ta cephe temizliği vinç hizmeti</Link> sağlarken, geniş site ve park alanlarında devasa yeşilliklerin bakımı için <Link href="/hizmetler/agac-budama" className="font-semibold text-teal-700 underline">ağaç budama vinç desteği</Link> sunmaktayız. Uzun soluklu dev projeleriniz için bütçe dostu <Link href="/hizmetler/gunluk-vinc-kiralama" className="font-semibold text-teal-700 underline">günlük vinç kiralama seçeneği</Link> de daima emrinizdedir.
+              </p>
             </div>
           </div>
         </section>
 
-        {/* 3. HIZ & ERİŞİM VURGUSU (FARK YARATAN BÖLÜM) */}
-        <section className="py-16 bg-teal-50 border-y border-teal-100">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
-            <div className="flex flex-col md:flex-row items-center gap-12">
-              <div className="w-full md:w-1/3 flex justify-center">
-                <div className="bg-white p-6 rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
-                  <Clock size={100} className="text-teal-600" />
-                </div>
-              </div>
-              <div className="w-full md:w-2/3 text-center md:text-left">
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Etimesgut’ta Hızlı Vinç Hizmeti</h2>
-                <div className="prose prose-lg text-gray-700 font-light">
-                  <p>
-                    Etimesgut, eski yerleşim yerlerine kıyasla çok daha düzenli bir şehir planlamasına sahiptir. İlçenin <strong>geniş yolları</strong>, bulvarları ve düzenli otopark alanları; sepetli vinç gibi büyük iş makinelerinin lokasyona ulaşımını ve kurulumunu oldukça kolaylaştırır.
-                  </p>
-                  <p>
-                    Dar sokak krizlerinin yaşanmadığı bu modern altyapı sayesinde araçlarımız hedefe trafiğe takılmadan <strong>hızlı ulaşım</strong> sağlar. Eryaman'ın en yüksek sitesinden Bağlıca'nın lüks villalarına kadar her noktada <strong>planlı çalışma</strong> disiplinimiz sayesinde işinize anında başlanır. Gecikme yaşanmadan, iş gücü kaybı yaratmadan <strong>kısa sürede müdahale</strong> edebilme yeteneğimiz, bölgedeki en büyük operasyonel gücümüzdür.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* 4. CTA BLOĞU */}
-        <section className="bg-primary py-12 border-y border-primary-dark">
-          <div className="container mx-auto px-4 text-center">
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">Etimesgut’ta en yakın vinci hızlıca yönlendirelim.</h3>
-            <p className="text-primary-foreground mb-8 text-lg">Eryaman sitelerinden Bağlıca villalarına, anında güvenli araç sevkiyatı.</p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <a
-                href="tel:05516066878"
-                className="inline-flex items-center gap-2 bg-white text-primary hover:bg-gray-100 px-8 py-4 rounded-xl font-bold text-xl transition-all shadow-xl justify-center"
-              >
-                <Phone size={24} />
-                Hemen Ara: 0551 606 68 78
-              </a>
-              <a
-                href="https://wa.me/905516066878"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 bg-[#25D366] text-white hover:bg-[#1ebd5a] px-8 py-4 rounded-xl font-bold text-xl transition-all shadow-xl justify-center"
-              >
-                <MessageCircle size={24} />
-                WhatsApp
-              </a>
-            </div>
-          </div>
-        </section>
-
-        {/* 5. FİYAT BÖLÜMÜ */}
-        <section id="fiyatlar" className="py-16 bg-white border-b border-gray-100">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-gray-50 p-8 md:p-12 rounded-3xl shadow-sm border border-gray-200 max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Etimesgut Sepetli Vinç Fiyatları</h2>
-              <div className="prose prose-gray max-w-none mb-8 text-left">
-                <p className="text-lg">
-                  Etimesgut ve Eryaman bölgesindeki vinç fiyatlandırmasını belirleyen temel faktör çalışma süresidir. Yüksek katlı devasa <strong>site işleri</strong>, kompozit yenileme veya tüm blokların dış cephe boyaması gibi günlerce/haftalarca sürebilir. Bu tür uzun soluklu şantiyelerde <strong>genelde günlük kiralama</strong> ve proje bazlı aylık kiralama modelleri uygulanarak site yönetimlerine ciddi maliyet avantajları sağlanır.
+        {/* 3. ETİMESGUT ÖZEL FİYAT BÖLÜMÜ */}
+        <section id="fiyatlar" className="py-16 bg-gray-50 border-b border-gray-200">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+            <div className="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gray-200 text-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Etimesgut Sepetli Vinç Kiralama Fiyatları</h2>
+              <div className="prose prose-lg text-gray-600 max-w-none text-left mb-8">
+                <p>
+                  Etimesgut ve çevresinde vinç hizmeti alırken maliyetin her proje için farklılık göstereceğini bilmek, bütçenizi doğru yönetmeniz için kritiktir. Kesin ve standart bir fiyat listesinden ziyade, operasyonun doğasına göre dinamik bir fiyatlandırma modeli uygulanır. Fiyatı etkileyen en önemli faktörlerin başında <strong>çalışma yüksekliği</strong> gelir; 15 metrelik bir aracın operasyon maliyeti ile 45 metrelik bir aracın maliyeti aynı değildir.
                 </p>
-                <p className="text-lg">
-                  Buna karşın, tek bir dairenin klimasının taşınması, bir ağacın budanması veya AVM caddesindeki bir tabelanın asılması gibi <strong>kısa işler saatlik kiralama</strong> üzerinden fiyatlandırılır. Aracın merkez garajdan gideceği mesafe ve <strong>lokasyon fiyatı etkiler</strong>. Projeniz için en doğru ve ekonomik teklifi oluşturmak adına keşif talep edebilirsiniz.
+                <p>
+                  Bunun yanı sıra <strong>işin süresi</strong> çok belirleyicidir. Kısa süreli bir tabela işlemi için <strong>saatlik kiralama</strong> bedeli alınırken, devasa bir sitenin günlerce sürecek mantolaması için <strong>günlük kiralama ihtiyacı</strong> doğar ve bu model saat bazında çok daha avantajlı rakamlara denk gelir. Etimesgut merkez ile Eryaman, Bağlıca, Elvankent gibi <strong>lokasyon farkı</strong> aracın transfer maliyetlerini çok ufak etkileyebilir ancak bölgeye yoğun araç sevkiyatımız sayesinde bu farkı minimize ediyoruz.
+                </p>
+                <p>
+                  Sitenin bahçe yapısı, <strong>site içi giriş ve araç yanaşma durumu</strong> makine seçimini zorlaştırabilir. Ayrıca her kiralama işlemine dahil ettiğimiz belgeli <strong>operatör ihtiyacı</strong>, <strong>işin türü</strong> (tabela, cephe, elektrik bakım, ağaç budama) ve anlık hasarlarda gereken <strong>acil yönlendirme ihtiyacı</strong> fiyat tekliflerini şekillendirir. Doğru analiz ve ekonomik fiyat için uzman ekiplerimize ulaşmanız yeterlidir.
                 </p>
               </div>
-              <div className="bg-teal-50 border border-teal-200 rounded-xl p-6 shadow-sm inline-block w-full">
-                <p className="text-gray-900 font-bold mb-4 text-xl">Sitenize veya apartmanınıza özel net fiyat için bizi arayın.</p>
-                <div className="flex flex-col sm:flex-row justify-center gap-3">
-                  <a href="tel:05516066878" className="inline-flex justify-center items-center gap-2 bg-teal-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-teal-700 transition-colors text-lg">
-                    <Phone size={22} /> Net Fiyat Alın
+              <div className="bg-teal-50 border border-teal-200 rounded-xl p-6 inline-block w-full">
+                <p className="text-teal-900 font-bold mb-4 text-xl">Etimesgut vinç fiyatı için 0551 606 68 78 numarasını arayın veya WhatsApp’tan konum ve iş fotoğrafı göndererek hızlı teklif alın.</p>
+                <div className="flex flex-col sm:flex-row justify-center gap-4">
+                  <a href="tel:05516066878" className="inline-flex justify-center items-center gap-2 bg-primary text-white px-8 py-4 rounded-xl font-bold hover:bg-primary-dark transition-colors text-lg">
+                    <Phone size={22} /> Hemen Ara
+                  </a>
+                  <a href="https://wa.me/905516066878" target="_blank" rel="noreferrer" className="inline-flex justify-center items-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#1ebd5a] transition-colors text-lg">
+                    <MessageCircle size={22} /> WhatsApp
                   </a>
                 </div>
               </div>
@@ -390,69 +337,94 @@ export default function EtimesgutPage() {
           </div>
         </section>
 
-        {/* 6. GÜVEN BLOĞU (E-E-A-T) */}
-        <section className="py-16 bg-gray-50 border-b border-gray-100">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        {/* 4. E-E-A-T GÜVEN BLOĞU: Gerçek Çalışmalar */}
+        <section className="py-16 bg-white border-b border-gray-100">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Etimesgut’ta Gerçekleştirdiğimiz Vinç Çalışmaları</h2>
-              <p className="text-lg text-gray-600">Eryaman, Bağlıca ve Elvankent'teki lüks konutlarda ve AVM'lerde başarıyla biten operasyonlar.</p>
+              <p className="text-lg text-gray-600">Bölgenin farklı noktalarında tamamladığımız gerçek operasyon örneklerimiz.</p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 group">
-                <div className="relative h-48 w-full">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Kart 1 */}
+              <div className="bg-gray-50 rounded-2xl overflow-hidden shadow-sm border border-gray-200 flex flex-col">
+                <div className="relative h-56 w-full">
                   <Image
                     src="/images/bolge/eryaman-site-vinc.jpg"
-                    alt="etimesgut sepetli vinç kiralama"
+                    alt="eryaman site cephe vinç hizmeti"
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover"
                   />
                 </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-2 text-teal-600 font-bold mb-2">
-                    <Building2 size={20} /> Site Cephe İşi
+                <div className="p-6 flex flex-col flex-grow">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Eryaman’da Site Cephe Çalışması</h3>
+                  <div className="space-y-2 mb-6 flex-grow">
+                    <p className="text-sm text-gray-700"><strong>İş Türü:</strong> 12 Katlı Site Dış Cephe Yalıtımı</p>
+                    <p className="text-sm text-gray-700"><strong>Neden Gerekti:</strong> Geleneksel iskelenin kurulamayacağı dar bir zemine sahip olan bloklarda rüzgar hasarı sebebiyle acil dış cephe onarımı gerekiyordu.</p>
+                    <p className="text-sm text-gray-700"><strong>Nasıl Çözüldü:</strong> 45 metrelik sepetli vincimizle site bahçesinin peyzajına zarar vermeden araç sabitlendi ve günlük kiralama ile tüm cephe 2 günde onarıldı.</p>
                   </div>
-                  <p className="text-gray-600 text-sm">Eryaman Göksu mevkiindeki 15 katlı lüks bir sitede, şiddetli fırtınadan hasar gören dış cephe sandviç panellerinin sökülüp yenilenmesi işlemi iskele kurulmadan vincimizle çözüldü.</p>
+                  <a href="tel:05516066878" className="inline-flex items-center justify-center w-full py-3 bg-teal-100 text-teal-800 font-bold rounded-lg hover:bg-teal-200 transition-colors text-sm">
+                    Benzer iş için 0551 606 68 78
+                  </a>
                 </div>
               </div>
 
-              <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 group">
-                <div className="relative h-48 w-full bg-gray-200 flex items-center justify-center">
-                  <Store size={48} className="text-gray-400" />
+              {/* Kart 2 */}
+              <div className="bg-gray-50 rounded-2xl overflow-hidden shadow-sm border border-gray-200 flex flex-col">
+                <div className="relative h-56 w-full">
+                  <Image
+                    src="/images/bolge/baglica-agac-budama-vinc.jpg"
+                    alt="bağlıca ağaç budama sepetli vinç"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-2 text-teal-600 font-bold mb-2">
-                    <Paintbrush size={20} /> Tabela Montajı
+                <div className="p-6 flex flex-col flex-grow">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Bağlıca’da Ağaç Budama ve Peyzaj Desteği</h3>
+                  <div className="space-y-2 mb-6 flex-grow">
+                    <p className="text-sm text-gray-700"><strong>İş Türü:</strong> Villa Bahçesi Yüksek Çam Ağacı Kesimi</p>
+                    <p className="text-sm text-gray-700"><strong>Neden Gerekti:</strong> Çatılara sürten ve fırtınada evin camlarına zarar verme riski taşıyan çok yüksek bir çam ağacının güvenli şekilde tepesinin alınması zorunluydu.</p>
+                    <p className="text-sm text-gray-700"><strong>Nasıl Çözüldü:</strong> Kompakt sepetli vincimizle bahçe duvarını aşarak erişim sağlandı. Uzman operatör ve testere ekibi ile tehlikeli dallar iplerle yavaşça aşağı indirildi.</p>
                   </div>
-                  <p className="text-gray-600 text-sm">Bağlıca bulvarı üzerinde yeni açılan bir zincir marketin, mağaza dış cephe kompozit giydirmesi ve gece aydınlatmalı büyük kutu harf tabela montajı sorunsuz teslim edildi.</p>
+                  <a href="tel:05516066878" className="inline-flex items-center justify-center w-full py-3 bg-teal-100 text-teal-800 font-bold rounded-lg hover:bg-teal-200 transition-colors text-sm">
+                    Benzer iş için 0551 606 68 78
+                  </a>
                 </div>
               </div>
 
-              <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 group">
-                <div className="relative h-48 w-full">
+              {/* Kart 3 */}
+              <div className="bg-gray-50 rounded-2xl overflow-hidden shadow-sm border border-gray-200 flex flex-col">
+                <div className="relative h-56 w-full">
                   <Image
                     src="/images/bolge/etimesgut-vinc.jpg"
-                    alt="ankara etimesgut vinç hizmeti"
+                    alt="elvankent tabela montaj vinç hizmeti"
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover"
                   />
                 </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-2 text-teal-600 font-bold mb-2">
-                    <Trees size={20} /> Ağaç Budama
+                <div className="p-6 flex flex-col flex-grow">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Elvankent’te Tabela ve Elektrik Bakım İşi</h3>
+                  <div className="space-y-2 mb-6 flex-grow">
+                    <p className="text-sm text-gray-700"><strong>İş Türü:</strong> Mağaza Işıklı Tabela Montajı</p>
+                    <p className="text-sm text-gray-700"><strong>Neden Gerekti:</strong> Yeni açılan ticari bir işletmenin 3. kat hizasına büyük bir ışıklı tabela takılması ve dış aydınlatma hatlarının çekilmesi gerekiyordu.</p>
+                    <p className="text-sm text-gray-700"><strong>Nasıl Çözüldü:</strong> Cadde üzerine park edilen aracımız ile trafik akışını engellemeden saatlik kiralama paketi kullanılarak tabela montajı hızlıca tamamlandı.</p>
                   </div>
-                  <p className="text-gray-600 text-sm">Elvankent sınırlarında bulunan ve dalları park halindeki araçların üzerine sarkan dev çam ağaçları, peyzaja zarar vermeden üstten kesim yapılarak güvenle budandı.</p>
+                  <a href="tel:05516066878" className="inline-flex items-center justify-center w-full py-3 bg-teal-100 text-teal-800 font-bold rounded-lg hover:bg-teal-200 transition-colors text-sm">
+                    Benzer iş için 0551 606 68 78
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* 7. HARİTA (ÇOK KRİTİK) */}
-        <section className="py-16 bg-white border-b border-gray-100">
+        {/* 5. HARİTA / GEO SİNYALİ */}
+        <section className="py-16 bg-gray-50 border-b border-gray-200">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
-            <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">Etimesgut Hizmet Lokasyonu</h2>
-            <div className="rounded-2xl overflow-hidden shadow-md border border-gray-200 w-full h-[400px]">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold text-gray-900 flex justify-center items-center gap-2"><MapPin className="text-teal-600" /> Hizmet Lokasyonumuz</h2>
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-lg border border-gray-200 w-full h-[400px]">
               <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48938.82489814421!2d32.61868512534571!3d39.94639735492471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d337f7c6cd0c59%3A0xe5426715f3de40b0!2sEtimesgut%2C%20Ankara!5e0!3m2!1str!2str!4v1714161000000!5m2!1str!2str" 
                 width="100%" 
@@ -464,51 +436,71 @@ export default function EtimesgutPage() {
                 title="Etimesgut Ankara Harita"
               ></iframe>
             </div>
+            <p className="text-center text-gray-600 mt-6 font-medium text-lg">
+              Etimesgut, Eryaman, Bağlıca, Elvankent ve çevresinde sepetli vinç yönlendirmesi yapıyoruz.
+            </p>
           </div>
         </section>
 
-        {/* 8. İÇ LİNK BLOĞU EKLE */}
-        <section className="py-16 bg-gray-50 border-b border-gray-100">
+        {/* 6. İÇ LİNK DESTEK BLOĞU */}
+        <section className="py-16 bg-white border-b border-gray-100">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
             <div className="text-center mb-10">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Etimesgut’ta Sunulan Vinç Hizmetleri</h2>
-              <p className="text-lg text-gray-600">İhtiyacınıza yönelik sunduğumuz başlıca operasyonel çözümlerimiz.</p>
+              <p className="text-lg text-gray-600">Projenizin türüne göre tercih edebileceğiniz operasyonel çözümler.</p>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-              <Link href="/hizmetler/sepetli-vinc-kiralama" className="bg-white border border-gray-200 p-5 rounded-xl hover:border-teal-500 hover:shadow-md transition-all flex flex-col group">
-                <span className="font-bold text-gray-800 group-hover:text-teal-600 transition-colors text-lg mb-2">Sepetli Vinç</span>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              <Link href="/hizmetler/sepetli-vinc-kiralama" className="bg-gray-50 border border-gray-200 p-5 rounded-xl hover:border-primary hover:shadow-md transition-all flex flex-col group">
+                <span className="font-bold text-gray-800 group-hover:text-primary transition-colors text-md mb-2">Ankara Sepetli Vinç Kiralama</span>
                 <span className="text-sm text-gray-500 mt-auto flex items-center gap-1 font-medium">İncele <ChevronRight size={16} /></span>
               </Link>
-              <Link href="/hizmetler/operatorlu-vinc-kiralama" className="bg-white border border-gray-200 p-5 rounded-xl hover:border-teal-500 hover:shadow-md transition-all flex flex-col group">
-                <span className="font-bold text-gray-800 group-hover:text-teal-600 transition-colors text-lg mb-2">Operatörlü Vinç</span>
+              <Link href="/hizmetler/operatorlu-vinc-kiralama" className="bg-gray-50 border border-gray-200 p-5 rounded-xl hover:border-primary hover:shadow-md transition-all flex flex-col group">
+                <span className="font-bold text-gray-800 group-hover:text-primary transition-colors text-md mb-2">Operatörlü Vinç Kiralama</span>
                 <span className="text-sm text-gray-500 mt-auto flex items-center gap-1 font-medium">İncele <ChevronRight size={16} /></span>
               </Link>
-              <Link href="/hizmetler/saatlik-vinc-kiralama" className="bg-white border border-gray-200 p-5 rounded-xl hover:border-teal-500 hover:shadow-md transition-all flex flex-col group">
-                <span className="font-bold text-gray-800 group-hover:text-teal-600 transition-colors text-lg mb-2">Saatlik Vinç</span>
+              <Link href="/hizmetler/saatlik-vinc-kiralama" className="bg-gray-50 border border-gray-200 p-5 rounded-xl hover:border-primary hover:shadow-md transition-all flex flex-col group">
+                <span className="font-bold text-gray-800 group-hover:text-primary transition-colors text-md mb-2">Saatlik Vinç Kiralama</span>
                 <span className="text-sm text-gray-500 mt-auto flex items-center gap-1 font-medium">İncele <ChevronRight size={16} /></span>
               </Link>
-              <Link href="/hizmetler/gunluk-vinc-kiralama" className="bg-white border border-gray-200 p-5 rounded-xl hover:border-teal-500 hover:shadow-md transition-all flex flex-col group">
-                <span className="font-bold text-gray-800 group-hover:text-teal-600 transition-colors text-lg mb-2">Günlük Vinç</span>
+              <Link href="/hizmetler/gunluk-vinc-kiralama" className="bg-gray-50 border border-gray-200 p-5 rounded-xl hover:border-primary hover:shadow-md transition-all flex flex-col group">
+                <span className="font-bold text-gray-800 group-hover:text-primary transition-colors text-md mb-2">Günlük Vinç Kiralama</span>
                 <span className="text-sm text-gray-500 mt-auto flex items-center gap-1 font-medium">İncele <ChevronRight size={16} /></span>
               </Link>
-              <Link href="/hizmetler/cephe-temizligi-sepetli-vinc" className="bg-white border border-gray-200 p-5 rounded-xl hover:border-teal-500 hover:shadow-md transition-all flex flex-col group">
-                <span className="font-bold text-gray-800 group-hover:text-teal-600 transition-colors text-lg mb-2">Cephe İşleri Vinç</span>
+              <Link href="/hizmetler/cephe-temizligi-sepetli-vinc" className="bg-gray-50 border border-gray-200 p-5 rounded-xl hover:border-primary hover:shadow-md transition-all flex flex-col group">
+                <span className="font-bold text-gray-800 group-hover:text-primary transition-colors text-md mb-2">Cephe Temizliği İçin Sepetli Vinç</span>
                 <span className="text-sm text-gray-500 mt-auto flex items-center gap-1 font-medium">İncele <ChevronRight size={16} /></span>
               </Link>
-              <Link href="/hizmetler/agac-budama" className="bg-white border border-gray-200 p-5 rounded-xl hover:border-teal-500 hover:shadow-md transition-all flex flex-col group">
-                <span className="font-bold text-gray-800 group-hover:text-teal-600 transition-colors text-lg mb-2">Ağaç Budama Vinç</span>
+              <Link href="/hizmetler/agac-budama" className="bg-gray-50 border border-gray-200 p-5 rounded-xl hover:border-primary hover:shadow-md transition-all flex flex-col group">
+                <span className="font-bold text-gray-800 group-hover:text-primary transition-colors text-md mb-2">Ağaç Budama İçin Sepetli Vinç</span>
                 <span className="text-sm text-gray-500 mt-auto flex items-center gap-1 font-medium">İncele <ChevronRight size={16} /></span>
+              </Link>
+              <Link href="/bolgeler" className="bg-teal-50 border border-teal-200 p-5 rounded-xl hover:bg-teal-600 hover:border-teal-600 transition-all flex flex-col group lg:col-span-2">
+                <span className="font-bold text-teal-800 group-hover:text-white transition-colors text-md mb-2">Tüm Hizmet Bölgeleri</span>
+                <span className="text-sm text-teal-600 group-hover:text-teal-100 mt-auto flex items-center gap-1 font-medium">İncele <ChevronRight size={16} /></span>
               </Link>
             </div>
           </div>
         </section>
 
-        {/* 9. FAQ Bölümü */}
+        {/* 7. YAKIN BÖLGELER BLOĞU */}
+        <section className="py-12 bg-gray-50 border-b border-gray-200">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Etimesgut’a Yakın Hizmet Bölgeleri</h2>
+            <p className="text-gray-600 mb-6">Etimesgut çevresindeki komşu bölgelere de hızlı araç yönlendirmesi sağlıyoruz.</p>
+            <div className="flex flex-wrap justify-center gap-3">
+              <Link href="/bolgeler/sincan-sepetli-vinc-kiralama" className="px-4 py-2 bg-white border border-gray-300 rounded-full text-sm font-semibold text-gray-700 hover:border-primary hover:text-primary transition-colors">Sincan sepetli vinç kiralama</Link>
+              <Link href="/bolgeler/yenimahalle-sepetli-vinc-kiralama" className="px-4 py-2 bg-white border border-gray-300 rounded-full text-sm font-semibold text-gray-700 hover:border-primary hover:text-primary transition-colors">Yenimahalle vinç kiralama</Link>
+              <Link href="/bolgeler/ostim-sepetli-vinc-kiralama" className="px-4 py-2 bg-white border border-gray-300 rounded-full text-sm font-semibold text-gray-700 hover:border-primary hover:text-primary transition-colors">Ostim sanayi vinç hizmeti</Link>
+              <Link href="/bolgeler/golbasi-sepetli-vinc-kiralama" className="px-4 py-2 bg-white border border-gray-300 rounded-full text-sm font-semibold text-gray-700 hover:border-primary hover:text-primary transition-colors">Gölbaşı sepetli vinç hizmeti</Link>
+            </div>
+          </div>
+        </section>
+
+        {/* 8. FAQ Bölümü */}
         <section className="py-16 bg-white border-b border-gray-100">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Sıkça Sorulan Sorular</h2>
-              <p className="text-lg text-gray-600">Etimesgut, Eryaman ve Bağlıca bölgesindeki operasyonlarla ilgili merak edilen detaylar.</p>
             </div>
 
             <div className="space-y-4">
