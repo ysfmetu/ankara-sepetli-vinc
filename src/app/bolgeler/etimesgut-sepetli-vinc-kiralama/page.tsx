@@ -496,8 +496,21 @@ export default function EtimesgutPage() {
           </div>
         </section>
 
-        {/* 8. FAQ Bölümü */}
+        {/* 8. BLOG REFERANS BLOĞU */}
         <section className="py-16 bg-white border-b border-gray-100">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Etimesgut’ta Sepetli Vinç Nerelerde Kullanılır?</h2>
+            <p className="text-lg text-gray-600 mb-6">
+              Etimesgut, Eryaman, Bağlıca ve Elvankent bölgelerinde sepetli vinç kullanım alanlarını detaylı olarak anlattığımız rehber içeriğimizi inceleyin.
+            </p>
+            <Link href="/blog/etimesgut-sepetli-vinc-kiralama-nerelerde-kullanilir" className="font-semibold underline text-primary hover:text-primary/80 transition text-lg inline-flex items-center gap-1 justify-center">
+              Etimesgut’ta sepetli vinç nerelerde kullanılır? <ArrowRight size={18} />
+            </Link>
+          </div>
+        </section>
+
+        {/* 9. FAQ Bölümü */}
+        <section className="py-16 bg-gray-50 border-b border-gray-100">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Sıkça Sorulan Sorular</h2>

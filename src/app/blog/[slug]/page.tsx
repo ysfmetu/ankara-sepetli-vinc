@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: BlogPostProps): Promise<Metad
 
     if (!isPublished) {
         return {
-            title: `${post.title} | Ankara Sepetli Vinç Blog`,
+            title: post.seoTitle || `${post.title} | Ankara Sepetli Vinç Blog`,
             description: post.excerpt,
             robots: {
                 index: false,
@@ -50,7 +50,7 @@ export async function generateMetadata({ params }: BlogPostProps): Promise<Metad
     }
 
     return {
-        title: `${post.title} | ${SEO_CONFIG.siteName} Blog`,
+        title: post.seoTitle || `${post.title} | ${SEO_CONFIG.siteName} Blog`,
         description: post.excerpt,
         alternates: getMetadataAlternates(`/blog/${slug}`),
         openGraph: {
@@ -170,13 +170,6 @@ export default async function BlogPost({ params }: BlogPostProps) {
 
                                 {/* Content Area */}
                                 <div className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-a:text-primary hover:prose-a:text-primary-hover prose-img:rounded-xl text-gray-700 leading-relaxed overflow-hidden">
-                                    {(!post.content.includes('<img') && !post.content.includes('/images/blog/') && !post.content.includes('![')) && (
-                                        <img
-                                            src={`/images/blog/${post.slug}-1.jpg`}
-                                            alt={`${post.title} görseli - sepetli vinç kiralama Ankara`}
-                                            className="w-full aspect-video object-cover rounded-xl shadow-sm mb-8 mt-2"
-                                        />
-                                    )}
                                     <div dangerouslySetInnerHTML={{ __html: post.content }} />
                                 </div>
 

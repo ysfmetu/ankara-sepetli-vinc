@@ -7,6 +7,7 @@ const CONTENT_PATH = path.join(process.cwd(), 'content/blog');
 
 export interface BlogPostFrontmatter {
     title: string;
+    seoTitle?: string;
     slug: string;
     excerpt: string;
     date: string;
@@ -253,6 +254,7 @@ export function getAllPosts(): BlogPost[] {
 
             return {
                 title: data.title,
+                seoTitle: data.seoTitle,
                 slug: slugParsed,
                 excerpt: data.description || data.excerpt || '', // Handle both common variants
                 date: data.date,
