@@ -10,12 +10,12 @@ import { getMetadataAlternates, getCanonicalUrl } from '@/lib/seo-utils';
 import { SEO_CONFIG } from '@/config/seo';
 
 export const metadata: Metadata = {
-  title: 'Etimesgut Sepetli Vinç Kiralama | Aynı Gün Hızlı Vinç Hizmeti',
-  description: "Etimesgut, Eryaman, Bağlıca ve Elvankent’te sepetli vinç kiralama hizmeti. Site, apartman, tabela, cephe ve ağaç işleri için hızlı teklif: 0551 606 68 78",
+  title: 'Etimesgut Sepetli Vinç Kiralama | 30 Dakikada Kapınızda',
+  description: 'Etimesgut, Eryaman, Bağlıca ve Elvankent’te sepetli vinç kiralama hizmeti. 30 dakika içinde adresinizdeyiz. Hemen arayın: 0551 606 68 78',
   alternates: getMetadataAlternates('/bolgeler/etimesgut-sepetli-vinc-kiralama'),
   openGraph: {
-    title: 'Etimesgut Sepetli Vinç Kiralama | Aynı Gün Hızlı Vinç Hizmeti',
-    description: "Etimesgut, Eryaman, Bağlıca ve Elvankent’te sepetli vinç kiralama hizmeti. Site, apartman, tabela, cephe ve ağaç işleri için hızlı teklif: 0551 606 68 78",
+    title: 'Etimesgut Sepetli Vinç Kiralama | 30 Dakikada Kapınızda',
+    description: 'Etimesgut, Eryaman, Bağlıca ve Elvankent’te sepetli vinç kiralama hizmeti. 30 dakika içinde adresinizdeyiz. Hemen arayın: 0551 606 68 78',
     url: getCanonicalUrl('/bolgeler/etimesgut-sepetli-vinc-kiralama'),
   },
 };
@@ -225,6 +225,9 @@ export default function EtimesgutPage() {
                   <Building2 size={32} />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">1. Eryaman ve Bağlıca’da Site Cephe İşleri</h3>
+                <p className="text-sm text-gray-600 mb-4 leading-relaxed">
+                  Etimesgut’un en yoğun bölgelerinden biri olan Eryaman’da da aktif olarak hizmet vermekteyiz. Detaylı bilgi için <Link href="/bolgeler/eryaman-sepetli-vinc-kiralama" className="font-semibold underline text-primary hover:text-primary/80 transition-colors">Eryaman sepetli vinç kiralama</Link> sayfamızı inceleyebilirsiniz.
+                </p>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-2 text-gray-700">
                     <CheckCircle2 className="text-teal-600 shrink-0 mt-1" size={18} />

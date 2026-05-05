@@ -86,6 +86,12 @@ const districtsData = [
     excerpt: 'Etimesgut, Eryaman ve Bağlıca bölgesinde devasa site bahçeleri, apartman blokları temizliği ve yüksek ağaç budama işleri için çevreyi rahatsız etmeyen sessiz ve pratik kiralık vinç desteği.',
   },
   {
+    name: 'Eryaman',
+    slug: 'eryaman',
+    image: '/images/bolge/eryaman-cephe-temizligi-mantolama.png',
+    excerpt: 'Eryaman bölgesindeki yüksek katlı sitelerde dış cephe mantolama, çatı oluk onarımı, devasa reklam tabela montajı ve ağaç budama işleri için hızlı sepetli vinç kiralama çözümleri.',
+  },
+  {
     name: 'Altındağ',
     slug: 'altindag',
     image: '/images/bolge/altindag-sepetli-vinc-calisma.png',
