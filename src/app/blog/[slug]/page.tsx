@@ -11,6 +11,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import { SEO_CONFIG } from '@/config/seo';
 import { getMetadataAlternates, getCanonicalUrl } from '@/lib/seo-utils';
 import { getWhatsAppUrl, getPhoneUrl, siteConfig } from '@/config/site';
+import ZoomableImage from '@/components/ZoomableImage';
 
 interface BlogPostProps {
     params: Promise<{ slug: string }>;
@@ -144,11 +145,13 @@ export default async function BlogPost({ params }: BlogPostProps) {
 
                         {/* Left: Article Content */}
                         <article className="lg:w-2/3 bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-                            <div className="relative w-full aspect-video before:absolute before:inset-0 before:bg-gradient-to-b before:from-transparent before:to-black/55 before:z-10 before:pointer-events-none">
-                                <img
+                            <div className="relative w-full aspect-video bg-gray-50 border-b border-gray-100">
+                                <ZoomableImage
                                     src={post.image}
                                     alt={`${post.title} | Ankara Sepetli Vinç`}
-                                    className="w-full h-full object-cover"
+                                    fill
+                                    className="object-contain p-4"
+                                    containerClassName="absolute inset-0"
                                 />
                             </div>
 

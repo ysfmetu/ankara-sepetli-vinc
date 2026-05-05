@@ -134,7 +134,7 @@ export default function YenimahallePage() {
         <section className="relative bg-gray-900 text-white overflow-hidden py-16 md:py-24">
           <div className="absolute inset-0 opacity-40">
             <Image
-              src="/images/bolge/yenimahalle-vinc.jpg"
+              src="/images/bolge/yenimahalle-sepetli-vinc-kiralama-cover.png"
               alt="yenimahalle sepetli vinç kiralama"
               fill
               className="object-cover"

@@ -38,7 +38,7 @@ export default function BlogSection() {
                                 <img
                                     src={post.image}
                                     alt={`Ankara sepetli vinç kiralama hizmeti - ${post.title}`}
-                                    className="w-full h-full object-cover transform group-hover:scale-102 transition-transform duration-500 ease-out"
+                                    className="w-full h-full object-contain bg-gray-50 p-4 transform group-hover:scale-102 transition-transform duration-500 ease-out"
                                 />
                                 <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-primary flex items-center gap-1.5 shadow-sm">
                                     <BookOpen className="w-3.5 h-3.5" />

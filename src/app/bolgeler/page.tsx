@@ -58,7 +58,7 @@ const districtsData = [
   {
     name: 'Yenimahalle',
     slug: 'yenimahalle',
-    image: '/images/bolge/yenimahalle-sepetli-vinc-calisma.jpg',
+    image: '/images/bolge/yenimahalle-sepetli-vinc-kiralama-cover.png',
     excerpt: 'Yenimahalle genelinde bina dış cephe tadilatları, klima montajı, cam silimi ve yüksek katlı apartmanlardaki bakım çalışmaları için uygun fiyatlı kiralık platform vinçlerimizle hızlı yönlendirme yapıyoruz.',
   },
   {
