@@ -499,6 +499,23 @@ export default function TabelaMontajPage() {
           </div>
         </section>
 
+        {/* 7.5 Gerçek Proje Örneği */}
+        <section className="py-16 bg-blue-50 border-b border-blue-100">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+            <div className="bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-gray-200 text-center md:text-left flex flex-col md:flex-row items-center gap-8">
+              <div className="flex-1">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">Gerçek Proje Örneği</h2>
+                <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                  Ankara Keçiören Ovacık bölgesinde Özka Lastik için gerçekleştirdiğimiz tabela montajı çalışmasında, sepetli vinç desteği ile kurulum işlemi yalnızca 4 saat içinde tamamlandı.
+                </p>
+                <Link href="/blog/kecioren-ovacik-tabela-montaj-sepetli-vinc-destegi" className="inline-flex items-center justify-center md:justify-start gap-1 font-semibold underline text-primary hover:text-primary-dark transition-colors text-lg">
+                  Projenin tüm detaylarını inceleyin <ChevronRight size={20} className="no-underline" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* 8. Süreç Bölümü */}
         <section className="py-16 bg-gray-50 border-b border-gray-100">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">

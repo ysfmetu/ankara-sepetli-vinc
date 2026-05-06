@@ -11,6 +11,7 @@ import BlogSection from '@/components/BlogSection';
 import Footer from '@/components/Footer';
 import FloatingCTA from '@/components/FloatingCTA';
 import HomeRegionalLinks from '@/components/HomeRegionalLinks';
+import RecentProject from '@/components/RecentProject';
 
 import { SEO_CONFIG } from '@/config/seo';
 import { getMetadataAlternates } from '@/lib/seo-utils';
@@ -113,6 +114,7 @@ export default function Home() {
         <Hero />
         <TrustBar />
         <Services />
+        <RecentProject />
         <HomeRegionalLinks />
         <WhyUs />
         <ServiceAreas />
