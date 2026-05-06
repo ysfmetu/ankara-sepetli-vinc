@@ -37,10 +37,10 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/logo.png', // WhatsApp/Twitter SVG desteklemez, PNG veya JPG olmalı
+        url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: SEO_CONFIG.siteName,
+        alt: `${SEO_CONFIG.siteName} - Ankara Sepetli Vinç Kiralama`,
       },
     ],
   },
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: SEO_CONFIG.defaultTitle,
     description: SEO_CONFIG.defaultDescription,
-    images: ['/logo.png'],
+    images: ['/og-image.png'],
   },
 };
 

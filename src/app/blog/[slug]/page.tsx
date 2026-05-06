@@ -50,6 +50,10 @@ export async function generateMetadata({ params }: BlogPostProps): Promise<Metad
         }
     }
 
+    const ogImage = post.image
+        ? `${SEO_CONFIG.baseUrl}${post.image}`
+        : `${SEO_CONFIG.baseUrl}/og-image.png`;
+
     return {
         title: post.seoTitle || `${post.title} | ${SEO_CONFIG.siteName} Blog`,
         description: post.excerpt,
@@ -62,7 +66,7 @@ export async function generateMetadata({ params }: BlogPostProps): Promise<Metad
             publishedTime: post.date,
             images: [
                 {
-                    url: `${SEO_CONFIG.baseUrl}${post.image}`,
+                    url: ogImage,
                     width: 1200,
                     height: 630,
                     alt: post.title,
@@ -73,7 +77,7 @@ export async function generateMetadata({ params }: BlogPostProps): Promise<Metad
             card: 'summary_large_image',
             title: post.title,
             description: post.excerpt,
-            images: [`${SEO_CONFIG.baseUrl}${post.image}`],
+            images: [ogImage],
         }
     };
 }
