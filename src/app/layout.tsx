@@ -28,6 +28,16 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: '48x48', type: 'image/x-icon' },
+      { url: '/favicon.svg', sizes: 'any', type: 'image/svg+xml' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    shortcut: '/favicon.ico',
+  },
   openGraph: {
     title: SEO_CONFIG.defaultTitle,
     description: SEO_CONFIG.defaultDescription,
@@ -37,10 +47,11 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/og-image.png',
+        url: `${SEO_CONFIG.baseUrl}/og-image.jpg`,
         width: 1200,
         height: 630,
         alt: `${SEO_CONFIG.siteName} - Ankara Sepetli Vinç Kiralama`,
+        type: 'image/jpeg',
       },
     ],
   },
@@ -48,7 +59,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: SEO_CONFIG.defaultTitle,
     description: SEO_CONFIG.defaultDescription,
-    images: ['/og-image.png'],
+    images: [`${SEO_CONFIG.baseUrl}/og-image.jpg`],
   },
 };
 
