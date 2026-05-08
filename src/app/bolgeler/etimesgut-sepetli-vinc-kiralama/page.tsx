@@ -10,12 +10,12 @@ import { getMetadataAlternates, getCanonicalUrl } from '@/lib/seo-utils';
 import { SEO_CONFIG } from '@/config/seo';
 
 export const metadata: Metadata = {
-  title: 'Etimesgut Sepetli Vinç Kiralama | 30 Dakikada Kapınızda',
-  description: 'Etimesgut, Eryaman, Bağlıca ve Elvankent’te sepetli vinç kiralama hizmeti. 30 dakika içinde adresinizdeyiz. Hemen arayın: 0551 606 68 78',
+  title: 'Etimesgut Sepetli Vinç Kiralama | 30 Dakikada Ulaşım ⚡ 0551 606 68 78',
+  description: 'Etimesgut, Eryaman, Bağlıca ve Elvankent bölgelerinde sepetli vinç kiralama hizmeti. 30 dakikada adresinize ulaşım, operatörlü vinç desteği ve uygun fiyat avantajı için hemen arayın: 0551 606 68 78',
   alternates: getMetadataAlternates('/bolgeler/etimesgut-sepetli-vinc-kiralama'),
   openGraph: {
-    title: 'Etimesgut Sepetli Vinç Kiralama | 30 Dakikada Kapınızda',
-    description: 'Etimesgut, Eryaman, Bağlıca ve Elvankent’te sepetli vinç kiralama hizmeti. 30 dakika içinde adresinizdeyiz. Hemen arayın: 0551 606 68 78',
+    title: 'Etimesgut Sepetli Vinç Kiralama | 30 Dakikada Ulaşım ⚡ 0551 606 68 78',
+    description: 'Etimesgut, Eryaman, Bağlıca ve Elvankent bölgelerinde sepetli vinç kiralama hizmeti. 30 dakikada adresinize ulaşım, operatörlü vinç desteği ve uygun fiyat avantajı için hemen arayın: 0551 606 68 78',
     url: getCanonicalUrl('/bolgeler/etimesgut-sepetli-vinc-kiralama'),
   },
 };
