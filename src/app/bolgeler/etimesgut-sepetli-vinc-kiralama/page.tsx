@@ -512,6 +512,19 @@ export default function EtimesgutPage() {
           </div>
         </section>
 
+        {/* 8.5. GERÇEK SAHA ÇALIŞMALARI BLOĞU */}
+        <section className="py-16 bg-teal-50 border-b border-teal-100">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Etimesgut Bölgesinde Gerçekleştirdiğimiz Son Çalışmalar</h2>
+            <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+              Bağlıca villa bölgesinde gerçekleştirdiğimiz ağaç budama çalışmasında sepetli vinç desteği, budama sonrası temizlik, nakliye ve belediye çöp atım izin süreçlerini uçtan uca yönettik.
+            </p>
+            <Link href="/blog/baglica-villa-bolgesinde-agac-budama-calismasi" className="inline-flex items-center justify-center gap-2 font-bold bg-white border-2 border-teal-600 text-teal-700 hover:bg-teal-600 hover:text-white px-8 py-4 rounded-xl transition-all shadow-sm">
+              Bağlıca villa bölgesinde ağaç budama çalışmamızı inceleyin <ArrowRight size={20} />
+            </Link>
+          </div>
+        </section>
+
         {/* 9. FAQ Bölümü */}
         <section className="py-16 bg-gray-50 border-b border-gray-100">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">

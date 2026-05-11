@@ -149,13 +149,19 @@ export default async function BlogPost({ params }: BlogPostProps) {
 
                         {/* Left: Article Content */}
                         <article className="lg:w-2/3 bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-                            <div className="relative w-full aspect-video bg-gray-50 border-b border-gray-100">
+                            <div className="relative w-full bg-gray-900 border-b border-gray-100 flex justify-center overflow-hidden">
+                                {/* Arka plan blur efekti */}
+                                <div className="absolute inset-0 opacity-40 blur-2xl transform scale-110 pointer-events-none">
+                                    <Image src={post.image} alt="bg" fill className="object-cover" priority />
+                                </div>
                                 <ZoomableImage
                                     src={post.image}
                                     alt={`${post.title} | Ankara Sepetli Vinç`}
-                                    fill
-                                    className="object-contain p-4"
-                                    containerClassName="absolute inset-0"
+                                    width={1200}
+                                    height={800}
+                                    className="relative z-10 w-full h-auto max-h-[400px] sm:max-h-[500px] md:max-h-[600px] object-contain"
+                                    containerClassName="w-full"
+                                    priority
                                 />
                             </div>
 

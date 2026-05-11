@@ -139,7 +139,7 @@ function markdownToHtml(md: string): string {
             if (inList) { htmlLines.push(listType === 'ul' ? '</ul>' : '</ol>'); inList = false; }
             const alt = imgMatch[1] || 'Ankara sepetli vinç kiralama görseli';
             const src = imgMatch[2];
-            htmlLines.push(`<figure class="my-8"><img src="${src}" alt="${alt}" loading="lazy" class="w-full rounded-xl shadow-sm" style="max-width:100%;height:auto" /><figcaption class="text-sm text-gray-500 text-center mt-2">${alt}</figcaption></figure>`);
+            htmlLines.push(`<figure class="my-10 flex flex-col items-center"><img src="${src}" alt="${alt}" loading="lazy" class="w-auto rounded-xl shadow-md object-contain max-h-[350px] sm:max-h-[400px] md:max-h-[450px]" style="max-width:100%;" /><figcaption class="text-sm text-gray-500 text-center mt-3 font-medium">${alt}</figcaption></figure>`);
             continue;
         }
 

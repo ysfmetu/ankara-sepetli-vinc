@@ -530,6 +530,19 @@ export default function AgacBudamaPage() {
           </div>
         </section>
 
+        {/* 8.5. GERÇEK REFERANS BLOĞU */}
+        <section className="py-16 bg-teal-50 border-b border-gray-100">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Gerçek Ağaç Budama Çalışmalarımızdan Bir Örnek</h2>
+            <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+              Bağlıca villa bölgesinde gerçekleştirdiğimiz çalışmada, sepetli vinç ile budama işleminin ardından dalların toplanması, nakliye süreci, alan temizliği ve belediye çöp atım izinleri dahil tüm süreci yönettik.
+            </p>
+            <Link href="/blog/baglica-villa-bolgesinde-agac-budama-calismasi" className="font-bold bg-white border-2 border-teal-600 text-teal-700 hover:bg-teal-600 hover:text-white transition-all px-8 py-4 rounded-xl inline-flex items-center gap-2 justify-center shadow-sm">
+              Bağlıca’daki ağaç budama çalışmasını okuyun <ArrowRight size={20} />
+            </Link>
+          </div>
+        </section>
+
         {/* 9. İç Link Bloğu */}
         <section className="py-16 bg-white border-b border-gray-100">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">

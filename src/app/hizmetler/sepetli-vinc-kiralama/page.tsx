@@ -309,7 +309,7 @@ export default function SepetliVincKiralamaPage() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Ağaç Budama ve Peyzaj İşleri</h3>
                 <p className="text-gray-600 mb-6 text-sm leading-relaxed">
-                  Rüzgarda kırılma tehlikesi olan, binalara sürten, elektrik tellerine dolanan yüksek boylu ağaçların budanmasında ve tehlikeli dalların çevreye zarar vermeden aşağıya indirilmesinde en emniyetli platform sistemidir.
+                  Rüzgarda kırılma tehlikesi olan yüksek boylu ağaçların budanmasında ve tehlikeli dalların çevreye zarar vermeden aşağıya indirilmesinde en emniyetli platform sistemidir. Sepetli vinç hizmetimiz yalnızca tabela ve cephe işlerinde değil, <Link href="/blog/baglica-villa-bolgesinde-agac-budama-calismasi" className="font-semibold underline text-primary hover:text-primary/80 transition-colors">Bağlıca villa bölgesinde gerçekleştirdiğimiz ağaç budama operasyonu</Link> gibi güvenlik ve erişim gerektiren peyzaj işlerinde de aktif olarak kullanılmaktadır.
                 </p>
                 <a href={`https://wa.me/${siteConfig.contact.whatsappNumber}`} className="text-primary font-bold text-sm inline-flex items-center gap-1 hover:underline">
                   Bu işlem için sepetli vinç gerekiyorsa hemen fiyat alın <ArrowRight size={16} />
