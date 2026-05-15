@@ -12,6 +12,7 @@ import { SEO_CONFIG } from '@/config/seo';
 import { getMetadataAlternates, getCanonicalUrl } from '@/lib/seo-utils';
 import { getWhatsAppUrl, getPhoneUrl, siteConfig } from '@/config/site';
 import ZoomableImage from '@/components/ZoomableImage';
+import BlogContentWithLightbox from '@/components/BlogContentWithLightbox';
 
 interface BlogPostProps {
     params: Promise<{ slug: string }>;
@@ -149,19 +150,16 @@ export default async function BlogPost({ params }: BlogPostProps) {
 
                         {/* Left: Article Content */}
                         <article className="lg:w-2/3 bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-                            <div className="relative w-full bg-gray-900 border-b border-gray-100 flex justify-center overflow-hidden">
-                                {/* Arka plan blur efekti */}
-                                <div className="absolute inset-0 opacity-40 blur-2xl transform scale-110 pointer-events-none">
-                                    <Image src={post.image} alt="bg" fill className="object-cover" priority />
-                                </div>
-                                <ZoomableImage
+                            <div className="relative w-full bg-gray-950 flex items-center justify-center overflow-hidden" style={{minHeight: '280px', maxHeight: '380px'}}>
+                                <Image
                                     src={post.image}
                                     alt={`${post.title} | Ankara Sepetli Vinç`}
                                     width={1200}
                                     height={800}
-                                    className="relative z-10 w-full h-auto max-h-[400px] sm:max-h-[500px] md:max-h-[600px] object-contain"
-                                    containerClassName="w-full"
+                                    className="w-full h-auto object-contain"
+                                    style={{maxHeight: '380px'}}
                                     priority
+                                    sizes="(max-width: 768px) 100vw, 66vw"
                                 />
                             </div>
 
@@ -182,9 +180,7 @@ export default async function BlogPost({ params }: BlogPostProps) {
                                 </h1>
 
                                 {/* Content Area */}
-                                <div className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-a:text-primary hover:prose-a:text-primary-hover prose-img:rounded-xl text-gray-700 leading-relaxed overflow-hidden">
-                                    <div dangerouslySetInnerHTML={{ __html: post.content }} />
-                                </div>
+                                <BlogContentWithLightbox html={post.content} />
 
                                 <hr className="my-10 border-gray-100" />
 

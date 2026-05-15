@@ -341,17 +341,23 @@ export default function AltindagPage() {
                 </div>
               </div>
 
-              <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 group">
-                <div className="relative h-48 w-full bg-gray-200 flex items-center justify-center">
-                  <HardHat size={48} className="text-gray-400" />
+              <Link href="/blog/ulus-ruzgarli-sokakta-dis-cephe-mermer-degisimi" className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 group hover:border-primary transition-all flex flex-col shadow-lg hover:shadow-xl">
+                <div className="relative h-48 w-full">
+                  <Image
+                    src="/images/blog/altindag-ulus-vinc-calismasi.png"
+                    alt="Ulus Rüzgarlı Sokak sepetli vinç mermer çalışmaları"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
                 </div>
-                <div className="p-6">
+                <div className="p-6 flex-grow flex flex-col">
                   <div className="flex items-center gap-2 text-primary font-bold mb-2">
-                    <HardHat size={20} /> Ulus Tabela Montajı
+                    <Building2 size={20} /> Ulus Mermer Çalışmaları
                   </div>
-                  <p className="text-gray-600 text-sm">Ulus Meydanı güzergahında bulunan çok katlı bir otelin dış cephe logosunun yenilenmesi ve dev kutu harf tabela montajı gece vardiyası yapılarak güvenle tamamlandı.</p>
+                  <p className="text-gray-600 text-sm mb-4">Rüzgarlı Sokak'ta gerçekleştirdiğimiz dış cephe mermer değişim ve onarım çalışmaları. Sepetli vinç ile güvenli erişim sağlayarak operasyonu profesyonelce tamamladık.</p>
+                  <span className="text-sm text-primary mt-auto flex items-center gap-1 font-bold group-hover:underline">Vaka Çalışmasını İncele <ChevronRight size={16} /></span>
                 </div>
-              </div>
+              </Link>
 
               <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 group">
                 <div className="relative h-48 w-full">

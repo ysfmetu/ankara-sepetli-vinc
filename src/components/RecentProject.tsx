@@ -12,14 +12,14 @@ export default function RecentProject() {
               <h3 className="text-xl font-bold text-gray-900">Son Tamamlanan İşlerimiz</h3>
             </div>
             <p className="text-gray-700 text-base md:text-lg">
-              Keçiören Ovacık’ta tabela montajı çalışmamızı 4 saat içinde başarıyla tamamladık.
+              Ulus Rüzgarlı Sokak'ta dış cephe mermer değişimi ve onarım çalışmasını başarıyla tamamladık.
             </p>
           </div>
           <Link 
-            href="/blog/kecioren-ovacik-tabela-montaj-sepetli-vinc-destegi" 
+            href="/blog/ulus-ruzgarli-sokakta-dis-cephe-mermer-degisimi" 
             className="shrink-0 inline-flex items-center justify-center gap-2 font-bold text-primary hover:text-primary-dark transition-colors bg-white px-6 py-3.5 rounded-xl shadow-sm border border-gray-200 hover:border-primary/50 w-full md:w-auto"
           >
-            Detaylı incele <ChevronRight size={18} />
+            Vaka çalışmasını incele <ChevronRight size={18} />
           </Link>
         </div>
       </div>
