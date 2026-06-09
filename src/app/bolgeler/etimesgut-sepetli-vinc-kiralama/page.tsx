@@ -301,9 +301,12 @@ export default function EtimesgutPage() {
               </div>
             </div>
             
-            <div className="mt-12 p-6 bg-teal-50 rounded-2xl border border-teal-100">
+            <div className="mt-12 p-6 bg-teal-50 rounded-2xl border border-teal-100 space-y-4">
               <p className="text-lg text-gray-700 leading-relaxed m-0">
                 Ayrıca plazalar ve iş merkezleri için <Link href="/hizmetler/cephe-temizligi-sepetli-vinc" className="font-semibold text-teal-700 underline">Etimesgut’ta cephe temizliği vinç hizmeti</Link> sağlarken, geniş site ve park alanlarında devasa yeşilliklerin bakımı için <Link href="/hizmetler/agac-budama" className="font-semibold text-teal-700 underline">ağaç budama vinç desteği</Link> sunmaktayız. Uzun soluklu dev projeleriniz için bütçe dostu <Link href="/hizmetler/gunluk-vinc-kiralama" className="font-semibold text-teal-700 underline">günlük vinç kiralama seçeneği</Link> de daima emrinizdedir.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed m-0">
+                Yaşamkent ve Konutkent hattında iş merkezi, tabela montajı ve dış cephe cam silme çalışmaları için de aktif olarak hizmet veriyoruz. Bu bölgede gerçekleştirdiğimiz gerçek saha uygulamasını incelemek için <Link href="/blog/yasamkentte-27-metre-sepetli-vinc-ile-tabela-montaji-ve-cam-silme-hizmeti" className="font-semibold text-teal-700 underline">Yaşamkent / Konutkent çalışmalarımız</Link> sayfasına göz atabilirsiniz.
               </p>
             </div>
           </div>
@@ -514,14 +517,50 @@ export default function EtimesgutPage() {
 
         {/* 8.5. GERÇEK SAHA ÇALIŞMALARI BLOĞU */}
         <section className="py-16 bg-teal-50 border-b border-teal-100">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Etimesgut Bölgesinde Gerçekleştirdiğimiz Son Çalışmalar</h2>
-            <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-              Bağlıca villa bölgesinde gerçekleştirdiğimiz ağaç budama çalışmasında sepetli vinç desteği, budama sonrası temizlik, nakliye ve belediye çöp atım izin süreçlerini uçtan uca yönettik.
-            </p>
-            <Link href="/blog/baglica-villa-bolgesinde-agac-budama-calismasi" className="inline-flex items-center justify-center gap-2 font-bold bg-white border-2 border-teal-600 text-teal-700 hover:bg-teal-600 hover:text-white px-8 py-4 rounded-xl transition-all shadow-sm">
-              Bağlıca villa bölgesinde ağaç budama çalışmamızı inceleyin <ArrowRight size={20} />
-            </Link>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-10">Etimesgut Bölgesinde Gerçekleştirdiğimiz Son Çalışmalar</h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+              <div className="bg-white rounded-2xl shadow-sm border border-teal-100 hover:shadow-md transition-shadow flex flex-col overflow-hidden">
+                <div className="relative h-56 w-full">
+                  <Image
+                    src="/images/blog/yasamkent-etimesgut-sepetli-vinc-tabela-montaji-27-metre.png"
+                    alt="Yaşamkent Tabela Montajı ve Cam Silme"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-8 flex flex-col flex-grow">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Yaşamkent / Konutkent Tabela Montajı ve Cam Silme Çalışması</h3>
+                  <p className="text-gray-700 mb-6 flex-grow">
+                    27 metrelik sepetli vinç ile Yaşamkent Elya Center çevresinde gerçekleştirdiğimiz tabela montajı ve dış cephe cam silme çalışmasını inceleyin.
+                  </p>
+                  <Link href="/blog/yasamkentte-27-metre-sepetli-vinc-ile-tabela-montaji-ve-cam-silme-hizmeti" className="inline-flex items-center justify-center gap-2 font-bold bg-teal-50 text-teal-700 hover:bg-teal-600 hover:text-white px-6 py-3 rounded-xl transition-colors">
+                    Gerçek çalışmayı incele <ArrowRight size={18} />
+                  </Link>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-2xl shadow-sm border border-teal-100 hover:shadow-md transition-shadow flex flex-col overflow-hidden">
+                <div className="relative h-56 w-full">
+                  <Image
+                    src="/images/blog/baglica-agac-budama-cover.png"
+                    alt="Bağlıca Ağaç Budama Çalışması"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-8 flex flex-col flex-grow">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Bağlıca Villa Bölgesinde Ağaç Budama Çalışması</h3>
+                  <p className="text-gray-700 mb-6 flex-grow">
+                    Bağlıca villa bölgesinde gerçekleştirdiğimiz ağaç budama çalışmasında sepetli vinç desteği, budama sonrası temizlik, nakliye ve belediye izin süreçlerini uçtan uca yönettik.
+                  </p>
+                  <Link href="/blog/baglica-villa-bolgesinde-agac-budama-calismasi" className="inline-flex items-center justify-center gap-2 font-bold bg-teal-50 text-teal-700 hover:bg-teal-600 hover:text-white px-6 py-3 rounded-xl transition-colors">
+                    Gerçek çalışmayı incele <ArrowRight size={18} />
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
