@@ -324,22 +324,23 @@ export default function AltindagPage() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 group">
+              <Link href="/blog/altindag-ornek-mahallesi-kentsel-donusum-binasi-branda-asma-calismasi" className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 group hover:border-primary transition-all flex flex-col shadow-lg hover:shadow-xl">
                 <div className="relative h-48 w-full">
                   <Image
-                    src="/images/bolge/siteler-vinc.jpg"
-                    alt="ankara altindag vinç hizmeti"
+                    src="/images/blog/altindag-ornek-mahallesi-kentsel-donusum-branda-asma-sepetli-vinc.jpg"
+                    alt="Örnek Mahallesi Branda Asma Çalışması"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <div className="p-6">
+                <div className="p-6 flex-grow flex flex-col">
                   <div className="flex items-center gap-2 text-primary font-bold mb-2">
-                    <Wrench size={20} /> Siteler Üretim İşi
+                    <HardHat size={20} /> Örnek Mah. Branda Asma
                   </div>
-                  <p className="text-gray-600 text-sm">Siteler mobilya üretim bölgesinde faaliyet gösteren devasa bir atölyenin havalandırma borularının montajı ve çatı kompozit izolasyonunu üretim akışını kesmeden hızlıca teslim ettik.</p>
+                  <p className="text-gray-600 text-sm mb-4">Örnek Mahallesi kentsel dönüşüm alanında bulunan çok katlı bir binanın dış cephesine 27 metre sepetli vinç ile güvenlik ve reklam brandası montajı yapıldı.</p>
+                  <span className="text-sm text-primary mt-auto flex items-center gap-1 font-bold group-hover:underline">Vaka Çalışmasını İncele <ChevronRight size={16} /></span>
                 </div>
-              </div>
+              </Link>
 
               <Link href="/blog/ulus-ruzgarli-sokakta-dis-cephe-mermer-degisimi" className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 group hover:border-primary transition-all flex flex-col shadow-lg hover:shadow-xl">
                 <div className="relative h-48 w-full">
