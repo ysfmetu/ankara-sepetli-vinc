@@ -4,7 +4,7 @@ export const siteConfig = {
     phoneE164: '+905516066878',
     phoneDisplay: '0 (551) 606 68 78',
     whatsappNumber: '905516066878',
-    email: 'info@ankarasepetlivinc.com',
+    email: 'ysf.metu@gmail.com',
     address: 'Ostim Organize Sanayi Bölgesi Yenimahalle / Ankara, TR',
   },
   whatsapp: {

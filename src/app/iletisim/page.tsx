@@ -33,7 +33,7 @@ export default function IletisimPage() {
     '@type': 'LocalBusiness',
     name: SEO_CONFIG.siteName,
     telephone: '+905516066878',
-    email: 'info@ankarasepetlivinc.com',
+    email: 'ysf.metu@gmail.com',
     url: SEO_CONFIG.baseUrl,
     image: `${SEO_CONFIG.baseUrl}/logo.png`,
     address: {
@@ -124,10 +124,10 @@ export default function IletisimPage() {
                 <div>
                   <h3 className="text-lg font-bold text-gray-900">E-Posta</h3>
                   <a
-                    href="mailto:info@ankarasepetlivinc.com"
+                    href="mailto:ysf.metu@gmail.com"
                     className="text-lg text-gray-600 hover:text-primary transition-colors font-medium mt-1 block"
                   >
-                    info@ankarasepetlivinc.com
+                    ysf.metu@gmail.com
                   </a>
                 </div>
               </div>
