@@ -335,8 +335,8 @@ export default function KeciorenPage() {
               <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 group">
                 <div className="relative h-48 w-full">
                   <Image
-                    src="/images/bolge/kecioren-apartman-vinc.jpg"
-                    alt="ankara kecioren vinç hizmeti"
+                    src="/images/bolge/kecioren-sepetli-vinc-kiralama-1.jpg"
+                    alt="Keçiören'de sepetli vinç ile apartman cephe çalışması"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -350,8 +350,13 @@ export default function KeciorenPage() {
               </div>
 
               <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 group">
-                <div className="relative h-48 w-full bg-gray-200 flex items-center justify-center">
-                  <Wrench size={48} className="text-gray-400" />
+                <div className="relative h-48 w-full">
+                  <Image
+                    src="/images/blog/kecioren-ovacik-tabela-montaj.jpeg"
+                    alt="Keçiören Etlik tabela montajı sepetli vinç"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
                 </div>
                 <div className="p-6">
                   <div className="flex items-center gap-2 text-blue-600 font-bold mb-2">
@@ -364,8 +369,8 @@ export default function KeciorenPage() {
               <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 group">
                 <div className="relative h-48 w-full">
                   <Image
-                    src="/images/bolge/kecioren-vinc.jpg"
-                    alt="kecioren sepetli vinç kiralama"
+                    src="/images/blog/elektrik-direk-bakimi-sepetli-vinc-cover.jpg"
+                    alt="Keçiören elektrik direk bakımı sepetli vinç"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -436,20 +441,69 @@ export default function KeciorenPage() {
           </div>
         </section>
 
-        {/* 8.5 Son Projeler (Blog Link) */}
-        <section className="py-16 bg-blue-50 border-b border-blue-100">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-            <div className="bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-gray-200 text-center md:text-left flex flex-col md:flex-row items-center gap-8">
-              <div className="flex-1">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">Keçiören’de Gerçekleştirdiğimiz Son Projeler</h2>
-                <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                  Keçiören Ovacık bölgesinde gerçekleştirdiğimiz tabela montajı çalışmasında, Özka Lastik için sepetli vinç desteği sağladık. Proje sabah 11:00’de başlayıp 15:00’te sorunsuz şekilde tamamlandı.
-                </p>
-                <Link href="/blog/kecioren-ovacik-tabela-montaj-sepetli-vinc-destegi" className="inline-flex items-center justify-center md:justify-start gap-1 font-semibold underline text-primary hover:text-primary-dark transition-colors text-lg">
-                  Keçiören Ovacık’ta tabela montajı nasıl yapıldı? detaylı inceleyin <ChevronRight size={20} className="no-underline" />
-                </Link>
-              </div>
+        {/* 8.5 Son Gerçek Saha Çalışmalarımız */}
+        <section className="py-16 bg-gray-50 border-b border-gray-100">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Son Gerçek Saha Çalışmalarımız</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Keçiören bölgesinde tamamladığımız gerçek operasyonları inceleyin, hizmet süreçlerimizi birinci elden öğrenin.
+              </p>
             </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              {/* Kart 1 — Ovacık Tabela Montajı */}
+              <Link
+                href="/blog/kecioren-ovacik-tabela-montaj-sepetli-vinc-destegi"
+                className="group bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md hover:border-blue-400 transition-all flex flex-col"
+              >
+                <div className="bg-blue-600 px-6 py-4 flex items-center gap-3">
+                  <div className="bg-white/20 rounded-xl p-2">
+                    <Wrench size={22} className="text-white" />
+                  </div>
+                  <span className="text-xs font-bold text-blue-100 uppercase tracking-widest">Keçiören · Ovacık</span>
+                </div>
+                <div className="p-6 flex flex-col flex-1">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors leading-snug">
+                    Keçiören Ovacık&apos;ta Tabela Montajı Çalışması
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed flex-1">
+                    Keçiören Ovacık bölgesinde 4 saat içerisinde tamamlanan tabela montajı operasyonu.
+                  </p>
+                  <span className="mt-5 inline-flex items-center gap-1 text-blue-600 font-semibold text-sm group-hover:gap-2 transition-all">
+                    Operasyonu İncele <ChevronRight size={16} />
+                  </span>
+                </div>
+              </Link>
+
+              {/* Kart 2 — Etlik Dış Cephe Tamiratı */}
+              <Link
+                href="/blog/kecioren-etlik-dis-cephe-tamirati-sepetli-vinc-destegi"
+                className="group bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md hover:border-blue-400 transition-all flex flex-col"
+              >
+                <div className="bg-blue-600 px-6 py-4 flex items-center gap-3">
+                  <div className="bg-white/20 rounded-xl p-2">
+                    <Building2 size={22} className="text-white" />
+                  </div>
+                  <span className="text-xs font-bold text-blue-100 uppercase tracking-widest">Keçiören · Etlik</span>
+                </div>
+                <div className="p-6 flex flex-col flex-1">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors leading-snug">
+                    Keçiören Etlik&apos;te Dış Cephe Tamiratı Çalışması
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed flex-1">
+                    Etlik bölgesinde 27 metre sepetli vinç ile gerçekleştirilen dış cephe tamiratı çalışması.
+                  </p>
+                  <span className="mt-5 inline-flex items-center gap-1 text-blue-600 font-semibold text-sm group-hover:gap-2 transition-all">
+                    Operasyonu İncele <ChevronRight size={16} />
+                  </span>
+                </div>
+              </Link>
+            </div>
+
+            <p className="text-center text-gray-600 mt-8 max-w-3xl mx-auto text-sm leading-relaxed">
+              Keçiören&apos;in Ovacık, Etlik, Ayvalı, Aktepe, Yükseltepe, Ufuktepe ve çevre mahallelerinde gerçekleştirdiğimiz gerçek saha çalışmalarını inceleyerek hizmet süreçlerimiz hakkında detaylı bilgi alabilirsiniz.
+            </p>
           </div>
         </section>
 
