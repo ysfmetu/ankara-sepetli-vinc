@@ -1,17 +1,16 @@
 import { Metadata } from 'next';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
+import CorporateProjects from '@/components/home/CorporateProjects';
 import TrustBar from '@/components/TrustBar';
 import Services from '@/components/Services';
-import WhyUs from '@/components/WhyUs';
 import ServiceAreas from '@/components/ServiceAreas';
-import SEOBlock from '@/components/SEOBlock';
 import FAQ from '@/components/FAQ';
-import BlogSection from '@/components/BlogSection';
+import MiniSEOBlock from '@/components/MiniSEOBlock';
 import Footer from '@/components/Footer';
 import FloatingCTA from '@/components/FloatingCTA';
-import HomeRegionalLinks from '@/components/HomeRegionalLinks';
-import RecentProject from '@/components/RecentProject';
+import LatestProjects from '@/components/home/LatestProjects';
+import StatsSection from '@/components/home/StatsSection';
 
 import { SEO_CONFIG } from '@/config/seo';
 import { getMetadataAlternates } from '@/lib/seo-utils';
@@ -112,15 +111,14 @@ export default function Home() {
 
       <main className="flex-grow">
         <Hero />
+        <CorporateProjects />
+        <StatsSection />
         <TrustBar />
         <Services />
-        <RecentProject />
-        <HomeRegionalLinks />
-        <WhyUs />
+        <LatestProjects />
         <ServiceAreas />
-        <SEOBlock />
+        <MiniSEOBlock />
         <FAQ />
-        <BlogSection />
       </main>
 
       <Footer />
