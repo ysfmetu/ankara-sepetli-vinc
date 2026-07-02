@@ -367,65 +367,116 @@ export default function YenimahallePage() {
         </section>
 
         {/* 5. GÜVEN BLOĞU (E-E-A-T) */}
-        <section className="py-16 bg-gray-50 border-b border-gray-100">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Yenimahalle’de Gerçekleştirdiğimiz Vinç Çalışmaları</h2>
-              <p className="text-lg text-gray-600">İlçenin çok farklı yapıya sahip mahallelerinde tamamladığımız referans operasyonlardan örnekler.</p>
+        <section className="py-20 bg-gray-50 border-b border-gray-100">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4 tracking-tight">Yenimahalle’de Gerçekleştirdiğimiz Vinç Çalışmaları</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">İlçenin farklı mahallelerinde tamamladığımız gerçek operasyon hikayelerini ve süreçleri inceleyin.</p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 group">
-                <div className="relative h-48 w-full">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              
+              {/* Kart 1 — Yunus Emre Klima Montajı */}
+              <Link
+                href="/blog/yenimahalle-yunus-emre-mahallesi-klima-montaji-sepetli-vinc"
+                className="group bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md hover:border-blue-400 transition-all flex flex-col"
+              >
+                <div className="relative h-52 w-full overflow-hidden">
                   <Image
-                    src="/images/bolge/batikent-vinc.jpg"
-                    alt="ankara yenimahalle vinç hizmeti"
+                    src="/images/blog/ankara-sepetli-vinc-kiralama-yenimahalle-yunus-emre-klima-montaji.png"
+                    alt="Yenimahalle Yunus Emre Mahallesi Klima Montajı Sepetli Vinç"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-2 text-primary font-bold mb-2">
-                    <Building2 size={20} /> Batıkent Site İşi
+                <div className="bg-gray-700 px-5 py-3 flex items-center gap-3">
+                  <div className="bg-white/20 rounded-lg p-1.5">
+                    <Wrench size={18} className="text-white" />
                   </div>
-                  <p className="text-gray-600 text-sm">Batıkent Çakırlar bölgesindeki çok bloklu bir sitede rüzgardan hasar gören dış cephe izolasyon kaplamaları, çevreye zarar vermeden vinç platformumuz yardımıyla onarıldı.</p>
+                  <span className="text-xs font-bold text-gray-200 uppercase tracking-widest">Yenimahalle · Yunus Emre</span>
                 </div>
-              </div>
+                <div className="p-5 flex flex-col flex-1">
+                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors leading-snug">
+                    Yunus Emre Mahallesi Klima Montajı
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed flex-1">
+                    Dış ünite montajı için gerçekleştirilen 1 saatlik güvenli sepetli vinç saha operasyonunun detayları.
+                  </p>
+                  <span className="mt-4 inline-flex items-center gap-1 text-blue-600 font-semibold text-sm group-hover:gap-2 transition-all">
+                    Operasyonu İncele <ChevronRight size={16} />
+                  </span>
+                </div>
+              </Link>
 
-              <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 group">
-                <div className="relative h-48 w-full">
+              {/* Kart 2 — Yenimahalle Diş Kliniği */}
+              <Link
+                href="/blog/yenimahallede-27-metre-sepetli-vinc-ile-tabela-montaji-ve-cam-silme-calismasi"
+                className="group bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md hover:border-blue-400 transition-all flex flex-col"
+              >
+                <div className="relative h-52 w-full overflow-hidden">
                   <Image
-                    src="/images/bolge/ostim-fabrika-vinc.jpg"
-                    alt="yenimahalle sepetli vinç kiralama"
+                    src="/images/blog/yenimahalle-dis-klinigi-tabela-montaji-cam-temizligi-sepetli-vinc.png"
+                    alt="Yenimahalle Diş Kliniği tabela montajı ve cam temizliği"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-2 text-primary font-bold mb-2">
-                    <Factory size={20} /> Ostim Fabrika İşi
+                <div className="bg-gray-700 px-5 py-3 flex items-center gap-3">
+                  <div className="bg-white/20 rounded-lg p-1.5">
+                    <Building2 size={18} className="text-white" />
                   </div>
-                  <p className="text-gray-600 text-sm">İvedik OSB'de yeni kurulan bir yedek parça fabrikasının dış cephe havalandırma egzoz borularının çelik montajı üretim hattı devreye girmeden tamamlandı.</p>
+                  <span className="text-xs font-bold text-gray-200 uppercase tracking-widest">Yenimahalle · Merkez</span>
                 </div>
-              </div>
+                <div className="p-5 flex flex-col flex-1">
+                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors leading-snug">
+                    Tabela Montajı ve Cam Silme
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed flex-1">
+                    Onkoloji Hastanesi yakınında bulunan diş kliniğinde 27 metre sepetli vinç ile gerçekleştirilen operasyon.
+                  </p>
+                  <span className="mt-4 inline-flex items-center gap-1 text-blue-600 font-semibold text-sm group-hover:gap-2 transition-all">
+                    Operasyonu İncele <ChevronRight size={16} />
+                  </span>
+                </div>
+              </Link>
 
-              <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 group">
-                <div className="relative h-48 w-full">
+              {/* Kart 3 — GİMAT Tabela ve Cephe Kaplama */}
+              <Link
+                href="/blog/gimatta-36-metrelik-sepetli-vinc-ile-tabela-montaji"
+                className="group bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md hover:border-blue-400 transition-all flex flex-col"
+              >
+                <div className="relative h-52 w-full overflow-hidden">
                   <Image
-                    src="/images/bolge/yenimahalle-vinc.jpg"
-                    alt="ankara yenimahalle vinç hizmeti"
+                    src="/images/blog/gimat-ankara-36-metrelik-sepetli-vinc-tabela-montaji-cephe-kaplama.png"
+                    alt="Yenimahalle GİMAT tabela montajı ve cephe kaplama"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-2 text-primary font-bold mb-2">
-                    <AlertTriangle size={20} /> Demetevler Apartman İşi
+                <div className="bg-gray-700 px-5 py-3 flex items-center gap-3">
+                  <div className="bg-white/20 rounded-lg p-1.5">
+                    <Factory size={18} className="text-white" />
                   </div>
-                  <p className="text-gray-600 text-sm">Demetevler'in oldukça dar sokaklarından birinde, yola park etmiş araçlara rağmen kısa şaseli vincimizle 7. kattaki tehlikeli klima dış ünitesi güvenle söküldü.</p>
+                  <span className="text-xs font-bold text-gray-200 uppercase tracking-widest">Yenimahalle · GİMAT</span>
                 </div>
-              </div>
+                <div className="p-5 flex flex-col flex-1">
+                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors leading-snug">
+                    GİMAT'ta Tabela Montajı
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed flex-1">
+                    GİMAT bölgesindeki oto aksesuar firması için 36 metrelik platform ile gerçekleştirilen cephe kaplama çalışması.
+                  </p>
+                  <span className="mt-4 inline-flex items-center gap-1 text-blue-600 font-semibold text-sm group-hover:gap-2 transition-all">
+                    Operasyonu İncele <ChevronRight size={16} />
+                  </span>
+                </div>
+              </Link>
+
             </div>
+
+            <p className="text-center text-gray-500 mt-10 max-w-3xl mx-auto text-sm leading-relaxed">
+              Yenimahalle'nin Ostim, İvedik, Batıkent, Şentepe, Demetevler ve Macunköy gibi yoğun mahallelerinde gerçekleştirdiğimiz saha çalışmalarını inceleyerek profesyonel hizmet süreçlerimiz hakkında fikir edinebilirsiniz.
+            </p>
           </div>
         </section>
 

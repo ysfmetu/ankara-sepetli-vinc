@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react';
 const projects = [
   {
     icon: '🏭',
-    title: 'Aviagen Anadolu',
+    title: 'AVIAGEN GROUP',
     subtitle: 'Bala Tesisi',
     badge: '4 Günlük Operasyon',
     description: 'Kurumsal üretim tesisinde planlı olarak gerçekleştirilen 4 günlük sepetli vinç operasyonu.',
