@@ -530,16 +530,60 @@ export default function AgacBudamaPage() {
           </div>
         </section>
 
-        {/* 8.5. GERÇEK REFERANS BLOĞU */}
-        <section className="py-16 bg-teal-50 border-b border-gray-100">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Gerçek Ağaç Budama Çalışmalarımızdan Bir Örnek</h2>
-            <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-              Bağlıca villa bölgesinde gerçekleştirdiğimiz çalışmada, sepetli vinç ile budama işleminin ardından dalların toplanması, nakliye süreci, alan temizliği ve belediye çöp atım izinleri dahil tüm süreci yönettik.
+        {/* 8.5. SON YAPILAN İŞLER — CLUSTER DESTEĞİ */}
+        <section className="py-20 bg-white border-b border-gray-100">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4 tracking-tight">Son Yapılan Ağaç Budama İşlerimiz</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">Ankara&apos;nın farklı bölgelerinde gerçekleştirdiğimiz ağaç budama operasyonlarını inceleyin.</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <Link href="/blog/cankaya-bahcelievler-agac-budama-sepetli-vinc-destegi" className="group bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:border-green-400 transition-all flex flex-col">
+                <div className="relative h-52 w-full overflow-hidden">
+                  <Image src="/images/blog/ankara-sepetli-vinc-kiralama-bahcelievler-buyulu-fener-dut-agaci-budama.png" alt="Çankaya Bahçelievler dut ağacı budama" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div className="bg-green-700 px-5 py-3 flex items-center gap-3">
+                  <div className="bg-white/20 rounded-lg p-1.5"><Trees size={18} className="text-white" /></div>
+                  <span className="text-xs font-bold text-gray-200 uppercase tracking-widest">Çankaya · Bahçelievler</span>
+                </div>
+                <div className="p-5 flex flex-col flex-1">
+                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-green-600 transition-colors leading-snug">Büyülü Fener&apos;de Dut Ağacı Budama</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed flex-1">Bahçelievler&apos;deki sinema kompleksinin bahçesinde 15 metrelik dut ağacının sepetli vinç ile 3 saatte tamamlanan budama operasyonu.</p>
+                  <span className="mt-4 inline-flex items-center gap-1 text-green-600 font-semibold text-sm group-hover:gap-2 transition-all">Operasyonu İncele <ChevronRight size={16} /></span>
+                </div>
+              </Link>
+              <Link href="/blog/baglica-villa-bolgesinde-agac-budama-calismasi" className="group bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:border-green-400 transition-all flex flex-col">
+                <div className="relative h-52 w-full overflow-hidden">
+                  <Image src="/images/blog/baglica-agac-budama-cover.png" alt="Bağlıca villa ağaç budama" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div className="bg-green-700 px-5 py-3 flex items-center gap-3">
+                  <div className="bg-white/20 rounded-lg p-1.5"><Trees size={18} className="text-white" /></div>
+                  <span className="text-xs font-bold text-gray-200 uppercase tracking-widest">Etimesgut · Bağlıca</span>
+                </div>
+                <div className="p-5 flex flex-col flex-1">
+                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-green-600 transition-colors leading-snug">Bağlıca Villa Bölgesinde Ağaç Budama</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed flex-1">Villa bahçesindeki devasa ağacın dallarının toplanması, nakliye süreci ve belediye çöp atım izinleri dahil tüm süreç.</p>
+                  <span className="mt-4 inline-flex items-center gap-1 text-green-600 font-semibold text-sm group-hover:gap-2 transition-all">Operasyonu İncele <ChevronRight size={16} /></span>
+                </div>
+              </Link>
+              <Link href="/blog/agac-budama-sepetli-vinc" className="group bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:border-green-400 transition-all flex flex-col">
+                <div className="relative h-52 w-full overflow-hidden">
+                  <Image src="/images/blog/agac-budama-sepetli-vinc-cover.png" alt="Ankara ağaç budama rehberi" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div className="bg-green-700 px-5 py-3 flex items-center gap-3">
+                  <div className="bg-white/20 rounded-lg p-1.5"><Leaf size={18} className="text-white" /></div>
+                  <span className="text-xs font-bold text-gray-200 uppercase tracking-widest">Ankara Geneli · Rehber</span>
+                </div>
+                <div className="p-5 flex flex-col flex-1">
+                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-green-600 transition-colors leading-snug">Ağaç Budama Rehberi</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed flex-1">Ankara&apos;da sepetli vinç ile güvenli ağaç budama süreçleri, iş güvenliği standartları ve bölgesel talep yoğunlukları.</p>
+                  <span className="mt-4 inline-flex items-center gap-1 text-green-600 font-semibold text-sm group-hover:gap-2 transition-all">Rehberi Oku <ChevronRight size={16} /></span>
+                </div>
+              </Link>
+            </div>
+            <p className="text-center text-gray-500 mt-10 max-w-3xl mx-auto text-sm leading-relaxed">
+              Ankara genelinde Çankaya, Etimesgut, Yenimahalle ve diğer ilçelerde gerçekleştirdiğimiz ağaç budama operasyonlarını inceleyerek profesyonel hizmet süreçlerimiz hakkında fikir edinebilirsiniz.
             </p>
-            <Link href="/blog/baglica-villa-bolgesinde-agac-budama-calismasi" className="font-bold bg-white border-2 border-teal-600 text-teal-700 hover:bg-teal-600 hover:text-white transition-all px-8 py-4 rounded-xl inline-flex items-center gap-2 justify-center shadow-sm">
-              Bağlıca’daki ağaç budama çalışmasını okuyun <ArrowRight size={20} />
-            </Link>
           </div>
         </section>
 

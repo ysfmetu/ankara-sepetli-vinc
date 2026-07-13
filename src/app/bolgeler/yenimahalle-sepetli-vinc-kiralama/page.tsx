@@ -129,7 +129,7 @@ export default function YenimahallePage() {
       <Header />
 
       <main className="flex-grow pt-24 pb-0">
-        
+
         {/* 1. Hero Alanı */}
         <section className="relative bg-gray-900 text-white overflow-hidden py-16 md:py-24">
           <div className="absolute inset-0 opacity-40">
@@ -142,7 +142,7 @@ export default function YenimahallePage() {
             />
             <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/90 to-transparent"></div>
           </div>
-          
+
           <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl">
               <Breadcrumb
@@ -158,7 +158,7 @@ export default function YenimahallePage() {
               <h2 className="text-2xl md:text-3xl font-semibold text-gray-300 mb-6">
                 Ankara Yenimahalle’de 7/24 Vinç Hizmeti
               </h2>
-              
+
               <div className="prose prose-lg text-gray-200 mb-10 max-w-3xl font-light">
                 <p>
                   <strong>Türkiye’nin başkenti Ankara</strong>, son yıllarda batıya doğru hızla büyürken bu büyümenin merkez üssünü <strong>İç Anadolu Bölgesi</strong>'nin en güçlü altyapılarına sahip ilçeleri çekmektedir. Bu bağlamda <strong>Ankara’nın merkezi ve en büyük ilçelerinden biri olan Yenimahalle</strong>, hem ağır sanayi bölgelerini hem de çok yüksek nüfuslu yerleşim alanlarını aynı anda barındıran en çeşitli yapıya sahip bölgedir. Batıkent, Demetevler, Ostim, İvedik, Macunköy ve Yenimahalle merkez, ilçenin farklı vinç kiralama ihtiyaçlarına sahip ana damarlarıdır.
@@ -170,7 +170,7 @@ export default function YenimahallePage() {
                   Demetevler'in dar sokaklarındaki tabela yenileme işlerinden Batıkent'teki bir ağacın budanmasına kadar kısa süren müdahaleler için daha hesaplı olan <Link href="/hizmetler/saatlik-vinc-kiralama" className="text-blue-300 hover:text-white underline font-medium">saatlik vinç kiralama</Link> çözümünü önerirken; Macunköy'deki lojistik depoların veya Ostim'deki fabrikaların günlerce sürecek çatı izolasyonu ve cephe giydirme işlemleri için kurumsal <Link href="/hizmetler/gunluk-vinc-kiralama" className="text-blue-300 hover:text-white underline font-medium">günlük vinç kiralama</Link> seçeneklerimizi devreye sokuyoruz. Merkez garajımız Yenimahalle'de yer aldığı için anında müdahale garantisi veriyoruz.
                 </p>
               </div>
-              
+
               <div className="flex flex-col sm:flex-row items-center gap-4 mb-8">
                 <a
                   href="tel:05516066878"
@@ -206,9 +206,9 @@ export default function YenimahallePage() {
               <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4 tracking-tight">Yenimahalle’de Sepetli Vinç Nerelerde Kullanılır?</h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">Sanayi, Site ve Apartman blokları olmak üzere üç ana kolda uzmanlaşmış vinç çözümleri.</p>
             </div>
-            
+
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              
+
               {/* 1. SANAYİ (OSTİM / İVEDİK) */}
               <div className="bg-gray-50 border border-gray-200 p-8 rounded-3xl hover:border-primary transition-all shadow-sm hover:shadow-md relative overflow-hidden group">
                 <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
@@ -294,7 +294,7 @@ export default function YenimahallePage() {
                       <span className="text-gray-600 text-sm">Kısa şaseli araçlarla trafiği felç etmeden yapılan çalışmalar.</span>
                     </div>
                   </li>
-                  <li className="flex items-start gap-3">
+                  <li className="flex items-start gap-3">ƒ
                     <ShieldCheck className="text-amber-600 mt-1 shrink-0" size={20} />
                     <div>
                       <strong className="block text-gray-900">Tabela Montaj</strong>
@@ -373,9 +373,9 @@ export default function YenimahallePage() {
               <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4 tracking-tight">Yenimahalle’de Gerçekleştirdiğimiz Vinç Çalışmaları</h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">İlçenin farklı mahallelerinde tamamladığımız gerçek operasyon hikayelerini ve süreçleri inceleyin.</p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              
+
               {/* Kart 1 — Yunus Emre Klima Montajı */}
               <Link
                 href="/blog/yenimahalle-yunus-emre-mahallesi-klima-montaji-sepetli-vinc"
@@ -485,13 +485,13 @@ export default function YenimahallePage() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
             <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">Yenimahalle Hizmet Lokasyonu</h2>
             <div className="rounded-2xl overflow-hidden shadow-md border border-gray-200 w-full h-[400px]">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d97877.0706240097!2d32.710712776856524!3d39.98188175510443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d3494793f7db29%3A0xeab5ed4d26217be5!2sYenimahalle%2C%20Ankara!5e0!3m2!1str!2str!4v1714159000000!5m2!1str!2str" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }} 
-                allowFullScreen={true} 
-                loading="lazy" 
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d97877.0706240097!2d32.710712776856524!3d39.98188175510443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d3494793f7db29%3A0xeab5ed4d26217be5!2sYenimahalle%2C%20Ankara!5e0!3m2!1str!2str!4v1714159000000!5m2!1str!2str"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Yenimahalle Ankara Harita"
               ></iframe>
@@ -568,7 +568,7 @@ export default function YenimahallePage() {
       </main>
 
       <Footer />
-      
+
       {/* MOBİL STICKY BAR */}
       <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-[0_-10px_20px_-10px_rgba(0,0,0,0.15)] z-[100] flex p-2 gap-2">
         <a
@@ -588,7 +588,7 @@ export default function YenimahallePage() {
           <span className="text-xs font-extrabold uppercase tracking-wide">WhatsApp</span>
         </a>
       </div>
-      
+
       <div className="h-[72px] md:hidden w-full bg-transparent"></div>
     </div>
   );
