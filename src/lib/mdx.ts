@@ -13,6 +13,7 @@ export interface BlogPostFrontmatter {
     date: string;
     image: string;
     readTime: string;
+    faqs?: Array<{ q: string; a: string }>;
 }
 
 export interface BlogPost extends BlogPostFrontmatter {
@@ -261,6 +262,7 @@ export function getAllPosts(): BlogPost[] {
                 image: imagePath,
                 readTime: data.readTime || '5 dk',
                 content: htmlContent,
+                faqs: data.faqs,
             } as BlogPost;
         })
         .filter((post): post is BlogPost => post !== null); // Removing nulls

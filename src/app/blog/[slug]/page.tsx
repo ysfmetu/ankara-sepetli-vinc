@@ -132,12 +132,32 @@ export default async function BlogPost({ params }: BlogPostProps) {
         description: post.excerpt
     };
 
+    // FAQ JSON-LD (optional, from frontmatter)
+    const faqJsonLd = post.faqs && post.faqs.length > 0 ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: post.faqs.map((faq: { q: string; a: string }) => ({
+            '@type': 'Question',
+            name: faq.q,
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: faq.a
+            }
+        }))
+    } : null;
+
     return (
         <div className="flex flex-col min-h-screen bg-gray-50">
             {isPublished && (
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+                />
+            )}
+            {isPublished && faqJsonLd && (
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
                 />
             )}
             <Header />

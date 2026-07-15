@@ -9,6 +9,34 @@ import Breadcrumb from '@/components/Breadcrumb';
 import { getMetadataAlternates, getCanonicalUrl } from '@/lib/seo-utils';
 import { SEO_CONFIG } from '@/config/seo';
 
+interface RecentProject {
+  title: string;
+  location: string;
+  description: string;
+  href: string;
+  badge: string;
+  icon: string;
+}
+
+const recentProjects: RecentProject[] = [
+  {
+    title: 'Bahçelievler Dut Ağacı Budama',
+    location: 'Büyülü Fener Bahçesi',
+    description: 'Yaklaşık 3 saat süren dut ağacı budama çalışması sepetli vinç desteğiyle güvenli şekilde tamamlandı.',
+    href: '/blog/cankaya-bahcelievler-agac-budama-sepetli-vinc-destegi',
+    badge: 'Ağaç Budama',
+    icon: '🌳',
+  },
+  {
+    title: 'Alacaatlı Villa Dış Cephe Operasyonu',
+    location: 'Çayyolu Mevkii',
+    description: '36 metrelik çift kırmalı platform ve 27 metrelik platform ile üç gün süren dış cephe, çatı ve boya çalışmaları tamamlandı.',
+    href: '/blog/alacaatli-cayyolu-villa-dis-cephe-cati-calismasi-sepetli-vinc',
+    badge: '3 Günlük Operasyon',
+    icon: '🏡',
+  },
+];
+
 export const metadata: Metadata = {
   title: 'Çankaya Sepetli Vinç Kiralama | Uygun Fiyat & 24 Saat Hizmet',
   description: 'Çankaya bölgesinde dış cephe, tabela ve montaj işleri için profesyonel sepetli vinç kiralama. 20 dakikada adresteyiz. Hemen arayın: 0551 606 68 78',
@@ -340,6 +368,57 @@ export default function CankayaPage() {
                 <span className="font-bold text-gray-800 group-hover:text-primary transition-colors text-lg mb-2">Tabela Montaj</span>
                 <span className="text-sm text-gray-500 mt-auto flex items-center gap-1 font-medium">İncele <ChevronRight size={16} /></span>
               </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Çankaya'da Son Tamamlanan Çalışmalarımız */}
+        <section className="py-16 bg-gray-50 border-b border-gray-100">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Çankaya'da Son Tamamlanan Çalışmalarımız
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Çankaya'nın farklı mahallelerinde tamamladığımız gerçek saha çalışmalarını inceleyebilir, kullanılan ekipmanları ve uygulama süreçlerini detaylı olarak görebilirsiniz. Çankaya sepetli vinç hizmetlerimiz kapsamında Bahçelievler sepetli vinç ile yapılan ağaç budama operasyonlarından, Çayyolu sepetli vinç ve Alacaatlı sepetli vinç desteğiyle tamamlanan villa dış cephe çalışması gibi operatörlü sepetli vinç projelerimize kadar gerçekleştirdiğimiz gerçek saha çalışmaları hakkında bilgi edinebilirsiniz.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              {recentProjects.map((project, index) => (
+                <Link
+                  key={index}
+                  href={project.href}
+                  className="group flex flex-col bg-white rounded-2xl p-6 border border-gray-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary"
+                  aria-label={`${project.title} projesini incele: ${project.location}`}
+                >
+                  <div className="flex justify-between items-start mb-4">
+                    <span className="text-4xl bg-gray-50 p-3 rounded-xl border border-gray-100 flex-shrink-0">{project.icon}</span>
+                    <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full flex-shrink-0">
+                      {project.badge}
+                    </span>
+                  </div>
+
+                  <div className="flex-grow">
+                    <h3 className="text-xl font-bold text-gray-900 group-hover:text-primary transition-colors mb-1">
+                      {project.title}
+                    </h3>
+                    <p className="text-sm text-gray-500 font-medium mb-3 flex items-center gap-1">
+                      <MapPin size={14} className="text-gray-400" />
+                      {project.location}
+                    </p>
+                    <p className="text-sm text-gray-600 mb-6 leading-relaxed">
+                      {project.description}
+                    </p>
+                  </div>
+
+                  <div className="mt-auto pt-4 border-t border-gray-100">
+                    <span className="inline-flex items-center text-primary group-hover:text-primary-hover font-bold transition-colors text-sm">
+                      Projeyi İncele &rarr;
+                    </span>
+                  </div>
+                </Link>
+              ))}
             </div>
           </div>
         </section>

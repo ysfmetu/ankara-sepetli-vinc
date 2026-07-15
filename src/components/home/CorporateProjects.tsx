@@ -2,22 +2,64 @@ import React from 'react';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
-const projects = [
+interface SubProject {
+  icon: string;
+  title: string;
+  description: string;
+  href: string;
+}
+
+interface Project {
+  icon: string;
+  title: string;
+  subtitle: string;
+  badge: string;
+  description: string;
+  href: string;
+  subProjects?: SubProject[];
+  bottomText?: string;
+}
+
+const projects: Project[] = [
   {
-    icon: '🏭',
-    title: 'AVIAGEN GROUP',
-    subtitle: 'Bala Tesisi',
-    badge: '4 Günlük Operasyon',
-    description: 'Kurumsal üretim tesisinde planlı olarak gerçekleştirilen 4 günlük sepetli vinç operasyonu.',
-    href: '/blog/bala-kurumsal-tesiste-4-gunluk-sepetli-vinc-hizmeti',
+    icon: '⏳',
+    title: '3 Gün ve Üzeri Çalışmalar',
+    subtitle: '',
+    badge: 'Uzun Süreli Operasyonlar',
+    description: 'Birden fazla gün süren planlı dış cephe, çatı, bakım ve kurumsal tesis çalışmalarımız.',
+    href: '',
+    bottomText: 'Tüm Uzun Süreli Çalışmaları Gör',
+    subProjects: [
+      {
+        title: 'Aviagen Anadolu – Bala Tesisi',
+        description: '4 günlük kurumsal tesis operasyonu',
+        href: '/blog/bala-kurumsal-tesiste-4-gunluk-sepetli-vinc-hizmeti',
+        icon: '🏭',
+      },
+      {
+        title: 'Alacaatlı – Çayyolu Villa Çalışması',
+        description: '3 günlük dış cephe, çatı ve oluk çalışması',
+        href: '/blog/alacaatli-cayyolu-villa-dis-cephe-cati-calismasi-sepetli-vinc',
+        icon: '🏡',
+      },
+    ],
   },
   {
-    icon: '🏦',
-    title: 'Halkbank',
-    subtitle: 'Keçiören Ovacık',
-    badge: 'Cam Temizliği',
-    description: 'Şube dış cephesinde gerçekleştirilen profesyonel cam temizliği çalışması.',
-    href: '/blog/kecioren-ovacik-halkbank-dis-cephe-cam-temizligi',
+    icon: '🏢',
+    title: 'Kurumsal Projeler',
+    subtitle: '',
+    badge: 'Kurumsal İşletmeler',
+    description: 'Banka şubeleri, iş merkezleri, üretim tesisleri ve kurumsal işletmeler için planlı sepetli vinç çözümleri.',
+    href: '',
+    bottomText: 'Tüm Kurumsal Çalışmaları Gör',
+    subProjects: [
+      {
+        title: 'Halkbank – Keçiören Ovacık',
+        description: 'Şube dış cephe cam temizliği',
+        href: '/blog/kecioren-ovacik-halkbank-dis-cephe-cam-temizligi',
+        icon: '🏦',
+      },
+    ],
   },
   {
     icon: '🏢',
@@ -63,38 +105,94 @@ export default function CorporateProjects() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-          {projects.map((project, index) => (
-            <Link
-              key={index}
-              href={project.href}
-              className="group flex flex-col bg-gray-50 rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-              aria-label={`${project.title} projesini incele`}
-            >
-              <div className="flex justify-between items-start mb-4">
-                <span className="text-4xl bg-white p-3 rounded-xl shadow-sm border border-gray-50">{project.icon}</span>
-                <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full">
-                  {project.badge}
-                </span>
-              </div>
-              
-              <div className="flex-grow">
-                <h3 className="text-xl font-bold text-gray-900 group-hover:text-primary transition-colors mb-1">
-                  {project.title}
-                </h3>
-                <p className="text-sm text-gray-500 font-medium mb-3">{project.subtitle}</p>
-                <p className="text-sm text-gray-600 mb-6 line-clamp-3">
-                  {project.description}
-                </p>
-              </div>
+          {projects.map((project, index) => {
+            if (project.subProjects) {
+              return (
+                <div
+                  key={index}
+                  className="flex flex-col bg-gray-50 rounded-2xl p-6 border border-gray-100 shadow-sm transition-all duration-300"
+                >
+                  <div className="flex justify-between items-start mb-4">
+                    <span className="text-4xl bg-white p-3 rounded-xl shadow-sm border border-gray-50">{project.icon}</span>
+                    <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full">
+                      {project.badge}
+                    </span>
+                  </div>
 
-              <div className="mt-auto pt-4 border-t border-gray-200">
-                <span className="inline-flex items-center text-gray-500 group-hover:text-primary font-semibold transition-colors text-sm">
-                  Detayları İncele
-                  <ArrowRight size={16} className="ml-1 opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
-                </span>
-              </div>
-            </Link>
-          ))}
+                  <div className="flex-grow">
+                    <h3 className="text-xl font-bold text-gray-900 mb-1">
+                      {project.title}
+                    </h3>
+                    {project.subtitle && <p className="text-sm text-gray-500 font-medium mb-3">{project.subtitle}</p>}
+                    <p className="text-sm text-gray-600 mb-4 line-clamp-3">
+                      {project.description}
+                    </p>
+
+                    <div className="space-y-2 mt-4">
+                      {project.subProjects.map((sub, sIdx) => (
+                        <Link
+                          key={sIdx}
+                          href={sub.href}
+                          className="group flex items-center gap-3 p-2.5 rounded-xl bg-white border border-gray-200/60 hover:bg-gray-100 hover:border-gray-300 transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary"
+                          aria-label={`${sub.title} projesini incele: ${sub.description}`}
+                        >
+                          <span className="text-2xl flex-shrink-0">{sub.icon}</span>
+                          <div className="flex-grow min-w-0">
+                            <h4 className="text-sm font-bold text-gray-900 group-hover:text-primary transition-colors truncate">
+                              {sub.title}
+                            </h4>
+                            <p className="text-xs text-gray-500 truncate leading-snug">
+                              {sub.description}
+                            </p>
+                          </div>
+                          <ArrowRight size={14} className="text-gray-400 group-hover:text-primary group-hover:translate-x-0.5 transition-all flex-shrink-0" />
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="mt-auto pt-4 border-t border-gray-200">
+                    <span className="inline-flex items-center text-gray-400 font-semibold text-xs uppercase tracking-wider">
+                      {project.bottomText}
+                    </span>
+                  </div>
+                </div>
+              );
+            }
+
+            return (
+              <Link
+                key={index}
+                href={project.href}
+                className="group flex flex-col bg-gray-50 rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                aria-label={`${project.title} projesini incele`}
+              >
+                <div className="flex justify-between items-start mb-4">
+                  <span className="text-4xl bg-white p-3 rounded-xl shadow-sm border border-gray-50">{project.icon}</span>
+                  <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full">
+                    {project.badge}
+                  </span>
+                </div>
+                
+                <div className="flex-grow">
+                  <h3 className="text-xl font-bold text-gray-900 group-hover:text-primary transition-colors mb-1">
+                    {project.title}
+                  </h3>
+                  <p className="text-sm text-gray-500 font-medium mb-3">{project.subtitle}</p>
+                  <p className="text-sm text-gray-600 mb-6 line-clamp-3">
+                    {project.description}
+                  </p>
+                </div>
+
+                <div className="mt-auto pt-4 border-t border-gray-200">
+                  <span className="inline-flex items-center text-gray-500 group-hover:text-primary font-semibold transition-colors text-sm">
+                    Detayları İncele
+                    <ArrowRight size={16} className="ml-1 opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+                  </span>
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </section>
