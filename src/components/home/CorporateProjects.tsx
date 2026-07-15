@@ -42,6 +42,12 @@ const projects: Project[] = [
         href: '/blog/alacaatli-cayyolu-villa-dis-cephe-cati-calismasi-sepetli-vinc',
         icon: '🏡',
       },
+      {
+        title: 'MAZI İnşaat',
+        description: '3 günlük iş merkezi dış cephe ve çatı çalışması',
+        href: '/blog/bilkent-is-merkezi-dis-cephe-cati-calismasi-sepetli-vinc',
+        icon: '🏢',
+      },
     ],
   },
   {
@@ -77,14 +83,6 @@ const projects: Project[] = [
     description: 'Kentsel dönüşüm projesinde yüksek katlara güvenli branda montajı.',
     href: '/blog/altindag-ornek-mahallesi-kentsel-donusum-binasi-branda-asma-calismasi',
   },
-  {
-    icon: '🏢',
-    title: 'Dış Cephe',
-    subtitle: 'Keçiören Etlik',
-    badge: 'Tamirat',
-    description: 'Apartman dış cephesinde hızlı ve güvenli tamirat çalışması.',
-    href: '/blog/kecioren-etlik-dis-cephe-tamirati-sepetli-vinc-destegi',
-  },
 ];
 
 export default function CorporateProjects() {
@@ -104,7 +102,7 @@ export default function CorporateProjects() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {projects.map((project, index) => {
             if (project.subProjects) {
               return (

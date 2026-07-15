@@ -35,6 +35,14 @@ const recentProjects: RecentProject[] = [
     badge: '3 Günlük Operasyon',
     icon: '🏡',
   },
+  {
+    title: 'Bilkent İş Merkezi Dış Cephe Operasyonu',
+    location: 'Mazı İnşaat Şantiyesi',
+    description: 'Mazı İnşaat yükleniciliğindeki iş merkezinde 27 metrelik sepetli platform ile 3 gün süren çatı işlemleri ve dış cephe çalışmaları başarıyla tamamlandı.',
+    href: '/blog/bilkent-is-merkezi-dis-cephe-cati-calismasi-sepetli-vinc',
+    badge: '3 Günlük Operasyon',
+    icon: '🏢',
+  },
 ];
 
 export const metadata: Metadata = {
@@ -384,7 +392,7 @@ export default function CankayaPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
               {recentProjects.map((project, index) => (
                 <Link
                   key={index}
