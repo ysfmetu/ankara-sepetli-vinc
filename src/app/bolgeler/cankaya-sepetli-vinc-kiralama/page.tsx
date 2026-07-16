@@ -306,43 +306,7 @@ export default function CankayaPage() {
           </div>
         </section>
 
-        {/* 4. FİYAT BÖLÜMÜNÜ GÜÇLENDİR */}
-        <section className="py-16 bg-white border-b border-gray-100">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-gray-50 p-8 md:p-12 rounded-3xl shadow-sm border border-gray-200 max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Çankaya Sepetli Vinç Fiyatları</h2>
-              <div className="prose prose-gray max-w-none mb-8 text-left">
-                <p className="text-lg">
-                  Çankaya, Ankara'nın tam merkezi konumunda olduğu için araç filomuzun lojistik olarak en rahat ve en hızlı ulaştığı noktaların başında gelir. Şehrin kilometrelerce uzağındaki dış ilçelerde vinç kiralama hesaplamalarına dahil edilen uzun yol mesafesi ve yüksek yakıt tüketimi gibi dezavantajlar Çankaya bölgesi için geçerli değildir. 
-                </p>
-                <p className="text-lg">
-                  Bu merkezi avantaj, <strong>Çankaya vinç fiyatları</strong> üzerinde doğrudan olumlu bir etki yaratarak maliyetleri aşağı çeker. Tabi ki fiyatlandırmayı kesinleştiren asıl unsur; işlemin gerçekleştirileceği binanın yüksekliği (vincin kaç metre açılacağı) ve operasyonun tahmini olarak kaç saat süreceğidir. Yarım günlük bir cam temizliği veya tüm güne yayılacak bir reklam panosu montajı, adil ve rekabetçi bir fiyat cetveliyle sizlere sunulur.
-                </p>
-              </div>
-              <div className="bg-primary/5 border border-primary/20 rounded-xl p-6 shadow-sm inline-block w-full">
-                <p className="text-gray-900 font-bold mb-4 text-xl">Projenize özel net fiyat için arayın.</p>
-                <div className="flex flex-col sm:flex-row justify-center gap-3">
-                  <a href="tel:05516066878" className="inline-flex justify-center items-center gap-2 bg-primary text-white px-8 py-4 rounded-xl font-bold hover:bg-primary-dark transition-colors text-lg">
-                    <Phone size={22} /> Fiyat Bilgisi Al
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
-        {/* 5. GÜÇLÜ LOCAL PARAGRAF EKLE */}
-        <section className="py-16 bg-gray-50 border-b border-gray-100">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
-            <div className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-200">
-              <Zap size={48} className="text-primary mx-auto mb-6" />
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Çankaya’da Vinç Hizmetinde Hızlı Müdahale</h2>
-              <p className="text-xl text-gray-600 leading-relaxed font-light">
-                Çankaya gibi gündüz nüfusunun milyonları aştığı, bulvar ve caddelerinde yaya ve araç trafiğinin asla durmadığı yoğun metropol bölgelerinde, yapılacak tadilat işleminin hızı her şeyden önemlidir. Trafik akışını bozmamak ve bölgedeki ticari hayata engel olmamak adına, bize ulaştığınız saniye itibariyle koordinasyon merkezimiz konumunuza <strong>en yakın olan vinci tespit eder</strong> ve hızla size yönlendirir. Zamanla yarışan projelerinizde veya acil müdahale gerektiren kriz anlarında (fırtına hasarı, arıza vs.) kesintisiz erişim güvencesi sunuyoruz.
-              </p>
-            </div>
-          </div>
-        </section>
 
         {/* 6. İÇ LİNK BLOĞU EKLE */}
         <section className="py-16 bg-white border-b border-gray-100">
