@@ -69,11 +69,26 @@ const projects: Project[] = [
   },
   {
     icon: '🏢',
-    title: 'İş Merkezi',
-    subtitle: 'Yaşamkent',
-    badge: 'Tabela + Cam',
-    description: 'İş merkezinde tabela montajı ve dış cephe cam temizliği uygulaması.',
-    href: '/blog/yasamkentte-27-metre-sepetli-vinc-ile-tabela-montaji-ve-cam-silme-hizmeti',
+    title: 'İş Merkezleri',
+    subtitle: '',
+    badge: 'Tabela & Bakım',
+    description: 'İş merkezleri, plazalar ve sanayi sitelerinde gerçekleştirdiğimiz tabela, temizlik, bakım ve karot alma çalışmaları.',
+    href: '',
+    bottomText: 'Tüm İş Merkezi Çalışmalarını Gör',
+    subProjects: [
+      {
+        title: 'Yaşamkent – Elya Center',
+        description: 'Tabela montajı ve cam temizliği',
+        href: '/blog/yasamkentte-27-metre-sepetli-vinc-ile-tabela-montaji-ve-cam-silme-hizmeti',
+        icon: '🏢',
+      },
+      {
+        title: 'Keresteciler Sanayi',
+        description: 'Karot numune alma çalışması',
+        href: '/blog/keresteciler-sanayi-sitesi-karot-alma-sepetli-vinc-destegi',
+        icon: '🏭',
+      },
+    ],
   },
   {
     icon: '🏗',

@@ -251,29 +251,6 @@ export default function KahramankazanPage() {
           </div>
         </section>
 
-        {/* 3. SANAYİ DERİNLİĞİ (FARK YARATIR) */}
-        <section className="py-16 bg-slate-50 border-y border-slate-200">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
-            <div className="flex flex-col md:flex-row items-center gap-12">
-              <div className="w-full md:w-1/3 flex justify-center">
-                <div className="bg-white p-6 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-slate-200">
-                  <Factory size={100} className="text-slate-700" />
-                </div>
-              </div>
-              <div className="w-full md:w-2/3 text-center md:text-left">
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Kahramankazan Sanayi Bölgesinde Vinç Kullanımı</h2>
-                <div className="prose prose-lg text-gray-700 font-light">
-                  <p>
-                    Sıradan bir apartman boyası ile Kahramankazan'daki ağır sanayi tesislerinde çalışmak çok farklı uzmanlık alanlarıdır. Saray, Keresteciler veya sanayi bölgesinde yürütülen operasyonlar <strong>ağır yük kaldırma</strong> kapasitesi gerektiren ve tolerans payının sıfır olduğu mühendislik hesaplamalarına dayanır. Milyonlarca liralık CNC makinelerinin montajı veya üretim bandı üzerindeki tavan tamiratları, herhangi bir kazaya mahal vermeyecek hassaslıkta olmalıdır.
-                  </p>
-                  <p>
-                    Bu yüksek risk barındıran ortamlarda, makinenin kalitesi kadar operatörün soğukkanlılığı da hayati önem taşır. Bu yüzden <strong>operatörlü kullanım zorunluluğu</strong> ilkemizden asla ödün vermiyoruz. İnşaatı aylarca sürecek dev tesisler için günübirlik çağırmak yerine maliyet avantajı yaratan <strong>proje bazlı çalışma</strong> modeli sunuyoruz. Fabrikanızın ihtiyaç duyduğu tüm <strong>büyük ekipman ihtiyacı</strong> için geniş filomuzla arkanızdayız.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* 4. CTA BLOĞU */}
         <section className="bg-slate-800 py-12 border-y border-slate-900">
@@ -301,30 +278,6 @@ export default function KahramankazanPage() {
           </div>
         </section>
 
-        {/* 5. FİYAT BÖLÜMÜ */}
-        <section id="fiyatlar" className="py-16 bg-white border-b border-gray-100">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-gray-50 p-8 md:p-12 rounded-3xl shadow-sm border border-gray-200 max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Kahramankazan Sepetli Vinç Fiyatları</h2>
-              <div className="prose prose-gray max-w-none mb-8 text-left">
-                <p className="text-lg">
-                  Kahramankazan bölgesindeki vinç kiralama maliyetleri, tamamen endüstriyel sahanın ihtiyaçlarına göre hesaplanmaktadır. Burada <strong>proje büyüklüğü fiyatı belirler</strong>. Ufak bir tabelanın asılması saatlik iş dilimine girerken, yeni bir deponun çatısının komple onarılması günlerce sürecek bir maliyet planı gerektirir.
-                </p>
-                <p className="text-lg">
-                  Fabrikalar, lojistik depoları ve şantiyelerdeki <strong>sanayi işleri genelde günlük / proje bazlı</strong> olarak sözleşmeye dökülür ve satın alma departmanlarına ekonomik avantaj sağlanır. Garajımızdan çıkacak vincin Keresteciler'e gitmesi ile Kahramankazan sınırlarına girmesi arasında <strong>mesafe fiyatlandırmada etkili</strong> bir faktördür.
-                </p>
-              </div>
-              <div className="bg-slate-100 border border-slate-300 rounded-xl p-6 shadow-sm inline-block w-full">
-                <p className="text-gray-900 font-bold mb-4 text-xl">Şirketinize özel net fiyat ve keşif için hemen arayın.</p>
-                <div className="flex flex-col sm:flex-row justify-center gap-3">
-                  <a href="tel:05516066878" className="inline-flex justify-center items-center gap-2 bg-slate-700 text-white px-8 py-4 rounded-xl font-bold hover:bg-slate-800 transition-colors text-lg">
-                    <Phone size={22} /> Net Fiyat Alın
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* 6. GÜVEN BLOĞU (E-E-A-T) */}
         <section className="py-16 bg-gray-50 border-b border-gray-100">
@@ -334,7 +287,7 @@ export default function KahramankazanPage() {
               <p className="text-lg text-gray-600">Saray, Keresteciler ve ağır sanayi bölgelerinde B2B firmalarla yürüttüğümüz referans projeler.</p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
               <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 group">
                 <div className="relative h-48 w-full">
                   <Image
@@ -380,28 +333,36 @@ export default function KahramankazanPage() {
                   <p className="text-gray-600 text-sm">Keresteciler Sanayi Sitesi'ndeki ahşap ve mobilya lojistik depolarının yeni tavanlarına, dar raf aralarına girebilen kompakt aracımız sayesinde yangın söndürme spring hatları çekildi.</p>
                 </div>
               </div>
+
+              <Link 
+                href="/blog/keresteciler-sanayi-sitesi-karot-alma-sepetli-vinc-destegi"
+                className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 group hover:border-slate-500 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col focus:outline-none focus:ring-2 focus:ring-slate-500 cursor-pointer"
+                aria-label="Keresteciler Sanayi Sitesi Karot Alma Çalışması projesini incele"
+              >
+                <div className="relative h-48 w-full">
+                  <Image
+                    src="/images/blog/keresteciler-sanayi-sitesi-karot-alma-islemi-kahramankazan-ankara.png"
+                    alt="keresteciler sanayi sitesi karot alma çalışması"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6 flex-grow flex flex-col justify-between">
+                  <div>
+                    <div className="flex items-center gap-2 text-slate-700 font-bold mb-2">
+                      <Wrench size={20} /> Karot Çalışması
+                    </div>
+                    <p className="text-gray-600 text-sm mb-4">Keresteciler Sanayi Sitesi'ndeki yeni endüstriyel yapının kolonlarından karot numunesi alınması amacıyla 27 metrelik sepetli platform desteği sağlandı.</p>
+                  </div>
+                  <span className="text-xs font-bold text-slate-700 group-hover:text-slate-900 flex items-center gap-1 mt-auto">
+                    Projeyi İncele &rarr;
+                  </span>
+                </div>
+              </Link>
             </div>
           </div>
         </section>
 
-        {/* 7. HARİTA (ÇOK KRİTİK) */}
-        <section className="py-16 bg-white border-b border-gray-100">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
-            <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">Kahramankazan Sanayi Bölgesi Lokasyonu</h2>
-            <div className="rounded-2xl overflow-hidden shadow-md border border-gray-200 w-full h-[400px]">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d195535.40578635817!2d32.482025287706354!3d40.11977750800346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d33a6479b7a4bf%3A0xe726df21b033620!2sKahramankazan%2C%20Ankara!5e0!3m2!1str!2str!4v1714163000000!5m2!1str!2str" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }} 
-                allowFullScreen={true} 
-                loading="lazy" 
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Kahramankazan Ankara Harita"
-              ></iframe>
-            </div>
-          </div>
-        </section>
 
         {/* 8. İÇ LİNK BLOĞU EKLE */}
         <section className="py-16 bg-gray-50 border-b border-gray-100">
@@ -434,6 +395,7 @@ export default function KahramankazanPage() {
             </div>
           </div>
         </section>
+
 
         {/* 9. FAQ Bölümü */}
         <section className="py-16 bg-white border-b border-gray-100">
