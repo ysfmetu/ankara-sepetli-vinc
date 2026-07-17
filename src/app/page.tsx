@@ -2,7 +2,6 @@ import { Metadata } from 'next';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import CorporateProjects from '@/components/home/CorporateProjects';
-import TrustBar from '@/components/TrustBar';
 import Services from '@/components/Services';
 import ServiceAreas from '@/components/ServiceAreas';
 import FAQ from '@/components/FAQ';
@@ -113,7 +112,6 @@ export default function Home() {
         <Hero />
         <CorporateProjects />
         <StatsSection />
-        <TrustBar />
         <Services />
         <LatestProjects />
         <ServiceAreas />

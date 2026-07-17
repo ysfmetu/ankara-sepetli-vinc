@@ -71,7 +71,7 @@ const projects: Project[] = [
     icon: '🏢',
     title: 'İş Merkezleri',
     subtitle: '',
-    badge: 'Tabela & Bakım',
+    badge: 'Tabela & Cam temizleme',
     description: 'İş merkezleri, plazalar ve sanayi sitelerinde gerçekleştirdiğimiz tabela, temizlik, bakım ve karot alma çalışmaları.',
     href: '',
     bottomText: 'Tüm İş Merkezi Çalışmalarını Gör',
