@@ -10,8 +10,8 @@ import { getMetadataAlternates, getCanonicalUrl } from '@/lib/seo-utils';
 import { SEO_CONFIG } from '@/config/seo';
 
 export const metadata: Metadata = {
-  title: 'Keçiören Sepetli Vinç Kiralama | Yoğun Nüfus ve Dar Sokak Vinç Hizmeti',
-  description: "Ankara Keçiören'de Etlik, İncirli ve Ovacık bölgelerinde dar sokaklar ve yoğun trafik için hızlı sepetli vinç kiralama. Hemen Arayın: 0551 606 68 78",
+  title: 'Keçiören Sepetli Vinç Kiralama | Dar Sokak Vinç Hizmeti',
+  description: 'Ankara Keçiören, Ovacık ve Etlik bölgelerinde dar sokaklara girebilen araç üstü platformlarımızla 7/24 operatörlü sepetli vinç kiralama hizmeti sunuyoruz.',
   alternates: getMetadataAlternates('/bolgeler/kecioren-sepetli-vinc-kiralama'),
   openGraph: {
     title: 'Keçiören Sepetli Vinç Kiralama | Yoğun Nüfus ve Dar Sokak Vinç Hizmeti',
@@ -48,7 +48,7 @@ export default function KeciorenPage() {
         name: 'Keçiören Sepetli Vinç Kiralama',
         provider: {
           '@type': 'LocalBusiness',
-          name: 'AS Ankara Sepetli Vinç Kiralama Hizmetleri',
+          name: 'ASV Vinç | Ankara Sepetli Vinç Kiralama',
           url: SEO_CONFIG.baseUrl
         },
         telephone: '+905516066878',
@@ -68,7 +68,7 @@ export default function KeciorenPage() {
       },
       {
         '@type': 'LocalBusiness',
-        name: 'AS Ankara Sepetli Vinç Kiralama Hizmetleri',
+        name: 'ASV Vinç | Ankara Sepetli Vinç Kiralama',
         url: SEO_CONFIG.baseUrl,
         telephone: '+905516066878',
         address: {

@@ -10,8 +10,8 @@ import { getMetadataAlternates, getCanonicalUrl } from '@/lib/seo-utils';
 import { SEO_CONFIG } from '@/config/seo';
 
 export const metadata: Metadata = {
-  title: 'Altındağ Sepetli Vinç Kiralama | Siteler ve Ulus Vinç Hizmeti',
-  description: "Ankara Altındağ'da Ulus, Siteler, Hacıbayram ve Kale bölgelerine özel sepetli vinç kiralama hizmeti. Tarihi alanlarda hassas çalışma. Hemen Arayın: 0551 606 68 78",
+  title: 'Altındağ Sepetli Vinç Kiralama | 7/24 Operatörlü Hizmet',
+  description: 'Ankara Altındağ, Siteler ve Ulus bölgelerinde dar sokaklara uygun, 7/24 operatörlü sepetli vinç kiralama hizmeti. Uygun fiyatlarla güvenli ve anında destek alın.',
   alternates: getMetadataAlternates('/bolgeler/altindag-sepetli-vinc-kiralama'),
   openGraph: {
     title: 'Altındağ Sepetli Vinç Kiralama | Siteler ve Ulus Vinç Hizmeti',
@@ -48,7 +48,7 @@ export default function AltindagPage() {
         name: 'Altındağ Sepetli Vinç Kiralama',
         provider: {
           '@type': 'LocalBusiness',
-          name: 'AS Ankara Sepetli Vinç Kiralama Hizmetleri',
+          name: 'ASV Vinç | Ankara Sepetli Vinç Kiralama',
           url: SEO_CONFIG.baseUrl
         },
         telephone: '+905516066878',
@@ -68,7 +68,7 @@ export default function AltindagPage() {
       },
       {
         '@type': 'LocalBusiness',
-        name: 'AS Ankara Sepetli Vinç Kiralama Hizmetleri',
+        name: 'ASV Vinç | Ankara Sepetli Vinç Kiralama',
         url: SEO_CONFIG.baseUrl,
         telephone: '+905516066878',
         address: {

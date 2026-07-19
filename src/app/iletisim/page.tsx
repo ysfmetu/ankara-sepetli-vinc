@@ -12,9 +12,8 @@ import { getMetadataAlternates, getCanonicalUrl } from '@/lib/seo-utils';
 import { SEO_CONFIG } from '@/config/seo';
 
 export const metadata: Metadata = {
-  title: 'Ankara Vinç Kiralama İletişim',
-  description:
-    'Ankara sepetli vinç kiralama hizmeti için bizimle iletişime geçin. Ostim, Etimesgut, Çankaya, Yenimahalle bölgelerinde operatörlü vinç kiralama 7/24 hizmetinizde.',
+  title: 'İletişim | Ankara Sepetli Vinç Kiralama 7/24 Destek',
+  description: 'Ankara sepetli vinç kiralama hizmeti için hemen iletişime geçin. Ostim, Etimesgut, Çankaya dahil tüm ilçelere 30 dakikada ücretsiz keşif ve araç sevkiyatı.',
   alternates: getMetadataAlternates('/iletisim'),
   openGraph: {
     title: 'Ankara Vinç Kiralama İletişim | Ankara Sepetli Vinç',

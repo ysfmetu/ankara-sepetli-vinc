@@ -89,20 +89,20 @@ export default function Logo({
             {/* Corporate Identity Text Container: Fades layout-safely on sticky shrink, hides completely on mobile */}
             {!hideText && (
                 <div
-                    className={`ml-1 hidden sm:flex flex-col relative w-[170px] origin-left transition-all duration-400 ease-out motion-reduce:opacity-100 motion-reduce:translate-y-0 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-1'
+                    className={`ml-1 hidden sm:flex flex-col relative w-[180px] origin-left transition-all duration-400 ease-out motion-reduce:opacity-100 motion-reduce:translate-y-0 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-1'
                         }`}
                 >
                     <span
                         className={`text-[1.15rem] font-bold leading-tight transition-transform duration-250 origin-left ${headingColor} ${isScrolled ? 'scale-95' : 'scale-100'
                             }`}
                     >
-                        Ankara Sepetli Vinç
+                        ASV Vinç
                     </span>
                     <span
                         className={`text-[11px] font-medium tracking-wide mt-0.5 ${subtextColor} absolute top-full left-0 transition-opacity duration-200 ease-in-out ${isScrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'
                             }`}
                     >
-                        Kiralama Hizmetleri
+                        Ankara Sepetli Vinç Kiralama
                     </span>
                 </div>
             )}

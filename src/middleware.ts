@@ -72,6 +72,8 @@ export function middleware(request: NextRequest) {
     '/ankara-sepetli-vinc-kiralama': '/hizmetler/sepetli-vinc-kiralama',
     '/blog/cephe-temizligi-sepetli-vinc': '/hizmetler/cephe-temizligi-sepetli-vinc',
     '/blog/sepetli-vinc-kac-metreye-cikar': '/blog/sepetli-vinc-kac-metreye-kadar-cikar',
+    '/blog/ankara-sepetli-vinc-kiralama-fiyatlari': '/sepetli-vinc-kiralama-fiyatlari',
+    '/blog/vinc-kiralama-ankara-fiyatlari-2026': '/sepetli-vinc-kiralama-fiyatlari',
   };
 
   if (legacyRedirects[canonicalPath]) {

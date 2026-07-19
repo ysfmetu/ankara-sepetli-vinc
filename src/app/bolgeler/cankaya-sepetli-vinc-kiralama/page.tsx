@@ -20,9 +20,9 @@ interface RecentProject {
 
 const recentProjects: RecentProject[] = [
   {
-    title: 'Bahçelievler Dut Ağacı Budama',
+    title: 'Çankaya Sepetli Vinç Kiralama | 30 Dakikada Hızlı Ulaşım',
     location: 'Büyülü Fener Bahçesi',
-    description: 'Yaklaşık 3 saat süren dut ağacı budama çalışması sepetli vinç desteğiyle güvenli şekilde tamamlandı.',
+    description: 'Ankara Çankaya, Balgat, Çukurambar bölgelerinde plaza ve yüksek katlı binalara özel 7/24 operatörlü sepetli vinç kiralama. Güvenilir ve uygun fiyatlı hizmet.',
     href: '/blog/cankaya-bahcelievler-agac-budama-sepetli-vinc-destegi',
     badge: 'Ağaç Budama',
     icon: '🌳',
@@ -84,7 +84,7 @@ export default function CankayaPage() {
         name: 'Çankaya Sepetli Vinç Kiralama',
         provider: {
           '@type': 'LocalBusiness',
-          name: 'AS Ankara Sepetli Vinç Kiralama Hizmetleri',
+          name: 'ASV Vinç | Ankara Sepetli Vinç Kiralama',
           url: SEO_CONFIG.baseUrl
         },
         telephone: '+905516066878',
@@ -98,7 +98,7 @@ export default function CankayaPage() {
       },
       {
         '@type': 'LocalBusiness',
-        name: 'AS Ankara Sepetli Vinç Kiralama Hizmetleri',
+        name: 'ASV Vinç | Ankara Sepetli Vinç Kiralama',
         url: SEO_CONFIG.baseUrl,
         telephone: '+905516066878',
         address: {

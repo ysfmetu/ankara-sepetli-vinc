@@ -11,8 +11,8 @@ import Breadcrumb from '@/components/Breadcrumb';
 import { getMetadataAlternates, getCanonicalUrl } from '@/lib/seo-utils';
 
 export const metadata: Metadata = {
-    title: 'Bilgi Merkezi ve Blog | Ankara Sepetli Vinç',
-    description: 'Ankara sepetli vinç kiralama, yüksekte çalışma güvenliği ve platform seçimi hakkında uzman rehberleri ve güncel yazılar.',
+    title: 'Bilgi Merkezi ve Blog | Ankara Sepetli Vinç Rehberi',
+    description: 'Ankara sepetli vinç kiralama, yüksekte çalışma güvenliği ve platform seçimi hakkında uzman rehberler. Operasyon detayları ve sektör haberleri blogumuzda.',
     alternates: getMetadataAlternates('/blog'),
 };
 

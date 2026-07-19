@@ -67,7 +67,7 @@ export default function OperatorluVincKiralamaPage() {
         name: 'Ankara Operatörlü Vinç Kiralama',
         provider: {
           '@type': 'LocalBusiness',
-          name: 'AS Ankara Sepetli Vinç Kiralama Hizmetleri',
+          name: 'ASV Vinç | Ankara Sepetli Vinç Kiralama',
           url: SEO_CONFIG.baseUrl
         },
         areaServed: {
@@ -81,7 +81,7 @@ export default function OperatorluVincKiralamaPage() {
       },
       {
         '@type': 'LocalBusiness',
-        name: 'AS Ankara Sepetli Vinç Kiralama Hizmetleri',
+        name: 'ASV Vinç | Ankara Sepetli Vinç Kiralama',
         url: SEO_CONFIG.baseUrl,
         telephone: siteConfig.contact.phoneE164,
         address: {

@@ -11,7 +11,7 @@ import { SEO_CONFIG } from '@/config/seo';
 
 export const metadata: Metadata = {
   title: 'Yenimahalle Sepetli Vinç Kiralama | Batıkent ve Ostim',
-  description: "Ankara Yenimahalle'de Ostim sanayi bölgesi fabrika bakımları, Batıkent site işleri ve Demetevler dar sokak cephe işleri için sepetli vinç kiralama. Arayın: 0551 606 68 78",
+  description: 'Ankara Yenimahalle, Batıkent ve Şentepe bölgelerinde 7/24 operatörlü sepetli vinç kiralama. Dış cephe tamiratı ve tabela montajı için hemen destek alın.',
   alternates: getMetadataAlternates('/bolgeler/yenimahalle-sepetli-vinc-kiralama'),
   openGraph: {
     title: 'Yenimahalle Sepetli Vinç Kiralama | Batıkent ve Ostim',
@@ -48,7 +48,7 @@ export default function YenimahallePage() {
         name: 'Yenimahalle Sepetli Vinç Kiralama',
         provider: {
           '@type': 'LocalBusiness',
-          name: 'AS Ankara Sepetli Vinç Kiralama Hizmetleri',
+          name: 'ASV Vinç | Ankara Sepetli Vinç Kiralama',
           url: SEO_CONFIG.baseUrl
         },
         telephone: '+905516066878',
@@ -68,7 +68,7 @@ export default function YenimahallePage() {
       },
       {
         '@type': 'LocalBusiness',
-        name: 'AS Ankara Sepetli Vinç Kiralama Hizmetleri',
+        name: 'ASV Vinç | Ankara Sepetli Vinç Kiralama',
         url: SEO_CONFIG.baseUrl,
         telephone: '+905516066878',
         address: {

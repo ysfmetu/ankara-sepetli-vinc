@@ -11,7 +11,7 @@ import { SEO_CONFIG } from '@/config/seo';
 
 export const metadata: Metadata = {
   title: 'Pursaklar Sepetli Vinç Kiralama | Esenboğa Yolu ve Saray',
-  description: "Ankara Pursaklar, Saray, Altınova ve Esenboğa yolu üzerindeki lojistik depolar, sanayi alanları ve apartman cephe işleri için sepetli vinç hizmeti. Arayın: 0551 606 68 78",
+  description: 'Ankara Pursaklar, Saray ve Esenboğa yolu üzerindeki lojistik depolar, sanayi alanları ve aydınlatma direği montajı için uygun fiyatlı sepetli vinç desteği.',
   alternates: getMetadataAlternates('/bolgeler/pursaklar-sepetli-vinc-kiralama'),
   openGraph: {
     title: 'Pursaklar Sepetli Vinç Kiralama | Esenboğa Yolu ve Saray',
@@ -48,7 +48,7 @@ export default function PursaklarPage() {
         name: 'Pursaklar Sepetli Vinç Kiralama',
         provider: {
           '@type': 'LocalBusiness',
-          name: 'AS Ankara Sepetli Vinç Kiralama Hizmetleri',
+          name: 'ASV Vinç | Ankara Sepetli Vinç Kiralama',
           url: SEO_CONFIG.baseUrl
         },
         telephone: '+905516066878',
@@ -68,7 +68,7 @@ export default function PursaklarPage() {
       },
       {
         '@type': 'LocalBusiness',
-        name: 'AS Ankara Sepetli Vinç Kiralama Hizmetleri',
+        name: 'ASV Vinç | Ankara Sepetli Vinç Kiralama',
         url: SEO_CONFIG.baseUrl,
         telephone: '+905516066878',
         address: {

@@ -10,9 +10,8 @@ import Breadcrumb from '@/components/Breadcrumb';
 import { getMetadataAlternates, getCanonicalUrl } from '@/lib/seo-utils';
 
 export const metadata: Metadata = {
-  title: 'Hakkımızda | Ankara Sepetli Vinç',
-  description:
-    'Yılların tecrübesi, geniş araç filomuz ve iş güvenliği odaklı hizmet anlayışımızla Ankara kiralık sepetli vinç sektörünün öncüsüyüz.',
+  title: 'Hakkımızda | Ankara Sepetli Vinç Kiralama Filosu',
+  description: 'Yılların tecrübesi, geniş araç filomuz ve iş güvenliği odaklı hizmet anlayışımızla Ankara kiralık sepetli vinç sektöründe 7/24 güvenilir çözüm ortağınız.',
   alternates: getMetadataAlternates('/hakkimizda'),
   openGraph: {
     title: 'Kurumsal | Ankara Sepetli Vinç',

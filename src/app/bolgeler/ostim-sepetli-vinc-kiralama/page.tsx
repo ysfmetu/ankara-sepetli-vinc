@@ -10,8 +10,8 @@ import { getMetadataAlternates, getCanonicalUrl } from '@/lib/seo-utils';
 import { SEO_CONFIG } from '@/config/seo';
 
 export const metadata: Metadata = {
-  title: 'Ostim Sepetli Vinç Kiralama | Fabrika ve OSB Vinç Hizmeti',
-  description: "Ankara Ostim OSB, İvedik ve Şaşmaz sanayi bölgelerinde fabrika bakımı, CNC makine montajı ve çelik konstrüksiyon işleri için 7/24 vinç kiralama. Arayın: 0551 606 68 78",
+  title: 'Ostim Sepetli Vinç Kiralama | OSB & Fabrika Vinç Hizmeti',
+  description: 'Ankara Ostim OSB ve Şaşmaz sanayi bölgelerinde fabrika bakımı, CNC makine montajı ve çelik konstrüksiyon için 7/24 operatörlü sepetli vinç kiralama çözümü.',
   alternates: getMetadataAlternates('/bolgeler/ostim-sepetli-vinc-kiralama'),
   openGraph: {
     title: 'Ostim Sepetli Vinç Kiralama | Fabrika ve OSB Vinç Hizmeti',
@@ -48,7 +48,7 @@ export default function OstimPage() {
         name: 'Ostim Sepetli Vinç Kiralama',
         provider: {
           '@type': 'LocalBusiness',
-          name: 'AS Ankara Sepetli Vinç Kiralama Hizmetleri',
+          name: 'ASV Vinç | Ankara Sepetli Vinç Kiralama',
           url: SEO_CONFIG.baseUrl
         },
         telephone: '+905516066878',
@@ -68,7 +68,7 @@ export default function OstimPage() {
       },
       {
         '@type': 'LocalBusiness',
-        name: 'AS Ankara Sepetli Vinç Kiralama Hizmetleri',
+        name: 'ASV Vinç | Ankara Sepetli Vinç Kiralama',
         url: SEO_CONFIG.baseUrl,
         telephone: '+905516066878',
         address: {

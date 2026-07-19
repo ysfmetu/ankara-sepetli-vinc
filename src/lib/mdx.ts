@@ -209,6 +209,8 @@ export function getAllPosts(): BlogPost[] {
     const posts = files
         .filter((fileName) => fileName.endsWith('.mdx'))
         .filter((fileName) => fileName !== 'cephe-temizligi-sepetli-vinc.mdx')
+        .filter((fileName) => fileName !== 'ankara-sepetli-vinc-kiralama-fiyatlari.mdx')
+        .filter((fileName) => fileName !== 'vinc-kiralama-ankara-fiyatlari-2026.mdx')
         .map((fileName) => {
             const fullPath = path.join(CONTENT_PATH, fileName);
             

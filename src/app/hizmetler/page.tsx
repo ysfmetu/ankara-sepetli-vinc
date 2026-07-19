@@ -13,9 +13,8 @@ import { SEO_CONFIG } from '@/config/seo';
 import { siteConfig } from '@/config/site';
 
 export const metadata: Metadata = {
-  title: 'Ankara Vinç Kiralama Hizmetleri | Sepetli, Saatlik ve Operatörlü Vinç',
-  description:
-    'Ankara genelinde sepetli vinç, saatlik vinç, günlük vinç ve operatörlü vinç kiralama hizmetleri. Tabela, cephe, elektrik ve ağaç işleri için arayın: 0551 606 68 78',
+  title: 'Ankara Vinç Kiralama Hizmetleri | Saatlik & Operatörlü Vinç',
+  description: 'Ankara genelinde sepetli vinç, saatlik vinç ve operatörlü vinç kiralama hizmetleri. Tabela montajı, dış cephe temizliği ve bakım için anında destek alın.',
   alternates: getMetadataAlternates('/hizmetler'),
   openGraph: {
     title: 'Ankara Vinç Kiralama Hizmetleri | Sepetli, Saatlik ve Operatörlü Vinç',

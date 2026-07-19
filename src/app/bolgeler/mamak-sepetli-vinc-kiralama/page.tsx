@@ -10,8 +10,8 @@ import { getMetadataAlternates, getCanonicalUrl } from '@/lib/seo-utils';
 import { SEO_CONFIG } from '@/config/seo';
 
 export const metadata: Metadata = {
-  title: 'Mamak Sepetli Vinç Kiralama | Dar Sokaklara Özel Vinç Hizmeti',
-  description: "Ankara Mamak'ta dar sokaklara girebilen kısa şaseli araçlarımızla apartman dış cephe, boya ve ağaç budama işleri için sepetli vinç. Hemen Arayın: 0551 606 68 78",
+  title: 'Mamak Sepetli Vinç Kiralama | Dar Sokaklara Özel Çözüm',
+  description: 'Ankara Mamak, Nato Yolu ve Akdere semtlerinde yokuşlu ve dar alanlara uyumlu, %100 iş güvenliği garantili operatörlü sepetli vinç kiralama hizmeti alın.',
   alternates: getMetadataAlternates('/bolgeler/mamak-sepetli-vinc-kiralama'),
   openGraph: {
     title: 'Mamak Sepetli Vinç Kiralama | Dar Sokaklara Özel Vinç Hizmeti',
@@ -48,7 +48,7 @@ export default function MamakPage() {
         name: 'Mamak Sepetli Vinç Kiralama',
         provider: {
           '@type': 'LocalBusiness',
-          name: 'AS Ankara Sepetli Vinç Kiralama Hizmetleri',
+          name: 'ASV Vinç | Ankara Sepetli Vinç Kiralama',
           url: SEO_CONFIG.baseUrl
         },
         telephone: '+905516066878',
@@ -68,7 +68,7 @@ export default function MamakPage() {
       },
       {
         '@type': 'LocalBusiness',
-        name: 'AS Ankara Sepetli Vinç Kiralama Hizmetleri',
+        name: 'ASV Vinç | Ankara Sepetli Vinç Kiralama',
         url: SEO_CONFIG.baseUrl,
         telephone: '+905516066878',
         address: {

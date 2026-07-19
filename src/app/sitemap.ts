@@ -5,8 +5,16 @@ import { getCanonicalUrl } from '@/lib/seo-utils';
 // Sitemap ISR — regenerate at most once per hour instead of on every request.
 export const revalidate = 3600;
 
+// Slugs that have been consolidated into the main pricing page via 301 redirect
+const REDIRECTED_BLOG_SLUGS = [
+  'ankara-sepetli-vinc-kiralama-fiyatlari',
+  'vinc-kiralama-ankara-fiyatlari-2026',
+];
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const posts = getPublishedPosts();
+  const posts = getPublishedPosts().filter(
+    (post) => !REDIRECTED_BLOG_SLUGS.includes(post.slug)
+  );
 
   const routes = [
     '',
@@ -56,16 +64,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     let priority = 0.8;
     if (route === '') priority = 1;
     else if (route === '/blog') priority = 0.9;
+    else if (route === '/sepetli-vinc-kiralama-fiyatlari') priority = 0.9;
     else if (route.startsWith('/hizmetler/')) priority = 0.85;
     else if (route.startsWith('/bolgeler/')) priority = 0.75;
     else if (route.startsWith('/blog/')) priority = 0.7;
 
+    // Use a fixed date for the pricing page to reflect actual content update
+    const lastModified =
+      route === '/sepetli-vinc-kiralama-fiyatlari'
+        ? new Date('2026-07-19')
+        : new Date();
+
     return {
       url: getCanonicalUrl(route),
-      lastModified: new Date(),
+      lastModified,
       changeFrequency,
       priority,
     };
   });
 }
-

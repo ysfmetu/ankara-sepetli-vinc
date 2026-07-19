@@ -11,7 +11,7 @@ import { SEO_CONFIG } from '@/config/seo';
 
 export const metadata: Metadata = {
   title: 'Kahramankazan Sepetli Vinç Kiralama | Fabrika ve Sanayi',
-  description: "Ankara Kahramankazan, Keresteciler ve Saray bölgesindeki dev üretim tesisleri, ağır makine montajı ve çelik konstrüksiyon işleri için vinç hizmeti. Arayın: 0551 606 68 78",
+  description: 'Ankara Kahramankazan ve Keresteciler bölgesindeki dev üretim tesisleri, ağır makine montajı ve çelik konstrüksiyon işleri için profesyonel vinç kiralama.',
   alternates: getMetadataAlternates('/bolgeler/kahramankazan-sepetli-vinc-kiralama'),
   openGraph: {
     title: 'Kahramankazan Sepetli Vinç Kiralama | Fabrika ve Sanayi',
@@ -48,7 +48,7 @@ export default function KahramankazanPage() {
         name: 'Kahramankazan Sepetli Vinç Kiralama',
         provider: {
           '@type': 'LocalBusiness',
-          name: 'AS Ankara Sepetli Vinç Kiralama Hizmetleri',
+          name: 'ASV Vinç | Ankara Sepetli Vinç Kiralama',
           url: SEO_CONFIG.baseUrl
         },
         telephone: '+905516066878',
@@ -68,7 +68,7 @@ export default function KahramankazanPage() {
       },
       {
         '@type': 'LocalBusiness',
-        name: 'AS Ankara Sepetli Vinç Kiralama Hizmetleri',
+        name: 'ASV Vinç | Ankara Sepetli Vinç Kiralama',
         url: SEO_CONFIG.baseUrl,
         telephone: '+905516066878',
         address: {

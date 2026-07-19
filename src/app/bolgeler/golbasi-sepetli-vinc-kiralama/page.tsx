@@ -10,8 +10,8 @@ import { getMetadataAlternates, getCanonicalUrl } from '@/lib/seo-utils';
 import { SEO_CONFIG } from '@/config/seo';
 
 export const metadata: Metadata = {
-  title: 'Gölbaşı Sepetli Vinç Kiralama | İncek Villa ve Ağaç Budama',
-  description: "Ankara Gölbaşı ve İncek bölgesinde villa bahçesi ağaç budama, peyzaj ve dış cephe işlemleri için 7/24 sepetli vinç kiralama. Hemen Arayın: 0551 606 68 78",
+  title: 'Gölbaşı Sepetli Vinç Kiralama | İncek Villa & Dış Cephe',
+  description: 'Ankara Gölbaşı ve İncek bölgesinde villa bahçesi ağaç budama, peyzaj ve dış cephe işlemleri için 7/24 operatörlü, yüksek güvenlikli sepetli vinç kiralama.',
   alternates: getMetadataAlternates('/bolgeler/golbasi-sepetli-vinc-kiralama'),
   openGraph: {
     title: 'Gölbaşı Sepetli Vinç Kiralama | İncek Villa ve Ağaç Budama',
@@ -48,7 +48,7 @@ export default function GolbasiPage() {
         name: 'Gölbaşı Sepetli Vinç Kiralama',
         provider: {
           '@type': 'LocalBusiness',
-          name: 'AS Ankara Sepetli Vinç Kiralama Hizmetleri',
+          name: 'ASV Vinç | Ankara Sepetli Vinç Kiralama',
           url: SEO_CONFIG.baseUrl
         },
         telephone: '+905516066878',
@@ -68,7 +68,7 @@ export default function GolbasiPage() {
       },
       {
         '@type': 'LocalBusiness',
-        name: 'AS Ankara Sepetli Vinç Kiralama Hizmetleri',
+        name: 'ASV Vinç | Ankara Sepetli Vinç Kiralama',
         url: SEO_CONFIG.baseUrl,
         telephone: '+905516066878',
         address: {

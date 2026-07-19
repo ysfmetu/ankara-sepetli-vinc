@@ -74,7 +74,7 @@ export default function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`flex items-center justify-between transition-all duration-250 ease-in-out ${isScrolled ? 'h-[60px]' : 'h-[72px] md:h-20'}`}>
           {/* Logo & Brand */}
-          <Link href="/" aria-label="Ankara Sepetli Vinç Ana Sayfa" className="flex items-center">
+          <Link href="/" aria-label="ASV Ankara Sepetli Vinç Ana Sayfa" className="flex items-center">
             <div
               className="transition-transform duration-300 ease-out will-change-transform"
               style={{

@@ -13,9 +13,8 @@ import { getMetadataAlternates, getCanonicalUrl } from '@/lib/seo-utils';
 import { SEO_CONFIG } from '@/config/seo';
 
 export const metadata: Metadata = {
-  title: 'Ankara Sepetli Vinç Kiralama Bölgeleri | Tüm İlçelerde Hizmet',
-  description:
-    "Ankara’nın tüm ilçelerinde sepetli vinç kiralama hizmeti. Çankaya, Etimesgut, Keçiören, Yenimahalle, Sincan ve diğer bölgelerde hızlı vinç yönlendirme. Hemen arayın: 0551 606 68 78",
+  title: 'Ankara Sepetli Vinç Kiralama Bölgeleri | Tüm İlçelerde Vinç',
+  description: 'Ankara’nın tüm ilçelerinde sepetli vinç kiralama hizmeti. Çankaya, Etimesgut, Keçiören, Yenimahalle, Sincan ve Ostim bölgelerine 30 dakikada hızlı sevkiyat.',
   alternates: getMetadataAlternates('/bolgeler'),
   openGraph: {
     title: 'Ankara Sepetli Vinç Kiralama Bölgeleri | Tüm İlçelerde Hizmet',
@@ -138,7 +137,7 @@ export default function BolgelerPage() {
         name: 'Ankara Sepetli Vinç Kiralama Hizmet Bölgeleri',
         provider: {
           '@type': 'LocalBusiness',
-          name: 'AS Ankara Sepetli Vinç Kiralama Hizmetleri',
+          name: 'ASV Vinç | Ankara Sepetli Vinç Kiralama',
           url: SEO_CONFIG.baseUrl,
           telephone: '+905516066878',
           address: {
@@ -159,7 +158,7 @@ export default function BolgelerPage() {
       },
       {
         '@type': 'LocalBusiness',
-        name: 'AS Ankara Sepetli Vinç Kiralama Hizmetleri',
+        name: 'ASV Vinç | Ankara Sepetli Vinç Kiralama',
         url: SEO_CONFIG.baseUrl,
         telephone: '+905516066878',
         address: {

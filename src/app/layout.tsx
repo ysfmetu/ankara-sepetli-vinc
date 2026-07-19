@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    template: `%s | ${SEO_CONFIG.siteName}`,
+    template: '%s',
     default: SEO_CONFIG.defaultTitle,
   },
   description: SEO_CONFIG.defaultDescription,
@@ -69,7 +69,7 @@ const jsonLd = {
   name: SEO_CONFIG.siteName,
   image: `${SEO_CONFIG.baseUrl}/images/hero-bg.jpg`,
   description: SEO_CONFIG.defaultDescription,
-  '@id': SEO_CONFIG.baseUrl,
+  '@id': `${SEO_CONFIG.baseUrl}/#business`,
   url: SEO_CONFIG.baseUrl,
   telephone: '+905516066878',
   hasMap: 'https://maps.app.goo.gl/Lan3WcJZBdS5fsyp6',

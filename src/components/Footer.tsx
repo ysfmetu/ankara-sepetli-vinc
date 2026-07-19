@@ -14,7 +14,7 @@ export default function Footer() {
           {/* Brand & About */}
           <div className="space-y-4">
             <div className="mb-6 flex">
-              <Link href="/" aria-label="Ankara Sepetli Vinç Ana Sayfa" className="inline-block relative w-max">
+              <Link href="/" aria-label="ASV Ankara Sepetli Vinç Ana Sayfa" className="inline-block relative w-max">
                 <Logo variant="light" hideText={false} iconSize={44} />
               </Link>
             </div>
@@ -155,7 +155,7 @@ export default function Footer() {
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
           <div className="text-sm text-gray-500">
             <p className="mb-1 md:mb-0 md:inline-block">
-              &copy; {currentYear} Ankara Sepetli Vinç. Tüm Hakları Saklıdır.
+              &copy; {currentYear} ASV Ankara Sepetli Vinç. Tüm Hakları Saklıdır.
             </p>
             <span className="hidden md:inline-block mx-2">|</span>
             <p className="inline-block">

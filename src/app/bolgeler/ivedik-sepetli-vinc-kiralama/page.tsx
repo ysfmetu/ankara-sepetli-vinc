@@ -10,8 +10,8 @@ import { getMetadataAlternates, getCanonicalUrl } from '@/lib/seo-utils';
 import { SEO_CONFIG } from '@/config/seo';
 
 export const metadata: Metadata = {
-  title: 'İvedik Sepetli Vinç Kiralama | Fabrika ve OSB Vinç Hizmeti',
-  description: "Ankara İvedik OSB'de fabrika bakımı, üretim hattı montajı ve CNC makine kurulumu için acil sepetli vinç kiralama hizmeti. Hemen Arayın: 0551 606 68 78",
+  title: 'İvedik Sepetli Vinç Kiralama | Fabrika ve OSB Vinç Çözümü',
+  description: 'Ankara İvedik OSB bölgesindeki ağır sanayi tesisleri, cephe paneli montajı ve fabrika içi bakım onarım işleri için 7/24 operatörlü sepetli vinç kiralama.',
   alternates: getMetadataAlternates('/bolgeler/ivedik-sepetli-vinc-kiralama'),
   openGraph: {
     title: 'İvedik Sepetli Vinç Kiralama | Fabrika ve OSB Vinç Hizmeti',
@@ -48,7 +48,7 @@ export default function IvedikPage() {
         name: 'İvedik Sepetli Vinç Kiralama',
         provider: {
           '@type': 'LocalBusiness',
-          name: 'AS Ankara Sepetli Vinç Kiralama Hizmetleri',
+          name: 'ASV Vinç | Ankara Sepetli Vinç Kiralama',
           url: SEO_CONFIG.baseUrl
         },
         telephone: '+905516066878',
@@ -68,7 +68,7 @@ export default function IvedikPage() {
       },
       {
         '@type': 'LocalBusiness',
-        name: 'AS Ankara Sepetli Vinç Kiralama Hizmetleri',
+        name: 'ASV Vinç | Ankara Sepetli Vinç Kiralama',
         url: SEO_CONFIG.baseUrl,
         telephone: '+905516066878',
         address: {

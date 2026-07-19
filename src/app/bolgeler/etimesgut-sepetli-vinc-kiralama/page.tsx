@@ -10,8 +10,8 @@ import { getMetadataAlternates, getCanonicalUrl } from '@/lib/seo-utils';
 import { SEO_CONFIG } from '@/config/seo';
 
 export const metadata: Metadata = {
-  title: 'Etimesgut Sepetli Vinç Kiralama | 30 Dakikada Ulaşım ⚡ 0551 606 68 78',
-  description: 'Etimesgut, Eryaman, Bağlıca ve Elvankent bölgelerinde sepetli vinç kiralama hizmeti. 30 dakikada adresinize ulaşım, operatörlü vinç desteği ve uygun fiyat avantajı için hemen arayın: 0551 606 68 78',
+  title: 'Etimesgut Sepetli Vinç Kiralama | 7/24 Operatörlü Hizmet',
+  description: 'Etimesgut, Bağlıca ve Elvankent bölgelerinde sepetli vinç kiralama hizmeti. 30 dakikada adresinize ulaşım sağlayan uygun fiyatlı ve operatörlü vinç seçenekleri.',
   alternates: getMetadataAlternates('/bolgeler/etimesgut-sepetli-vinc-kiralama'),
   openGraph: {
     title: 'Etimesgut Sepetli Vinç Kiralama | 30 Dakikada Ulaşım ⚡ 0551 606 68 78',
@@ -59,7 +59,7 @@ export default function EtimesgutPage() {
       name: 'Etimesgut Sepetli Vinç Kiralama',
       provider: {
         '@type': 'LocalBusiness',
-        name: 'AS Ankara Sepetli Vinç Kiralama Hizmetleri',
+        name: 'ASV Vinç | Ankara Sepetli Vinç Kiralama',
         url: SEO_CONFIG.baseUrl
       },
       telephone: '+905516066878',
@@ -80,7 +80,7 @@ export default function EtimesgutPage() {
     {
       '@context': 'https://schema.org',
       '@type': 'LocalBusiness',
-      name: 'AS Ankara Sepetli Vinç Kiralama Hizmetleri',
+      name: 'ASV Vinç | Ankara Sepetli Vinç Kiralama',
       url: SEO_CONFIG.baseUrl,
       telephone: '+905516066878',
       address: {

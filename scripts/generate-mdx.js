@@ -146,7 +146,7 @@ Vinç kiralama ankara fiyatları sabit bir tarife üzerinden çalışmaz. Projen
 - **Konum:** Ankara içi seferlerde intikal masrafları minimumda tutulur; şehir dışı projelerde ek nakliye ücreti uygulanabilir.
 - **İş Türü:** Gece vardiyası, özel güvenlik önlemi gereken alanlar veya ek operatör talepleri fiyatı etkileyebilir.
 
-Net bütçe hesaplaması için [fiyat rehberimizi](/blog/ankara-sepetli-vinc-kiralama-fiyatlari) inceleyebilir veya ücretsiz keşif talep edebilirsiniz.
+Net bütçe hesaplaması için [fiyat rehberimizi](/sepetli-vinc-kiralama-fiyatlari) inceleyebilir veya ücretsiz keşif talep edebilirsiniz.
 
 ## İş Güvenliği Standartlarımız
 

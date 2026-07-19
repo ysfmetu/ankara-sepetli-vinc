@@ -12,7 +12,7 @@ import { SEO_CONFIG } from '@/config/seo';
 
 export const metadata: Metadata = {
   title: 'Eryaman Sepetli Vinç Kiralama | Aynı Gün Hızlı Hizmet',
-  description: 'Eryaman’da sepetli vinç kiralama hizmeti. Ağaç budama, cephe işleri ve tabela montajı için hızlı çözüm. 0551 606 68 78',
+  description: 'Ankara Eryaman’da sepetli vinç kiralama hizmeti. Ağaç budama, cephe işleri, cam temizliği ve tabela montajı için 30 dakikada ulaşım sağlayan güvenilir destek.',
   alternates: getMetadataAlternates('/bolgeler/eryaman-sepetli-vinc-kiralama'),
   openGraph: {
     title: 'Eryaman Sepetli Vinç Kiralama | Aynı Gün Hızlı Hizmet',
@@ -52,7 +52,7 @@ export default function EryamanPage() {
       name: 'Eryaman Sepetli Vinç Kiralama',
       provider: {
         '@type': 'LocalBusiness',
-        name: 'AS Ankara Sepetli Vinç Kiralama Hizmetleri',
+        name: 'ASV Vinç | Ankara Sepetli Vinç Kiralama',
         url: SEO_CONFIG.baseUrl
       },
       telephone: '+905516066878',
@@ -77,7 +77,7 @@ export default function EryamanPage() {
     {
       '@context': 'https://schema.org',
       '@type': 'LocalBusiness',
-      name: 'AS Ankara Sepetli Vinç Kiralama Hizmetleri',
+      name: 'ASV Vinç | Ankara Sepetli Vinç Kiralama',
       url: SEO_CONFIG.baseUrl,
       telephone: '+905516066878',
       address: {

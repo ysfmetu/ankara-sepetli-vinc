@@ -10,8 +10,8 @@ import { getMetadataAlternates, getCanonicalUrl } from '@/lib/seo-utils';
 import { SEO_CONFIG } from '@/config/seo';
 
 export const metadata: Metadata = {
-  title: 'Sincan Sepetli Vinç Kiralama | Sanayi ve Fabrika Vinç Hizmeti',
-  description: "Ankara Sincan OSB, Yenikent ve Temelli bölgelerinde fabrika, depo ve dış cephe işleri için 7/24 operatörlü sepetli vinç kiralama. Hemen Arayın: 0551 606 68 78",
+  title: 'Sincan Sepetli Vinç Kiralama | OSB & Sanayi Vinç Hizmeti',
+  description: 'Ankara Sincan OSB, Yenikent ve Temelli bölgelerinde fabrika, depo ve dış cephe işleri için 7/24 operatörlü, hızlı ve güvenli sepetli vinç kiralama hizmeti.',
   alternates: getMetadataAlternates('/bolgeler/sincan-sepetli-vinc-kiralama'),
   openGraph: {
     title: 'Sincan Sepetli Vinç Kiralama | Sanayi ve Fabrika Vinç Hizmeti',
@@ -48,7 +48,7 @@ export default function SincanPage() {
         name: 'Sincan Sepetli Vinç Kiralama',
         provider: {
           '@type': 'LocalBusiness',
-          name: 'AS Ankara Sepetli Vinç Kiralama Hizmetleri',
+          name: 'ASV Vinç | Ankara Sepetli Vinç Kiralama',
           url: SEO_CONFIG.baseUrl
         },
         telephone: '+905516066878',
@@ -68,7 +68,7 @@ export default function SincanPage() {
       },
       {
         '@type': 'LocalBusiness',
-        name: 'AS Ankara Sepetli Vinç Kiralama Hizmetleri',
+        name: 'ASV Vinç | Ankara Sepetli Vinç Kiralama',
         url: SEO_CONFIG.baseUrl,
         telephone: '+905516066878',
         address: {
