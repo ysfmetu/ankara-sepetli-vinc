@@ -60,6 +60,12 @@ const projects: Project[] = [
     bottomText: 'Tüm Kurumsal Çalışmaları Gör',
     subProjects: [
       {
+        title: 'Sazak İnşaat – Beysukent Şantiyesi',
+        description: '7 günlük konut şantiyesi – 45 metre mobil platform',
+        href: '/blog/beysukent-sazak-insaat-santiyesi-45-metre-mobil-platform-sepetli-vinc',
+        icon: '🏗️',
+      },
+      {
         title: 'Halkbank – Keçiören Ovacık',
         description: 'Şube dış cephe cam temizliği',
         href: '/blog/kecioren-ovacik-halkbank-dis-cephe-cam-temizligi',

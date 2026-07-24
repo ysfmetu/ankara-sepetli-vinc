@@ -20,6 +20,14 @@ interface RecentProject {
 
 const recentProjects: RecentProject[] = [
   {
+    title: "Beysukent'te 45 Metre Mobil Platform ile 7 Günlük Şantiye Operasyonu",
+    location: 'Sazak İnşaat Şantiyesi – Beysukent',
+    description: 'Sazak İnşaat konut şantiyesinde 45 metrelik mobil platformumuzun ilk büyük kurumsal kullanımı. Yedi gün boyunca dış cephe erişimi ve güvenli personel taşıma tamamlandı.',
+    href: '/blog/beysukent-sazak-insaat-santiyesi-45-metre-mobil-platform-sepetli-vinc',
+    badge: '7 Günlük Operasyon',
+    icon: '🏗️',
+  },
+  {
     title: 'Çankaya Sepetli Vinç Kiralama | 30 Dakikada Hızlı Ulaşım',
     location: 'Büyülü Fener Bahçesi',
     description: 'Ankara Çankaya, Balgat, Çukurambar bölgelerinde plaza ve yüksek katlı binalara özel 7/24 operatörlü sepetli vinç kiralama. Güvenilir ve uygun fiyatlı hizmet.',
