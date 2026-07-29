@@ -98,11 +98,26 @@ const projects: Project[] = [
   },
   {
     icon: '🏗',
-    title: 'Kentsel Dönüşüm',
-    subtitle: 'Altındağ',
-    badge: 'Branda Montajı',
-    description: 'Kentsel dönüşüm projesinde yüksek katlara güvenli branda montajı.',
-    href: '/blog/altindag-ornek-mahallesi-kentsel-donusum-binasi-branda-asma-calismasi',
+    title: 'Tamir İşlemleri',
+    subtitle: '',
+    badge: 'Branda & Çatı Oluk',
+    description: 'Kentsel dönüşüm branda montajı, çatı oluk tamiri ve bina bakım çalışmaları.',
+    href: '',
+    bottomText: 'Tüm Tamir Çalışmalarını Gör',
+    subProjects: [
+      {
+        title: 'Çankaya Oran – Çatı Oluk Tamiri',
+        description: '3 saatlik oluk tamiri, mobil platform ile',
+        href: '/blog/oran-sitesi-cankaya-cati-oluk-tamiri-sepetli-vinc',
+        icon: '🏠',
+      },
+      {
+        title: 'Altındağ – Branda Montajı',
+        description: 'Kentsel dönüşüm binasında branda asma çalışması',
+        href: '/blog/altindag-ornek-mahallesi-kentsel-donusum-binasi-branda-asma-calismasi',
+        icon: '🏗️',
+      },
+    ],
   },
 ];
 

@@ -20,6 +20,14 @@ interface RecentProject {
 
 const recentProjects: RecentProject[] = [
   {
+    title: "Oran Sitesi'nde Sepetli Vinç ile Çatı Oluk Tamiri",
+    location: 'Oran Mahallesi – Çankaya',
+    description: "Oran Sitesi'nde hasarlı çatı oluğu ASV Vinç mobil platformuyla 3 saatte güvenli biçimde onarıldı. Bina sakinleri minimum kesinti yaşadı.",
+    href: '/blog/oran-sitesi-cankaya-cati-oluk-tamiri-sepetli-vinc',
+    badge: '3 Saatlik Operasyon',
+    icon: '🏠',
+  },
+  {
     title: "Beysukent'te 45 Metre Mobil Platform ile 7 Günlük Şantiye Operasyonu",
     location: 'Sazak İnşaat Şantiyesi – Beysukent',
     description: 'Sazak İnşaat konut şantiyesinde 45 metrelik mobil platformumuzun ilk büyük kurumsal kullanımı. Yedi gün boyunca dış cephe erişimi ve güvenli personel taşıma tamamlandı.',
