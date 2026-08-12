@@ -59,6 +59,14 @@ const recentProjects: RecentProject[] = [
     badge: '3 Günlük Operasyon',
     icon: '🏢',
   },
+  {
+    title: 'İncek/Ahlatlıbel – AS İnşaat Dış Cephe Projesi',
+    location: 'AS İnşaat Sitesi – İncek/Ahlatlıbel',
+    description: 'AS İnşaat bünyesindeki site projelerinde yaklaşık 20 gün boyunca cam temizliği, silikon uygulaması, cam bakım/tamir ve dış cephe bakım çalışmaları için mobil platform ile yüksekte erişim desteği sağlandı.',
+    href: '/blog/incek-ahlatlibel-sepetli-vinc-dis-cephe-calismasi',
+    badge: '~20 Günlük Operasyon',
+    icon: '🏘️',
+  },
 ];
 
 export const metadata: Metadata = {

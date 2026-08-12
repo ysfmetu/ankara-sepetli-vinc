@@ -37,10 +37,10 @@ const projects: Project[] = [
         icon: '🏭',
       },
       {
-        title: 'Alacaatlı – Çayyolu Villa Çalışması',
-        description: '3 günlük dış cephe, çatı ve oluk çalışması',
-        href: '/blog/alacaatli-cayyolu-villa-dis-cephe-cati-calismasi-sepetli-vinc',
-        icon: '🏡',
+        title: 'AS İnşaat – İncek/Ahlatlıbel Sitesi',
+        description: '~20 günlük dış cephe, cam temizliği ve silikon çalışması',
+        href: '/blog/incek-ahlatlibel-sepetli-vinc-dis-cephe-calismasi',
+        icon: '🏘️',
       },
       {
         title: 'MAZI İnşaat',
@@ -110,6 +110,12 @@ const projects: Project[] = [
         description: '3 saatlik oluk tamiri, mobil platform ile',
         href: '/blog/oran-sitesi-cankaya-cati-oluk-tamiri-sepetli-vinc',
         icon: '🏠',
+      },
+      {
+        title: 'Alacaatlı – Çayyolu Villa Çalışması',
+        description: '3 günlük dış cephe, çatı ve oluk bakımı',
+        href: '/blog/alacaatli-cayyolu-villa-dis-cephe-cati-calismasi-sepetli-vinc',
+        icon: '🏡',
       },
       {
         title: 'Altındağ – Branda Montajı',
