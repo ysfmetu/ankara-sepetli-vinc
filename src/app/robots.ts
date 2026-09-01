@@ -13,7 +13,6 @@ export default function robots(): MetadataRoute.Robots {
           '/drafts',
           '/unused-posts',
           '/api/',
-          '/_next/',
           // Block URL patterns with query parameters (faceted navigation etc.)
           '/*?*',
         ],

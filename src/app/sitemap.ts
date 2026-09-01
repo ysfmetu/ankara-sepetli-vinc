@@ -12,9 +12,7 @@ const REDIRECTED_BLOG_SLUGS = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const posts = getPublishedPosts().filter(
-    (post) => !REDIRECTED_BLOG_SLUGS.includes(post.slug)
-  );
+  const posts = getPublishedPosts().filter((post) => !REDIRECTED_BLOG_SLUGS.includes(post.slug));
 
   const routes = [
     '',
@@ -33,6 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/sepetli-vinc-kiralama-fiyatlari',
     '/bolgeler',
     '/bolgeler/etimesgut-sepetli-vinc-kiralama',
+    '/bolgeler/eryaman-sepetli-vinc-kiralama',
     '/bolgeler/ostim-sepetli-vinc-kiralama',
     '/bolgeler/yenimahalle-sepetli-vinc-kiralama',
     '/bolgeler/cankaya-sepetli-vinc-kiralama',
@@ -71,9 +70,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Use a fixed date for the pricing page to reflect actual content update
     const lastModified =
-      route === '/sepetli-vinc-kiralama-fiyatlari'
-        ? new Date('2026-07-19')
-        : new Date();
+      route === '/sepetli-vinc-kiralama-fiyatlari' ? new Date('2026-07-19') : new Date();
 
     return {
       url: getCanonicalUrl(route),
