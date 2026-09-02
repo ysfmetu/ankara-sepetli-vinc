@@ -33,9 +33,7 @@ export const metadata: Metadata = {
       { url: '/favicon.ico', sizes: '48x48', type: 'image/x-icon' },
       { url: '/favicon.svg', sizes: 'any', type: 'image/svg+xml' },
     ],
-    apple: [
-      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
-    ],
+    apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
     shortcut: '/favicon.ico',
   },
   openGraph: {
@@ -66,16 +64,14 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: SEO_CONFIG.siteName,
+  name: 'ASV Ankara Sepetli Vinç Kiralama',
   image: `${SEO_CONFIG.baseUrl}/images/hero-bg.jpg`,
   description: SEO_CONFIG.defaultDescription,
   '@id': `${SEO_CONFIG.baseUrl}/#business`,
   url: SEO_CONFIG.baseUrl,
   telephone: '+905516066878',
   hasMap: 'https://maps.app.goo.gl/Lan3WcJZBdS5fsyp6',
-  sameAs: [
-    'https://maps.app.goo.gl/Lan3WcJZBdS5fsyp6'
-  ],
+  sameAs: ['https://maps.app.goo.gl/Lan3WcJZBdS5fsyp6'],
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Ostim Organize Sanayi Bölgesi',

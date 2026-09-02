@@ -92,16 +92,15 @@ export default function DistrictPageLayout({
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Service',
-            'serviceType': 'Sepetli Vinç Kiralama',
-            'provider': {
-              '@type': 'LocalBusiness',
-              'name': 'Ankara Sepetli Vinç Kiralama',
+            serviceType: 'Sepetli Vinç Kiralama',
+            provider: {
+              '@id': 'https://ankarasepetlivinckirala.com/#business',
             },
-            'areaServed': {
+            areaServed: {
               '@type': 'City',
-              'name': districtName,
+              name: districtName,
             },
-            'description': `${districtName} bölgesinde 7/24 hızlı servis garantisi ile sepetli vinç ve platform kiralama hizmeti.`,
+            description: `${districtName} bölgesinde 7/24 hızlı servis garantisi ile sepetli vinç ve platform kiralama hizmeti.`,
           }),
         }}
       />
@@ -121,8 +120,7 @@ export default function DistrictPageLayout({
             />
 
             <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
-              {districtName}{' '}
-              <span className="text-primary">Sepetli Vinç Kiralama</span>
+              {districtName} <span className="text-primary">Sepetli Vinç Kiralama</span>
               <span className="block text-xl sm:text-2xl md:text-3xl font-semibold text-gray-600 mt-2">
                 — Uygun Fiyat &amp; 24 Saat Hizmet
               </span>
@@ -143,7 +141,6 @@ export default function DistrictPageLayout({
 
         {/* ── İçerik ───────────────────────────────────────────── */}
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 max-w-4xl">
-
           {/* Giriş */}
           <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-8">
             {introText}{' '}
@@ -251,10 +248,10 @@ export default function DistrictPageLayout({
               >
                 Vinç kiralama fiyatları
               </a>{' '}
-              konusunda tam şeffaflık uyguluyoruz: keşif öncesi tahmini fiyat, keşif
-              sonrası net yazılı teklif. Saatlik, günlük ve haftalık paketler mevcuttur.
-              Operatör ücreti ve iş güvenliği sigortası her pakete dahildir. CE/ISO
-              sertifikalı araçlar, MMO onaylı operatörler, OHSAS iş güvenliği tam uyumu.
+              konusunda tam şeffaflık uyguluyoruz: keşif öncesi tahmini fiyat, keşif sonrası net
+              yazılı teklif. Saatlik, günlük ve haftalık paketler mevcuttur. Operatör ücreti ve iş
+              güvenliği sigortası her pakete dahildir. CE/ISO sertifikalı araçlar, MMO onaylı
+              operatörler, OHSAS iş güvenliği tam uyumu.
             </p>
           </div>
 
@@ -275,10 +272,7 @@ export default function DistrictPageLayout({
           </h2>
           <div className="space-y-3 mb-12">
             {faq.map((item, i) => (
-              <div
-                key={i}
-                className="border border-gray-200 rounded-xl overflow-hidden"
-              >
+              <div key={i} className="border border-gray-200 rounded-xl overflow-hidden">
                 <button
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
                   className="w-full flex justify-between items-center px-5 py-4 text-left font-semibold text-gray-900 bg-gray-50 hover:bg-gray-100 transition-colors"
@@ -301,7 +295,6 @@ export default function DistrictPageLayout({
               </div>
             ))}
           </div>
-
         </div>
 
         {/* ── WhatsApp / Harita CTA ──────────────────────────────── */}

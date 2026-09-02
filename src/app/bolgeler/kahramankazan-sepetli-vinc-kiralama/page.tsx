@@ -1,7 +1,20 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Phone, MessageCircle, MapPin, ChevronRight, Factory, Building2, Settings, ClipboardList, Wrench, HardHat, ShieldCheck, Zap } from 'lucide-react';
+import {
+  Phone,
+  MessageCircle,
+  MapPin,
+  ChevronRight,
+  Factory,
+  Building2,
+  Settings,
+  ClipboardList,
+  Wrench,
+  HardHat,
+  ShieldCheck,
+  Zap,
+} from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
@@ -11,11 +24,13 @@ import { SEO_CONFIG } from '@/config/seo';
 
 export const metadata: Metadata = {
   title: 'Kahramankazan Sepetli Vinç Kiralama | Fabrika ve Sanayi',
-  description: 'Ankara Kahramankazan ve Keresteciler bölgesindeki dev üretim tesisleri, ağır makine montajı ve çelik konstrüksiyon işleri için profesyonel vinç kiralama.',
+  description:
+    'Ankara Kahramankazan ve Keresteciler bölgesindeki dev üretim tesisleri, ağır makine montajı ve çelik konstrüksiyon işleri için profesyonel vinç kiralama.',
   alternates: getMetadataAlternates('/bolgeler/kahramankazan-sepetli-vinc-kiralama'),
   openGraph: {
     title: 'Kahramankazan Sepetli Vinç Kiralama | Fabrika ve Sanayi',
-    description: "Ankara Kahramankazan, Keresteciler ve Saray bölgesindeki dev üretim tesisleri, ağır makine montajı ve çelik konstrüksiyon işleri için vinç hizmeti. Arayın: 0551 606 68 78",
+    description:
+      'Ankara Kahramankazan, Keresteciler ve Saray bölgesindeki dev üretim tesisleri, ağır makine montajı ve çelik konstrüksiyon işleri için vinç hizmeti. Arayın: 0551 606 68 78',
     url: getCanonicalUrl('/bolgeler/kahramankazan-sepetli-vinc-kiralama'),
   },
 };
@@ -23,20 +38,20 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: 'Kahramankazan’da vinç ne kadar sürede gelir?',
-    a: 'Garaj lokasyonumuzun Ankara çevre yollarına bağlantısı sayesinde, Kahramankazan gibi Ankara merkezine mesafe olarak daha uzak görünen bir ilçeye dahi trafiğe takılmadan ortalama 45 dakika içerisinde ulaşım sağlayabiliyoruz.'
+    a: 'Garaj lokasyonumuzun Ankara çevre yollarına bağlantısı sayesinde, Kahramankazan gibi Ankara merkezine mesafe olarak daha uzak görünen bir ilçeye dahi trafiğe takılmadan ortalama 45 dakika içerisinde ulaşım sağlayabiliyoruz.',
   },
   {
     q: 'Sanayi bölgelerine hizmet var mı?',
-    a: 'Kesinlikle. Keresteciler Sanayi Sitesi, Saray Dökümcüler ve ilçedeki devasa üretim fabrikalarına ağır sanayi standartlarına uygun, sertifikalı vinç hizmeti sunuyoruz.'
+    a: 'Kesinlikle. Keresteciler Sanayi Sitesi, Saray Dökümcüler ve ilçedeki devasa üretim fabrikalarına ağır sanayi standartlarına uygun, sertifikalı vinç hizmeti sunuyoruz.',
   },
   {
     q: 'Proje bazlı vinç kiralama yapılır mı?',
-    a: 'Evet, fabrikaların aylarca süren ek bina inşaatları, komple cephe giydirme işlemleri veya uzun süreli bakım duruşları (şalter indirme) dönemleri için avantajlı proje bazlı kiralama sözleşmeleri yapmaktayız.'
+    a: 'Evet, fabrikaların aylarca süren ek bina inşaatları, komple cephe giydirme işlemleri veya uzun süreli bakım duruşları (şalter indirme) dönemleri için avantajlı proje bazlı kiralama sözleşmeleri yapmaktayız.',
   },
   {
     q: 'Günlük vinç kiralama mümkün mü?',
-    a: 'Ağır sanayi bölgesindeki makine montajı, çelik konstrüksiyon bağlantısı ve tavan aydınlatma yenilemeleri uzun zaman aldığı için en çok tercih edilen ve maliyet avantajı sağlayan modelimiz günlük kiralamadır.'
-  }
+    a: 'Ağır sanayi bölgesindeki makine montajı, çelik konstrüksiyon bağlantısı ve tavan aydınlatma yenilemeleri uzun zaman aldığı için en çok tercih edilen ve maliyet avantajı sağlayan modelimiz günlük kiralamadır.',
+  },
 ];
 
 export default function KahramankazanPage() {
@@ -47,28 +62,28 @@ export default function KahramankazanPage() {
         '@type': 'Service',
         name: 'Kahramankazan Sepetli Vinç Kiralama',
         provider: {
-          '@type': 'LocalBusiness',
-          name: 'ASV Vinç | Ankara Sepetli Vinç Kiralama',
-          url: SEO_CONFIG.baseUrl
+          '@id': `${SEO_CONFIG.baseUrl}/#business`,
         },
         telephone: '+905516066878',
         areaServed: [
           {
             '@type': 'City',
-            name: 'Kahramankazan'
+            name: 'Kahramankazan',
           },
           {
             '@type': 'City',
-            name: 'Ankara'
-          }
+            name: 'Ankara',
+          },
         ],
         serviceType: 'Sepetli Vinç Kiralama',
-        description: "Kahramankazan, Saray ve Keresteciler Sanayi bölgesindeki ağır sanayi fabrikaları ve üretim tesisleri için profesyonel vinç kiralama.",
-        url: getCanonicalUrl('/bolgeler/kahramankazan-sepetli-vinc-kiralama')
+        description:
+          'Kahramankazan, Saray ve Keresteciler Sanayi bölgesindeki ağır sanayi fabrikaları ve üretim tesisleri için profesyonel vinç kiralama.',
+        url: getCanonicalUrl('/bolgeler/kahramankazan-sepetli-vinc-kiralama'),
       },
       {
         '@type': 'LocalBusiness',
-        name: 'ASV Vinç | Ankara Sepetli Vinç Kiralama',
+        '@id': `${SEO_CONFIG.baseUrl}/#business`,
+        name: 'ASV Ankara Sepetli Vinç Kiralama',
         url: SEO_CONFIG.baseUrl,
         telephone: '+905516066878',
         address: {
@@ -76,23 +91,23 @@ export default function KahramankazanPage() {
           streetAddress: 'Ostim Organize Sanayi Bölgesi',
           addressLocality: 'Yenimahalle',
           addressRegion: 'Ankara',
-          addressCountry: 'TR'
+          addressCountry: 'TR',
         },
         areaServed: {
           '@type': 'City',
-          name: 'Ankara'
-        }
+          name: 'Ankara',
+        },
       },
       {
         '@type': 'FAQPage',
-        mainEntity: faqs.map(faq => ({
+        mainEntity: faqs.map((faq) => ({
           '@type': 'Question',
           name: faq.q,
           acceptedAnswer: {
             '@type': 'Answer',
-            text: faq.a
-          }
-        }))
+            text: faq.a,
+          },
+        })),
       },
       {
         '@type': 'BreadcrumbList',
@@ -101,23 +116,23 @@ export default function KahramankazanPage() {
             '@type': 'ListItem',
             position: 1,
             name: 'Ana Sayfa',
-            item: SEO_CONFIG.baseUrl
+            item: SEO_CONFIG.baseUrl,
           },
           {
             '@type': 'ListItem',
             position: 2,
             name: 'Bölgeler',
-            item: `${SEO_CONFIG.baseUrl}/bolgeler`
+            item: `${SEO_CONFIG.baseUrl}/bolgeler`,
           },
           {
             '@type': 'ListItem',
             position: 3,
             name: 'Kahramankazan Sepetli Vinç',
-            item: `${SEO_CONFIG.baseUrl}/bolgeler/kahramankazan-sepetli-vinc-kiralama`
-          }
-        ]
-      }
-    ]
+            item: `${SEO_CONFIG.baseUrl}/bolgeler/kahramankazan-sepetli-vinc-kiralama`,
+          },
+        ],
+      },
+    ],
   };
 
   return (
@@ -129,7 +144,6 @@ export default function KahramankazanPage() {
       <Header />
 
       <main className="flex-grow pt-24 pb-0">
-        
         {/* 1. Hero Alanı */}
         <section className="relative bg-gray-900 text-white overflow-hidden py-16 md:py-24">
           <div className="absolute inset-0 opacity-40">
@@ -142,7 +156,7 @@ export default function KahramankazanPage() {
             />
             <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-gray-900/90 to-transparent"></div>
           </div>
-          
+
           <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl">
               <Breadcrumb
@@ -158,19 +172,66 @@ export default function KahramankazanPage() {
               <h2 className="text-2xl md:text-3xl font-semibold text-slate-400 mb-6">
                 Ankara Kahramankazan’da 7/24 Profesyonel Vinç Hizmeti
               </h2>
-              
+
               <div className="prose prose-lg text-gray-200 mb-10 max-w-3xl font-light">
                 <p>
-                  <strong>Türkiye’nin başkenti Ankara</strong>, sanayi ve üretim yatırımları açısından sürekli kabuk değiştirmektedir. Şehrin merkezinden dışarıya doğru taşınan ağır sanayinin yeni ve en güçlü kalbi, hiç şüphesiz <strong>Ankara’nın kuzeybatısında yer alan Kahramankazan</strong> ilçesidir. <strong>İç Anadolu Bölgesi</strong>'nin en devasa fabrikalarına ve lojistik depolama alanlarına ev sahipliği yapan bu ilçe; savunma sanayi, çelik döküm, gıda paketleme ve mobilya üretimi gibi lokomotif sektörlerin birleşme noktasıdır.
+                  <strong>Türkiye’nin başkenti Ankara</strong>, sanayi ve üretim yatırımları
+                  açısından sürekli kabuk değiştirmektedir. Şehrin merkezinden dışarıya doğru
+                  taşınan ağır sanayinin yeni ve en güçlü kalbi, hiç şüphesiz{' '}
+                  <strong>Ankara’nın kuzeybatısında yer alan Kahramankazan</strong> ilçesidir.{' '}
+                  <strong>İç Anadolu Bölgesi</strong>'nin en devasa fabrikalarına ve lojistik
+                  depolama alanlarına ev sahipliği yapan bu ilçe; savunma sanayi, çelik döküm, gıda
+                  paketleme ve mobilya üretimi gibi lokomotif sektörlerin birleşme noktasıdır.
                 </p>
                 <p>
-                  Bölgede yer alan Saray bölgesi fabrikaları, Keresteciler Sanayi Sitesi ve Kahramankazan merkez bağlantısındaki dev sanayi bölgeleri, sürekli bir yapısal büyüme içerisindedir. Yeni inşa edilen üretim tesisleri, yüzlerce tonluk çelik iskeletlerle kurulmakta ve metrelerce yüksekliğe sahip çatı aydınlatmaları gerektirmektedir. Bu ağır sanayi şartları, risk barındıran tüm yüksekte çalışma ve montaj faaliyetlerinde yüksek kapasiteli araçlarla profesyonel müdahaleyi zorunlu hale getirir. Tüm iş sağlığı güvenliği testlerinden geçmiş araçlarımızla sunduğumuz <Link href="/hizmetler/sepetli-vinc-kiralama" className="text-slate-400 hover:text-white underline font-medium">Ankara sepetli vinç kiralama</Link> hizmetimiz, bölge fabrikalarının tüm bakım anlaşmalarına yanıt verir. Fabrika içerisinde vincin milimetrik manevra yapmasını gerektiren riskli işler nedeniyle sadece sertifikalı <Link href="/hizmetler/operatorlu-vinc-kiralama" className="text-slate-400 hover:text-white underline font-medium">operatörlü vinç kiralama</Link> desteği sağlamaktayız.
+                  Bölgede yer alan Saray bölgesi fabrikaları, Keresteciler Sanayi Sitesi ve
+                  Kahramankazan merkez bağlantısındaki dev sanayi bölgeleri, sürekli bir yapısal
+                  büyüme içerisindedir. Yeni inşa edilen üretim tesisleri, yüzlerce tonluk çelik
+                  iskeletlerle kurulmakta ve metrelerce yüksekliğe sahip çatı aydınlatmaları
+                  gerektirmektedir. Bu ağır sanayi şartları, risk barındıran tüm yüksekte çalışma ve
+                  montaj faaliyetlerinde yüksek kapasiteli araçlarla profesyonel müdahaleyi zorunlu
+                  hale getirir. Tüm iş sağlığı güvenliği testlerinden geçmiş araçlarımızla
+                  sunduğumuz{' '}
+                  <Link
+                    href="/hizmetler/sepetli-vinc-kiralama"
+                    className="text-slate-400 hover:text-white underline font-medium"
+                  >
+                    Ankara sepetli vinç kiralama
+                  </Link>{' '}
+                  hizmetimiz, bölge fabrikalarının tüm bakım anlaşmalarına yanıt verir. Fabrika
+                  içerisinde vincin milimetrik manevra yapmasını gerektiren riskli işler nedeniyle
+                  sadece sertifikalı{' '}
+                  <Link
+                    href="/hizmetler/operatorlu-vinc-kiralama"
+                    className="text-slate-400 hover:text-white underline font-medium"
+                  >
+                    operatörlü vinç kiralama
+                  </Link>{' '}
+                  desteği sağlamaktayız.
                 </p>
                 <p>
-                  Kahramankazan ilçe merkezindeki apartmanların veya küçük dükkanların cephe ve tabela işlemlerinde kısa süreli çözümler sunan <Link href="/hizmetler/saatlik-vinc-kiralama" className="text-slate-400 hover:text-white underline font-medium">saatlik vinç kiralama</Link> paketimiz aktiftir. Ancak bu bölgenin ana dinamosunu oluşturan şantiye kurulumları, fabrika dış cephe kaplama işleri, geniş üretim hollerindeki elektrik-havalandırma borusu çekimleri ve makine taşıma gibi büyük ölçekli projeler için bütçenizi ciddi anlamda koruyan kurumsal <Link href="/hizmetler/gunluk-vinc-kiralama" className="text-slate-400 hover:text-white underline font-medium">günlük vinç kiralama</Link> anlaşmalarını tavsiye etmekteyiz.
+                  Kahramankazan ilçe merkezindeki apartmanların veya küçük dükkanların cephe ve
+                  tabela işlemlerinde kısa süreli çözümler sunan{' '}
+                  <Link
+                    href="/hizmetler/saatlik-vinc-kiralama"
+                    className="text-slate-400 hover:text-white underline font-medium"
+                  >
+                    saatlik vinç kiralama
+                  </Link>{' '}
+                  paketimiz aktiftir. Ancak bu bölgenin ana dinamosunu oluşturan şantiye
+                  kurulumları, fabrika dış cephe kaplama işleri, geniş üretim hollerindeki
+                  elektrik-havalandırma borusu çekimleri ve makine taşıma gibi büyük ölçekli
+                  projeler için bütçenizi ciddi anlamda koruyan kurumsal{' '}
+                  <Link
+                    href="/hizmetler/gunluk-vinc-kiralama"
+                    className="text-slate-400 hover:text-white underline font-medium"
+                  >
+                    günlük vinç kiralama
+                  </Link>{' '}
+                  anlaşmalarını tavsiye etmekteyiz.
                 </p>
               </div>
-              
+
               <div className="flex flex-col sm:flex-row items-center gap-4 mb-8">
                 <a
                   href="tel:05516066878"
@@ -205,58 +266,93 @@ export default function KahramankazanPage() {
         {/* 2. Bölüm: Kahramankazan’da Sepetli Vinç Nerelerde Kullanılır? */}
         <section className="py-16 bg-white border-b border-gray-100">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">Kahramankazan’da Sepetli Vinç Nerelerde Kullanılır?</h2>
-            
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">
+              Kahramankazan’da Sepetli Vinç Nerelerde Kullanılır?
+            </h2>
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
               <div className="bg-gray-50 border border-gray-100 p-6 rounded-2xl hover:border-slate-500 transition-colors group">
                 <div className="bg-slate-200 w-12 h-12 rounded-xl flex items-center justify-center text-slate-700 mb-4">
                   <Factory size={24} />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-slate-700 transition-colors">Fabrika Bakım İşleri</h3>
-                <p className="text-gray-600">Dev üretim tesislerinin sandviç panel onarımları, çatı yalıtım işlemleri, dış cephe boyamaları ve fabrika bacalarının filtre temizliği gibi uzun soluklu dış bakım operasyonlarında kullanılır.</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-slate-700 transition-colors">
+                  Fabrika Bakım İşleri
+                </h3>
+                <p className="text-gray-600">
+                  Dev üretim tesislerinin sandviç panel onarımları, çatı yalıtım işlemleri, dış
+                  cephe boyamaları ve fabrika bacalarının filtre temizliği gibi uzun soluklu dış
+                  bakım operasyonlarında kullanılır.
+                </p>
               </div>
 
               <div className="bg-gray-50 border border-gray-100 p-6 rounded-2xl hover:border-slate-500 transition-colors group">
                 <div className="bg-slate-200 w-12 h-12 rounded-xl flex items-center justify-center text-slate-700 mb-4">
                   <Settings size={24} />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-slate-700 transition-colors">Ağır Makine Montajı</h3>
-                <p className="text-gray-600">Yurt dışından gelen devasa enjeksiyon, pres ve CNC makinelerinin fabrika içerisine konumlandırılması, bu makinelerin üstten havalandırma egzozlarına bağlanması işlemlerinde kilit rol oynar.</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-slate-700 transition-colors">
+                  Ağır Makine Montajı
+                </h3>
+                <p className="text-gray-600">
+                  Yurt dışından gelen devasa enjeksiyon, pres ve CNC makinelerinin fabrika içerisine
+                  konumlandırılması, bu makinelerin üstten havalandırma egzozlarına bağlanması
+                  işlemlerinde kilit rol oynar.
+                </p>
               </div>
 
               <div className="bg-gray-50 border border-gray-100 p-6 rounded-2xl hover:border-slate-500 transition-colors group">
                 <div className="bg-slate-200 w-12 h-12 rounded-xl flex items-center justify-center text-slate-700 mb-4">
                   <Building2 size={24} />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-slate-700 transition-colors">Çelik Konstrüksiyon</h3>
-                <p className="text-gray-600">Yeni açılan depo ve imalathanelerin dev çelik iskeletlerinin kaynaklı birleştirilmesi, vidalanması ve montaj personelinin yüksekte güvenle çalışabilmesi için geniş sepetli platformlar tercih edilir.</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-slate-700 transition-colors">
+                  Çelik Konstrüksiyon
+                </h3>
+                <p className="text-gray-600">
+                  Yeni açılan depo ve imalathanelerin dev çelik iskeletlerinin kaynaklı
+                  birleştirilmesi, vidalanması ve montaj personelinin yüksekte güvenle çalışabilmesi
+                  için geniş sepetli platformlar tercih edilir.
+                </p>
               </div>
 
               <div className="bg-gray-50 border border-gray-100 p-6 rounded-2xl hover:border-slate-500 transition-colors group">
                 <div className="bg-slate-200 w-12 h-12 rounded-xl flex items-center justify-center text-slate-700 mb-4">
                   <Wrench size={24} />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-slate-700 transition-colors">Depo ve Üretim Alanları</h3>
-                <p className="text-gray-600">Lojistik kargo aktarma merkezleri ile gıda depolarının tavan aydınlatma armatürlerinin değiştirilmesi, raf aralarına yangın spring hattı çekilmesi gibi dar ve yüksek alan gerektiren işlerde kullanılır.</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-slate-700 transition-colors">
+                  Depo ve Üretim Alanları
+                </h3>
+                <p className="text-gray-600">
+                  Lojistik kargo aktarma merkezleri ile gıda depolarının tavan aydınlatma
+                  armatürlerinin değiştirilmesi, raf aralarına yangın spring hattı çekilmesi gibi
+                  dar ve yüksek alan gerektiren işlerde kullanılır.
+                </p>
               </div>
 
               <div className="bg-gray-50 border border-gray-100 p-6 rounded-2xl hover:border-slate-500 transition-colors group">
                 <div className="bg-slate-200 w-12 h-12 rounded-xl flex items-center justify-center text-slate-700 mb-4">
                   <HardHat size={24} />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-slate-700 transition-colors">Şantiye Çalışmaları</h3>
-                <p className="text-gray-600">Kahramankazan çevresinde inşası devam eden tüm sanayi siteleri şantiyelerinde iskele kurulum zorluğunu ortadan kaldırarak; elektrik çekimi, dış kaplama ve cam montajı işlemlerini çok hızlandırır.</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-slate-700 transition-colors">
+                  Şantiye Çalışmaları
+                </h3>
+                <p className="text-gray-600">
+                  Kahramankazan çevresinde inşası devam eden tüm sanayi siteleri şantiyelerinde
+                  iskele kurulum zorluğunu ortadan kaldırarak; elektrik çekimi, dış kaplama ve cam
+                  montajı işlemlerini çok hızlandırır.
+                </p>
               </div>
             </div>
           </div>
         </section>
 
-
         {/* 4. CTA BLOĞU */}
         <section className="bg-slate-800 py-12 border-y border-slate-900">
           <div className="container mx-auto px-4 text-center">
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">Kahramankazan’da en yakın vinci hızlıca yönlendirelim.</h3>
-            <p className="text-slate-300 mb-8 text-lg">Fabrikanızda işler aksamasın, sanayi bölgesi uzmanı ekibimiz hemen yola çıksın.</p>
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
+              Kahramankazan’da en yakın vinci hızlıca yönlendirelim.
+            </h3>
+            <p className="text-slate-300 mb-8 text-lg">
+              Fabrikanızda işler aksamasın, sanayi bölgesi uzmanı ekibimiz hemen yola çıksın.
+            </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a
                 href="tel:05516066878"
@@ -278,15 +374,19 @@ export default function KahramankazanPage() {
           </div>
         </section>
 
-
         {/* 6. GÜVEN BLOĞU (E-E-A-T) */}
         <section className="py-16 bg-gray-50 border-b border-gray-100">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Kahramankazan’da Gerçekleştirdiğimiz Vinç Çalışmaları</h2>
-              <p className="text-lg text-gray-600">Saray, Keresteciler ve ağır sanayi bölgelerinde B2B firmalarla yürüttüğümüz referans projeler.</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Kahramankazan’da Gerçekleştirdiğimiz Vinç Çalışmaları
+              </h2>
+              <p className="text-lg text-gray-600">
+                Saray, Keresteciler ve ağır sanayi bölgelerinde B2B firmalarla yürüttüğümüz referans
+                projeler.
+              </p>
             </div>
-            
+
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
               <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 group">
                 <div className="relative h-48 w-full">
@@ -301,7 +401,11 @@ export default function KahramankazanPage() {
                   <div className="flex items-center gap-2 text-slate-700 font-bold mb-2">
                     <Factory size={20} /> Fabrika Bakım İşi
                   </div>
-                  <p className="text-gray-600 text-sm">Kahramankazan sanayi bölgesindeki devasa bir gıda paketleme tesisinin, üretim durdurulmadan dış cephe sandviç panellerinin izolasyonu güvenli bir şekilde tamamlandı.</p>
+                  <p className="text-gray-600 text-sm">
+                    Kahramankazan sanayi bölgesindeki devasa bir gıda paketleme tesisinin, üretim
+                    durdurulmadan dış cephe sandviç panellerinin izolasyonu güvenli bir şekilde
+                    tamamlandı.
+                  </p>
                 </div>
               </div>
 
@@ -313,7 +417,11 @@ export default function KahramankazanPage() {
                   <div className="flex items-center gap-2 text-slate-700 font-bold mb-2">
                     <Settings size={20} /> Makine Montajı
                   </div>
-                  <p className="text-gray-600 text-sm">Saray Dökümcüler mevkiinde yer alan bir yedek parça üretim tesisine tırlarla getirilen 12 tonluk pres makinelerinin kurulumu esnasında, havalandırma tahliye boruları vincimizle yukarıdan bağlandı.</p>
+                  <p className="text-gray-600 text-sm">
+                    Saray Dökümcüler mevkiinde yer alan bir yedek parça üretim tesisine tırlarla
+                    getirilen 12 tonluk pres makinelerinin kurulumu esnasında, havalandırma tahliye
+                    boruları vincimizle yukarıdan bağlandı.
+                  </p>
                 </div>
               </div>
 
@@ -330,11 +438,15 @@ export default function KahramankazanPage() {
                   <div className="flex items-center gap-2 text-slate-700 font-bold mb-2">
                     <Building2 size={20} /> Depo Çalışması
                   </div>
-                  <p className="text-gray-600 text-sm">Keresteciler Sanayi Sitesi'ndeki ahşap ve mobilya lojistik depolarının yeni tavanlarına, dar raf aralarına girebilen kompakt aracımız sayesinde yangın söndürme spring hatları çekildi.</p>
+                  <p className="text-gray-600 text-sm">
+                    Keresteciler Sanayi Sitesi'ndeki ahşap ve mobilya lojistik depolarının yeni
+                    tavanlarına, dar raf aralarına girebilen kompakt aracımız sayesinde yangın
+                    söndürme spring hatları çekildi.
+                  </p>
                 </div>
               </div>
 
-              <Link 
+              <Link
                 href="/blog/keresteciler-sanayi-sitesi-karot-alma-sepetli-vinc-destegi"
                 className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 group hover:border-slate-500 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col focus:outline-none focus:ring-2 focus:ring-slate-500 cursor-pointer"
                 aria-label="Keresteciler Sanayi Sitesi Karot Alma Çalışması projesini incele"
@@ -352,7 +464,10 @@ export default function KahramankazanPage() {
                     <div className="flex items-center gap-2 text-slate-700 font-bold mb-2">
                       <Wrench size={20} /> Karot Çalışması
                     </div>
-                    <p className="text-gray-600 text-sm mb-4">Keresteciler Sanayi Sitesi'ndeki yeni endüstriyel yapının kolonlarından karot numunesi alınması amacıyla 27 metrelik sepetli platform desteği sağlandı.</p>
+                    <p className="text-gray-600 text-sm mb-4">
+                      Keresteciler Sanayi Sitesi'ndeki yeni endüstriyel yapının kolonlarından karot
+                      numunesi alınması amacıyla 27 metrelik sepetli platform desteği sağlandı.
+                    </p>
                   </div>
                   <span className="text-xs font-bold text-slate-700 group-hover:text-slate-900 flex items-center gap-1 mt-auto">
                     Projeyi İncele &rarr;
@@ -363,55 +478,112 @@ export default function KahramankazanPage() {
           </div>
         </section>
 
-
         {/* 8. İÇ LİNK BLOĞU EKLE */}
         <section className="py-16 bg-gray-50 border-b border-gray-100">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Kahramankazan’da Sunulan Vinç Hizmetleri</h2>
-              <p className="text-lg text-gray-600">Sanayi ve üretim tesislerine yönelik sunduğumuz operasyonel çözümlerimiz.</p>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Kahramankazan’da Sunulan Vinç Hizmetleri
+              </h2>
+              <p className="text-lg text-gray-600">
+                Sanayi ve üretim tesislerine yönelik sunduğumuz operasyonel çözümlerimiz.
+              </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-              <Link href="/hizmetler/sepetli-vinc-kiralama" className="bg-white border border-gray-200 p-5 rounded-xl hover:border-slate-500 hover:shadow-md transition-all flex flex-col group">
-                <span className="font-bold text-gray-800 group-hover:text-slate-700 transition-colors text-lg mb-2">Sepetli Vinç</span>
-                <span className="text-sm text-gray-500 mt-auto flex items-center gap-1 font-medium">İncele <ChevronRight size={16} /></span>
+              <Link
+                href="/hizmetler/sepetli-vinc-kiralama"
+                className="bg-white border border-gray-200 p-5 rounded-xl hover:border-slate-500 hover:shadow-md transition-all flex flex-col group"
+              >
+                <span className="font-bold text-gray-800 group-hover:text-slate-700 transition-colors text-lg mb-2">
+                  Sepetli Vinç
+                </span>
+                <span className="text-sm text-gray-500 mt-auto flex items-center gap-1 font-medium">
+                  İncele <ChevronRight size={16} />
+                </span>
               </Link>
-              <Link href="/hizmetler/operatorlu-vinc-kiralama" className="bg-white border border-gray-200 p-5 rounded-xl hover:border-slate-500 hover:shadow-md transition-all flex flex-col group">
-                <span className="font-bold text-gray-800 group-hover:text-slate-700 transition-colors text-lg mb-2">Operatörlü Vinç</span>
-                <span className="text-sm text-gray-500 mt-auto flex items-center gap-1 font-medium">İncele <ChevronRight size={16} /></span>
+              <Link
+                href="/hizmetler/operatorlu-vinc-kiralama"
+                className="bg-white border border-gray-200 p-5 rounded-xl hover:border-slate-500 hover:shadow-md transition-all flex flex-col group"
+              >
+                <span className="font-bold text-gray-800 group-hover:text-slate-700 transition-colors text-lg mb-2">
+                  Operatörlü Vinç
+                </span>
+                <span className="text-sm text-gray-500 mt-auto flex items-center gap-1 font-medium">
+                  İncele <ChevronRight size={16} />
+                </span>
               </Link>
-              <Link href="/hizmetler/saatlik-vinc-kiralama" className="bg-white border border-gray-200 p-5 rounded-xl hover:border-slate-500 hover:shadow-md transition-all flex flex-col group">
-                <span className="font-bold text-gray-800 group-hover:text-slate-700 transition-colors text-lg mb-2">Saatlik Vinç</span>
-                <span className="text-sm text-gray-500 mt-auto flex items-center gap-1 font-medium">İncele <ChevronRight size={16} /></span>
+              <Link
+                href="/hizmetler/saatlik-vinc-kiralama"
+                className="bg-white border border-gray-200 p-5 rounded-xl hover:border-slate-500 hover:shadow-md transition-all flex flex-col group"
+              >
+                <span className="font-bold text-gray-800 group-hover:text-slate-700 transition-colors text-lg mb-2">
+                  Saatlik Vinç
+                </span>
+                <span className="text-sm text-gray-500 mt-auto flex items-center gap-1 font-medium">
+                  İncele <ChevronRight size={16} />
+                </span>
               </Link>
-              <Link href="/hizmetler/gunluk-vinc-kiralama" className="bg-white border border-gray-200 p-5 rounded-xl hover:border-slate-500 hover:shadow-md transition-all flex flex-col group">
-                <span className="font-bold text-gray-800 group-hover:text-slate-700 transition-colors text-lg mb-2">Günlük Vinç</span>
-                <span className="text-sm text-gray-500 mt-auto flex items-center gap-1 font-medium">İncele <ChevronRight size={16} /></span>
+              <Link
+                href="/hizmetler/gunluk-vinc-kiralama"
+                className="bg-white border border-gray-200 p-5 rounded-xl hover:border-slate-500 hover:shadow-md transition-all flex flex-col group"
+              >
+                <span className="font-bold text-gray-800 group-hover:text-slate-700 transition-colors text-lg mb-2">
+                  Günlük Vinç
+                </span>
+                <span className="text-sm text-gray-500 mt-auto flex items-center gap-1 font-medium">
+                  İncele <ChevronRight size={16} />
+                </span>
               </Link>
-              <Link href="/hizmetler/elektrik-bakim" className="bg-white border border-gray-200 p-5 rounded-xl hover:border-slate-500 hover:shadow-md transition-all flex flex-col group">
-                <span className="font-bold text-gray-800 group-hover:text-slate-700 transition-colors text-lg mb-2">Elektrik Bakım Vinç</span>
-                <span className="text-sm text-gray-500 mt-auto flex items-center gap-1 font-medium">İncele <ChevronRight size={16} /></span>
+              <Link
+                href="/hizmetler/elektrik-bakim"
+                className="bg-white border border-gray-200 p-5 rounded-xl hover:border-slate-500 hover:shadow-md transition-all flex flex-col group"
+              >
+                <span className="font-bold text-gray-800 group-hover:text-slate-700 transition-colors text-lg mb-2">
+                  Elektrik Bakım Vinç
+                </span>
+                <span className="text-sm text-gray-500 mt-auto flex items-center gap-1 font-medium">
+                  İncele <ChevronRight size={16} />
+                </span>
               </Link>
             </div>
           </div>
         </section>
 
-
         {/* 9. FAQ Bölümü */}
         <section className="py-16 bg-white border-b border-gray-100">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Sıkça Sorulan Sorular</h2>
-              <p className="text-lg text-gray-600">Kahramankazan, Keresteciler ve Saray bölgesindeki fabrika operasyonlarıyla ilgili detaylar.</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Sıkça Sorulan Sorular
+              </h2>
+              <p className="text-lg text-gray-600">
+                Kahramankazan, Keresteciler ve Saray bölgesindeki fabrika operasyonlarıyla ilgili
+                detaylar.
+              </p>
             </div>
 
             <div className="space-y-4">
               {faqs.map((faq, index) => (
-                <details key={index} className="group bg-gray-50 border border-gray-200 rounded-2xl [&_summary::-webkit-details-marker]:hidden">
+                <details
+                  key={index}
+                  className="group bg-gray-50 border border-gray-200 rounded-2xl [&_summary::-webkit-details-marker]:hidden"
+                >
                   <summary className="flex items-center justify-between cursor-pointer p-6 font-bold text-lg text-gray-900 group-hover:text-slate-700 transition-colors">
                     {faq.q}
                     <span className="transition group-open:rotate-180 bg-white p-2 rounded-full shadow-sm border border-gray-100">
-                      <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                      <svg
+                        fill="none"
+                        height="24"
+                        shapeRendering="geometricPrecision"
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="1.5"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <path d="M6 9l6 6 6-6"></path>
+                      </svg>
                     </span>
                   </summary>
                   <div className="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-100 pt-4 mt-2">
@@ -422,11 +594,10 @@ export default function KahramankazanPage() {
             </div>
           </div>
         </section>
-
       </main>
 
       <Footer />
-      
+
       {/* MOBİL STICKY BAR */}
       <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-[0_-10px_20px_-10px_rgba(0,0,0,0.15)] z-[100] flex p-2 gap-2">
         <a
@@ -446,7 +617,7 @@ export default function KahramankazanPage() {
           <span className="text-xs font-extrabold uppercase tracking-wide">WhatsApp</span>
         </a>
       </div>
-      
+
       <div className="h-[72px] md:hidden w-full bg-transparent"></div>
     </div>
   );

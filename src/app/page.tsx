@@ -28,7 +28,8 @@ export default function Home() {
     '@graph': [
       {
         '@type': 'LocalBusiness',
-        name: 'Ankara Sepetli Vinç',
+        '@id': `${siteUrl}/#business`,
+        name: 'ASV Ankara Sepetli Vinç Kiralama',
         image: `${siteUrl}/logo.png`,
         telephone: '+905516066878',
         email: 'info@ankarasepetlivinckirala.com',

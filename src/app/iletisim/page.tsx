@@ -13,7 +13,8 @@ import { SEO_CONFIG } from '@/config/seo';
 
 export const metadata: Metadata = {
   title: 'İletişim | Ankara Sepetli Vinç Kiralama 7/24 Destek',
-  description: 'Ankara sepetli vinç kiralama hizmeti için hemen iletişime geçin. Ostim, Etimesgut, Çankaya dahil tüm ilçelere 30 dakikada ücretsiz keşif ve araç sevkiyatı.',
+  description:
+    'Ankara sepetli vinç kiralama hizmeti için hemen iletişime geçin. Ostim, Etimesgut, Çankaya dahil tüm ilçelere 30 dakikada ücretsiz keşif ve araç sevkiyatı.',
   alternates: getMetadataAlternates('/iletisim'),
   openGraph: {
     title: 'Ankara Vinç Kiralama İletişim | Ankara Sepetli Vinç',
@@ -30,7 +31,8 @@ export default function IletisimPage() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: SEO_CONFIG.siteName,
+    '@id': `${SEO_CONFIG.baseUrl}/#business`,
+    name: 'ASV Ankara Sepetli Vinç Kiralama',
     telephone: '+905516066878',
     email: 'ysf.metu@gmail.com',
     url: SEO_CONFIG.baseUrl,
@@ -47,10 +49,9 @@ export default function IletisimPage() {
       '@type': 'ContactPoint',
       telephone: '+905516066878',
       contactType: 'customer service',
-      contactOption: 'TollFree',
       areaServed: 'TR',
-      availableLanguage: 'Turkish'
-    }
+      availableLanguage: 'Turkish',
+    },
   };
 
   return (
@@ -74,7 +75,11 @@ export default function IletisimPage() {
               <span className="text-primary">İletişim</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-              <strong>Ankara vinç kiralama</strong> ve <strong>sepetli vinç kiralama Ankara</strong> çözümleri için bize 7 gün 24 saat ulaşabilirsiniz. Acil durumlarda <strong>operatörlü vinç kiralama</strong> taleplerinize anında yanıt veriyor, Ostim merkezimizden aracı derhal yola çıkarıyoruz. Size en yakın vinci yönlendirebilmemiz için çalışma lokasyonunuzu iletmeniz yeterlidir.
+              <strong>Ankara vinç kiralama</strong> ve <strong>sepetli vinç kiralama Ankara</strong>{' '}
+              çözümleri için bize 7 gün 24 saat ulaşabilirsiniz. Acil durumlarda{' '}
+              <strong>operatörlü vinç kiralama</strong> taleplerinize anında yanıt veriyor, Ostim
+              merkezimizden aracı derhal yola çıkarıyoruz. Size en yakın vinci yönlendirebilmemiz
+              için çalışma lokasyonunuzu iletmeniz yeterlidir.
             </p>
           </div>
         </div>
@@ -152,8 +157,10 @@ export default function IletisimPage() {
                 <div>
                   <h3 className="text-lg font-bold text-gray-900">Hizmet Bölgelerimiz</h3>
                   <p className="text-lg text-gray-600 font-medium mt-1">
-                    <strong>Ankara ve çevresi:</strong><br />
-                    Ostim, Etimesgut, Çankaya, Yenimahalle, Sincan, Keçiören, Mamak başta olmak üzere tüm merkez ve çevre ilçelere hızlı sevk.
+                    <strong>Ankara ve çevresi:</strong>
+                    <br />
+                    Ostim, Etimesgut, Çankaya, Yenimahalle, Sincan, Keçiören, Mamak başta olmak
+                    üzere tüm merkez ve çevre ilçelere hızlı sevk.
                   </p>
                 </div>
               </div>
@@ -162,10 +169,20 @@ export default function IletisimPage() {
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <h4 className="text-2xl font-bold text-gray-900 mb-4">Neden Biz?</h4>
                 <ul className="space-y-3 text-gray-600 text-lg">
-                  <li className="flex items-center gap-2"><span className="text-primary font-bold">✓</span> Periyodik Bakımlı Güvenli Filo</li>
-                  <li className="flex items-center gap-2"><span className="text-primary font-bold">✓</span> G Sınıfı Sertifikalı Operatörler</li>
-                  <li className="flex items-center gap-2"><span className="text-primary font-bold">✓</span> Söz Verilen Saatte Teslimat</li>
-                  <li className="flex items-center gap-2"><span className="text-primary font-bold">✓</span> Rekabetçi ve Şeffaf Fiyatlandırma</li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-primary font-bold">✓</span> Periyodik Bakımlı Güvenli Filo
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-primary font-bold">✓</span> G Sınıfı Sertifikalı
+                    Operatörler
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-primary font-bold">✓</span> Söz Verilen Saatte Teslimat
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-primary font-bold">✓</span> Rekabetçi ve Şeffaf
+                    Fiyatlandırma
+                  </li>
                 </ul>
               </div>
 

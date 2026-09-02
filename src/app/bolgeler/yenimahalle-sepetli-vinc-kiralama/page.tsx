@@ -62,9 +62,7 @@ export default function YenimahallePage() {
         '@type': 'Service',
         name: 'Yenimahalle Sepetli Vinç Kiralama',
         provider: {
-          '@type': 'LocalBusiness',
-          name: 'ASV Vinç | Ankara Sepetli Vinç Kiralama',
-          url: SEO_CONFIG.baseUrl,
+          '@id': `${SEO_CONFIG.baseUrl}/#business`,
         },
         telephone: '+905516066878',
         areaServed: [
@@ -84,7 +82,8 @@ export default function YenimahallePage() {
       },
       {
         '@type': 'LocalBusiness',
-        name: 'ASV Vinç | Ankara Sepetli Vinç Kiralama',
+        '@id': `${SEO_CONFIG.baseUrl}/#business`,
+        name: 'ASV Ankara Sepetli Vinç Kiralama',
         url: SEO_CONFIG.baseUrl,
         telephone: '+905516066878',
         address: {
