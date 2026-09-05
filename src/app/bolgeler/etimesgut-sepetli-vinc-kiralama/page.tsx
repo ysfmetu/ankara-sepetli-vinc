@@ -794,6 +794,38 @@ export default function EtimesgutPage() {
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+              {/* Elvankent Halı Saha Projesi */}
+              <div className="bg-white rounded-2xl shadow-sm border border-teal-100 hover:shadow-md transition-shadow flex flex-col overflow-hidden md:col-span-2">
+                <div className="flex flex-col md:flex-row">
+                  <div className="relative h-56 md:h-auto md:w-2/5 w-full">
+                    <Image
+                      src="/images/blog/etimesgut-elvankent-hali-saha-vinc-calismasi-kapak.webp"
+                      alt="Elvankent halı saha yapımında vinç desteği"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-8 flex flex-col flex-grow md:w-3/5">
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                      Elvankent Halı Saha Yapımına Vinç Desteği
+                    </h3>
+                    <p className="text-gray-700 mb-4 flex-grow">
+                      Elvankent&apos;te gerçekleştirilen bir halı saha yapım çalışmasında, farklı erişim
+                      yüksekliklerine uygun üç araçla saha desteği sağladık. 36 metre çift kırma
+                      vinç 5 araç-gün, 50 metre çift kırma vinç 2 araç-gün ve 27 metre sepetli vinç
+                      10 araç-gün olmak üzere toplam <strong>17 araç-gün</strong> vinç desteği
+                      verildi.
+                    </p>
+                    <Link
+                      href="/blog/etimesgut-elvankent-hali-saha-yapimi-vinc-destegi"
+                      className="inline-flex items-center justify-center gap-2 font-bold bg-teal-50 text-teal-700 hover:bg-teal-600 hover:text-white px-6 py-3 rounded-xl transition-colors"
+                    >
+                      Elvankent halı saha projesini inceleyin <ArrowRight size={18} />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
               <div className="bg-white rounded-2xl shadow-sm border border-teal-100 hover:shadow-md transition-shadow flex flex-col overflow-hidden">
                 <div className="relative h-56 w-full">
                   <Image
