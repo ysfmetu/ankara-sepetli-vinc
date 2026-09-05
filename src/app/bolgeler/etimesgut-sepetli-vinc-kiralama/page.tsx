@@ -9,14 +9,8 @@ import {
   Building2,
   Home,
   Store,
-  Trees,
-  Clock,
-  ShieldCheck,
-  Paintbrush,
-  Zap,
-  ArrowRight,
-  ShieldAlert,
   CheckCircle2,
+  ArrowRight,
 } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -194,7 +188,7 @@ export default function EtimesgutPage() {
                   <strong>Türkiye’nin başkenti Ankara</strong>, batı ekseninde muazzam bir hızla
                   büyürken bu sürecin merkezinde{' '}
                   <strong>Ankara’nın en hızlı gelişen ilçelerinden biri olan Etimesgut</strong> yer
-                  almaktadır. <strong>İç Anadolu Bölgesi</strong>'nin planlı şehirleşme
+                  almaktadır. <strong>İç Anadolu Bölgesi&apos;nin</strong> planlı şehirleşme
                   örneklerinden biri olan ilçe, devasa inşaat, ticaret ve peyzaj alanları ile dikkat
                   çekmektedir.
                 </p>
@@ -205,11 +199,11 @@ export default function EtimesgutPage() {
                   budama, tabela montajı, elektrik bakım ve dış cephe işleri için sepetli vinç
                   hizmeti sıkça tercih edilmektedir. İster <strong>Ahi Mesut</strong> mahallesindeki
                   bir binanın çatı tamiratı, ister <strong>Etimesgut merkez</strong> veya{' '}
-                  <strong>Göksu Park çevresi</strong>'ndeki devasa rekreasyon alanlarının aydınlatma
-                  direklerinin bakımı olsun, güvenli erişim çözümlerine duyulan ihtiyaç kesintisiz
-                  devam etmektedir. Ayrıca <strong>Şaşmaz bağlantı hattı</strong> üzerindeki ağır
-                  sanayi işletmelerinin dış cephe veya çatı onarımlarında da profesyonel vinç
-                  kullanımı kritik bir role sahiptir.
+                  <strong>Göksu Park çevresi&apos;ndeki</strong> devasa rekreasyon alanlarının
+                  aydınlatma direklerinin bakımı olsun, güvenli erişim çözümlerine duyulan ihtiyaç
+                  kesintisiz devam etmektedir. Ayrıca <strong>Şaşmaz bağlantı hattı</strong>{' '}
+                  üzerindeki ağır sanayi işletmelerinin dış cephe veya çatı onarımlarında da
+                  profesyonel vinç kullanımı kritik bir role sahiptir.
                 </p>
                 <p>
                   Geleneksel ve riskli iskele kurulumları yerine{' '}
@@ -479,136 +473,6 @@ export default function EtimesgutPage() {
           </div>
         </section>
 
-        {/* 4. E-E-A-T GÜVEN BLOĞU: Gerçek Çalışmalar */}
-        <section className="py-16 bg-white border-b border-gray-100">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Etimesgut’ta Gerçekleştirdiğimiz Vinç Çalışmaları
-              </h2>
-              <p className="text-lg text-gray-600">
-                Bölgenin farklı noktalarında tamamladığımız gerçek operasyon örneklerimiz.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {/* Kart 1 */}
-              <div className="bg-gray-50 rounded-2xl overflow-hidden shadow-sm border border-gray-200 flex flex-col">
-                <div className="relative h-56 w-full">
-                  <Image
-                    src="/images/bolge/eryaman-site-vinc.jpg"
-                    alt="eryaman site cephe vinç hizmeti"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-6 flex flex-col flex-grow">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    Eryaman’da Site Cephe Çalışması
-                  </h3>
-                  <div className="space-y-2 mb-6 flex-grow">
-                    <p className="text-sm text-gray-700">
-                      <strong>İş Türü:</strong> 12 Katlı Site Dış Cephe Yalıtımı
-                    </p>
-                    <p className="text-sm text-gray-700">
-                      <strong>Neden Gerekti:</strong> Geleneksel iskelenin kurulamayacağı dar bir
-                      zemine sahip olan bloklarda rüzgar hasarı sebebiyle acil dış cephe onarımı
-                      gerekiyordu.
-                    </p>
-                    <p className="text-sm text-gray-700">
-                      <strong>Nasıl Çözüldü:</strong> 45 metrelik sepetli vincimizle site bahçesinin
-                      peyzajına zarar vermeden araç sabitlendi ve günlük kiralama ile tüm cephe 2
-                      günde onarıldı.
-                    </p>
-                  </div>
-                  <a
-                    href="tel:05516066878"
-                    className="inline-flex items-center justify-center w-full py-3 bg-teal-100 text-teal-800 font-bold rounded-lg hover:bg-teal-200 transition-colors text-sm"
-                  >
-                    Benzer iş için 0551 606 68 78
-                  </a>
-                </div>
-              </div>
-
-              {/* Kart 2 */}
-              <div className="bg-gray-50 rounded-2xl overflow-hidden shadow-sm border border-gray-200 flex flex-col">
-                <div className="relative h-56 w-full">
-                  <Image
-                    src="/images/bolge/baglica-agac-budama-vinc.jpg"
-                    alt="bağlıca ağaç budama sepetli vinç"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-6 flex flex-col flex-grow">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    Bağlıca’da Ağaç Budama ve Peyzaj Desteği
-                  </h3>
-                  <div className="space-y-2 mb-6 flex-grow">
-                    <p className="text-sm text-gray-700">
-                      <strong>İş Türü:</strong> Villa Bahçesi Yüksek Çam Ağacı Kesimi
-                    </p>
-                    <p className="text-sm text-gray-700">
-                      <strong>Neden Gerekti:</strong> Çatılara sürten ve fırtınada evin camlarına
-                      zarar verme riski taşıyan çok yüksek bir çam ağacının güvenli şekilde
-                      tepesinin alınması zorunluydu.
-                    </p>
-                    <p className="text-sm text-gray-700">
-                      <strong>Nasıl Çözüldü:</strong> Kompakt sepetli vincimizle bahçe duvarını
-                      aşarak erişim sağlandı. Uzman operatör ve testere ekibi ile tehlikeli dallar
-                      iplerle yavaşça aşağı indirildi.
-                    </p>
-                  </div>
-                  <a
-                    href="tel:05516066878"
-                    className="inline-flex items-center justify-center w-full py-3 bg-teal-100 text-teal-800 font-bold rounded-lg hover:bg-teal-200 transition-colors text-sm"
-                  >
-                    Benzer iş için 0551 606 68 78
-                  </a>
-                </div>
-              </div>
-
-              {/* Kart 3 */}
-              <div className="bg-gray-50 rounded-2xl overflow-hidden shadow-sm border border-gray-200 flex flex-col">
-                <div className="relative h-56 w-full">
-                  <Image
-                    src="/images/bolge/etimesgut-vinc.jpg"
-                    alt="elvankent tabela montaj vinç hizmeti"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-6 flex flex-col flex-grow">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    Elvankent’te Tabela ve Elektrik Bakım İşi
-                  </h3>
-                  <div className="space-y-2 mb-6 flex-grow">
-                    <p className="text-sm text-gray-700">
-                      <strong>İş Türü:</strong> Mağaza Işıklı Tabela Montajı
-                    </p>
-                    <p className="text-sm text-gray-700">
-                      <strong>Neden Gerekti:</strong> Yeni açılan ticari bir işletmenin 3. kat
-                      hizasına büyük bir ışıklı tabela takılması ve dış aydınlatma hatlarının
-                      çekilmesi gerekiyordu.
-                    </p>
-                    <p className="text-sm text-gray-700">
-                      <strong>Nasıl Çözüldü:</strong> Cadde üzerine park edilen aracımız ile trafik
-                      akışını engellemeden saatlik kiralama paketi kullanılarak tabela montajı
-                      hızlıca tamamlandı.
-                    </p>
-                  </div>
-                  <a
-                    href="tel:05516066878"
-                    className="inline-flex items-center justify-center w-full py-3 bg-teal-100 text-teal-800 font-bold rounded-lg hover:bg-teal-200 transition-colors text-sm"
-                  >
-                    Benzer iş için 0551 606 68 78
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* 5. HARİTA / GEO SİNYALİ */}
         <section className="py-16 bg-gray-50 border-b border-gray-200">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
@@ -786,46 +650,50 @@ export default function EtimesgutPage() {
           </div>
         </section>
 
-        {/* 8.5. GERÇEK SAHA ÇALIŞMALARI BLOĞU */}
+        {/* GERÇEK SAHA ÇALIŞMALARI BLOĞU */}
         <section className="py-16 bg-teal-50 border-b border-teal-100">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-10">
-              Etimesgut Bölgesinde Gerçekleştirdiğimiz Son Çalışmalar
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Etimesgut’ta Gerçekleştirdiğimiz Vinç Çalışmaları
             </h2>
+            <p className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
+              Etimesgut, Elvankent, Yaşamkent ve Bağlıca çevresinde tamamladığımız gerçek saha
+              çalışmalarından bazılarını inceleyin.
+            </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left mb-12">
               {/* Elvankent Halı Saha Projesi */}
-              <div className="bg-white rounded-2xl shadow-sm border border-teal-100 hover:shadow-md transition-shadow flex flex-col overflow-hidden md:col-span-2">
-                <div className="flex flex-col md:flex-row">
-                  <div className="relative h-56 md:h-auto md:w-2/5 w-full">
-                    <Image
-                      src="/images/blog/etimesgut-elvankent-hali-saha-vinc-calismasi-kapak.webp"
-                      alt="Elvankent halı saha yapımında vinç desteği"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-8 flex flex-col flex-grow md:w-3/5">
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">
-                      Elvankent Halı Saha Yapımına Vinç Desteği
-                    </h3>
-                    <p className="text-gray-700 mb-4 flex-grow">
-                      Elvankent&apos;te gerçekleştirilen bir halı saha yapım çalışmasında, farklı erişim
-                      yüksekliklerine uygun üç araçla saha desteği sağladık. 36 metre çift kırma
-                      vinç 5 araç-gün, 50 metre çift kırma vinç 2 araç-gün ve 27 metre sepetli vinç
-                      10 araç-gün olmak üzere toplam <strong>17 araç-gün</strong> vinç desteği
-                      verildi.
-                    </p>
-                    <Link
-                      href="/blog/etimesgut-elvankent-hali-saha-yapimi-vinc-destegi"
-                      className="inline-flex items-center justify-center gap-2 font-bold bg-teal-50 text-teal-700 hover:bg-teal-600 hover:text-white px-6 py-3 rounded-xl transition-colors"
-                    >
-                      Elvankent halı saha projesini inceleyin <ArrowRight size={18} />
-                    </Link>
-                  </div>
+              <div className="bg-white rounded-2xl shadow-sm border border-teal-100 hover:shadow-md transition-shadow flex flex-col overflow-hidden">
+                <div className="relative h-56 w-full">
+                  <Image
+                    src="/images/blog/etimesgut-elvankent-hali-saha-vinc-calismasi-kapak.webp"
+                    alt="Elvankent halı saha yapımında vinç desteği"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-6 flex flex-col flex-grow">
+                  <span className="inline-block px-3 py-1 bg-teal-100 text-teal-800 text-xs font-bold rounded-full mb-4 self-start">
+                    Elvankent
+                  </span>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    Elvankent Halı Saha Yapımına Vinç Desteği
+                  </h3>
+                  <p className="text-gray-700 mb-6 flex-grow text-sm leading-relaxed">
+                    Elvankent’teki halı saha yapım çalışmasına 36 ve 50 metre çift kırma vinçler ile
+                    27 metre sepetli vinç kullanarak toplam 17 araç-gün destek sağladık.
+                  </p>
+                  <Link
+                    href="/blog/etimesgut-elvankent-hali-saha-yapimi-vinc-destegi"
+                    className="inline-flex items-center text-teal-700 font-bold hover:text-teal-600 transition-colors"
+                  >
+                    Elvankent halı saha projesini inceleyin{' '}
+                    <ArrowRight size={16} className="ml-1" />
+                  </Link>
                 </div>
               </div>
 
+              {/* Yaşamkent Projesi */}
               <div className="bg-white rounded-2xl shadow-sm border border-teal-100 hover:shadow-md transition-shadow flex flex-col overflow-hidden">
                 <div className="relative h-56 w-full">
                   <Image
@@ -835,23 +703,27 @@ export default function EtimesgutPage() {
                     className="object-cover"
                   />
                 </div>
-                <div className="p-8 flex flex-col flex-grow">
+                <div className="p-6 flex flex-col flex-grow">
+                  <span className="inline-block px-3 py-1 bg-teal-100 text-teal-800 text-xs font-bold rounded-full mb-4 self-start">
+                    Yaşamkent
+                  </span>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    Yaşamkent / Konutkent Tabela Montajı ve Cam Silme Çalışması
+                    Yaşamkent Tabela Montajı ve Cam Silme
                   </h3>
-                  <p className="text-gray-700 mb-6 flex-grow">
+                  <p className="text-gray-700 mb-6 flex-grow text-sm leading-relaxed">
                     27 metrelik sepetli vinç ile Yaşamkent Elya Center çevresinde
                     gerçekleştirdiğimiz tabela montajı ve dış cephe cam silme çalışmasını inceleyin.
                   </p>
                   <Link
                     href="/blog/yasamkentte-27-metre-sepetli-vinc-ile-tabela-montaji-ve-cam-silme-hizmeti"
-                    className="inline-flex items-center justify-center gap-2 font-bold bg-teal-50 text-teal-700 hover:bg-teal-600 hover:text-white px-6 py-3 rounded-xl transition-colors"
+                    className="inline-flex items-center text-teal-700 font-bold hover:text-teal-600 transition-colors"
                   >
-                    Gerçek çalışmayı incele <ArrowRight size={18} />
+                    Gerçek çalışmayı incele <ArrowRight size={16} className="ml-1" />
                   </Link>
                 </div>
               </div>
 
+              {/* Bağlıca Projesi */}
               <div className="bg-white rounded-2xl shadow-sm border border-teal-100 hover:shadow-md transition-shadow flex flex-col overflow-hidden">
                 <div className="relative h-56 w-full">
                   <Image
@@ -861,23 +733,43 @@ export default function EtimesgutPage() {
                     className="object-cover"
                   />
                 </div>
-                <div className="p-8 flex flex-col flex-grow">
+                <div className="p-6 flex flex-col flex-grow">
+                  <span className="inline-block px-3 py-1 bg-teal-100 text-teal-800 text-xs font-bold rounded-full mb-4 self-start">
+                    Bağlıca
+                  </span>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">
                     Bağlıca Villa Bölgesinde Ağaç Budama Çalışması
                   </h3>
-                  <p className="text-gray-700 mb-6 flex-grow">
+                  <p className="text-gray-700 mb-6 flex-grow text-sm leading-relaxed">
                     Bağlıca villa bölgesinde gerçekleştirdiğimiz ağaç budama çalışmasında sepetli
-                    vinç desteği, budama sonrası temizlik, nakliye ve belediye izin süreçlerini
-                    uçtan uca yönettik.
+                    vinç desteği, temizlik, nakliye ve izin süreçlerini uçtan uca yönettik.
                   </p>
                   <Link
                     href="/blog/baglica-villa-bolgesinde-agac-budama-calismasi"
-                    className="inline-flex items-center justify-center gap-2 font-bold bg-teal-50 text-teal-700 hover:bg-teal-600 hover:text-white px-6 py-3 rounded-xl transition-colors"
+                    className="inline-flex items-center text-teal-700 font-bold hover:text-teal-600 transition-colors"
                   >
-                    Gerçek çalışmayı incele <ArrowRight size={18} />
+                    Gerçek çalışmayı incele <ArrowRight size={16} className="ml-1" />
                   </Link>
                 </div>
               </div>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 border border-teal-200 shadow-sm max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+              <div className="text-left">
+                <h4 className="text-xl font-bold text-gray-900 mb-2">
+                  Projeniz İçin Vinç mi Gerekiyor?
+                </h4>
+                <p className="text-gray-600">
+                  Etimesgut ve çevresindeki çalışmalarınız için uygun vinç seçimini birlikte
+                  planlayalım.
+                </p>
+              </div>
+              <a
+                href="tel:+905516066878"
+                className="inline-flex items-center justify-center gap-2 bg-teal-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-teal-700 transition-colors whitespace-nowrap shadow-md hover:shadow-lg"
+              >
+                <Phone size={20} /> 0551 606 68 78
+              </a>
             </div>
           </div>
         </section>
