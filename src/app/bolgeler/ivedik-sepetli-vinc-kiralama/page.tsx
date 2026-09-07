@@ -457,62 +457,37 @@ export default function IvedikPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 group">
-                <div className="relative h-48 w-full">
+            <div className="grid grid-cols-1 max-w-md mx-auto gap-8">
+              <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 group flex flex-col">
+                <Link
+                  href="/blog/ivedik-osb-4-katli-is-yeri-dis-cam-temizligi"
+                  className="relative h-60 w-full block overflow-hidden"
+                >
                   <Image
-                    src="/images/bolge/ivedik-fabrika-vinc.jpg"
-                    alt="ankara ivedik vinç hizmeti"
+                    src="/images/blog/ivedik-osb-4-katli-is-yeri-dis-cam-temizligi-kapak.webp"
+                    alt="İvedik OSB Cam Temizliği"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-2 text-red-600 font-bold mb-2">
-                    <Factory size={20} /> Fabrika Bakım İşi
+                </Link>
+                <div className="p-6 flex flex-col flex-grow">
+                  <div className="flex items-center gap-2 text-red-600 font-bold mb-3 text-sm uppercase tracking-wider">
+                    <MapPin size={16} /> İvedik OSB
                   </div>
-                  <p className="text-gray-600 text-sm">
-                    İvedik Organize Sanayi Bölgesinde yer alan büyük bir yedek parça fabrikasının
-                    dış cephe havalandırma (egzoz) motoru, üretim bandı durdurulmadan güvenli
-                    şekilde değiştirildi.
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    İvedik OSB’de 4 Katlı İş Yeri Cam Temizliği
+                  </h3>
+                  <p className="text-gray-600 text-sm mb-6 flex-grow leading-relaxed">
+                    İvedik Organize Sanayi Bölgesi’nde bulunan dört katlı bir iş yerinin dış cam
+                    temizliği çalışmasına sepetli vinçle yüksek erişim desteği sağladık. Gerçek saha
+                    fotoğraflarını ve çalışma videosunu vaka yazımızda inceleyebilirsiniz.
                   </p>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 group">
-                <div className="relative h-48 w-full bg-gray-200 flex items-center justify-center">
-                  <Settings size={48} className="text-gray-400" />
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-2 text-red-600 font-bold mb-2">
-                    <Settings size={20} /> Makine Montajı
-                  </div>
-                  <p className="text-gray-600 text-sm">
-                    Atölye girişindeki dar kapıdan tırla getirilen 5 tonluk yeni nesil CNC
-                    tezgahının içeri alınması ve tavan bağlantılarının yapılması işlemi sıfır kaza
-                    riski ile tamamlandı.
-                  </p>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 group">
-                <div className="relative h-48 w-full">
-                  <Image
-                    src="/images/bolge/ivedik-vinc.jpg"
-                    alt="ivedik sepetli vinç kiralama"
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-2 text-red-600 font-bold mb-2">
-                    <Zap size={20} /> Depo Aydınlatma
-                  </div>
-                  <p className="text-gray-600 text-sm">
-                    Lojistik bir deponun 12 metre yükseklikteki tavanına, raf aralarına ustalıkla
-                    giren kısa şaseli platformumuz aracılığıyla yangın ihbar sistemi ve LED
-                    aydınlatmalar yerleştirildi.
-                  </p>
+                  <Link
+                    href="/blog/ivedik-osb-4-katli-is-yeri-dis-cam-temizligi"
+                    className="inline-flex items-center gap-2 text-red-600 font-bold hover:text-red-700 transition-colors"
+                  >
+                    İvedik OSB cam temizliği çalışmasını inceleyin <ChevronRight size={18} />
+                  </Link>
                 </div>
               </div>
             </div>
