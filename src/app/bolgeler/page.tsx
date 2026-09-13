@@ -120,6 +120,13 @@ const districtsData = [
       'Gölbaşı, İncek ve Mogan çevresindeki lüks villalar, müstakil bahçeler ve yeni projelerde hassas ağaç budama, baca temizliği ve kamera montajı için güvenilir sepetli vinç hizmetleri.',
   },
   {
+    name: 'Haymana',
+    slug: 'haymana',
+    image: '/images/blog/haymana-ak3-27-metre-sepetli-vinc-cati-temizligi.webp',
+    excerpt:
+      'Kurumsal tesisler, çatı kontrolü, temizlik ve yüksek erişim gerektiren çalışmalar için Haymana\'da operatörlü sepetli vinç desteği.',
+  },
+  {
     name: 'Kahramankazan',
     slug: 'kahramankazan',
     image: '/images/bolge/kahramankazan-sepetli-vinc-calisma.png',

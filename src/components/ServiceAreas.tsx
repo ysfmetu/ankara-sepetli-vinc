@@ -18,6 +18,7 @@ export default function ServiceAreas() {
     { name: 'Altındağ', slug: 'altindag' },
     { name: 'Pursaklar', slug: 'pursaklar' },
     { name: 'Gölbaşı', slug: 'golbasi' },
+    { name: 'Haymana', slug: 'haymana' },
     { name: 'Kahramankazan', slug: 'kahramankazan' },
     { name: 'Ostim', slug: 'ostim' },
     { name: 'İvedik', slug: 'ivedik' },

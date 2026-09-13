@@ -42,6 +42,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/bolgeler/altindag-sepetli-vinc-kiralama',
     '/bolgeler/pursaklar-sepetli-vinc-kiralama',
     '/bolgeler/golbasi-sepetli-vinc-kiralama',
+    '/bolgeler/haymana-sepetli-vinc-kiralama',
     '/bolgeler/kahramankazan-sepetli-vinc-kiralama',
     ...posts.map((post) => `/blog/${post.slug}`),
   ];
