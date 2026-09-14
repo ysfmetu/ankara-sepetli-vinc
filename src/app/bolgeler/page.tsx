@@ -127,6 +127,13 @@ const districtsData = [
       'Kurumsal tesisler, çatı kontrolü, temizlik ve yüksek erişim gerektiren çalışmalar için Haymana\'da operatörlü sepetli vinç desteği.',
   },
   {
+    name: 'Bala',
+    slug: 'bala',
+    image: '/images/blog/bala-kurumsal-tesiste-4-gunluk-sepetli-vinc-hizmeti-kapak.webp',
+    excerpt:
+      'Bala\'da kurumsal tesis çalışmaları, çatı ve dış cephe bakımı ile uzun süreli planlı vinç operasyonları için operatörlü sepetli vinç kiralama.',
+  },
+  {
     name: 'Kahramankazan',
     slug: 'kahramankazan',
     image: '/images/bolge/kahramankazan-sepetli-vinc-calisma.png',

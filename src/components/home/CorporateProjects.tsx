@@ -37,12 +37,6 @@ const projects: Project[] = [
         icon: '🏭',
       },
       {
-        title: 'Aviagen Anadolu – Haymana AK3 & ANK2',
-        description: 'Platform taşıma, çatı temizliği ve kuşkonmaz montajı',
-        href: '/blog/haymana-aviagen-ak3-ank2-tesisleri-vinc-calismasi',
-        icon: '🏗️',
-      },
-      {
         title: 'AS İnşaat – İncek/Ahlatlıbel Sitesi',
         description: '~20 günlük dış cephe, cam temizliği ve silikon çalışması',
         href: '/blog/incek-ahlatlibel-sepetli-vinc-dis-cephe-calismasi',
