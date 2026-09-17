@@ -8,12 +8,7 @@ import {
   CheckCircle2,
   ChevronRight,
   Factory,
-  Zap,
   Building2,
-  Map,
-  ShieldCheck,
-  Wrench,
-  HardHat,
 } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -400,71 +395,143 @@ export default function SincanPage() {
           </div>
         </section>
 
-        {/* 5. GÜVEN BLOĞU (E-E-A-T) */}
+        {/* 5. GERÇEK SAHA ÇALIŞMASI — Sincan Merkez Oluk Borusu İndirme */}
         <section className="py-16 bg-gray-50 border-b border-gray-100">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Sincan’da Gerçekleştirdiğimiz Vinç Çalışmaları
+                Sincan'da Gerçekleştirdiğimiz Vinç Çalışmaları
               </h2>
               <p className="text-lg text-gray-600">
-                Yılların getirdiği tecrübeyle Sincan OSB ve çevresinde sayısız endüstriyel başarıya
-                imza attık.
+                Sincan ve çevresinde tamamladığımız gerçek saha çalışmalarından birini
+                inceleyebilirsiniz.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 group">
-                <div className="relative h-48 w-full">
+            <div className="max-w-4xl mx-auto">
+              {/* Proje kartı */}
+              <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
+                {/* Kapak görseli */}
+                <div className="relative w-full" style={{ aspectRatio: '1200 / 727' }}>
                   <Image
-                    src="/images/bolge/sincan-fabrika-vinc.jpg"
-                    alt="ankara sincan vinç hizmeti"
+                    src="/images/bolge/sincan-merkez-oluk-borusu-indirme-sepetli-vinc-kapak.webp"
+                    alt="Sincan Merkez'de oluk borusu indirme çalışması yapan sepetli vinç"
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 896px"
+                    priority
                   />
                 </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-2 text-primary font-bold mb-2">
-                    <Wrench size={20} /> Fabrika Bakım Örneği
+
+                {/* Proje bilgileri */}
+                <div className="p-6 md:p-8">
+                  <div className="flex flex-wrap items-center gap-3 mb-4">
+                    <span className="inline-flex items-center gap-1.5 bg-primary/10 text-primary text-sm font-semibold px-3 py-1 rounded-full">
+                      <MapPin size={14} /> Sincan Merkez
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 bg-gray-100 text-gray-700 text-sm font-semibold px-3 py-1 rounded-full">
+                      Oluk Borusu İndirme
+                    </span>
                   </div>
-                  <p className="text-gray-600 text-sm">
-                    Sincan ASO 1. OSB bölgesinde yer alan devasa bir üretim tesisinin dış cephe
-                    kompozit yalıtım onarımlarını, iş güvenliği standartlarına uygun şekilde
-                    günlerce süren vinç kiralama operasyonumuzla sorunsuz tamamladık.
+
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                    Sincan Merkez'de Oluk Borusu İndirme Çalışması
+                  </h3>
+
+                  <div className="prose prose-gray max-w-none mb-6">
+                    <p className="text-gray-600 leading-relaxed">
+                      Sincan Merkez'de çok katlı bir binanın çatı seviyesindeki oluk borusunun
+                      indirilmesi için sepetli vinç desteği sağladık. Bina cephesinin önünden geçen
+                      havai hatlar çalışma alanını daralttığı için aracın konumu ve bom hareketleri
+                      mevcut saha koşullarına göre planlandı. Kontrollü erişim sayesinde oluk borusu
+                      cepheden aşağı alınarak çalışma tamamlandı.
+                    </p>
+                    <p className="text-gray-600 leading-relaxed">
+                      Bu çalışma, dar erişim alanlarında yalnızca çalışma yüksekliğinin değil; bina
+                      cephesi, havai hatlar ve aracın konumlandırılabileceği alanın da birlikte
+                      değerlendirilmesi gerektiğini gösteren gerçek bir Sincan uygulamasıdır.
+                    </p>
+                    <p className="text-gray-500 text-sm leading-relaxed">
+                      Erişimi zorlaştıran havai hatlara rağmen uygun araç konumlandırması ve
+                      kontrollü bom hareketleriyle çalışma tamamlandı.
+                    </p>
+                  </div>
+
+                  {/* Galeri — 2 sütunlu alt görseller */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                    <div
+                      className="relative w-full rounded-xl overflow-hidden"
+                      style={{ aspectRatio: '9 / 10', maxHeight: '400px' }}
+                    >
+                      <Image
+                        src="/images/bolge/sincan-merkez-havai-hatlar-arasinda-vinc-calismasi.webp"
+                        alt="Sincan Merkez'de havai hatların bulunduğu alanda kontrollü vinç çalışması"
+                        fill
+                        className="object-cover object-top"
+                        sizes="(max-width: 640px) 100vw, 400px"
+                      />
+                    </div>
+                    <div
+                      className="relative w-full rounded-xl overflow-hidden"
+                      style={{ aspectRatio: '5 / 6', maxHeight: '400px' }}
+                    >
+                      <Image
+                        src="/images/bolge/sincan-merkez-oluk-borusu-indirme-islemi-tamamlandi.webp"
+                        alt="Sincan'da oluk borusu indirme işleminin tamamlanmış görünümü"
+                        fill
+                        className="object-cover object-top"
+                        sizes="(max-width: 640px) 100vw, 400px"
+                      />
+                    </div>
+                  </div>
+
+                  {/* İç bağlantılar */}
+                  <p className="text-gray-600 text-sm leading-relaxed mb-6">
+                    Bu tür yüksek erişim gerektiren dış cephe işlerinde{' '}
+                    <Link
+                      href="/hizmetler/sepetli-vinc-kiralama"
+                      className="text-primary hover:underline font-medium"
+                    >
+                      operatörlü sepetli vinç desteği
+                    </Link>{' '}
+                    sağlıyoruz. Kısa süreli bakım ve onarım işleri için{' '}
+                    <Link
+                      href="/hizmetler/saatlik-vinc-kiralama"
+                      className="text-primary hover:underline font-medium"
+                    >
+                      saatlik vinç kiralama seçenekleri
+                    </Link>
+                    ni de değerlendirebilirsiniz.
                   </p>
                 </div>
               </div>
 
-              <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 group">
-                <div className="relative h-48 w-full bg-gray-200 flex items-center justify-center">
-                  {/* Kullanıcı sadece 2 görsel adı verdi, 3. kart için sembolik bir alan tutuyoruz */}
-                  <Zap size={48} className="text-gray-400" />
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-2 text-primary font-bold mb-2">
-                    <Zap size={20} /> Depo Aydınlatma İşi
-                  </div>
-                  <p className="text-gray-600 text-sm">
-                    Temelli lojistik üslerinde bulunan dev hangarların 15 metre yüksekliğindeki iç
-                    tavan aydınlatma armatürlerinin LED dönüşümünü, fabrika içine giren manevra
-                    kabiliyeti yüksek sepetli araçlarımızla sıfır kazayla bitirdik.
-                  </p>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 group">
-                <div className="relative h-48 w-full bg-gray-200 flex items-center justify-center">
-                  <ShieldCheck size={48} className="text-gray-400" />
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-2 text-primary font-bold mb-2">
-                    <HardHat size={20} /> Tabela Montajı
-                  </div>
-                  <p className="text-gray-600 text-sm">
-                    Sincan merkez Lale Meydanı çevresindeki ticari mağazaların ve çok katlı iş
-                    hanlarının çatılarına ağır çelik profilli kutu harf tabela ve totem reklam
-                    panosu montajlarını gece vardiyasında emniyetle gerçekleştirdik.
-                  </p>
+              {/* CTA */}
+              <div className="mt-10 bg-white border border-gray-200 rounded-2xl p-6 md:p-8 text-center shadow-sm">
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">
+                  Sincan'daki Yüksek Erişim İşiniz İçin Destek Alın
+                </h3>
+                <p className="text-gray-600 mb-6">
+                  Çalışma alanının fotoğrafını ve konumunu paylaşın, işe uygun araç planlamasını
+                  birlikte yapalım.
+                </p>
+                <div className="flex flex-col sm:flex-row justify-center gap-3">
+                  <a
+                    href="tel:05516066878"
+                    className="inline-flex items-center justify-center gap-2 bg-primary text-white hover:bg-primary-dark px-6 py-3 rounded-xl font-bold text-lg transition-colors"
+                  >
+                    <Phone size={20} />
+                    0551 606 68 78
+                  </a>
+                  <a
+                    href="https://wa.me/905516066878?text=Merhaba%2C%20Sincan%27da%20y%C3%BCksek%20eri%C5%9Fim%20gerektiren%20bir%20%C3%A7al%C4%B1%C5%9Fma%20i%C3%A7in%20sepetli%20vin%C3%A7%20deste%C4%9Fi%20almak%20istiyorum."
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white hover:bg-[#1ebd5a] px-6 py-3 rounded-xl font-bold text-lg transition-colors"
+                  >
+                    <MessageCircle size={20} />
+                    WhatsApp
+                  </a>
                 </div>
               </div>
             </div>
