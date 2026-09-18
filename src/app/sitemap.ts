@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { getAllPosts, getPublishedPosts } from '@/lib/mdx';
+import { getPublishedPosts } from '@/lib/mdx';
 import { getCanonicalUrl } from '@/lib/seo-utils';
 
 // Sitemap ISR — regenerate at most once per hour instead of on every request.
@@ -13,6 +13,18 @@ const REDIRECTED_BLOG_SLUGS = [
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getPublishedPosts().filter((post) => !REDIRECTED_BLOG_SLUGS.includes(post.slug));
+
+  const postDateMap = new Map<string, Date>();
+  posts.forEach((p) => {
+    const postRecord = p as unknown as Record<string, unknown>;
+    const rawDate = postRecord.updated || postRecord.modified || postRecord.dateModified || p.date;
+    if (rawDate && typeof rawDate === 'string') {
+      const parsed = new Date(rawDate);
+      if (!isNaN(parsed.getTime())) {
+        postDateMap.set(`/blog/${p.slug}`, parsed);
+      }
+    }
+  });
 
   const routes = [
     '',
@@ -70,13 +82,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     else if (route.startsWith('/bolgeler/')) priority = 0.75;
     else if (route.startsWith('/blog/')) priority = 0.7;
 
-    // Use a fixed date for the pricing page to reflect actual content update
-    const lastModified =
-      route === '/sepetli-vinc-kiralama-fiyatlari' ? new Date('2026-07-19') : new Date();
+    // Determine lastModified date only if verified date exists
+    let lastModified: Date | undefined = undefined;
+    if (route === '/sepetli-vinc-kiralama-fiyatlari') {
+      lastModified = new Date('2026-07-19');
+    } else if (route.startsWith('/blog/') && postDateMap.has(route)) {
+      lastModified = postDateMap.get(route);
+    }
 
     return {
       url: getCanonicalUrl(route),
-      lastModified,
+      ...(lastModified ? { lastModified } : {}),
       changeFrequency,
       priority,
     };

@@ -65,7 +65,7 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   name: 'ASV Ankara Sepetli Vinç Kiralama',
-  image: `${SEO_CONFIG.baseUrl}/images/hero-bg.jpg`,
+  image: `${SEO_CONFIG.baseUrl}/og-image.jpg`,
   description: SEO_CONFIG.defaultDescription,
   '@id': `${SEO_CONFIG.baseUrl}/#business`,
   url: SEO_CONFIG.baseUrl,
