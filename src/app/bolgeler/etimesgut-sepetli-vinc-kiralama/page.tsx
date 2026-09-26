@@ -657,11 +657,11 @@ export default function EtimesgutPage() {
               Etimesgut’ta Gerçekleştirdiğimiz Vinç Çalışmaları
             </h2>
             <p className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
-              Etimesgut, Elvankent, Yaşamkent ve Bağlıca çevresinde tamamladığımız gerçek saha
-              çalışmalarından bazılarını inceleyin.
+              Etimesgut, Elvankent, Yaşamkent, Bağlıca ve Şaşmaz hattında tamamladığımız gerçek
+              saha çalışmalarından bazılarını inceleyin.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-left mb-12">
               {/* Elvankent Halı Saha Projesi */}
               <div className="bg-white rounded-2xl shadow-sm border border-teal-100 hover:shadow-md transition-shadow flex flex-col overflow-hidden">
                 <div className="relative h-56 w-full">
@@ -750,6 +750,32 @@ export default function EtimesgutPage() {
                   >
                     Gerçek çalışmayı incele <ArrowRight size={16} className="ml-1" />
                   </Link>
+                </div>
+              </div>
+
+              {/* İncek → Şaşmaz Konteyner Taşıma */}
+              <div className="bg-white rounded-2xl shadow-sm border border-teal-100 hover:shadow-md transition-shadow flex flex-col overflow-hidden">
+                <div className="relative h-48 w-full">
+                  <Image
+                    src="/images/bolge/incek-sasmaz-konteyner-tasima-vinc-ankara.jpeg"
+                    alt="İncek’ten Şaşmaz’a konteyner taşıma operasyonunda ASV Vinç"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-5 flex flex-col flex-grow">
+                  <span className="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs font-bold rounded-full mb-3 self-start">
+                    Tamamlanan Operasyon
+                  </span>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">
+                    İncek’ten Şaşmaz’a Konteyner Taşıma
+                  </h3>
+                  <p className="text-gray-700 flex-grow text-sm leading-relaxed">
+                    İncek bölgesinden alınan konteyner, vinç desteğiyle İstanbul
+                    Yolu–Şaşmaz Kavşağı bölgesine taşındı. Kaldırma, taşıma
+                    aracına alma ve varış noktasında kontrollü şekilde indirme
+                    planlı olarak tamamlandı.
+                  </p>
                 </div>
               </div>
             </div>

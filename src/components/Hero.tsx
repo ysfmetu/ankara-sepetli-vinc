@@ -38,13 +38,6 @@ export default function Hero() {
                 <span className="text-gray-700 font-medium">Yeni Ekipman</span>
               </div>
             </div>
-            
-            <div className="mt-8 pt-4">
-              <p className="text-lg font-bold text-gray-800 bg-white/60 p-4 rounded-xl shadow-sm border border-gray-100 inline-block">
-                Ankara sepetli vinç kiralama hizmeti için hemen arayın:{' '}
-                <a href="tel:+905516066878" className="text-primary hover:underline whitespace-nowrap">0551 606 68 78</a>
-              </p>
-            </div>
           </div>
 
           {/* Lead Form Area */}

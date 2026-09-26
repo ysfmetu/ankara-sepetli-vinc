@@ -405,7 +405,7 @@ export default function CankayaPage() {
                 <p className="text-gray-600">
                   Çankaya'nın müstakil villalara ve geniş arazilere ev sahipliği yapan İncek
                   bölgesinde genellikle çim ve bahçeyi ezmeyen kompakt vinçler istenir. Yüksek çam
-                  ağaçlarının budanması, peyzaj düzenlemesi ve çatı oluk temizliği hızlıca sağlanır.
+                  ağaçlarının budanması, peyzaj düzenlemesi ve çatı oluk temizliği hızlıca sağlanır. Bunların yanı sıra İncek bölgesinden İstanbul Yolu–Şaşmaz Kavşağı'na gerçekleştirilen konteyner taşıma operasyonunda da vinç desteği sağladık.
                 </p>
               </div>
             </div>

@@ -3,21 +3,57 @@ export default function MiniSEOBlock() {
     <section className="py-12 md:py-16 bg-white border-t border-gray-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
         <h2 className="text-3xl font-extrabold text-gray-900 mb-6">
-          Ankara'da Profesyonel Sepetli Vinç Hizmeti
+          Ankara&apos;da Profesyonel Sepetli Vinç Hizmeti
         </h2>
-        
+
         <div className="prose prose-lg text-gray-600 max-w-none space-y-5 leading-relaxed text-justify sm:text-left">
           <p>
-            Başkentin dört bir yanında süregelen inşaat, yenileme ve endüstriyel faaliyetler, güvenilir ve esnek ekipmanlara olan ihtiyacı her geçen gün artırmaktadır. Bizler, sektördeki köklü tecrübemizle <strong>Ankara sepetli vinç kiralama</strong> alanında kurumların ve bireylerin öncelikli çözüm ortağı olmaya devam ediyoruz. <strong>Yüksekte çalışma hizmetleri</strong> söz konusu olduğunda, en temel prensibimiz iş güvenliği kurallarından taviz vermeden projelerinizi zamanında tamamlamaktır.
+            Yıllar içinde Ankara&apos;nın farklı ilçelerinde —Çankaya&apos;dan
+            Yenimahalle&apos;ye, Etimesgut&apos;tan çevre sanayi bölgelerine kadar—
+            yüzlerce yüksek erişim işini başarıyla tamamladık. Tüm bu operasyonlar,
+            deneyimli kadromuz eşliğinde{' '}
+            <a href="/hizmetler/operatorlu-vinc-kiralama" className="text-primary hover:underline font-medium">
+              operatörlü sepetli vinç
+            </a>{' '}
+            hizmeti olarak sunulmaktadır; çünkü yüksekte güvenli çalışma, doğru
+            ekipmanın yanı sıra sahayı bilen bir operatör gerektirir. Projenizin
+            büyüklüğüne ve süresine göre saatlik veya günlük olarak planlanan{' '}
+            <a href="/hizmetler/sepetli-vinc-kiralama" className="text-primary hover:underline font-medium">
+              Ankara sepetli vinç kiralama
+            </a>{' '}
+            hizmetimizle bütçenize en uygun çözümü birlikte belirleyebiliriz.
           </p>
           <p>
-            Merkezden çevre ilçelere kadar oldukça geniş bir coğrafyada kesintisiz lojistik sağlıyoruz. Özellikle nüfus ve ticaretin yoğunlaştığı <strong>Çankaya</strong>, <strong>Yenimahalle</strong> ve <strong>Keçiören</strong> ilçelerinde her gün çok sayıda başarılı operasyona imza atıyoruz. Bunun yanı sıra sanayi ve dönüşüm projelerinin hız kazandığı <strong>Etimesgut</strong>, <strong>Sincan</strong> ve <strong>Altındağ</strong> bölgelerinde de filomuz aktif şekilde görev yapmaktadır. Ulaşım ağımızın gücü sayesinde sadece merkezle sınırlı kalmıyor; <strong>Gölbaşı</strong> ve <strong>Bala</strong> gibi daha uzak ilçelerdeki şantiye ve kurumsal tesislere de aynı hızla ulaşım sağlayabiliyoruz.
+            Çalıştığımız işler oldukça geniş bir yelpazeye yayılır. Plazaların ve
+            konut binalarının dış yüzeylerinde gerçekleştirilen{' '}
+            <a href="/hizmetler/cephe-temizligi-sepetli-vinc" className="text-primary hover:underline font-medium">
+              dış cephe temizliği
+            </a>{' '}
+            ve bakım çalışmalarından cadde üzerindeki zorlu{' '}
+            <a href="/hizmetler/tabela-montaj" className="text-primary hover:underline font-medium">
+              tabela montajı
+            </a>{' '}
+            operasyonlarına; yüksek gerilim hatları ve aydınlatma sistemlerindeki{' '}
+            <a href="/hizmetler/elektrik-bakim" className="text-primary hover:underline font-medium">
+              elektrik ve bakım
+            </a>{' '}
+            müdahalelerinden park ve yaşam alanlarındaki{' '}
+            <a href="/hizmetler/agac-budama" className="text-primary hover:underline font-medium">
+              ağaç budama
+            </a>{' '}
+            işlerine kadar uzanan bu çeşitlilik, filomuzun farklı tonaj ve bom
+            uzunluğu seçenekleri sayesinde mümkün olmaktadır.
           </p>
           <p>
-            Geliştirdiğimiz esnek hizmet altyapısı sayesinde, projenizin büyüklüğü ne olursa olsun size en uygun modeli sunuyoruz. Kısa mesai gerektiren hızlı işlemleriniz için <strong>saatlik vinç kiralama</strong> modelimiz hem pratik hem de ekonomik bir çözüm oluştururken; uzun soluklu şantiye işleri, tam gün sürecek fabrika bakımları ve periyodik dış müdahaleler için <strong>günlük vinç kiralama</strong> seçeneklerimiz devreye girmektedir. Hangi modeli seçerseniz seçin, sahadaki operasyonlarınız yalnızca makine teslimiyle sınırlı kalmaz. Tüm kiralama süreçlerimiz, alanında deneyimli, donanımlı ve yasal sertifikasyonlarını tamamlamış uzman personellerimiz eşliğinde, <strong>operatörlü sepetli vinç</strong> hizmeti olarak gerçekleştirilir.
-          </p>
-          <p>
-            Farklı tonaj ve bom uzunluklarına sahip araçlarımız çok çeşitli ihtiyaçlara yanıt vermektedir. Şehrin en işlek caddelerindeki yüksek plazalarda büyük titizlik gerektiren <strong>dış cephe cam temizliği</strong> uygulamalarından, marka bilinirliğinizi artıracak zorlu <strong>tabela montajı</strong> operasyonlarına kadar her alanda profesyonel destek sağlıyoruz. Binaların ömrünü uzatan <strong>dış cephe bakım ve onarım</strong> çalışmaları, vinç platformlarımız sayesinde hiçbir yapısal hasara yol açmadan, en güvenli şekilde sonlandırılmaktadır. Tüm bu endüstriyel ve ticari faaliyetlere ek olarak, kent estetiğini korumak amacıyla mevsimsel olarak yürütülen <strong>ağaç budama</strong> işlerinde de, çevre dokusuna zarar vermeden erişim imkânı sunuyoruz. 
+            Hizmet coğrafyamız başkentin merkez ilçeleriyle sınırlı değil;
+            sanayi siteleri, alışveriş merkezleri, kurumsal tesisler ve şantiyeler
+            dahil Ankara genelinde aktif operasyon kapasitemiz bulunmaktadır.
+            Hangi bölgede olduğunuzdan bağımsız olarak{' '}
+            <a href="/bolgeler" className="text-primary hover:underline font-medium">
+              hizmet verdiğimiz ilçeleri
+            </a>{' '}
+            inceleyebilir, aynı gün veya planlı sevk için bizimle doğrudan iletişime
+            geçebilirsiniz.
           </p>
         </div>
       </div>
