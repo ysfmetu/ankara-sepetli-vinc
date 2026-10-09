@@ -4,14 +4,10 @@ import Image from 'next/image';
 import {
   Phone,
   MessageCircle,
-  MapPin,
   ChevronRight,
   Factory,
   Building2,
   Home,
-  Trees,
-  Zap,
-  AlertTriangle,
   ShieldCheck,
   Wrench,
 } from 'lucide-react';
@@ -38,19 +34,19 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: 'Yenimahalle’de vinç ne kadar sürede gelir?',
-    a: 'Merkez garajımız Yenimahalle lokasyonunda (Ostim) bulunduğu için bölgeye hizmetimiz son derece hızlıdır. Trafik durumuna göre genellikle 20-30 dakika içerisinde adresinize ulaşıyoruz.',
+    a: 'Garajımız Yenimahalle (Ostim) bölgesinde yer almaktadır. Tahmini ulaşım süresi konum, trafik ve araç uygunluğuna göre paylaşılır; önceden iletişime geçilerek planlama yapılması tercih edilir.',
   },
   {
     q: 'Batıkent’e hizmet var mı?',
-    a: "Evet, Batıkent Yenimahalle'nin en yoğun çalıştığımız bölgelerinden biridir. Özellikle çok bloklu sitelerde cephe boyama, dış cephe mantolama ve ağaç budama işleri için sürekli hizmet vermekteyiz.",
+    a: "Evet, Batıkent Yenimahalle'nin yoğun çalıştığımız bölgelerinden biridir. Özellikle çok bloklu sitelerde cephe boyama, dış cephe mantolama ve ağaç budama işleri için hizmet veriyoruz.",
   },
   {
     q: 'Ostim sanayi bölgesine vinç gelir mi?',
-    a: 'Kesinlikle. Ostim OSB ve İvedik OSB bölgelerindeki ağır sanayi tesislerine, depo içi aydınlatma değişimlerine ve CNC makine montajlarına 7/24 vinç kiralama desteği sunuyoruz.',
+    a: 'Evet. Ostim OSB ve İvedik OSB bölgelerindeki sanayi tesislerine, depo aydınlatma değişimlerine ve makine montajlarına vinç kiralama desteği sunuyoruz.',
   },
   {
     q: 'Saatlik kiralama yapılır mı?',
-    a: 'Bireysel müşterilerimiz ve Demetevler gibi bölgelerdeki apartman sakinleri için klima motoru sökümü, tek bir ağaç budaması veya tabela montajı gibi kısa süreli işlerde saatlik kiralama seçeneğimiz aktiftir.',
+    a: 'Demetevler gibi bölgelerdeki klima sökümü, ağaç budaması veya tabela montajı gibi kısa süreli işler için saatlik kiralama seçeneği mevcuttur. Detaylar için aramak yeterlidir.',
   },
 ];
 
@@ -170,62 +166,48 @@ export default function YenimahallePage() {
                 Yenimahalle Sepetli Vinç Kiralama
               </h1>
               <h2 className="text-2xl md:text-3xl font-semibold text-gray-300 mb-6">
-                Ankara Yenimahalle’de 7/24 Vinç Hizmeti
+                Ankara Yenimahalle&apos;de Vinç Hizmeti
               </h2>
 
               <div className="prose prose-lg text-gray-200 mb-10 max-w-3xl font-light">
                 <p>
-                  <strong>Türkiye’nin başkenti Ankara</strong>, son yıllarda batıya doğru hızla
-                  büyürken bu büyümenin merkez üssünü <strong>İç Anadolu Bölgesi</strong>'nin en
-                  güçlü altyapılarına sahip ilçeleri çekmektedir. Bu bağlamda{' '}
-                  <strong>Ankara’nın merkezi ve en büyük ilçelerinden biri olan Yenimahalle</strong>
-                  , hem ağır sanayi bölgelerini hem de çok yüksek nüfuslu yerleşim alanlarını aynı
-                  anda barındıran en çeşitli yapıya sahip bölgedir. Batıkent, Demetevler, Ostim,
-                  İvedik, Macunköy ve Yenimahalle merkez, ilçenin farklı vinç kiralama ihtiyaçlarına
-                  sahip ana damarlarıdır.
-                </p>
-                <p>
-                  Yenimahalle'nin bu ikili yapısı, operasyon planlamasının doğru yapılmasını şart
-                  koşar. Ostim ve İvedik OSB bölgelerinde yoğunlaşan fabrika, üretim ve çelik
-                  konstrüksiyon montaj çalışmaları ağır sanayi kurallarıyla yürütülürken; Batıkent
-                  ve Demetevler gibi yüksek yerleşim alanlarında ise apartman, site cephe boyama,
-                  dış cephe yalıtımı ve devasa ağaç budama işleri öne çıkar. Her iki senaryoda da iş
-                  güvenliğini temel alan{' '}
+                  Yenimahalle, Ostim ve İvedik OSB sanayi alanlarını; Batıkent, Demetevler ve
+                  Şentepe yerleşim bölgelerini aynı sınırlar içinde barındıran çeşitli yapılı bir
+                  ilçedir. Bu çeşitlilik, her saha için ayrı araç konumlandırması ve operasyon
+                  planlaması gerektirmektedir. Fabrika bakım işleri, site cephe onarımları, apartman
+                  tabela montajları ve kurumsal işletme çalışmaları için{' '}
                   <Link
                     href="/hizmetler/sepetli-vinc-kiralama"
                     className="text-blue-300 hover:text-white underline font-medium"
                   >
                     Ankara sepetli vinç kiralama
                   </Link>{' '}
-                  sistemimiz, yüksek esneklikle çalışır. Deneyimli kadromuzla, sıfır kaza politikası
-                  eşliğinde{' '}
+                  ve{' '}
                   <Link
                     href="/hizmetler/operatorlu-vinc-kiralama"
                     className="text-blue-300 hover:text-white underline font-medium"
                   >
                     operatörlü vinç kiralama
                   </Link>{' '}
-                  hizmetini tüm ilçe geneline sunmaktayız.
+                  hizmetini Yenimahalle geneline sunuyoruz.
                 </p>
                 <p>
-                  Demetevler'in dar sokaklarındaki tabela yenileme işlerinden Batıkent'teki bir
-                  ağacın budanmasına kadar kısa süren müdahaleler için daha hesaplı olan{' '}
+                  Demetevler ve Batıkent&apos;teki kısa süreli işler için{' '}
                   <Link
                     href="/hizmetler/saatlik-vinc-kiralama"
                     className="text-blue-300 hover:text-white underline font-medium"
                   >
                     saatlik vinç kiralama
                   </Link>{' '}
-                  çözümünü önerirken; Macunköy'deki lojistik depoların veya Ostim'deki fabrikaların
-                  günlerce sürecek çatı izolasyonu ve cephe giydirme işlemleri için kurumsal{' '}
+                  seçeneği mevcutken; Ostim ve Macunköy&apos;deki uzun süreli çatı ve cephe işleri
+                  için{' '}
                   <Link
                     href="/hizmetler/gunluk-vinc-kiralama"
                     className="text-blue-300 hover:text-white underline font-medium"
                   >
                     günlük vinç kiralama
                   </Link>{' '}
-                  seçeneklerimizi devreye sokuyoruz. Merkez garajımız Yenimahalle'de yer aldığı için
-                  anında müdahale garantisi veriyoruz.
+                  planlanabilir. Araç uygunluğuna göre aynı gün hizmet organize edilebilir.
                 </p>
               </div>
 
@@ -377,7 +359,6 @@ export default function YenimahallePage() {
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    ƒ
                     <ShieldCheck className="text-amber-600 mt-1 shrink-0" size={20} />
                     <div>
                       <strong className="block text-gray-900">Tabela Montaj</strong>
@@ -408,7 +389,8 @@ export default function YenimahallePage() {
               Yenimahalle’de en yakın vinci hızlıca yönlendirelim.
             </h3>
             <p className="text-primary-foreground mb-8 text-lg">
-              Fabrikanız, siteniz veya apartmanınız için Merkez Garaj'dan hemen çıkış yapıyoruz.
+              Fabrikanız, siteniz veya apartmanınız için Merkez Garaj&apos;dan hemen çıkış
+              yapıyoruz.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a
@@ -447,8 +429,8 @@ export default function YenimahallePage() {
                   sağlanır.
                 </p>
                 <p className="text-lg">
-                  Buna karşın Batıkent ve Demetevler'de yaşayan bina sakinlerinin ihtiyaç duyduğu
-                  baca temizliği, dış oluk tamiri veya klima değişimi gibi{' '}
+                  Buna karşın Batıkent ve Demetevler&apos;de yaşayan bina sakinlerinin ihtiyaç
+                  duyduğu baca temizliği, dış oluk tamiri veya klima değişimi gibi{' '}
                   <strong>apartman işleri genellikle saatlik paketler</strong> üzerinden
                   ücretlendirilir. İşin yapılacağı mahallenin garajımıza olan{' '}
                   <strong>lokasyon mesafesi</strong> ve dar sokak kurulum zorlukları da{' '}
@@ -483,6 +465,152 @@ export default function YenimahallePage() {
                 İlçenin farklı mahallelerinde tamamladığımız gerçek operasyon hikayelerini ve
                 süreçleri inceleyin.
               </p>
+            </div>
+
+            {/* Şentepe Halkbank — Gerçek Proje Bölümü */}
+            <div
+              id="sentepe-halkbank-cam-temizligi"
+              className="bg-white border border-gray-200 rounded-3xl shadow-sm overflow-hidden mb-12"
+            >
+              {/* Başlık / Etiketler */}
+              <div className="px-6 pt-6 pb-4 border-b border-gray-100">
+                <div className="flex flex-wrap items-center gap-2 mb-3">
+                  <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full">
+                    Yenimahalle · Şentepe
+                  </span>
+                  <span className="inline-block px-3 py-1 bg-gray-100 text-gray-700 text-xs font-semibold rounded-full">
+                    Halkbank
+                  </span>
+                  <span className="inline-block px-3 py-1 bg-gray-100 text-gray-700 text-xs font-semibold rounded-full">
+                    4 Saatlik Çalışma
+                  </span>
+                  <span className="inline-block px-3 py-1 bg-gray-100 text-gray-700 text-xs font-semibold rounded-full">
+                    Dış Cephe Cam Temizliği
+                  </span>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900">
+                  Şentepe Halkbank Şubesinde Dış Cephe Cam Temizliği
+                </h3>
+              </div>
+
+              {/* Kapak görseli */}
+              <div
+                className="relative w-full"
+                style={{ aspectRatio: '3/2', maxHeight: '480px', overflow: 'hidden' }}
+              >
+                <Image
+                  src="/images/bolge/yenimahalle-sentepe-halkbank-cam-temizligi-kapak.webp"
+                  alt="Yenimahalle Şentepe Halkbank şubesinde dış cephe cam temizliği çalışması"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 900px"
+                  priority={false}
+                />
+              </div>
+
+              {/* İçerik */}
+              <div className="px-6 py-8">
+                <p className="text-gray-700 leading-relaxed mb-6">
+                  Yenimahalle Şentepe&apos;de bulunan Halkbank şubesinin dış cephe cam temizliği
+                  için sepetli vinç desteği sağladık. Araç konumlandırması ve cepheye erişim
+                  planlamasının ardından çalışma yaklaşık 4 saat içinde tamamlandı.
+                </p>
+                <ul className="space-y-3 mb-6 text-gray-700">
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1 shrink-0">▸</span>
+                    <span>
+                      Banka şubesinin dış cephe camlarına yüksekten erişim planlaması yapıldı.
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1 shrink-0">▸</span>
+                    <span>Araç, çalışma alanına göre uygun pozisyona alındı.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1 shrink-0">▸</span>
+                    <span>
+                      Cam temizliği ekibine{' '}
+                      <Link
+                        href="/hizmetler/cephe-temizligi-sepetli-vinc"
+                        className="text-blue-600 hover:underline font-medium"
+                      >
+                        sepetli vinçle dış cephe temizliği
+                      </Link>{' '}
+                      kapsamında erişim desteği sağlandı.
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1 shrink-0">▸</span>
+                    <span>
+                      Kurumsal işletmelerde iş akışına göre planlama yapılarak çalışma yaklaşık 4
+                      saat sürdü.
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1 shrink-0">▸</span>
+                    <span>
+                      Kısa süreli kurumsal işler için{' '}
+                      <Link
+                        href="/hizmetler/saatlik-vinc-kiralama"
+                        className="text-blue-600 hover:underline font-medium"
+                      >
+                        saatlik vinç kiralama seçenekleri
+                      </Link>{' '}
+                      hakkında bilgi alabilirsiniz.
+                    </span>
+                  </li>
+                </ul>
+
+                {/* Saha görselleri — 2 sütun */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                  <div
+                    className="relative rounded-2xl overflow-hidden"
+                    style={{ aspectRatio: '3/4' }}
+                  >
+                    <Image
+                      src="/images/bolge/sentepe-halkbank-dis-cephe-cam-temizligi-sepetli-vinc-01.webp"
+                      alt="Şentepe'de dış cephe cam temizliği için kullanılan sepetli vinç"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 640px) 100vw, 50vw"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div
+                    className="relative rounded-2xl overflow-hidden"
+                    style={{ aspectRatio: '4/3' }}
+                  >
+                    <Image
+                      src="/images/bolge/yenimahalle-sentepe-banka-subesi-cam-silme-02.webp"
+                      alt="Yenimahalle'de banka şubesi cam temizliği sırasında sepetli vinç desteği"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 640px) 100vw, 50vw"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+
+                {/* Video — Dikey responsive kapsayıcı */}
+                <div className="mx-auto w-full max-w-sm overflow-hidden rounded-xl bg-black">
+                  <video
+                    controls
+                    playsInline
+                    preload="metadata"
+                    poster="/images/bolge/yenimahalle-sentepe-halkbank-cam-temizligi-kapak.webp"
+                    className="aspect-[9/16] h-auto w-full object-contain"
+                  >
+                    <source
+                      src="/videos/yenimahalle-sentepe-halkbank-cam-temizligi-sepetli-vinc.mp4"
+                      type="video/mp4"
+                    />
+                    Tarayıcınız video etiketini desteklemiyor.
+                  </video>
+                </div>
+                <p className="text-gray-500 text-sm mt-2 text-center">
+                  Şentepe Halkbank şubesi dış cephe cam temizliği saha çalışması videosu
+                </p>
+              </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -579,7 +707,7 @@ export default function YenimahallePage() {
                 </div>
                 <div className="p-5 flex flex-col flex-1">
                   <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors leading-snug">
-                    GİMAT'ta Tabela Montajı
+                    GİMAT&apos;ta Tabela Montajı
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed flex-1">
                     GİMAT bölgesindeki oto aksesuar firması için 36 metrelik platform ile
@@ -626,9 +754,9 @@ export default function YenimahallePage() {
             </div>
 
             <p className="text-center text-gray-500 mt-10 max-w-3xl mx-auto text-sm leading-relaxed">
-              Yenimahalle'nin Ostim, İvedik, Batıkent, Şentepe, Demetevler ve Macunköy gibi yoğun
-              mahallelerinde gerçekleştirdiğimiz saha çalışmalarını inceleyerek profesyonel hizmet
-              süreçlerimiz hakkında fikir edinebilirsiniz.
+              Yenimahalle&apos;nin Ostim, İvedik, Batıkent, Şentepe, Demetevler ve Macunköy gibi
+              yoğun mahallelerinde gerçekleştirdiğimiz saha çalışmalarını inceleyerek profesyonel
+              hizmet süreçlerimiz hakkında fikir edinebilirsiniz.
             </p>
           </div>
         </section>

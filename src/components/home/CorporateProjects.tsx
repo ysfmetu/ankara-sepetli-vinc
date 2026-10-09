@@ -26,7 +26,8 @@ const projects: Project[] = [
     title: '3 Gün ve Üzeri Çalışmalar',
     subtitle: '',
     badge: 'Uzun Süreli Operasyonlar',
-    description: 'Birden fazla gün süren planlı dış cephe, çatı, bakım ve kurumsal tesis çalışmalarımız.',
+    description:
+      'Birden fazla gün süren planlı dış cephe, çatı, bakım ve kurumsal tesis çalışmalarımız.',
     href: '',
     bottomText: 'Tüm Uzun Süreli Çalışmaları Gör',
     subProjects: [
@@ -55,7 +56,8 @@ const projects: Project[] = [
     title: 'Kurumsal Projeler',
     subtitle: '',
     badge: 'Kurumsal İşletmeler',
-    description: 'Banka şubeleri, iş merkezleri, üretim tesisleri ve kurumsal işletmeler için planlı sepetli vinç çözümleri.',
+    description:
+      'Banka şubeleri, iş merkezleri, üretim tesisleri ve kurumsal işletmeler için planlı sepetli vinç çözümleri.',
     href: '',
     bottomText: 'Tüm Kurumsal Çalışmaları Gör',
     subProjects: [
@@ -71,6 +73,12 @@ const projects: Project[] = [
         href: '/blog/kecioren-ovacik-halkbank-dis-cephe-cam-temizligi',
         icon: '🏦',
       },
+      {
+        title: 'Halkbank – Yenimahalle Şentepe',
+        description: '4 saatlik dış cephe cam temizliği',
+        href: '/bolgeler/yenimahalle-sepetli-vinc-kiralama#sentepe-halkbank-cam-temizligi',
+        icon: '🏦',
+      },
     ],
   },
   {
@@ -78,7 +86,8 @@ const projects: Project[] = [
     title: 'İş Merkezleri',
     subtitle: '',
     badge: 'Tabela & Cam temizleme',
-    description: 'İş merkezleri, plazalar ve sanayi sitelerinde gerçekleştirdiğimiz tabela, temizlik, bakım ve karot alma çalışmaları.',
+    description:
+      'İş merkezleri, plazalar ve sanayi sitelerinde gerçekleştirdiğimiz tabela, temizlik, bakım ve karot alma çalışmaları.',
     href: '',
     bottomText: 'Tüm İş Merkezi Çalışmalarını Gör',
     subProjects: [
@@ -129,7 +138,10 @@ const projects: Project[] = [
 
 export default function CorporateProjects() {
   return (
-    <section className="py-12 md:py-16 bg-white border-b border-gray-100" aria-label="Kurumsal Referans Projelerimiz">
+    <section
+      className="py-12 md:py-16 bg-white border-b border-gray-100"
+      aria-label="Kurumsal Referans Projelerimiz"
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-10 md:mb-12">
           <div className="flex items-center justify-center gap-4 mb-4">
@@ -140,7 +152,10 @@ export default function CorporateProjects() {
             <div className="h-px bg-gray-300 w-12 sm:w-24"></div>
           </div>
           <p className="text-gray-600 text-lg">
-            Ankara genelinde kamu kurumları, fabrikalar, üretim tesisleri, bankalar, iş merkezleri ve kurumsal işletmelere planlı sepetli vinç hizmeti sunuyoruz. Tamamladığımız gerçek saha çalışmalarını inceleyerek çalışma sürecimizi, kullandığımız ekipmanları ve elde edilen sonuçları görebilirsiniz.
+            Ankara genelinde kamu kurumları, fabrikalar, üretim tesisleri, bankalar, iş merkezleri
+            ve kurumsal işletmelere planlı sepetli vinç hizmeti sunuyoruz. Tamamladığımız gerçek
+            saha çalışmalarını inceleyerek çalışma sürecimizi, kullandığımız ekipmanları ve elde
+            edilen sonuçları görebilirsiniz.
           </p>
         </div>
 
@@ -153,20 +168,20 @@ export default function CorporateProjects() {
                   className="flex flex-col bg-gray-50 rounded-2xl p-6 border border-gray-100 shadow-sm transition-all duration-300"
                 >
                   <div className="flex justify-between items-start mb-4">
-                    <span className="text-4xl bg-white p-3 rounded-xl shadow-sm border border-gray-50">{project.icon}</span>
+                    <span className="text-4xl bg-white p-3 rounded-xl shadow-sm border border-gray-50">
+                      {project.icon}
+                    </span>
                     <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full">
                       {project.badge}
                     </span>
                   </div>
 
                   <div className="flex-grow">
-                    <h3 className="text-xl font-bold text-gray-900 mb-1">
-                      {project.title}
-                    </h3>
-                    {project.subtitle && <p className="text-sm text-gray-500 font-medium mb-3">{project.subtitle}</p>}
-                    <p className="text-sm text-gray-600 mb-4 line-clamp-3">
-                      {project.description}
-                    </p>
+                    <h3 className="text-xl font-bold text-gray-900 mb-1">{project.title}</h3>
+                    {project.subtitle && (
+                      <p className="text-sm text-gray-500 font-medium mb-3">{project.subtitle}</p>
+                    )}
+                    <p className="text-sm text-gray-600 mb-4 line-clamp-3">{project.description}</p>
 
                     <div className="space-y-2 mt-4">
                       {project.subProjects.map((sub, sIdx) => (
@@ -185,7 +200,10 @@ export default function CorporateProjects() {
                               {sub.description}
                             </p>
                           </div>
-                          <ArrowRight size={14} className="text-gray-400 group-hover:text-primary group-hover:translate-x-0.5 transition-all flex-shrink-0" />
+                          <ArrowRight
+                            size={14}
+                            className="text-gray-400 group-hover:text-primary group-hover:translate-x-0.5 transition-all flex-shrink-0"
+                          />
                         </Link>
                       ))}
                     </div>
@@ -208,26 +226,29 @@ export default function CorporateProjects() {
                 aria-label={`${project.title} projesini incele`}
               >
                 <div className="flex justify-between items-start mb-4">
-                  <span className="text-4xl bg-white p-3 rounded-xl shadow-sm border border-gray-50">{project.icon}</span>
+                  <span className="text-4xl bg-white p-3 rounded-xl shadow-sm border border-gray-50">
+                    {project.icon}
+                  </span>
                   <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full">
                     {project.badge}
                   </span>
                 </div>
-                
+
                 <div className="flex-grow">
                   <h3 className="text-xl font-bold text-gray-900 group-hover:text-primary transition-colors mb-1">
                     {project.title}
                   </h3>
                   <p className="text-sm text-gray-500 font-medium mb-3">{project.subtitle}</p>
-                  <p className="text-sm text-gray-600 mb-6 line-clamp-3">
-                    {project.description}
-                  </p>
+                  <p className="text-sm text-gray-600 mb-6 line-clamp-3">{project.description}</p>
                 </div>
 
                 <div className="mt-auto pt-4 border-t border-gray-200">
                   <span className="inline-flex items-center text-gray-500 group-hover:text-primary font-semibold transition-colors text-sm">
                     Detayları İncele
-                    <ArrowRight size={16} className="ml-1 opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+                    <ArrowRight
+                      size={16}
+                      className="ml-1 opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all"
+                    />
                   </span>
                 </div>
               </Link>
