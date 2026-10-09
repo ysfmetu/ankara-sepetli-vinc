@@ -467,153 +467,65 @@ export default function YenimahallePage() {
               </p>
             </div>
 
-            {/* Şentepe Halkbank — Gerçek Proje Bölümü */}
-            <div
-              id="sentepe-halkbank-cam-temizligi"
-              className="bg-white border border-gray-200 rounded-3xl shadow-sm overflow-hidden mb-12"
-            >
-              {/* Başlık / Etiketler */}
-              <div className="px-6 pt-6 pb-4 border-b border-gray-100">
-                <div className="flex flex-wrap items-center gap-2 mb-3">
-                  <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+              {/* Kart 0 — Şentepe Halkbank Dış Cephe Cam Temizliği */}
+              <div
+                id="sentepe-halkbank-cam-temizligi"
+                className="scroll-mt-24 bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm flex flex-col"
+              >
+                <div className="relative h-52 w-full overflow-hidden">
+                  <Image
+                    src="/images/bolge/yenimahalle-sentepe-halkbank-cam-temizligi-kapak.webp"
+                    alt="Yenimahalle Şentepe Halkbank şubesinde sepetli vinçle dış cephe cam temizliği"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="bg-gray-700 px-5 py-3 flex items-center gap-3">
+                  <div className="bg-white/20 rounded-lg p-1.5">
+                    <Building2 size={18} className="text-white" />
+                  </div>
+                  <span className="text-xs font-bold text-gray-200 uppercase tracking-widest">
                     Yenimahalle · Şentepe
                   </span>
-                  <span className="inline-block px-3 py-1 bg-gray-100 text-gray-700 text-xs font-semibold rounded-full">
-                    Halkbank
-                  </span>
-                  <span className="inline-block px-3 py-1 bg-gray-100 text-gray-700 text-xs font-semibold rounded-full">
-                    4 Saatlik Çalışma
-                  </span>
-                  <span className="inline-block px-3 py-1 bg-gray-100 text-gray-700 text-xs font-semibold rounded-full">
-                    Dış Cephe Cam Temizliği
-                  </span>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900">
-                  Şentepe Halkbank Şubesinde Dış Cephe Cam Temizliği
-                </h3>
-              </div>
-
-              {/* Kapak görseli */}
-              <div
-                className="relative w-full"
-                style={{ aspectRatio: '3/2', maxHeight: '480px', overflow: 'hidden' }}
-              >
-                <Image
-                  src="/images/bolge/yenimahalle-sentepe-halkbank-cam-temizligi-kapak.webp"
-                  alt="Yenimahalle Şentepe Halkbank şubesinde dış cephe cam temizliği çalışması"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 900px"
-                  priority={false}
-                />
-              </div>
-
-              {/* İçerik */}
-              <div className="px-6 py-8">
-                <p className="text-gray-700 leading-relaxed mb-6">
-                  Yenimahalle Şentepe&apos;de bulunan Halkbank şubesinin dış cephe cam temizliği
-                  için sepetli vinç desteği sağladık. Araç konumlandırması ve cepheye erişim
-                  planlamasının ardından çalışma yaklaşık 4 saat içinde tamamlandı.
-                </p>
-                <ul className="space-y-3 mb-6 text-gray-700">
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1 shrink-0">▸</span>
-                    <span>
-                      Banka şubesinin dış cephe camlarına yüksekten erişim planlaması yapıldı.
+                <div className="p-5 flex flex-col flex-1">
+                  <h3 className="text-lg font-bold text-gray-900 mb-2 leading-snug">
+                    Şentepe Halkbank Dış Cephe Cam Temizliği
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed flex-1">
+                    Şentepe&apos;deki Halkbank şubesinin dış cephe cam temizliği için sepetli vinçle
+                    yüksek erişim desteği sağladık. Planlanan çalışma yaklaşık 4 saat içinde
+                    tamamlandı.
+                  </p>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    <span className="inline-block px-2.5 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full">
+                      4 Saatlik Çalışma
                     </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1 shrink-0">▸</span>
-                    <span>Araç, çalışma alanına göre uygun pozisyona alındı.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1 shrink-0">▸</span>
-                    <span>
-                      Cam temizliği ekibine{' '}
-                      <Link
-                        href="/hizmetler/cephe-temizligi-sepetli-vinc"
-                        className="text-blue-600 hover:underline font-medium"
-                      >
-                        sepetli vinçle dış cephe temizliği
-                      </Link>{' '}
-                      kapsamında erişim desteği sağlandı.
+                    <span className="inline-block px-2.5 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full">
+                      Dış Cephe Cam Temizliği
                     </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1 shrink-0">▸</span>
-                    <span>
-                      Kurumsal işletmelerde iş akışına göre planlama yapılarak çalışma yaklaşık 4
-                      saat sürdü.
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1 shrink-0">▸</span>
-                    <span>
-                      Kısa süreli kurumsal işler için{' '}
-                      <Link
-                        href="/hizmetler/saatlik-vinc-kiralama"
-                        className="text-blue-600 hover:underline font-medium"
-                      >
-                        saatlik vinç kiralama seçenekleri
-                      </Link>{' '}
-                      hakkında bilgi alabilirsiniz.
-                    </span>
-                  </li>
-                </ul>
-
-                {/* Saha görselleri — 2 sütun */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-                  <div
-                    className="relative rounded-2xl overflow-hidden"
-                    style={{ aspectRatio: '3/4' }}
-                  >
-                    <Image
-                      src="/images/bolge/sentepe-halkbank-dis-cephe-cam-temizligi-sepetli-vinc-01.webp"
-                      alt="Şentepe'de dış cephe cam temizliği için kullanılan sepetli vinç"
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 640px) 100vw, 50vw"
-                      loading="lazy"
-                    />
                   </div>
-                  <div
-                    className="relative rounded-2xl overflow-hidden"
-                    style={{ aspectRatio: '4/3' }}
-                  >
-                    <Image
-                      src="/images/bolge/yenimahalle-sentepe-banka-subesi-cam-silme-02.webp"
-                      alt="Yenimahalle'de banka şubesi cam temizliği sırasında sepetli vinç desteği"
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 640px) 100vw, 50vw"
-                      loading="lazy"
-                    />
+                  <div className="mt-3 flex flex-wrap gap-3 text-xs">
+                    <Link
+                      href="/hizmetler/cephe-temizligi-sepetli-vinc"
+                      className="text-blue-600 hover:underline"
+                    >
+                      Dış cephe temizliği →
+                    </Link>
+                    <Link
+                      href="/hizmetler/saatlik-vinc-kiralama"
+                      className="text-blue-600 hover:underline"
+                    >
+                      Saatlik vinç kiralama →
+                    </Link>
                   </div>
+                  <span className="mt-4 inline-flex items-center gap-1 text-gray-500 font-semibold text-sm">
+                    Tamamlanan Çalışma
+                  </span>
                 </div>
-
-                {/* Video — Dikey responsive kapsayıcı */}
-                <div className="mx-auto w-full max-w-sm overflow-hidden rounded-xl bg-black">
-                  <video
-                    controls
-                    playsInline
-                    preload="metadata"
-                    poster="/images/bolge/yenimahalle-sentepe-halkbank-cam-temizligi-kapak.webp"
-                    className="aspect-[9/16] h-auto w-full object-contain"
-                  >
-                    <source
-                      src="/videos/yenimahalle-sentepe-halkbank-cam-temizligi-sepetli-vinc.mp4"
-                      type="video/mp4"
-                    />
-                    Tarayıcınız video etiketini desteklemiyor.
-                  </video>
-                </div>
-                <p className="text-gray-500 text-sm mt-2 text-center">
-                  Şentepe Halkbank şubesi dış cephe cam temizliği saha çalışması videosu
-                </p>
               </div>
-            </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {/* Kart 1 — Yunus Emre Klima Montajı */}
               <Link
                 href="/blog/yenimahalle-yunus-emre-mahallesi-klima-montaji-sepetli-vinc"
