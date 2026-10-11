@@ -1,11 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Car } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 interface SubProject {
-  icon: React.ReactNode;
+  icon: string;
   title: string;
-  description?: string;
+  description: string;
   href: string;
 }
 
@@ -105,9 +105,9 @@ const projects: Project[] = [
       },
       {
         title: 'Otonomi',
-        description: '',
+        description: 'İş merkezi dış cephe cam silme',
         href: '/blog/otonomi-sepetli-vinc-dis-cephe-cam-silme-kahramankazan',
-        icon: <Car size={20} className="text-gray-600 group-hover:text-primary transition-colors" />,
+        icon: '🚗',
       },
     ],
   },
@@ -195,24 +195,16 @@ export default function CorporateProjects() {
                           key={sIdx}
                           href={sub.href}
                           className="group flex items-center gap-3 p-2.5 rounded-xl bg-white border border-gray-200/60 hover:bg-gray-100 hover:border-gray-300 transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary"
-                          aria-label={
-                            sub.description
-                              ? `${sub.title} projesini incele: ${sub.description}`
-                              : `${sub.title} projesini incele`
-                          }
+                          aria-label={`${sub.title} projesini incele: ${sub.description}`}
                         >
-                          <span className="text-2xl flex-shrink-0 inline-flex items-center justify-center">
-                            {sub.icon}
-                          </span>
+                          <span className="text-2xl flex-shrink-0">{sub.icon}</span>
                           <div className="flex-grow min-w-0">
                             <h4 className="text-sm font-bold text-gray-900 group-hover:text-primary transition-colors truncate">
                               {sub.title}
                             </h4>
-                            {sub.description && (
-                              <p className="text-xs text-gray-500 truncate leading-snug">
-                                {sub.description}
-                              </p>
-                            )}
+                            <p className="text-xs text-gray-500 truncate leading-snug">
+                              {sub.description}
+                            </p>
                           </div>
                           <ArrowRight
                             size={14}
