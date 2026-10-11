@@ -57,7 +57,7 @@ const projects: Project[] = [
     subtitle: '',
     badge: 'Kurumsal İşletmeler',
     description:
-      'Banka şubeleri, iş merkezleri, üretim tesisleri ve kurumsal işletmeler için planlı sepetli vinç çözümleri.',
+      'İş merkezleri, üretim tesisleri, şantiyeler ve kurumsal işletmeler için planlı sepetli vinç çözümleri.',
     href: '',
     bottomText: 'Tüm Kurumsal Çalışmaları Gör',
     subProjects: [
@@ -68,16 +68,16 @@ const projects: Project[] = [
         icon: '🏗️',
       },
       {
-        title: 'Halkbank – Keçiören Ovacık',
-        description: 'Şube dış cephe cam temizliği',
-        href: '/blog/kecioren-ovacik-halkbank-dis-cephe-cam-temizligi',
-        icon: '🏦',
+        title: 'Başkent OSB – Fabrika Cam Temizliği',
+        description: 'Üretim tesisi dış cephe temizliği',
+        href: '/blog/baskent-osb-cam-temizligi-sepetli-vinc',
+        icon: '🏭',
       },
       {
-        title: 'Halkbank – Yenimahalle Şentepe',
-        description: '4 saatlik dış cephe cam temizliği',
-        href: '/bolgeler/yenimahalle-sepetli-vinc-kiralama#sentepe-halkbank-cam-temizligi',
-        icon: '🏦',
+        title: 'İvedik OSB – 4 Katlı İş Yeri',
+        description: 'Dış cephe cam temizliği operasyonu',
+        href: '/blog/ivedik-osb-4-katli-is-yeri-dis-cam-temizligi',
+        icon: '🏢',
       },
     ],
   },
@@ -142,7 +142,43 @@ const projects: Project[] = [
   },
 ];
 
+interface BankBranch {
+  name: string;
+  href?: string;
+}
+
+const bankBranches: BankBranch[] = [
+  {
+    name: 'Halkbank – Ovacık / Ankara',
+    href: '/blog/kecioren-ovacik-halkbank-dis-cephe-cam-temizligi',
+  },
+  {
+    name: 'Halkbank – Şentepe / Ankara',
+  },
+  {
+    name: 'QNB Finansbank – Kayseri',
+  },
+  {
+    name: 'Akbank – Esenler / İstanbul',
+  },
+  {
+    name: 'Akbank – Hoşdere / Ankara',
+  },
+  {
+    name: 'Akbank – İvedik / Ankara',
+  },
+  {
+    name: 'DenizBank – Antalya',
+  },
+];
+
 export default function CorporateProjects() {
+  const CHUNK_SIZE = 5;
+  const bankColumns: BankBranch[][] = [];
+  for (let i = 0; i < bankBranches.length; i += CHUNK_SIZE) {
+    bankColumns.push(bankBranches.slice(i, i + CHUNK_SIZE));
+  }
+
   return (
     <section
       className="py-12 md:py-16 bg-white border-b border-gray-100"
@@ -165,6 +201,7 @@ export default function CorporateProjects() {
           </p>
         </div>
 
+        {/* 4 Ana Referans Kategorisi */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {projects.map((project, index) => {
             if (project.subProjects) {
@@ -260,6 +297,74 @@ export default function CorporateProjects() {
               </Link>
             );
           })}
+        </div>
+
+        {/* BANKALAR Referans Alanı */}
+        <div className="mt-8 md:mt-10 bg-white rounded-2xl border border-gray-200/80 shadow-sm overflow-hidden flex flex-col lg:flex-row">
+          {/* Sol taraf: Dar, dikey başlık alanı (~%20–25, dikey ve yatay ortalı) */}
+          <div className="w-full lg:w-[23%] p-6 sm:p-7 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white flex flex-col items-center justify-center text-center shrink-0">
+            <div className="flex flex-col items-center justify-center text-center space-y-3">
+              <span className="text-4xl inline-flex items-center justify-center bg-white/10 p-3 rounded-2xl backdrop-blur-sm border border-white/10">
+                🏦
+              </span>
+              <div>
+                <h3 className="text-xl sm:text-2xl font-extrabold tracking-wider text-white">
+                  BANKALAR
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-300 font-medium mt-1">
+                  Türkiye Geneli Referanslar
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Sağ taraf: Şube Listesi (~%75–80, hafif kompakt) */}
+          <div className="w-full lg:w-[77%] p-5 sm:p-6 bg-gray-50 flex flex-col justify-center">
+            <div className="flex items-center justify-between mb-3.5">
+              <h4 className="text-base sm:text-lg font-bold text-gray-900">
+                Tamamlanan Şube Çalışmaları
+              </h4>
+              <span className="text-xs font-semibold px-2.5 py-0.5 bg-blue-100 text-blue-800 rounded-full">
+                {bankBranches.length} Şube
+              </span>
+            </div>
+
+            <div className="overflow-x-auto pb-1">
+              <div className="flex flex-col md:flex-row gap-3 md:gap-5 min-w-full">
+                {bankColumns.map((col, colIdx) => (
+                  <div key={colIdx} className="flex-1 md:min-w-[240px] space-y-2">
+                    {col.map((branch, bIdx) => {
+                      if (branch.href) {
+                        return (
+                          <Link
+                            key={bIdx}
+                            href={branch.href}
+                            className="group flex items-center justify-between py-2.5 px-3 rounded-xl bg-white border border-gray-200/80 hover:border-blue-500 hover:bg-blue-50/40 hover:shadow-sm transition-all text-sm font-semibold text-gray-800 hover:text-blue-700"
+                            aria-label={`${branch.name} çalışmasını incele`}
+                          >
+                            <span className="truncate">{branch.name}</span>
+                            <ArrowRight
+                              size={15}
+                              className="text-gray-400 group-hover:text-blue-600 group-hover:translate-x-0.5 transition-all shrink-0 ml-2"
+                            />
+                          </Link>
+                        );
+                      }
+
+                      return (
+                        <div
+                          key={bIdx}
+                          className="flex items-center py-2.5 px-3 rounded-xl bg-white/80 border border-gray-200/60 text-sm font-medium text-gray-700"
+                        >
+                          <span className="truncate">{branch.name}</span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
