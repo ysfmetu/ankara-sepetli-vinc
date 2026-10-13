@@ -163,6 +163,7 @@ const bankBranches: BankBranch[] = [
   },
   {
     name: 'Akbank – Hoşdere / Ankara',
+    href: '/blog/cankaya-hosdere-akbank-sepetli-vinc-cam-temizligi',
   },
   {
     name: 'Akbank – İvedik / Ankara',

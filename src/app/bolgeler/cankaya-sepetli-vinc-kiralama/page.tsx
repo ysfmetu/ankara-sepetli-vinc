@@ -1,19 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import {
-  Phone,
-  MessageCircle,
-  MapPin,
-  CheckCircle2,
-  ArrowRight,
-  ChevronRight,
-  Clock,
-  Building2,
-  Map,
-  ShieldCheck,
-  Zap,
-} from 'lucide-react';
+import { Phone, MessageCircle, MapPin, ChevronRight } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
@@ -27,63 +15,99 @@ interface RecentProject {
   description: string;
   href: string;
   badge: string;
-  icon: string;
+  image: string;
 }
 
 const recentProjects: RecentProject[] = [
   {
-    title: "Oran Sitesi'nde Sepetli Vinç ile Çatı Oluk Tamiri",
+    title: 'Hoşdere Akbank – Dış Cephe Cam Temizliği',
+    location: 'Hoşdere Caddesi – Çankaya',
+    description:
+      'Çankaya Hoşdere\'deki Akbank şubesinde sepetli vinç kullanılarak gerçekleştirilen dış cephe cam temizliği çalışması.',
+    href: '/blog/cankaya-hosdere-akbank-sepetli-vinc-cam-temizligi',
+    badge: 'Hoşdere / Çankaya',
+    image: '/images/blog/cankaya-hosdere-akbank-vinc-kiralama-calismasi.webp',
+  },
+  {
+    title: 'Oran Sitesi – Çatı ve Oluk Tamiri',
     location: 'Oran Mahallesi – Çankaya',
     description:
-      "Oran Sitesi'nde hasarlı çatı oluğu ASV Vinç mobil platformuyla 3 saatte güvenli biçimde onarıldı. Bina sakinleri minimum kesinti yaşadı.",
+      'Oran Sitesi\'nde hasarlı çatı oluğu sepetli vinç mobil platformuyla güvenli ve hızlı biçimde onarıldı.',
     href: '/blog/oran-sitesi-cankaya-cati-oluk-tamiri-sepetli-vinc',
-    badge: '3 Saatlik Operasyon',
-    icon: '🏠',
+    badge: 'Oran / Çankaya',
+    image: '/images/blog/cankaya-oran-sepetli-vinc-cati-oluk-tamiri-asv-vinc.png',
   },
   {
-    title: "Beysukent'te 45 Metre Mobil Platform ile 7 Günlük Şantiye Operasyonu",
+    title: 'Beysukent – Sazak İnşaat Şantiyesi',
     location: 'Sazak İnşaat Şantiyesi – Beysukent',
     description:
-      'Sazak İnşaat konut şantiyesinde 45 metrelik mobil platformumuzun ilk büyük kurumsal kullanımı. Yedi gün boyunca dış cephe erişimi ve güvenli personel taşıma tamamlandı.',
+      'Sazak İnşaat konut şantiyesinde 45 metrelik mobil platform ile dış cephe erişimi ve personel güvenliği sağlandı.',
     href: '/blog/beysukent-sazak-insaat-santiyesi-45-metre-mobil-platform-sepetli-vinc',
-    badge: '7 Günlük Operasyon',
-    icon: '🏗️',
+    badge: 'Beysukent / Çankaya',
+    image: '/images/blog/beysukent-cankaya-sazak-insaat-45-metre-mobil-platform-kapak.png',
   },
   {
-    title: 'Çankaya Sepetli Vinç Kiralama | 30 Dakikada Hızlı Ulaşım',
-    location: 'Büyülü Fener Bahçesi',
+    title: 'Alacaatlı / Çayyolu – Villa Dış Cephe Çalışması',
+    location: 'Çayyolu Mevkii – Çankaya',
     description:
-      'Ankara Çankaya, Balgat, Çukurambar bölgelerinde plaza ve yüksek katlı binalara özel 7/24 operatörlü sepetli vinç kiralama. Güvenilir ve uygun fiyatlı hizmet.',
-    href: '/blog/cankaya-bahcelievler-agac-budama-sepetli-vinc-destegi',
-    badge: 'Ağaç Budama',
-    icon: '🌳',
-  },
-  {
-    title: 'Alacaatlı Villa Dış Cephe Operasyonu',
-    location: 'Çayyolu Mevkii',
-    description:
-      '36 metrelik çift kırmalı platform ve 27 metrelik platform ile üç gün süren dış cephe, çatı ve boya çalışmaları tamamlandı.',
+      'Çayyolu Alacaatlı mevkiinde sepetli platform desteğiyle villa dış cephe, çatı ve boya çalışması tamamlandı.',
     href: '/blog/alacaatli-cayyolu-villa-dis-cephe-cati-calismasi-sepetli-vinc',
-    badge: '3 Günlük Operasyon',
-    icon: '🏡',
+    badge: 'Çayyolu / Alacaatlı',
+    image: '/images/blog/alacaatli-cayyolu-villa-dis-cephe-cati-calismasi-sepetli-vinc-asv.png',
   },
   {
-    title: 'Bilkent İş Merkezi Dış Cephe Operasyonu',
-    location: 'Mazı İnşaat Şantiyesi',
+    title: 'Bilkent – İş Merkezi Dış Cephe Çalışması',
+    location: 'Mazı İnşaat Şantiyesi – Bilkent',
     description:
-      'Mazı İnşaat yükleniciliğindeki iş merkezinde 27 metrelik sepetli platform ile 3 gün süren çatı işlemleri ve dış cephe çalışmaları başarıyla tamamlandı.',
+      'Mazı İnşaat yükleniciliğindeki iş merkezinde 27 metrelik sepetli platform ile çatı ve dış cephe işlemleri tamamlandı.',
     href: '/blog/bilkent-is-merkezi-dis-cephe-cati-calismasi-sepetli-vinc',
-    badge: '3 Günlük Operasyon',
-    icon: '🏢',
+    badge: 'Bilkent / Çankaya',
+    image: '/images/blog/bilkent-cankaya-sepetli-vinc-dis-cephe-cati-calismasi-asv-vinc.png',
   },
   {
-    title: 'İncek/Ahlatlıbel – AS İnşaat Dış Cephe Projesi',
+    title: 'İncek / Ahlatlıbel – Dış Cephe Projesi',
     location: 'AS İnşaat Sitesi – İncek/Ahlatlıbel',
     description:
-      'AS İnşaat bünyesindeki site projelerinde yaklaşık 20 gün boyunca cam temizliği, silikon uygulaması, cam bakım/tamir ve dış cephe bakım çalışmaları için mobil platform ile yüksekte erişim desteği sağlandı.',
+      'AS İnşaat site projelerinde mobil platform ile cam temizliği, silikon uygulaması ve dış cephe bakım desteği sağlandı.',
     href: '/blog/incek-ahlatlibel-sepetli-vinc-dis-cephe-calismasi',
-    badge: '~20 Günlük Operasyon',
-    icon: '🏘️',
+    badge: 'İncek / Ahlatlıbel',
+    image: '/images/blog/incek-ahlatlibel-asv-vinc-dis-cephe-calismasi-kapak.jpeg',
+  },
+  {
+    title: 'Bahçelievler – Ağaç Budama Operasyonu',
+    location: 'Büyülü Fener Bahçesi – Bahçelievler',
+    description:
+      'Bahçelievler bölgesinde çevre ve yaya güvenliği sağlanarak sepetli vinç ile yüksek ağaç budama çalışması tamamlandı.',
+    href: '/blog/cankaya-bahcelievler-agac-budama-sepetli-vinc-destegi',
+    badge: 'Bahçelievler / Çankaya',
+    image: '/images/blog/ankara-sepetli-vinc-kiralama-bahcelievler-buyulu-fener-dut-agaci-budama.png',
+  },
+];
+
+const serviceLinks = [
+  {
+    title: 'Sepetli Vinç Kiralama',
+    href: '/hizmetler/sepetli-vinc-kiralama',
+  },
+  {
+    title: 'Operatörlü Vinç Kiralama',
+    href: '/hizmetler/operatorlu-vinc-kiralama',
+  },
+  {
+    title: 'Dış Cephe Temizliği İçin Sepetli Vinç',
+    href: '/hizmetler/cephe-temizligi-sepetli-vinc',
+  },
+  {
+    title: 'Tabela ve Reklam Montajı',
+    href: '/hizmetler/tabela-montaj',
+  },
+  {
+    title: 'Saatlik Vinç Kiralama',
+    href: '/hizmetler/saatlik-vinc-kiralama',
+  },
+  {
+    title: 'Günlük Vinç Kiralama',
+    href: '/hizmetler/gunluk-vinc-kiralama',
   },
 ];
 
@@ -102,20 +126,20 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    q: 'Çankaya’da vinç ne kadar sürede gelir?',
-    a: 'Çankaya merkezi konumu sebebiyle araç filomuzun en yoğun bulunduğu ve hızlı ulaşım sağladığı ilçelerin başında gelir. Müsaitlik durumuna göre ve trafik yoğunluğu da hesaplanarak acil durumlarda ortalama 20-35 dakika içerisinde adresinize araç yönlendiriyoruz.',
+    q: "Çankaya'da hangi bölgelerde sepetli vinç hizmeti veriyorsunuz?",
+    a: "Kızılay, Balgat, Çukurambar, Hoşdere, Oran, Beysukent, Bilkent, İncek ve Bahçelievler başta olmak üzere Çankaya'nın tüm mahalle ve caddelerine araç yönlendirmesi sağlıyoruz.",
   },
   {
-    q: 'Aynı gün hizmet var mı?',
-    a: 'Evet, özellikle tabela uçması, fırtına sonrası ağaç devrilmesi veya acil cam temizliği gibi anlık gelişen ihtiyaçlar için Çankaya bölgesine aynı gün acil vinç müdahalesi gerçekleştirebiliyoruz.',
+    q: 'Banka ve iş merkezi dış cephe çalışmalarında sepetli vinç kullanılabilir mi?',
+    a: 'Evet. Cadde üzerindeki banka şubeleri, plazalar ve iş merkezlerinde dış cephe cam temizliği, tabela montajı ve bakım operasyonları için operatörlü sepetli vinç güvenle tercih edilmektedir.',
   },
   {
-    q: 'Saatlik kiralama yapılır mı?',
-    a: 'Kesinlikle. Klima motoru montajı, ufak bir aydınlatma değişimi veya tek bir ağacın budanması gibi kısa süreli işleriniz için saatlik vinç kiralama modelimiz Çankaya bölgesinde en çok tercih edilen seçenektir.',
+    q: "Çankaya'da saatlik veya günlük vinç kiralama yapılabilir mi?",
+    a: 'Evet. Kısa süreli montaj ve bakım işleri için saatlik, şantiye ve geniş kapsamlı bina cephe operasyonları için günlük veya haftalık vinç kiralama seçeneklerimiz bulunmaktadır.',
   },
   {
-    q: 'Çankaya fiyatları farklı mı?',
-    a: 'Çankaya konumu itibarıyla merkez ilçe olduğu için, şehrin çok dışındaki uzak bölgelere göre daha uygun fiyatlandırmalara tabidir. Yol veya ekstra yakıt maliyeti yansıtılmadığından bütçe dostu fiyatlar sunabiliyoruz.',
+    q: 'Vinç seçimi ve fiyatlandırma nasıl belirlenir?',
+    a: 'Çalışma yapılacak yapının yüksekliği, cephe yanaşma mesafesi ve operasyonun tahmini süresine göre en uygun vinç belirlenir ve şeffaf fiyat teklifi sunulur.',
   },
 ];
 
@@ -202,9 +226,9 @@ export default function CankayaPage() {
       />
       <Header />
 
-      <main className="flex-grow pt-24 pb-0">
-        {/* 1. Hero Alanı */}
-        <section className="relative bg-gray-900 text-white overflow-hidden py-16 md:py-24">
+      <main className="flex-grow">
+        {/* Bölüm 1: Hero */}
+        <section className="relative bg-gray-900 text-white overflow-hidden py-10 md:py-14">
           <div className="absolute inset-0 opacity-40">
             <Image
               src="/images/bolge/cankaya-sepetli-vinc-calisma.png"
@@ -218,97 +242,57 @@ export default function CankayaPage() {
 
           <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl">
-              <Breadcrumb
-                items={[
-                  { label: 'Ana Sayfa', href: '/' },
-                  { label: 'Bölgeler', href: '/bolgeler' },
-                  { label: 'Çankaya', href: '/bolgeler/cankaya-sepetli-vinc-kiralama' },
-                ]}
-              />
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mt-6 mb-4 tracking-tight leading-tight">
+              <div className="[&_ol]:text-gray-300 [&_a]:text-gray-300 [&_a:hover]:text-white [&_span]:text-white [&_span]:font-semibold [&_svg]:text-gray-400">
+                <Breadcrumb
+                  items={[
+                    { label: 'Ana Sayfa', href: '/' },
+                    { label: 'Bölgeler', href: '/bolgeler' },
+                    { label: 'Çankaya', href: '/bolgeler/cankaya-sepetli-vinc-kiralama' },
+                  ]}
+                />
+              </div>
+              <h1 className="text-3xl md:text-5xl font-extrabold text-white mt-4 mb-3 tracking-tight leading-tight">
                 Çankaya Sepetli Vinç Kiralama
               </h1>
-              <h2 className="text-2xl md:text-3xl font-semibold text-blue-300 mb-6">
+              <h2 className="text-xl md:text-2xl font-semibold text-blue-300 mb-4">
                 Ankara Çankaya’da 7/24 Vinç Hizmeti
               </h2>
 
-              <div className="prose prose-lg text-gray-200 mb-10 max-w-3xl font-light">
+              <div className="prose prose-lg text-gray-200 mb-8 max-w-3xl font-light text-base md:text-lg">
                 <p>
-                  Başkentin atan kalbi Çankaya, Kızılay Meydanı'nın yoğun yaya trafiğinden
-                  Bahçelievler'in yerleşim karmaşasına, Dikmen'in yüksek rakımlı tepelerinden Oran
-                  ve Balgat'taki lüks plaza oluşumlarına kadar her noktasıyla Ankara'nın en
-                  hareketli iş ve yaşam bölgesidir. İncek gibi hızla gelişen villa konseptli
-                  lokasyonları da içine alan bu dev metropol ilçesi, kesintisiz bir hizmet ve bakım
-                  döngüsüne ihtiyaç duyar.
-                </p>
-                <p>
-                  Özellikle ticari rekabetin üst seviyede olduğu bu bölgede mağaza vitrin
-                  yenilemeleri, devasa{' '}
-                  <Link
-                    href="/hizmetler/tabela-montaj"
-                    className="text-blue-300 hover:text-white underline font-medium"
-                  >
-                    tabela montaj işlemleri
-                  </Link>
-                  , iş merkezlerinin{' '}
-                  <Link
-                    href="/hizmetler/cephe-temizligi-sepetli-vinc"
-                    className="text-blue-300 hover:text-white underline font-medium"
-                  >
-                    dış cephe temizliği
-                  </Link>{' '}
-                  ve sokakların aydınlatılması adına{' '}
-                  <Link
-                    href="/hizmetler/elektrik-bakim"
-                    className="text-blue-300 hover:text-white underline font-medium"
-                  >
-                    elektrik bakım onarımları
-                  </Link>{' '}
-                  yoğun olarak yapılır. Klasik iskele sistemlerinin kurulmasının günlerce sürdüğü ve
-                  trafiği kilitlediği noktalarda{' '}
-                  <Link
-                    href="/hizmetler/sepetli-vinc-kiralama"
-                    className="text-blue-300 hover:text-white underline font-medium"
-                  >
-                    Ankara sepetli vinç kiralama
-                  </Link>{' '}
-                  sistemimiz en akılcı ve hızlı çözümü sunmaktadır.
-                </p>
-                <p>
-                  Sepetli vinç hizmeti böylesine kilit bir bölgede planlanırken sıfır hata prensibi
-                  gerektirir. Alanın darlığı, park sorunları ve yaya güvenliği gibi değişkenler,
-                  kiraladığınız aracın kontrolünü kimin sağladığı sorusunu doğurur. Ekiplerimiz, iş
-                  güvenliği sertifikalı kadrosuyla{' '}
+                  Ankara Çankaya genelinde banka şubeleri, iş merkezleri, plazalar ve konut projeleri
+                  için profesyonel{' '}
                   <Link
                     href="/hizmetler/operatorlu-vinc-kiralama"
                     className="text-blue-300 hover:text-white underline font-medium"
                   >
-                    operatörlü vinç kiralama
+                    operatörlü sepetli vinç kiralama
                   </Link>{' '}
-                  modeli uygulayarak çalışmalarda risk faktörünü tamamen ortadan kaldırır. Kısa
-                  süreli aydınlatma ve klima motoru değişimlerinde{' '}
+                  hizmeti sunuyoruz. Dış cephe cam temizliği ve silikon bakımından tabela montajına,
+                  çatı ve oluk onarımlarından yüksekte erişim gerektiren tüm teknik operasyonlara
+                  kadar sahaya en uygun vinç çözümlerini yönlendiriyoruz. İhtiyacınıza göre{' '}
                   <Link
                     href="/hizmetler/saatlik-vinc-kiralama"
                     className="text-blue-300 hover:text-white underline font-medium"
                   >
                     saatlik vinç kiralama
                   </Link>{' '}
-                  paketlerimizden yararlanabilirken, dev rezidansların cephe mantolama işlemlerinde
-                  çok daha maliyet avantajlı olan{' '}
+                  veya{' '}
                   <Link
                     href="/hizmetler/gunluk-vinc-kiralama"
                     className="text-blue-300 hover:text-white underline font-medium"
                   >
                     günlük vinç kiralama
                   </Link>{' '}
-                  hizmetimizle projelerinizi güvenle sonlandırabilirsiniz.
+                  seçeneklerimizden faydalanabilir, Çankaya&apos;da tamamladığımız gerçek saha
+                  çalışmalarını aşağıda inceleyebilirsiniz.
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row items-center gap-4 mb-8">
+              <div className="flex flex-col sm:flex-row items-center gap-4 mb-2">
                 <a
                   href="tel:05516066878"
-                  className="w-full sm:w-auto flex items-center justify-center gap-2 bg-primary text-white hover:bg-primary-dark px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg shadow-primary/30"
+                  className="w-full sm:w-auto flex items-center justify-center gap-2 bg-primary text-white hover:bg-primary-dark px-8 py-3.5 rounded-xl font-bold text-base md:text-lg transition-all shadow-lg shadow-primary/30"
                 >
                   <Phone size={20} />
                   Hemen Ara: 0551 606 68 78
@@ -317,281 +301,125 @@ export default function CankayaPage() {
                   href="https://wa.me/905516066878"
                   target="_blank"
                   rel="noreferrer"
-                  className="w-full sm:w-auto flex items-center justify-center gap-2 bg-[#25D366] text-white hover:bg-[#1ebd5a] px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg shadow-green-500/30"
+                  className="w-full sm:w-auto flex items-center justify-center gap-2 bg-[#25D366] text-white hover:bg-[#1ebd5a] px-8 py-3.5 rounded-xl font-bold text-base md:text-lg transition-all shadow-lg shadow-green-500/30"
                 >
                   <MessageCircle size={20} />
-                  WhatsApp'tan Konum Gönder
+                  WhatsApp
                 </a>
               </div>
             </div>
           </div>
         </section>
 
-        {/* 2. Bölüm: Çankaya’da Sepetli Vinç En Çok Nerelerde Kullanılır? */}
-        <section className="py-16 bg-white border-b border-gray-100">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">
-              Çankaya’da Sepetli Vinç En Çok Nerelerde Kullanılır?
-            </h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-              <div className="bg-gray-50 border border-gray-100 p-6 rounded-2xl hover:border-primary transition-colors">
-                <div className="bg-primary/10 w-12 h-12 rounded-xl flex items-center justify-center text-primary mb-4">
-                  <MapPin size={24} />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Kızılay</h3>
-                <p className="text-gray-600">
-                  Yaya ve araç trafiğinin başkentteki sıfır noktası olan Kızılay'da; ticari
-                  dükkanların devasa tabela değişimleri, dış cephe giydirme işlemleri ve AVM
-                  süslemeleri gibi operasyonlarda mesai dışı ve gece çalışmaları vinçlerimizle
-                  yürütülür.
-                </p>
-              </div>
-
-              <div className="bg-gray-50 border border-gray-100 p-6 rounded-2xl hover:border-primary transition-colors">
-                <div className="bg-primary/10 w-12 h-12 rounded-xl flex items-center justify-center text-primary mb-4">
-                  <MapPin size={24} />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Bahçelievler</h3>
-                <p className="text-gray-600">
-                  Yerleşimin sık ve köklü olduğu Bahçelievler semtinde genellikle apartman dış cephe
-                  onarımları, düşmekte olan eski çatı parçalarının alınması, oluk temizliği ve cam
-                  silimi gibi site yönetimlerinin talepleri sepetli vinç ile karşılanır.
-                </p>
-              </div>
-
-              <div className="bg-gray-50 border border-gray-100 p-6 rounded-2xl hover:border-primary transition-colors">
-                <div className="bg-primary/10 w-12 h-12 rounded-xl flex items-center justify-center text-primary mb-4">
-                  <MapPin size={24} />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Dikmen</h3>
-                <p className="text-gray-600">
-                  Dikmen'in yüksek rakımlı, bol rüzgar alan yapısı ve dik yokuşlarında dengeli
-                  çalışabilecek vinçler şarttır. Buradaki yüksek binaların dış cephe boya, mantolama
-                  ve anten/kamera montaj işlemleri sarsıntısız platformlarımız sayesinde güvence
-                  altındadır.
-                </p>
-              </div>
-
-              <div className="bg-gray-50 border border-gray-100 p-6 rounded-2xl hover:border-primary transition-colors">
-                <div className="bg-primary/10 w-12 h-12 rounded-xl flex items-center justify-center text-primary mb-4">
-                  <MapPin size={24} />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Oran</h3>
-                <p className="text-gray-600">
-                  Diplomatik alanların, lüks konut projelerinin ve büyük sitelerin yoğunlukta olduğu
-                  Oran semtinde, binaların mimari dokusuna zarar vermeyen sessiz makine parkurumuz
-                  ile cephe onarımları ve bahçe aydınlatmaları bakımı yapılmaktadır.
-                </p>
-              </div>
-
-              <div className="bg-gray-50 border border-gray-100 p-6 rounded-2xl hover:border-primary transition-colors">
-                <div className="bg-primary/10 w-12 h-12 rounded-xl flex items-center justify-center text-primary mb-4">
-                  <MapPin size={24} />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Balgat</h3>
-                <p className="text-gray-600">
-                  Kamu kurumlarının ve özel şirket plazalarının yan yana dizildiği Balgat aksında,
-                  rezidansların dış cam yüzey temizliği, büyük ofis logolarının (kutu harf) montajı
-                  ve klimaların dış ünite değişimleri en sık uyguladığımız operasyonlardır.
-                </p>
-              </div>
-
-              <div className="bg-gray-50 border border-gray-100 p-6 rounded-2xl hover:border-primary transition-colors">
-                <div className="bg-primary/10 w-12 h-12 rounded-xl flex items-center justify-center text-primary mb-4">
-                  <MapPin size={24} />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">İncek</h3>
-                <p className="text-gray-600">
-                  Çankaya'nın müstakil villalara ve geniş arazilere ev sahipliği yapan İncek
-                  bölgesinde genellikle çim ve bahçeyi ezmeyen kompakt vinçler istenir. Yüksek çam
-                  ağaçlarının budanması, peyzaj düzenlemesi ve çatı oluk temizliği hızlıca sağlanır. Bunların yanı sıra İncek bölgesinden İstanbul Yolu–Şaşmaz Kavşağı'na gerçekleştirilen konteyner taşıma operasyonunda da vinç desteği sağladık.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* 3. CTA EKLE (ORTA BLOK) */}
-        <section className="bg-primary py-12 border-y border-primary-dark">
-          <div className="container mx-auto px-4 text-center">
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
-              Çankaya’da vinç ihtiyacınız varsa en yakın aracı hızlıca yönlendirelim.
-            </h3>
-            <p className="text-primary-foreground mb-8 text-lg">
-              İskele maliyetinden ve zaman kaybından kurtulmak için hemen ulaşın.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <a
-                href="tel:05516066878"
-                className="inline-flex items-center gap-2 bg-white text-primary hover:bg-gray-100 px-8 py-4 rounded-xl font-bold text-xl transition-all shadow-xl justify-center"
-              >
-                <Phone size={24} />
-                Hemen Ara: 0551 606 68 78
-              </a>
-              <a
-                href="https://wa.me/905516066878"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 bg-[#25D366] text-white hover:bg-[#1ebd5a] px-8 py-4 rounded-xl font-bold text-xl transition-all shadow-xl justify-center"
-              >
-                <MessageCircle size={24} />
-                WhatsApp
-              </a>
-            </div>
-          </div>
-        </section>
-
-        {/* 6. İÇ LİNK BLOĞU EKLE */}
-        <section className="py-16 bg-white border-b border-gray-100">
+        {/* Bölüm 2: Çankaya'da Tamamladığımız Vinç Çalışmaları (Hero'nun hemen altında) */}
+        <section className="py-14 bg-gray-50 border-b border-gray-100">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Çankaya’da Sunulan Vinç Hizmetleri
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+                Çankaya&apos;da Tamamladığımız Vinç Çalışmaları
               </h2>
-              <p className="text-lg text-gray-600">
-                İhtiyacınıza yönelik sunduğumuz başlıca operasyonel çözümlerimiz.
+              <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
+                Hoşdere, Oran, Beysukent, Bilkent, İncek, Çayyolu ve Bahçelievler bölgelerinde
+                tamamladığımız gerçek saha operasyonlarını inceleyin.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {recentProjects.map((project, index) => {
+                // Masaüstünde (lg: 3 sütun) son satırda tek kalan bir kart varsa (örneğin 7, 10 eleman), satırın ortasına yerleştir
+                const isSingleInLastRow =
+                  recentProjects.length % 3 === 1 && index === recentProjects.length - 1;
+
+                return (
+                  <Link
+                    key={index}
+                    href={project.href}
+                    className={`group flex flex-col bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary ${
+                      isSingleInLastRow ? 'lg:col-start-2' : ''
+                    }`}
+                    aria-label={`${project.title} projesini incele: ${project.location}`}
+                  >
+                    <div className="relative h-48 w-full overflow-hidden bg-gray-100">
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      />
+                      <span className="absolute top-2.5 right-2.5 px-2.5 py-0.5 bg-blue-600 text-white text-[11px] font-medium rounded-full shadow-sm">
+                        {project.badge}
+                      </span>
+                    </div>
+
+                    <div className="p-5 sm:p-6 flex flex-col flex-grow">
+                      <div className="flex-grow">
+                        <h3 className="text-lg font-bold text-gray-900 group-hover:text-primary transition-colors mb-1">
+                          {project.title}
+                        </h3>
+                        <p className="text-xs text-gray-500 font-medium mb-2.5 flex items-center gap-1">
+                          <MapPin size={13} className="text-gray-400" />
+                          {project.location}
+                        </p>
+                        <p className="text-sm text-gray-600 mb-4 leading-relaxed line-clamp-2 md:line-clamp-3">
+                          {project.description}
+                        </p>
+                      </div>
+
+                      <div className="mt-auto pt-3 border-t border-gray-100">
+                        <span className="inline-flex items-center text-primary group-hover:text-primary-hover font-bold transition-colors text-sm">
+                          Projeyi İncele &rarr;
+                        </span>
+                      </div>
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* Bölüm 3: Çankaya Sepetli Vinç Hizmetleri */}
+        <section className="py-14 bg-white border-b border-gray-100">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl font-bold text-gray-900 mb-3">
+                Çankaya Sepetli Vinç Hizmetleri
+              </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Banka şubeleri, iş merkezleri ve ticari yapılar için sunduğumuz başlıca kiralama
+                çözümlerimiz.
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-              <Link
-                href="/hizmetler/sepetli-vinc-kiralama"
-                className="bg-gray-50 border border-gray-200 p-5 rounded-xl hover:border-primary hover:shadow-md transition-all flex flex-col group"
-              >
-                <span className="font-bold text-gray-800 group-hover:text-primary transition-colors text-lg mb-2">
-                  Sepetli Vinç
-                </span>
-                <span className="text-sm text-gray-500 mt-auto flex items-center gap-1 font-medium">
-                  İncele <ChevronRight size={16} />
-                </span>
-              </Link>
-              <Link
-                href="/hizmetler/operatorlu-vinc-kiralama"
-                className="bg-gray-50 border border-gray-200 p-5 rounded-xl hover:border-primary hover:shadow-md transition-all flex flex-col group"
-              >
-                <span className="font-bold text-gray-800 group-hover:text-primary transition-colors text-lg mb-2">
-                  Operatörlü Vinç
-                </span>
-                <span className="text-sm text-gray-500 mt-auto flex items-center gap-1 font-medium">
-                  İncele <ChevronRight size={16} />
-                </span>
-              </Link>
-              <Link
-                href="/hizmetler/saatlik-vinc-kiralama"
-                className="bg-gray-50 border border-gray-200 p-5 rounded-xl hover:border-primary hover:shadow-md transition-all flex flex-col group"
-              >
-                <span className="font-bold text-gray-800 group-hover:text-primary transition-colors text-lg mb-2">
-                  Saatlik Vinç
-                </span>
-                <span className="text-sm text-gray-500 mt-auto flex items-center gap-1 font-medium">
-                  İncele <ChevronRight size={16} />
-                </span>
-              </Link>
-              <Link
-                href="/hizmetler/gunluk-vinc-kiralama"
-                className="bg-gray-50 border border-gray-200 p-5 rounded-xl hover:border-primary hover:shadow-md transition-all flex flex-col group"
-              >
-                <span className="font-bold text-gray-800 group-hover:text-primary transition-colors text-lg mb-2">
-                  Günlük Vinç
-                </span>
-                <span className="text-sm text-gray-500 mt-auto flex items-center gap-1 font-medium">
-                  İncele <ChevronRight size={16} />
-                </span>
-              </Link>
-              <Link
-                href="/hizmetler/cephe-temizligi-sepetli-vinc"
-                className="bg-gray-50 border border-gray-200 p-5 rounded-xl hover:border-primary hover:shadow-md transition-all flex flex-col group"
-              >
-                <span className="font-bold text-gray-800 group-hover:text-primary transition-colors text-lg mb-2">
-                  Cephe Temizliği
-                </span>
-                <span className="text-sm text-gray-500 mt-auto flex items-center gap-1 font-medium">
-                  İncele <ChevronRight size={16} />
-                </span>
-              </Link>
-              <Link
-                href="/hizmetler/tabela-montaj"
-                className="bg-gray-50 border border-gray-200 p-5 rounded-xl hover:border-primary hover:shadow-md transition-all flex flex-col group"
-              >
-                <span className="font-bold text-gray-800 group-hover:text-primary transition-colors text-lg mb-2">
-                  Tabela Montaj
-                </span>
-                <span className="text-sm text-gray-500 mt-auto flex items-center gap-1 font-medium">
-                  İncele <ChevronRight size={16} />
-                </span>
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Çankaya'da Son Tamamlanan Çalışmalarımız */}
-        <section className="py-16 bg-gray-50 border-b border-gray-100">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Çankaya'da Son Tamamlanan Çalışmalarımız
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Çankaya'nın farklı mahallelerinde tamamladığımız gerçek saha çalışmalarını
-                inceleyebilir, kullanılan ekipmanları ve uygulama süreçlerini detaylı olarak
-                görebilirsiniz. Çankaya sepetli vinç hizmetlerimiz kapsamında Bahçelievler sepetli
-                vinç ile yapılan ağaç budama operasyonlarından, Çayyolu sepetli vinç ve Alacaatlı
-                sepetli vinç desteğiyle tamamlanan villa dış cephe çalışması gibi operatörlü sepetli
-                vinç projelerimize kadar gerçekleştirdiğimiz gerçek saha çalışmaları hakkında bilgi
-                edinebilirsiniz.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-              {recentProjects.map((project, index) => (
+              {serviceLinks.map((service, index) => (
                 <Link
                   key={index}
-                  href={project.href}
-                  className="group flex flex-col bg-white rounded-2xl p-6 border border-gray-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary"
-                  aria-label={`${project.title} projesini incele: ${project.location}`}
+                  href={service.href}
+                  className="bg-gray-50 border border-gray-200 p-4 rounded-xl hover:border-primary hover:bg-white hover:shadow-sm transition-all flex items-center justify-between group"
                 >
-                  <div className="flex justify-between items-start mb-4">
-                    <span className="text-4xl bg-gray-50 p-3 rounded-xl border border-gray-100 flex-shrink-0">
-                      {project.icon}
-                    </span>
-                    <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full flex-shrink-0">
-                      {project.badge}
-                    </span>
-                  </div>
-
-                  <div className="flex-grow">
-                    <h3 className="text-xl font-bold text-gray-900 group-hover:text-primary transition-colors mb-1">
-                      {project.title}
-                    </h3>
-                    <p className="text-sm text-gray-500 font-medium mb-3 flex items-center gap-1">
-                      <MapPin size={14} className="text-gray-400" />
-                      {project.location}
-                    </p>
-                    <p className="text-sm text-gray-600 mb-6 leading-relaxed">
-                      {project.description}
-                    </p>
-                  </div>
-
-                  <div className="mt-auto pt-4 border-t border-gray-100">
-                    <span className="inline-flex items-center text-primary group-hover:text-primary-hover font-bold transition-colors text-sm">
-                      Projeyi İncele &rarr;
-                    </span>
-                  </div>
+                  <span className="font-semibold text-gray-800 group-hover:text-primary transition-colors">
+                    {service.title}
+                  </span>
+                  <ChevronRight
+                    size={18}
+                    className="text-gray-400 group-hover:text-primary group-hover:translate-x-0.5 transition-all"
+                  />
                 </Link>
               ))}
             </div>
           </div>
         </section>
 
-        {/* 7. FAQ Bölümü */}
-        <section className="py-16 bg-white border-b border-gray-100">
+        {/* Bölüm 4: Sıkça Sorulan Sorular */}
+        <section className="py-14 bg-gray-50 border-b border-gray-100">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
                 Sıkça Sorulan Sorular
               </h2>
-              <p className="text-lg text-gray-600">
-                Bölgesel süreçler ve aklınıza takılan detaylar.
+              <p className="text-base md:text-lg text-gray-600">
+                Çankaya bölgesindeki vinç kiralama ve saha operasyonlarımızla ilgili merak edilenler.
               </p>
             </div>
 
@@ -599,11 +427,11 @@ export default function CankayaPage() {
               {faqs.map((faq, index) => (
                 <details
                   key={index}
-                  className="group bg-gray-50 border border-gray-200 rounded-2xl [&_summary::-webkit-details-marker]:hidden"
+                  className="group bg-white border border-gray-200 rounded-2xl [&_summary::-webkit-details-marker]:hidden"
                 >
                   <summary className="flex items-center justify-between cursor-pointer p-6 font-bold text-lg text-gray-900 group-hover:text-primary transition-colors">
                     {faq.q}
-                    <span className="transition group-open:rotate-180 bg-white p-2 rounded-full shadow-sm border border-gray-100">
+                    <span className="transition group-open:rotate-180 bg-gray-50 p-2 rounded-full shadow-sm border border-gray-100">
                       <svg
                         fill="none"
                         height="24"
@@ -631,11 +459,11 @@ export default function CankayaPage() {
 
       <Footer />
 
-      {/* MOBİL STICKY BAR */}
+      {/* Mobil Sabit İletişim Çubuğu */}
       <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-[0_-10px_20px_-10px_rgba(0,0,0,0.15)] z-[100] flex p-2 gap-2">
         <a
           href="tel:05516066878"
-          className="flex-1 bg-blue-600 hover:bg-blue-700 text-white flex flex-col items-center justify-center py-2.5 rounded-xl transition-colors"
+          className="flex-1 bg-primary hover:bg-primary-dark text-white flex flex-col items-center justify-center py-2.5 rounded-xl transition-colors"
         >
           <Phone size={22} className="mb-1" />
           <span className="text-xs font-extrabold uppercase tracking-wide">Ara</span>
