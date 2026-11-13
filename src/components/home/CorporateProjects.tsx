@@ -171,6 +171,15 @@ const bankBranches: BankBranch[] = [
   {
     name: 'DenizBank – Antalya',
   },
+  {
+    name: 'DenizBank – Kuşadası / Aydın',
+  },
+  {
+    name: 'Finansbank – Bursa',
+  },
+  {
+    name: 'Akbank – Samsun',
+  },
 ];
 
 export default function CorporateProjects() {
